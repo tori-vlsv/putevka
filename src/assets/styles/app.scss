@@ -1,0 +1,21 @@
+@import "./utils/reset";   
+
+/*
+  Базовые стили и утилиты
+*/
+@import "./base/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+@import "./base/global";
+
+/*
+  Шрифты и типография
+*/
+@import "./base/fonts";
+@import "./base/typography";  
+
+/*
+  Компоненты
+*/
+@import "./components/header";
+@import "./components/footer";   

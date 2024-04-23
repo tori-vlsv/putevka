@@ -1,0 +1,69 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+textarea,
+input,
+button,
+select,
+a {
+  outline: none;
+  border-radius: 0;
+
+  font-weight: 400;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  touch-action: manipulation;
+}
+
+html,
+body {
+  height: 100%;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.render {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $white;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 #{$container-padding};
+  max-width: calc(#{$mobile-wrapper} + #{$container-padding * 2});
+  @include screen(tablet) {
+    max-width: calc(#{$screen-tablet} + #{$container-padding * 2});
+  }
+  @include screen(tablet-2x) {
+    max-width: calc(#{$screen-tablet-2x} + #{$container-padding * 2});
+  }
+  @include screen(laptop) {
+    max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
+  }
+  @include screen(desktop) {
+    max-width: calc(#{$screen-desktop} + #{$container-padding * 2});
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
