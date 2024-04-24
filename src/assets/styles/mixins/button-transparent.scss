@@ -1,0 +1,17 @@
+.button-transparent {
+  width: 100%;
+  border: 1px solid $blue-border;
+  display: flex;
+  padding: 11px 86px;
+  justify-content: center;
+  border-radius: 8px;
+  @include screen(tablet) {
+    max-width: max-content;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: $blue-500;
+  }
+}

@@ -17,4 +17,10 @@
 /*
   Компоненты
 */
-@import "./components/main-faq"; 
+@import "./components/main-faq";
+@import "./components/main-promo";
+
+/*
+  Миксины
+*/
+@import "./mixins/button-transparent";

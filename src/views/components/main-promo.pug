@@ -1,0 +1,55 @@
+include ../mixins/button-transparent
+
+section.main-promo
+  .wrapper
+    .main-promo__wrapper
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            a(href="/").main-promo__block
+              .main-promo__bg
+                img(src="/assets/images/main-promo/bg-1.png", alt="promo-bg")
+              .main-promo__container
+                .main-promo__content
+                  h3.main-promo__title.main-promo__title-red Открытый ЮГ 2024
+                  p.main-promo__text.main-promo__text-black Скидки в самые популярные санатории Крыма и Краснодарского края!
+                .main-promo__discount
+                  span Скидки до 30%
+          .swiper-slide
+            a(href="/").main-promo__block
+              .main-promo__bg
+                img(src="/assets/images/main-promo/bg-2.png", alt="promo-bg")
+              .main-promo__container
+                .main-promo__content
+                  h3.main-promo__title Отдых по сертификатам МОСГОРТУР
+                  p.main-promo__text Полная или частичная оплата услуг отдыха сертификатом
+                .main-promo__picture
+                  img(src="/assets/images/main-promo/logo.png", alt="logo")
+          .swiper-slide
+            a(href="/").main-promo__block
+              .main-promo__bg
+                img(src="/assets/images/main-promo/bg-3.png", alt="promo-bg")
+              .main-promo__container
+                .main-promo__content
+                  h3.main-promo__title Что лечат на разных курортах
+                  p.main-promo__text Инструкция по выбору лучшего места для оздоровления.
+                .main-promo__button
+                  span Читать
+          .swiper-slide
+            a(href="/").main-promo__block
+              .main-promo__bg
+                img(src="/assets/images/main-promo/bg-2.png", alt="promo-bg")
+              .main-promo__container
+                .main-promo__content
+                  h3.main-promo__title Отдых по сертификатам МОСГОРТУР
+                  p.main-promo__text Полная или частичная оплата услуг отдыха сертификатом
+                .main-promo__picture
+                  img(src="/assets/images/main-promo/logo.png", alt="logo")
+      .swiper-button-prev
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="white"/><path d="M17.75 26.5L24.25 20L17.75 13.5" stroke="#1F56D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      .swiper-button-next
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="white"/><path d="M17.75 26.5L24.25 20L17.75 13.5" stroke="#1F56D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      .main-promo__buttons
+        a(href="/") 
+          +button-transparent('Смотреть все акции')
+
