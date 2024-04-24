@@ -29,3 +29,35 @@
     }
   }
 }
+
+@mixin max-screen($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 1535px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-2x {
+    @media only screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 639px) {
+      @content;
+    }
+  }
+}

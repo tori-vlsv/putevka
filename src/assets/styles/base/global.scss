@@ -11,9 +11,8 @@ select,
 a {
   outline: none;
   border-radius: 0;
-
-  font-weight: 400;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  font-weight: 500;
+  font-family: "Tilda Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   touch-action: manipulation;
@@ -22,10 +21,30 @@ a {
 html,
 body {
   height: 100%;
-
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  font-weight: 500;
+  font-family: "Tilda Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h2 {
+  font-family: "Panton";
+  font-weight: 400;
+  text-align: left;
+  font-size: 24px;
+  line-height: 28px;
+  @include screen(laptop) {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
+h1, h3, h4, h5, h6 {
+  font-family: "Panton";
+}
+
+p {
+  font-family: "Tilda Sans VF";
 }
 
 .render {
