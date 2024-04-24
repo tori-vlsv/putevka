@@ -8,6 +8,7 @@
   }
   @include screen(tablet-2x) {
     padding-top: 40px;
+    padding-bottom: 20px;
     background-color: $bg-blue;
   }
 
@@ -40,6 +41,7 @@
       border-radius: 10px;
       min-height: 220px;
       padding: 0;
+      box-shadow: 0px 5px 10px 0px #1544821A;
     }
     &:before {
       position: absolute;
@@ -111,15 +113,23 @@
   }
 
   h3 {
-    font-family: "Panton";
     max-width: 224px;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
     text-align: left;
     color: $white;
+    @include screen(tablet) {
+      max-width: 500px;
+      br {
+        display: none;
+      }
+    }
     @include screen(tablet-2x) {
       color: $black-400;
+      br {
+        display: block;
+      }
     }
     @include screen(laptop) {
       font-size: 20px;
@@ -152,30 +162,32 @@
   }
 
   &__arrow {
-    circle {
-      fill: transparent;
-    }
-    path {
-      stroke: $white;
+    svg {
+      path {
+        stroke: $white;
+      }
     }
     @include screen(tablet-2x) {
-      path {
-        stroke: $black;
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        path {
+          stroke: $black;
+        }
       }
       &-blue {
-        circle {
-          fill: $blue-300;
-        }
+        background-color: rgba($color: $blue-300, $alpha: 0.15);
       }
       &-orange {
-        circle {
-          fill: $orange-400;
-        }
+        background-color: rgba($color: $orange-400, $alpha: 0.15);
       }
       &-green {
-        circle {
-          fill: $green-400;
-        }
+        background-color: rgba($color: $green-400, $alpha: 0.15);
       }
     }
   }
