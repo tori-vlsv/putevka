@@ -1,0 +1,77 @@
+include ../mixins/resort-card
+include ../mixins/button-transparent
+
+section.main-resorts
+  .wrapper
+    h2 Популярные курорты для отдыха и лечения
+  .wrapper
+    .main-resorts__wrapper
+      .main-resorts__cards
+        +resort-card('', 'true', '/assets/images/main-resorts/mob-1.png', 'resort-1', true, 'От 19 990 ₽', false, '', false, '', 'Краснодарский край', 'Сочи', 'Адлер', 'Анапа', 'Туапсе', 'Геленджик', 'Мацеста')
+        +resort-card('', 'true', '/assets/images/main-resorts/mob-2.png', 'resort-2', false, '', true, 'Скидки до 30%', false, '', 'Крым', 'Ялта', 'Алушта', 'Евпатория', 'Саки', 'ЮБК', 'Гурзуф', 'Мисхор')
+        +resort-card('', 'true', '/assets/images/main-resorts/mob-3.png', 'resort-3', false, '', false, '', false, '', 'КавМинВоды', 'Кисловодск', 'Ессентуки', 'Пятигорск', 'Железноводск')
+      .main-resorts__items
+        +resort-card('resort-card-mini', false, '/assets/images/main-resorts/mob-4.png', 'resort-4', false, '', false, '', false, '', 'Абхазия')
+        +resort-card('resort-card-mini', false, '/assets/images/main-resorts/mob-5.png', 'resort-5', false, '', false, '', false, '', 'Белоруссия')
+        +resort-card('resort-card-mini', false, '/assets/images/main-resorts/mob-6.png', 'resort-6', false, '', false, '', false, '', 'Москва и обл.')
+        +resort-card('resort-card-mini', false, '/assets/images/main-resorts/mob-7.png', 'resort-7', false, '', false, '', true, 'Раннее бронирование', 'Алтай')
+  .wrapper
+    ul.main-resorts__list
+      li 
+        a(href="/") Ставропольский край
+      li 
+        a(href="/") Новгородская область
+      li 
+        a(href="/") Ярославская область
+      li 
+        a(href="/") Калининградская область
+      li 
+        a(href="/") Башкортостан
+      li 
+        a(href="/") Татарстан
+      li 
+        a(href="/") Свердловская область
+      li 
+        a(href="/") Кемеровская область
+      li 
+        a(href="/") Челябинская область
+      li 
+        a(href="/") Самарская область
+      li 
+        a(href="/") Нижегородская область
+      li 
+        a(href="/") Пермский край
+      li 
+        a(href="/") Новосибирская область
+      li 
+        a(href="/") Тюменская область
+      li 
+        a(href="/") Дагестан
+      li 
+        a(href="/") Оренбургская область
+      li 
+        a(href="/") Удмуртия
+      li 
+        a(href="/") Иркутская область
+      li 
+        a(href="/") Тюменская область
+      li 
+        a(href="/") Волгоградская область
+      li 
+        a(href="/") Красноярский край
+      li 
+        a(href="/") Тульская область
+      li 
+        a(href="/") Ростовская область
+      li 
+        a(href="/") Кабардино-Балкария
+      li 
+        a(href="/") Карелия
+      li 
+        a(href="/") Коми
+      li 
+        a(href="/") Марий Эл
+    
+    .main-resorts__buttons
+        a(href="/") 
+          +button-transparent('Смотреть все регионы')

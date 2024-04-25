@@ -1,0 +1,78 @@
+.main-resorts {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  @include screen(tablet-2x) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
+  }
+
+  & > .wrapper {
+    &:nth-child(2) {
+      @include max-screen(tablet) {
+        max-width: 100%;
+        padding: 0;
+        width: calc(100% + 40px);
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    justify-items: center;
+    @include screen(tablet-2x) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+
+  &__items {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    @include screen(tablet-2x) {
+      margin-top: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @include screen(tablet-2x) {
+      display: none;
+    }
+    a {
+      width: 100%;
+      @include screen(tablet) {
+        width: max-content;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    margin-top: 50px;
+    max-height: 246px;
+    @include screen(tablet-2x) {
+      display: flex;
+      row-gap: 20px;
+      flex-wrap: wrap;
+    }
+    li {
+      color: $blue-500;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+}

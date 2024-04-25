@@ -5,7 +5,7 @@ function mainPromoSlider() {
   new Swiper('.main-promo .swiper', {
     modules: [ Navigation, Grid ],
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 20,
     speed: 800,
     allowTouchMove: false,
     grid: {

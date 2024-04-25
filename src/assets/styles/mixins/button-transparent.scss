@@ -2,10 +2,11 @@
   width: 100%;
   border: 1px solid $blue-border;
   display: flex;
-  padding: 11px 86px;
+  padding: 11px;
   justify-content: center;
   border-radius: 8px;
   @include screen(tablet) {
+    padding: 11px 86px;
     max-width: max-content;
   }
   span {

@@ -19,8 +19,11 @@
 */
 @import "./components/main-faq";
 @import "./components/main-promo";
+@import "./components/main-resorts";
 
 /*
   Миксины
 */
 @import "./mixins/button-transparent";
+@import "./mixins/resort-card";
+

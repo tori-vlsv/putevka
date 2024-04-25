@@ -1,5 +1,6 @@
 .main-promo {
   padding-top: 20px;
+  padding-bottom: 30px;
   @include screen(tablet-2x) {
     padding-top: 20px;
     padding-bottom: 45px;
@@ -147,6 +148,12 @@
     justify-content: center;
     @include screen(tablet-2x) {
       display: none;
+    }
+    a {
+      width: 100%;
+      @include screen(tablet) {
+        width: max-content;
+      }
     }
   }
 
