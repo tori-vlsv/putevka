@@ -1,35 +1,37 @@
 mixin resort-card(cardClass, content, src, alt, price, namePrice, discount, nameDiscount, booking, nameBooking, title, ...items)
 
-  a(href="/").resort-card(class="" + cardClass)
+  .resort-card(class="" + cardClass)
     .resort-card__bg
       img(src="" + src alt="" + alt loading="lazy")
     .resort-card__container
       if content
         .resort-card__top
           if price
-            .resort-card__cost.resort-card__cost-orange
+            .resort-card__cost.resort-card__cost--orange
               span= namePrice
           if discount
-            .resort-card__cost.resort-card__cost-red
+            .resort-card__cost.resort-card__cost--red
               span= nameDiscount
           if booking
-            .resort-card__cost.resort-card__cost-green
+            .resort-card__cost.resort-card__cost--green
               span= nameBooking
           else
         .resort-card__content
-          h4.resort-card__title= title
+          a.resort-card__link(href="#") 
+            h4.resort-card__title= title
           .resort-card__items
             each item in items
-              .resort-card__item= item
+              a(href="#").resort-card__item= item
       else
         .resort-card__top
           if price
-            .resort-card__cost.resort-card__cost-orange
+            .resort-card__cost.resort-card__cost--orange
               span= namePrice
           if discount
-            .resort-card__cost.resort-card__cost-red
+            .resort-card__cost.resort-card__cost--red
               span= nameDiscount
           if booking
-            .resort-card__cost.resort-card__cost-green
+            .resort-card__cost.resort-card__cost--green
               span= nameBooking
-        h4.resort-card__title= title
+        a.resort-card__link(href="#") 
+          h4.resort-card__title= title

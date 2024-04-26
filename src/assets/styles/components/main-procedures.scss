@@ -1,0 +1,67 @@
+.main-procedures {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include screen(tablet-2x) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
+  }
+
+  &__blocks {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 416px;
+    gap: 24px;
+
+  }
+
+  &__block {
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 12px 35px 0px #64749A1F;
+    background-color: $white;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $gray-400;
+  }
+
+  &__links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    &-large {
+      max-height: 208px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    max-width: max-content;
+    color: $blue-500;
+  }
+
+  &__button {
+    margin-top: 68px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid rgba($color: $blue-border, $alpha: 0.25);
+    border-radius: 8px;
+    padding: 10px 16px;
+    span {
+      color: $blue-500;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+}

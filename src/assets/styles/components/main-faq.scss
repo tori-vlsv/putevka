@@ -37,6 +37,7 @@
     padding: 18px 0;
     position: relative;
     display: block;
+    overflow: hidden;
     @include screen(tablet-2x) {
       border-radius: 10px;
       min-height: 220px;
@@ -67,7 +68,16 @@
         display: none;
       }
     }
+    & > a {
+      position: absolute; 
+      inset: 0;
+      z-index: 1;
+      @include screen(tablet-2x) {
+        position: relative;
+      }
+    }
     & > .wrapper {
+      position: relative;
       @include screen(tablet-2x) {
         max-width: 100%;
         padding: 0;
@@ -75,30 +85,30 @@
         height: 100%;
       }
     }
-    &-cian {
+    &--cian {
       background-color: $cian-400;
       &:before,
       &:after {
         background-color: $cian-400;
       }
     }
-    &-blue {
+    &--blue {
       background-color: $blue-400;
       &:before,
       &:after {
         background-color: $blue-400;
       }
     }
-    &-green {
+    &--green {
       background-color: $green-400;
       &:before,
       &:after {
         background-color: $green-400;
       }
     }
-    &-cian,
-    &-blue,
-    &-green {
+    &--cian,
+    &--blue,
+    &--green {
       @include screen(tablet-2x) {
         background-color: $white;
       }
@@ -110,6 +120,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include screen(tablet-2x) {
+      align-items: flex-start;
+    }
   }
 
   h3 {
@@ -154,22 +167,34 @@
       font-weight: 500;
       line-height: 20px;
     }
-    span {
+    a {
       font-weight: 700;
       color: $blue-500;
       border-bottom: 1px solid $blue-500;
+      transition: color $transition-default, border-color $transition-default;
+      &:active {
+        color: $orange-500;
+        border-color: $orange-500;
+      }
+      @include screen(tablet-2x) {
+        &:hover {
+          color: $orange-500;
+          border-color: $orange-500;
+        }
+      }
     }
   }
 
   &__arrow {
     margin-left: 10px;
+    transition: background-color $transition-default;
     @include screen(tablet) {
       margin-left: 0;
     }
     svg {
-      path {
-        stroke: $white;
-      }
+      stroke: $white;
+      fill: transparent;
+      transition: stroke $transition-default;
     }
     @include screen(tablet-2x) {
       width: 40px;
@@ -179,24 +204,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      svg {
-        path {
-          stroke: $black;
+      &:active {
+        background-color: $blue-500;
+        svg {
+          stroke: $white;
         }
       }
-      &-blue {
+      svg {
+        stroke: $black;
+      }
+      &--blue {
         background-color: rgba($color: $blue-300, $alpha: 0.15);
       }
-      &-orange {
+      &--orange {
         background-color: rgba($color: $orange-400, $alpha: 0.15);
       }
-      &-green {
+      &--green {
         background-color: rgba($color: $green-400, $alpha: 0.15);
+      }
+    }
+    @include screen(laptop) {
+      &:hover {
+        background-color: $blue-500;
+        svg {
+          stroke: $white;
+        }
       }
     }
   }
 
   &__icon {
+    fill: transparent;
+    stroke: $white;
     min-width: 32px;
     @include screen(tablet-2x) {
       display: none;

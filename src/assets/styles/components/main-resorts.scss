@@ -73,6 +73,24 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 18px;
+      transition: color $transition-default;
+      &:before {
+        transition: background-color $transition-default;
+      }
+      &:active {
+        color: $orange-500;
+        &:before {
+          background-color: $orange-500;
+        }
+      }
+      @include screen(laptop) {
+        &:hover {
+          color: $orange-500;
+          &:before {
+            background-color: $orange-500;
+          }
+        }
+      }
     }
   }
 }

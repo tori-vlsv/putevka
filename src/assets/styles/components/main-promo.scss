@@ -21,6 +21,12 @@
       border-radius: 0;
       height: 300px;
     }
+
+    & > a {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
   }
 
   &__bg {
@@ -119,7 +125,7 @@
       line-height: 30px;
       letter-spacing: -0.02em;
     }
-    &-red {
+    &--red {
       background-color: $red-400;
       display: inline-block;
       padding: 3px 6px;
@@ -137,7 +143,7 @@
       font-size: 16px;
       line-height: 20px;
     }
-    &-black {
+    &--black {
       color: $black-400;
     }
   }
@@ -165,15 +171,38 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        background-color: $white;
+        box-shadow: 0px 5px 15px 0px $box-shadow-two, 0px 1px 4px 0px $box-shadow-three;
+        border-radius: 50%;
+        transition: background-color $transition-default;
         svg {
-          border-radius: 50%;
-          box-shadow: 0px 5px 15px 0px $box-shadow-two, 0px 1px 4px 0px $box-shadow-three;
+          width: 10px;
+          height: 16px;
+          fill: transparent;
+          stroke: $blue-500;
+          transition: stroke $transition-default;
         }
         &:after {
           display: none;
         }
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
         @include screen(tablet-2x) {
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @include screen(laptop) {
+          &:hover {
+            background-color: $blue-500;
+            svg {
+              stroke: $white;
+            }
+          }
         }
       }
       &-prev {

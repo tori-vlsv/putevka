@@ -6,17 +6,21 @@ section.main-promo
       .swiper
         .swiper-wrapper
           .swiper-slide
-            a(href="/").main-promo__block
+            .main-promo__block
+              a(href="/")
+                span.visually-hidden Открытый ЮГ 2024
               .main-promo__bg
                 img(src="/assets/images/main-promo/bg-1.png", alt="promo-bg")
               .main-promo__container
                 .main-promo__content
-                  h3.main-promo__title.main-promo__title-red Открытый ЮГ 2024
-                  p.main-promo__text.main-promo__text-black Скидки в самые популярные санатории Крыма и Краснодарского края!
+                  h3.main-promo__title.main-promo__title--red Открытый ЮГ 2024
+                  p.main-promo__text.main-promo__text--black Скидки в самые популярные санатории Крыма и Краснодарского края!
                 .main-promo__discount
                   span Скидки до 30%
           .swiper-slide
-            a(href="/").main-promo__block
+            .main-promo__block
+              a(href="/")
+                span.visually-hidden Отдых по сертификатам МОСГОРТУР
               .main-promo__bg
                 img(src="/assets/images/main-promo/bg-2.png", alt="promo-bg")
               .main-promo__container
@@ -26,7 +30,9 @@ section.main-promo
                 .main-promo__picture
                   img(src="/assets/images/main-promo/logo.png", alt="logo")
           .swiper-slide
-            a(href="/").main-promo__block
+            .main-promo__block
+              a(href="/")
+                span.visually-hidden Что лечат на разных курортах
               .main-promo__bg
                 img(src="/assets/images/main-promo/bg-3.png", alt="promo-bg")
               .main-promo__container
@@ -36,7 +42,9 @@ section.main-promo
                 .main-promo__button
                   span Читать
           .swiper-slide
-            a(href="/").main-promo__block
+            .main-promo__block
+              a(href="/")
+                span.visually-hidden Отдых по сертификатам МОСГОРТУР
               .main-promo__bg
                 img(src="/assets/images/main-promo/bg-2.png", alt="promo-bg")
               .main-promo__container
@@ -45,10 +53,12 @@ section.main-promo
                   p.main-promo__text Полная или частичная оплата услуг отдыха сертификатом
                 .main-promo__picture
                   img(src="/assets/images/main-promo/logo.png", alt="logo")
-      .swiper-button-prev
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="white"/><path d="M17.75 26.5L24.25 20L17.75 13.5" stroke="#1F56D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      .swiper-button-next
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="white"/><path d="M17.75 26.5L24.25 20L17.75 13.5" stroke="#1F56D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      button(type="button", aria-label="Previous").swiper-button-prev
+        svg(width="10" height="16" viewBox="0 0 10 16")
+          use(xlink:href="#svg-arrow-right")
+      button(type="button", aria-label="Next").swiper-button-next
+        svg(width="10" height="16" viewBox="0 0 10 16")
+          use(xlink:href="#svg-arrow-right")
       .main-promo__buttons
         a(href="/") 
           +button-transparent('Смотреть все акции')
