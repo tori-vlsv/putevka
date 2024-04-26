@@ -15,4 +15,9 @@
     line-height: 18px;
     color: $blue-500;
   }
+  &:active {
+    span {
+      color: $orange-500;
+    }
+  }
 }
