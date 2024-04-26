@@ -9,11 +9,19 @@
     padding: 11px 86px;
     max-width: max-content;
   }
+  @include screen(laptop) {
+    &:hover {
+      span {
+        color: $orange-500;
+      }
+    }
+  }
   span {
     font-size: 16px;
     font-weight: 600;
     line-height: 18px;
     color: $blue-500;
+    transition: color $transition-default;
   }
   &:active {
     span {
