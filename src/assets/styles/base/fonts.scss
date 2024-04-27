@@ -52,21 +52,19 @@
   src: local('Tilda Sans Extra Bold'), local('TildaSans-ExtraBold'),
       url('../fonts/TildaSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
       url('../fonts/TildaSans-ExtraBold.woff2') format('woff2'),
-      url('../fonts/TildaSans-ExtraBold.woff') format('woff'),
-      url('../fonts/TildaSans-ExtraBold.ttf') format('truetype');
+      url('../fonts/TildaSans-ExtraBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Tilda Sans VF';
-  src: url('../fonts/TildaSansVF.eot');
+  font-family: 'Tilda Sans';
+  src: url('../fonts/TildaSans-Regular.eot');
   src: local('Tilda Sans VF'), local('TildaSansVF'),
-      url('../fonts/TildaSansVF.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/TildaSansVF.woff2') format('woff2'),
-      url('../fonts/TildaSansVF.woff') format('woff'),
-      url('../fonts/TildaSansVF.ttf') format('truetype');
+      url('../fonts/TildaSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TildaSans-Regular.woff2') format('woff2'),
+      url('../fonts/TildaSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -78,8 +76,7 @@
   src: local('Tilda Sans Medium'), local('TildaSans-Medium'),
       url('../fonts/TildaSans-Medium.eot?#iefix') format('embedded-opentype'),
       url('../fonts/TildaSans-Medium.woff2') format('woff2'),
-      url('../fonts/TildaSans-Medium.woff') format('woff'),
-      url('../fonts/TildaSans-Medium.ttf') format('truetype');
+      url('../fonts/TildaSans-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -91,8 +88,7 @@
   src: local('Tilda Sans Bold'), local('TildaSans-Bold'),
       url('../fonts/TildaSans-Bold.eot?#iefix') format('embedded-opentype'),
       url('../fonts/TildaSans-Bold.woff2') format('woff2'),
-      url('../fonts/TildaSans-Bold.woff') format('woff'),
-      url('../fonts/TildaSans-Bold.ttf') format('truetype');
+      url('../fonts/TildaSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
