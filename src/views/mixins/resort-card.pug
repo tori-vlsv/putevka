@@ -1,37 +1,23 @@
-mixin resort-card(cardClass, content, src, alt, price, namePrice, discount, nameDiscount, booking, nameBooking, title, ...items)
-
-  .resort-card(class="" + cardClass)
+mixin resort-card(data)
+  .resort-card(class="" + data.className)
     .resort-card__bg
-      img(src="" + src alt="" + alt loading="lazy")
+      img(src="" + data.image.src alt="" + data.image.alt loading="lazy")
     .resort-card__container
-      if content
+      if data.price || data.discount || data.booking
         .resort-card__top
-          if price
+          if data.price
             .resort-card__cost.resort-card__cost--orange
-              span= namePrice
-          if discount
+              span= data.price
+          if data.discount
             .resort-card__cost.resort-card__cost--red
-              span= nameDiscount
-          if booking
+              span= data.discount
+          if data.booking
             .resort-card__cost.resort-card__cost--green
-              span= nameBooking
-          else
-        .resort-card__content
-          a.resort-card__link(href="#") 
-            h4.resort-card__title= title
-          .resort-card__items
-            each item in items
-              a(href="#").resort-card__item= item
-      else
-        .resort-card__top
-          if price
-            .resort-card__cost.resort-card__cost--orange
-              span= namePrice
-          if discount
-            .resort-card__cost.resort-card__cost--red
-              span= nameDiscount
-          if booking
-            .resort-card__cost.resort-card__cost--green
-              span= nameBooking
+              span= data.booking
+      .resort-card__content
         a.resort-card__link(href="#") 
-          h4.resort-card__title= title
+          h4.resort-card__title= data.title
+        if data.locations.length > 0
+          .resort-card__items
+            each item in data.locations
+              a(href="#").resort-card__item= item.title
