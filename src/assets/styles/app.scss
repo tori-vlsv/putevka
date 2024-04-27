@@ -15,6 +15,13 @@
 @import "./base/typography";  
 
 /*
+  Миксины
+*/
+@import "./mixins/button-transparent";
+@import "./mixins/resort-card";
+@import "./mixins/house-card";
+
+/*
   Компоненты
 */
 @import "./components/main-faq";
@@ -22,10 +29,8 @@
 @import "./components/main-resorts";
 @import "./components/main-procedures";
 @import "./components/main-about";
+@import "./components/main-houses";
 
-/*
-  Миксины
-*/
-@import "./mixins/button-transparent";
-@import "./mixins/resort-card";
+
+
 

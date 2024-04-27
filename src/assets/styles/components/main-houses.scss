@@ -1,0 +1,121 @@
+.main-houses {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include screen(tablet-2x) {
+    background-color: $white;
+    padding-top: 90px;
+    padding-top: 60px;
+  }
+  @include screen(laptop) {
+    background-color: $white;
+    padding-top: 90px;
+    padding-top: 60px;
+  } 
+  @include screen(desktop) {
+    background-color: $white;
+    padding-top: 90px;
+    padding-top: 60px;
+  } 
+
+  &__text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $black-300;
+    @include screen(laptop) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include screen(desktop) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__tabs {
+    &.swiper {
+      margin-top: 30px;
+      padding: 0 20px;
+
+      @include screen(tablet-2x) {
+        padding: 0;
+      }
+      @include screen(laptop) {
+        padding: 0;
+        margin-top: 40px;
+      }
+      @include screen(desktop) {
+        padding: 0;
+        margin-top: 40px;
+      }
+    }
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
+  &__tab {
+    border: 1px solid $blue-border-light;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: background-color $transition-default, border-color $transition-default;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $black-400;
+      white-space: nowrap;
+      transition: color $transition-default;
+    }
+    @include screen(laptop) {
+      &:hover {
+        border-color: $orange-500;
+      }
+      padding: 10px 16px;
+    }
+    @include screen(desktop) {
+      &:hover {
+        border-color: $orange-500;
+      }
+      padding: 10px 16px;
+    }
+    &.active {
+      background-color: $blue-700;
+      border-color: $blue-700;
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &__slider.swiper {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    @include screen(laptop) {
+      padding-left: 0;
+    }
+    @include screen(desktop) {
+      padding-left: 0;
+    }
+  }
+  .swiper {
+    &-scrollbar {
+      background-color: #EEF3FB;
+      @include screen(laptop) {
+        display: none;
+      }
+      @include screen(desktop) {
+        display: none;
+      }
+      &-drag {
+        background-color: #2768C926;
+      }
+    }
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      left: 20px;
+      bottom: 0;
+    } 
+  }
+}

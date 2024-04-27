@@ -8,3 +8,5 @@ import "./base/common/get-current-year";
 import "./base/common/get-header-height";
 
 import "./components/mainPromoSlider";
+import "./components/mainHousesSlider";
+import "./components/mainTabsSlider";

@@ -1,0 +1,314 @@
+section.main-houses
+  .wrapper
+    h2 Рейтинг лучших санаториев и пансионатов
+    p.main-houses__text Рейтинг составляется автоматически на основе количества бронирований и оценок отдыхающих
+  .wide-wrapper
+
+    .swiper.main-houses__tabs
+      .swiper-wrapper
+        .swiper-slide
+          button.main-houses__tab.active(type="button") 
+            span Краснодарский край
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span Крым
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span КавМинВоды
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span Абхазия
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span Беларусь
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span Москва и область
+        .swiper-slide
+          button.main-houses__tab(type="button") 
+            span Алтай
+
+    .swiper.main-houses__slider
+      .swiper-wrapper
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/1.png',
+                  alt: 'house-1'
+                },
+                price: 'От 19 990 ₽',
+                discount: '',
+                booking: '',
+                title: 'Пансионат Изумруд',
+                location: 'Адлер',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'swimming-pool',
+                    },
+                    title: 'Открытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'spa',
+                    },
+                    title: 'SPA'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 150 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/2.png',
+                  alt: 'house-2'
+                },
+                price: '',
+                discount: 'Скидки до 30%',
+                booking: '',
+                title: 'Санаторий «Адлеркурорт» корпус Дельфин',
+                location: 'Адлер',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'kpool',
+                    },
+                    title: 'Крытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'wifi',
+                    },
+                    title: 'Wi-Fi'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 320 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/3.png',
+                  alt: 'house-3'
+                },
+                price: '',
+                discount: '',
+                booking: '',
+                title: 'Пансионат Орбита-1',
+                location: 'Сочи',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'swimming-pool',
+                    },
+                    title: 'Открытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'spa',
+                    },
+                    title: 'SPA'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 50 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/4.png',
+                  alt: 'house-4'
+                },
+                price: '',
+                discount: '',
+                booking: 'Раннее бронирование',
+                title: 'Лечебно-оздоровительный комплекс АкваЛоо',
+                location: 'Поселок Лоо',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'kpool',
+                    },
+                    title: 'Крытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'conference',
+                    },
+                    title: 'Конференц-зал'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 725 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/5.png',
+                  alt: 'house-5'
+                },
+                price: '',
+                discount: '',
+                booking: 'Раннее бронирование',
+                title: 'Санаторий Красная Талка (Геленджик)',
+                location: 'Геленджик',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'kpool',
+                    },
+                    title: 'Крытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'wifi',
+                    },
+                    title: 'Wi-Fi'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 320 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/6.png',
+                  alt: 'house-6'
+                },
+                price: '',
+                discount: '',
+                booking: '',
+                title: 'Санаторий Актер (Сочи)',
+                location: 'Адлер',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'swimming-pool',
+                    },
+                    title: 'Открытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'spa',
+                    },
+                    title: 'SPA'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 150 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/7.png',
+                  alt: 'house-7'
+                },
+                price: '',
+                discount: 'РАСПРОДАЖА',
+                booking: '',
+                title: 'Санаторий AZIMUT Здоровье Аквамарин (РЖД)',
+                location: 'Краснодар',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'kpool',
+                    },
+                    title: 'Крытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'conference',
+                    },
+                    title: 'Конференц-зал'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 725 метров'
+                  },
+                ]
+              }
+            )
+        .swiper-slide
+          +house-card(
+              {
+                className: '',
+                image: {
+                  src: '/assets/images/main-houses/8.png',
+                  alt: 'house-8'
+                },
+                price: '',
+                discount: '',
+                booking: '',
+                title: 'Санаторий Ивушка (РЖД)',
+                location: 'Железноводск',
+                facilities: [
+                  {
+                    icon: {
+                      href: 'swimming-pool',
+                    },
+                    title: 'Открытый бассейн'
+                  },
+                  {
+                    icon: {
+                      href: 'spa',
+                    },
+                    title: 'SPA'
+                  },
+                  {
+                    icon: {
+                      href: 'sea',
+                    },
+                    title: 'До пляжа: 50 метров'
+                  },
+                ]
+              }
+            )
+      .swiper-scrollbar
+        
