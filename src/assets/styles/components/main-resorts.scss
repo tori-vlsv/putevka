@@ -7,15 +7,15 @@
     padding-bottom: 45px;
     background-color: $bg-blue;
   }
-
-  & > .wrapper {
-    &:nth-child(2) {
-      @include max-screen(tablet) {
-        max-width: 100%;
-        padding: 0;
-        width: calc(100% + 40px);
-      }
-    }
+  @include screen(laptop) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
+  }
+  @include screen(desktop) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
   }
 
   &__cards {
@@ -25,6 +25,14 @@
     gap: 5px;
     justify-items: center;
     @include screen(tablet-2x) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    @include screen(laptop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    @include screen(desktop) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
@@ -42,6 +50,18 @@
       grid-template-rows: repeat(1, minmax(0, 1fr));
       gap: 24px;
     }
+    @include screen(laptop) {
+      margin-top: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      gap: 24px;
+    }
+    @include screen(desktop) {
+      margin-top: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      gap: 24px;
+    }
   }
 
   &__buttons {
@@ -51,9 +71,24 @@
     @include screen(tablet-2x) {
       display: none;
     }
+    @include screen(laptop) {
+      display: none;
+    }
+    @include screen(desktop) {
+      display: none;
+    }
     a {
       width: 100%;
       @include screen(tablet) {
+        width: max-content;
+      }
+      @include screen(tablet-2x) {
+        width: max-content;
+      }
+      @include screen(laptop) {
+        width: max-content;
+      }
+      @include screen(desktop) {
         width: max-content;
       }
     }
@@ -65,6 +100,16 @@
     max-height: 246px;
     padding-left: 10px;
     @include screen(tablet-2x) {
+      display: flex;
+      row-gap: 20px;
+      flex-wrap: wrap;
+    }
+    @include screen(laptop) {
+      display: flex;
+      row-gap: 20px;
+      flex-wrap: wrap;
+    }
+    @include screen(desktop) {
       display: flex;
       row-gap: 20px;
       flex-wrap: wrap;
@@ -86,6 +131,14 @@
         }
       }
       @include screen(laptop) {
+        &:hover {
+          color: $orange-500;
+          &:before {
+            background-color: $orange-500;
+          }
+        }
+      }
+      @include screen(desktop) {
         &:hover {
           color: $orange-500;
           &:before {

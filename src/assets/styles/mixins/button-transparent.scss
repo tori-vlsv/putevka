@@ -16,6 +16,13 @@
       }
     }
   }
+  @include screen(desktop) {
+    &:hover {
+      span {
+        color: $orange-500;
+      }
+    }
+  }
   span {
     font-size: 16px;
     font-weight: 600;

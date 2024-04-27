@@ -37,6 +37,10 @@ h2 {
     font-size: 30px;
     line-height: 32px;
   }
+  @include screen(desktop) {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 
 h1, h3, h4, h5, h6 {
@@ -100,9 +104,39 @@ svg {
   padding: 0 #{$container-padding};
   max-width: calc(#{$mobile-wrapper} + #{$container-padding * 2});
   @include screen(tablet) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 #{$container-padding};
     max-width: calc(#{$screen-tablet} + #{$container-padding * 2});
   }
   @include screen(tablet-2x) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 #{$container-padding};
+    max-width: calc(#{$screen-tablet-2x} + #{$container-padding * 2});
+  }
+  @include screen(laptop) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 #{$container-padding};
+    max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
+  }
+  @include screen(desktop) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 #{$container-padding};
+    max-width: calc(#{$screen-desktop} + #{$container-padding * 2});
+  }
+}
+
+.wide-wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+  width: calc(100% + 40px);
+  @include screen(tablet-2x) {
+    width: 100%;
+    padding: 0 #{$container-padding};
     max-width: calc(#{$screen-tablet-2x} + #{$container-padding * 2});
   }
   @include screen(laptop) {

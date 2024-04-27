@@ -8,6 +8,18 @@
     background-color: $bg-blue;
     background-image: none;
   }
+  @include screen(laptop) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
+    background-image: none;
+  }
+  @include screen(desktop) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $bg-blue;
+    background-image: none;
+  }
 
   &__wrapper {
     position: relative;
@@ -20,11 +32,27 @@
       @include screen(tablet-2x) {
         display: none;
       }
+      @include screen(laptop) {
+        display: none;
+      }
+      @include screen(desktop) {
+        display: none;
+      }
     }
     &--laptop {
       display: none;
       gap: 24px;
       @include screen(tablet-2x) {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 1fr 416px;
+      }
+      @include screen(laptop) {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 1fr 416px;
+      }
+      @include screen(desktop) {
         display: grid;
         margin-top: 40px;
         grid-template-columns: 1fr 416px;
@@ -97,6 +125,9 @@
     @include screen(laptop) {
       display: block;
     }
+    @include screen(desktop) {
+      display: block;
+    }
   }
 
   &__name {
@@ -130,6 +161,11 @@
         color: $orange-500;
       }
     }
+    @include screen(desktop) {
+      &:hover {
+        color: $orange-500;
+      }
+    }
   }
 
   &__buttons {
@@ -146,6 +182,18 @@
     left: 50%;
     width: 100%;
     @include screen(tablet) {
+      max-width: 319px;
+      margin: 30px auto 0;
+    }
+    @include screen(tablet-2x) {
+      max-width: 319px;
+      margin: 30px auto 0;
+    }
+    @include screen(laptop) {
+      max-width: 319px;
+      margin: 30px auto 0;
+    }
+    @include screen(desktop) {
       max-width: 319px;
       margin: 30px auto 0;
     }
@@ -181,6 +229,17 @@
       width: max-content;
     }
     @include screen(laptop) {
+      margin-top: 66px;
+      width: max-content;
+      &:hover {
+        span {
+          color: $orange-500;
+        }
+      }
+    }
+    @include screen(desktop) {
+      margin-top: 66px;
+      width: max-content;
       &:hover {
         span {
           color: $orange-500;

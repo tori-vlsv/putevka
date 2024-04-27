@@ -5,8 +5,19 @@
       max-width: 100%;
       padding: 0;
     }
+    
   }
   @include screen(tablet-2x) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: $bg-blue;
+  }
+  @include screen(laptop) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: $bg-blue;
+  }
+  @include screen(desktop) {
     padding-top: 40px;
     padding-bottom: 20px;
     background-color: $bg-blue;
@@ -21,12 +32,35 @@
       justify-content: space-between;
     }
     @include screen(laptop) {
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+    }
+    @include screen(desktop) {
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 30px;
     }
   }
 
   &__blocks {
     @include screen(tablet-2x) {
+      display: grid;
+      grid-template-columns: 306px 1fr 306px;
+      column-gap: 24px;
+    }
+    @include screen(laptop) {
+      display: grid;
+      grid-template-columns: 306px 1fr 306px;
+      column-gap: 24px;
+    }
+    @include screen(desktop) {
       display: grid;
       grid-template-columns: 306px 1fr 306px;
       column-gap: 24px;
@@ -44,6 +78,18 @@
       padding: 0;
       box-shadow: 0px 5px 10px 0px $box-shadow-one;
     }
+    @include screen(laptop) {
+      border-radius: 10px;
+      min-height: 220px;
+      padding: 0;
+      box-shadow: 0px 5px 10px 0px $box-shadow-one;
+    }
+    @include screen(desktop) {
+      border-radius: 10px;
+      min-height: 220px;
+      padding: 0;
+      box-shadow: 0px 5px 10px 0px $box-shadow-one;
+    }
     &:before {
       position: absolute;
       content: '';
@@ -53,6 +99,12 @@
       height: 100%;
       left: -100%;
       @include screen(tablet-2x) {
+        display: none;
+      }
+      @include screen(laptop) {
+        display: none;
+      }
+      @include screen(desktop) {
         display: none;
       }
     }
@@ -67,6 +119,12 @@
       @include screen(tablet-2x) {
         display: none;
       }
+      @include screen(laptop) {
+        display: none;
+      }
+      @include screen(desktop) {
+        display: none;
+      }
     }
     & > a {
       position: absolute; 
@@ -75,10 +133,28 @@
       @include screen(tablet-2x) {
         position: relative;
       }
+      @include screen(laptop) {
+        position: relative;
+      }
+      @include screen(desktop) {
+        position: relative;
+      }
     }
     & > .wrapper {
       position: relative;
       @include screen(tablet-2x) {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      @include screen(laptop) {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      @include screen(desktop) {
         max-width: 100%;
         padding: 0;
         width: 100%;
@@ -112,6 +188,12 @@
       @include screen(tablet-2x) {
         background-color: $white;
       }
+      @include screen(laptop) {
+        background-color: $white;
+      }
+      @include screen(desktop) {
+        background-color: $white;
+      }
     }
   }
 
@@ -121,6 +203,12 @@
     align-items: center;
     justify-content: space-between;
     @include screen(tablet-2x) {
+      align-items: flex-start;
+    }
+    @include screen(laptop) {
+      align-items: flex-start;
+    }
+    @include screen(desktop) {
       align-items: flex-start;
     }
   }
@@ -145,10 +233,13 @@
       }
     }
     @include screen(laptop) {
+      color: $black-400;
       font-size: 20px;
       line-height: 24px;
       max-width: 330px;
-
+      br {
+        display: block;
+      }
     }
   }
 
@@ -167,16 +258,35 @@
       font-weight: 500;
       line-height: 20px;
     }
+    @include screen(laptop) {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    @include screen(desktop) {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
     a {
       font-weight: 700;
       color: $blue-500;
       border-bottom: 1px solid $blue-500;
-      transition: color $transition-default, border-color $transition-default;
       &:active {
         color: $orange-500;
         border-color: $orange-500;
       }
-      @include screen(tablet-2x) {
+      @include screen(laptop) {
+        transition: color $transition-default, border-color $transition-default;
+        &:hover {
+          color: $orange-500;
+          border-color: $orange-500;
+        }
+      }
+      @include screen(desktop) {
+        transition: color $transition-default, border-color $transition-default;
         &:hover {
           color: $orange-500;
           border-color: $orange-500;
@@ -187,16 +297,15 @@
 
   &__arrow {
     margin-left: 10px;
-    transition: background-color $transition-default;
     @include screen(tablet) {
       margin-left: 0;
     }
     svg {
       stroke: $white;
       fill: transparent;
-      transition: stroke $transition-default;
     }
     @include screen(tablet-2x) {
+      margin-left: 0;
       width: 40px;
       min-width: 40px;
       height: 40px;
@@ -208,6 +317,8 @@
         background-color: $blue-500;
         svg {
           stroke: $white;
+          fill: transparent;
+
         }
       }
       svg {
@@ -224,6 +335,70 @@
       }
     }
     @include screen(laptop) {
+      margin-left: 0;
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color $transition-default;
+      &:active {
+        background-color: $blue-500;
+        svg {
+          stroke: $white;
+          fill: transparent;
+        }
+      }
+      svg {
+        stroke: $black;
+        transition: stroke $transition-default;
+      }
+      &--blue {
+        background-color: rgba($color: $blue-300, $alpha: 0.15);
+      }
+      &--orange {
+        background-color: rgba($color: $orange-400, $alpha: 0.15);
+      }
+      &--green {
+        background-color: rgba($color: $green-400, $alpha: 0.15);
+      }
+      &:hover {
+        background-color: $blue-500;
+        svg {
+          stroke: $white;
+        }
+      }
+    }
+    @include screen(desktop) {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color $transition-default;
+      &:active {
+        background-color: $blue-500;
+        svg {
+          transition: stroke $transition-default;
+          stroke: $white;
+        }
+      }
+      svg {
+        stroke: $black;
+      }
+      &--blue {
+        background-color: rgba($color: $blue-300, $alpha: 0.15);
+      }
+      &--orange {
+        background-color: rgba($color: $orange-400, $alpha: 0.15);
+      }
+      &--green {
+        background-color: rgba($color: $green-400, $alpha: 0.15);
+      }
       &:hover {
         background-color: $blue-500;
         svg {
@@ -240,6 +415,12 @@
     @include screen(tablet-2x) {
       display: none;
     }
+    @include screen(laptop) {
+      display: none;
+    }
+    @include screen(desktop) {
+      display: none;
+    }
   }
 
   &__bg {
@@ -249,11 +430,20 @@
     @include screen(tablet-2x) {
       right: 0;
     }
+    @include screen(laptop) {
+      right: 0;
+    }
+    @include screen(desktop) {
+      right: 0;
+    }
   }
 
   &__list {
     gap: 4px;
     @include screen(laptop) {
+      gap: 10px;
+    }
+    @include screen(desktop) {
       gap: 10px;
     }
   }
