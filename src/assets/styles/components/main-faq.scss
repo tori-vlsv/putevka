@@ -1,66 +1,29 @@
 .main-faq {
   overflow: hidden;
-  & > .wrapper {
-    @include max-screen(tablet-2x) {
-      max-width: 100%;
-      padding: 0;
-    }
-    
-  }
-  @include screen(tablet-2x) {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    background-color: $bg-blue;
-  }
-  @include screen(laptop) {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    background-color: $bg-blue;
-  }
-  @include screen(desktop) {
+  @include min-screen(tablet-2x) {
     padding-top: 40px;
     padding-bottom: 20px;
     background-color: $bg-blue;
   }
 
   &__container {
-    @include screen(tablet-2x) {
-      padding: 20px;
+    position: relative;
+    @include min-screen(tablet-2x) {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    @include screen(laptop) {
+    @include mm-screen(tablet-2x) {
       padding: 20px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 30px;
     }
-    @include screen(desktop) {
-      padding: 20px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    @include min-screen(laptop) {
       padding: 30px;
     }
   }
 
   &__blocks {
-    @include screen(tablet-2x) {
-      display: grid;
-      grid-template-columns: 306px 1fr 306px;
-      column-gap: 24px;
-    }
-    @include screen(laptop) {
-      display: grid;
-      grid-template-columns: 306px 1fr 306px;
-      column-gap: 24px;
-    }
-    @include screen(desktop) {
+    @include min-screen(tablet-2x) {
       display: grid;
       grid-template-columns: 306px 1fr 306px;
       column-gap: 24px;
@@ -70,21 +33,9 @@
   &__block {
     padding: 18px 0;
     position: relative;
-    display: block;
+    display: flex;
     overflow: hidden;
-    @include screen(tablet-2x) {
-      border-radius: 10px;
-      min-height: 220px;
-      padding: 0;
-      box-shadow: 0px 5px 10px 0px $box-shadow-one;
-    }
-    @include screen(laptop) {
-      border-radius: 10px;
-      min-height: 220px;
-      padding: 0;
-      box-shadow: 0px 5px 10px 0px $box-shadow-one;
-    }
-    @include screen(desktop) {
+    @include min-screen(tablet-2x) {
       border-radius: 10px;
       min-height: 220px;
       padding: 0;
@@ -98,13 +49,7 @@
       width: 100%;
       height: 100%;
       left: -100%;
-      @include screen(tablet-2x) {
-        display: none;
-      }
-      @include screen(laptop) {
-        display: none;
-      }
-      @include screen(desktop) {
+      @include min-screen(tablet-2x) {
         display: none;
       }
     }
@@ -116,13 +61,7 @@
       width: 100%;
       height: 100%;
       right: -100%;
-      @include screen(tablet-2x) {
-        display: none;
-      }
-      @include screen(laptop) {
-        display: none;
-      }
-      @include screen(desktop) {
+      @include min-screen(tablet-2x) {
         display: none;
       }
     }
@@ -130,42 +69,15 @@
       position: absolute; 
       inset: 0;
       z-index: 1;
-      @include screen(tablet-2x) {
-        position: relative;
-      }
-      @include screen(laptop) {
-        position: relative;
-      }
-      @include screen(desktop) {
+      @include min-screen(tablet-2x) {
         position: relative;
       }
     }
-    & > .wrapper {
-      position: relative;
-      @include screen(tablet-2x) {
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-      @include screen(laptop) {
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-      @include screen(desktop) {
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &--cian {
-      background-color: $cian-400;
+    &--cyan {
+      background-color: $cyan-400;
       &:before,
       &:after {
-        background-color: $cian-400;
+        background-color: $cyan-400;
       }
     }
     &--blue {
@@ -182,16 +94,10 @@
         background-color: $green-400;
       }
     }
-    &--cian,
+    &--cyan,
     &--blue,
     &--green {
-      @include screen(tablet-2x) {
-        background-color: $white;
-      }
-      @include screen(laptop) {
-        background-color: $white;
-      }
-      @include screen(desktop) {
+      @include min-screen(tablet-2x) {
         background-color: $white;
       }
     }
@@ -202,13 +108,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       align-items: flex-start;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       align-items: flex-start;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       align-items: flex-start;
     }
   }
@@ -220,19 +126,19 @@
     line-height: 18px;
     text-align: left;
     color: $white;
-    @include screen(tablet) {
+    @include min-screen(tablet) {
       max-width: 500px;
       br {
         display: none;
       }
     }
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       color: $black-400;
       br {
         display: block;
       }
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       color: $black-400;
       font-size: 20px;
       line-height: 24px;
@@ -252,19 +158,19 @@
   &__description {
     display: none;
     position: relative;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       display: block;
       font-size: 16px;
       font-weight: 500;
       line-height: 20px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       display: block;
       font-size: 16px;
       font-weight: 500;
       line-height: 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       display: block;
       font-size: 16px;
       font-weight: 500;
@@ -278,14 +184,14 @@
         color: $orange-500;
         border-color: $orange-500;
       }
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         transition: color $transition-default, border-color $transition-default;
         &:hover {
           color: $orange-500;
           border-color: $orange-500;
         }
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         transition: color $transition-default, border-color $transition-default;
         &:hover {
           color: $orange-500;
@@ -297,14 +203,14 @@
 
   &__arrow {
     margin-left: 10px;
-    @include screen(tablet) {
+    @include min-screen(tablet) {
       margin-left: 0;
     }
     svg {
       stroke: $white;
       fill: transparent;
     }
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       margin-left: 0;
       width: 40px;
       min-width: 40px;
@@ -334,7 +240,7 @@
         background-color: rgba($color: $green-400, $alpha: 0.15);
       }
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       margin-left: 0;
       width: 40px;
       min-width: 40px;
@@ -371,7 +277,7 @@
         }
       }
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       width: 40px;
       min-width: 40px;
       height: 40px;
@@ -412,13 +318,13 @@
     fill: transparent;
     stroke: $white;
     min-width: 32px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       display: none;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       display: none;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       display: none;
     }
   }
@@ -427,23 +333,23 @@
     position: absolute;
     right: -20px;
     bottom: 0;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       right: 0;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       right: 0;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       right: 0;
     }
   }
 
   &__list {
     gap: 4px;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       gap: 10px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       gap: 10px;
     }
   }

@@ -5,18 +5,18 @@
   padding: 11px;
   justify-content: center;
   border-radius: 8px;
-  @include screen(tablet) {
+  @include min-screen(tablet) {
     padding: 11px 86px;
     max-width: max-content;
   }
-  @include screen(laptop) {
+  @include min-screen(laptop) {
     &:hover {
       span {
         color: $orange-500;
       }
     }
   }
-  @include screen(desktop) {
+  @include min-screen(desktop) {
     &:hover {
       span {
         color: $orange-500;

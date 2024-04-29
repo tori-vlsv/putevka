@@ -31,13 +31,11 @@ h2 {
   font-family: "Panton";
   font-weight: 400;
   text-align: left;
-  font-size: 24px;
-  line-height: 28px;
-  @include screen(laptop) {
-    font-size: 30px;
-    line-height: 32px;
+  @include max-screen(tablet-2x) {
+    font-size: 24px;
+    line-height: 28px;
   }
-  @include screen(desktop) {
+  @include min-screen(laptop) {
     font-size: 30px;
     line-height: 32px;
   }
@@ -47,7 +45,7 @@ h1, h3, h4, h5, h6 {
   font-family: "Panton";
 }
 
-ul {
+.list {
   list-style-position: inside;
   display: flex;
   flex-direction: column;
@@ -103,46 +101,52 @@ svg {
   width: 100%;
   padding: 0 #{$container-padding};
   max-width: calc(#{$mobile-wrapper} + #{$container-padding * 2});
-  @include screen(tablet) {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 #{$container-padding};
+  @include min-screen(tablet) {
     max-width: calc(#{$screen-tablet} + #{$container-padding * 2});
   }
-  @include screen(tablet-2x) {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 #{$container-padding};
+  @include min-screen(tablet-2x) {
     max-width: calc(#{$screen-tablet-2x} + #{$container-padding * 2});
   }
-  @include screen(laptop) {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 #{$container-padding};
+  @include min-screen(laptop) {
     max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
   }
-  @include screen(desktop) {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 #{$container-padding};
+  @include min-screen(desktop) {
     max-width: calc(#{$screen-desktop} + #{$container-padding * 2});
   }
 }
 
 .wide-wrapper {
   margin: 0 auto;
-  max-width: 100%;
-  padding: 0;
-  width: calc(100% + 40px);
-  @include screen(tablet-2x) {
-    width: 100%;
+  @include min-screen(tablet-2x) {
     padding: 0 #{$container-padding};
+  }
+  @include mm-screen(tablet-2x) {
     max-width: calc(#{$screen-tablet-2x} + #{$container-padding * 2});
   }
-  @include screen(laptop) {
+  @include mm-screen(laptop) {
     max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
   }
-  @include screen(desktop) {
+  @include min-screen(desktop) {
+    max-width: calc(#{$screen-desktop} + #{$container-padding * 2});
+  }
+}
+
+.inner-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  @include max-screen(mobile) {
+    max-width: calc(#{$mobile-wrapper} + #{$container-padding * 2});
+  }
+  @include mm-screen(tablet) {
+    max-width: calc(#{$screen-tablet} + #{$container-padding * 2});
+  }
+  @include max-screen(tablet) {
+    padding: 0 #{$container-padding};
+  }
+  @include mm-screen(laptop) {
+    max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
+  }
+  @include min-screen(desktop) {
     max-width: calc(#{$screen-desktop} + #{$container-padding * 2});
   }
 }

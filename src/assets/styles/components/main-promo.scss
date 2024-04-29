@@ -1,17 +1,17 @@
 .main-promo {
   padding-top: 20px;
   padding-bottom: 30px;
-  @include screen(tablet-2x) {
+  @include min-screen(tablet-2x) {
     padding-top: 20px;
     padding-bottom: 45px;
     background-color: $bg-blue;
   }
-  @include screen(laptop) {
+  @include min-screen(laptop) {
     padding-top: 20px;
     padding-bottom: 45px;
     background-color: $bg-blue;
   }
-  @include screen(desktop) {
+  @include min-screen(desktop) {
     padding-top: 20px;
     padding-bottom: 45px;
     background-color: $bg-blue;
@@ -27,15 +27,15 @@
     overflow: hidden;
     position: relative;
     height: 230px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       border-radius: 0;
       height: 300px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       border-radius: 0;
       height: 300px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       border-radius: 0;
       height: 300px;
     }
@@ -78,13 +78,13 @@
     background-color: $orange-500;
     border-radius: 6px;
     padding: 8.5px 16px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       padding: 10.5px 20px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       padding: 10.5px 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       padding: 10.5px 20px;
     }
     span {
@@ -99,15 +99,15 @@
   &__picture {
     height: 50px;
     width: 49px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       width: 68px;
       height: 70px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       width: 68px;
       height: 70px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       width: 68px;
       height: 70px;
     }
@@ -123,13 +123,13 @@
     background-color: $white;
     border-radius: 7px;
     max-width: max-content;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       padding: 10.5px 20px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       padding: 10.5px 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       padding: 10.5px 20px;
     }
     span {
@@ -147,13 +147,13 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px 20px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       padding: 30px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       padding: 30px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       padding: 30px;
     }
   }
@@ -164,12 +164,12 @@
     line-height: 24px;
     letter-spacing: -0.01em;
     color: $white;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       font-size: 30px;
       line-height: 30px;
       letter-spacing: -0.02em;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       font-size: 30px;
       line-height: 30px;
       letter-spacing: -0.02em;
@@ -187,17 +187,17 @@
     font-weight: 600;
     line-height: 18px;
     color: $white;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       margin-top: 20px;
       font-size: 16px;
       line-height: 20px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       margin-top: 20px;
       font-size: 16px;
       line-height: 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       margin-top: 20px;
       font-size: 16px;
       line-height: 20px;
@@ -211,27 +211,27 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       display: none;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       display: none;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       display: none;
     }
     a {
       width: 100%;
-      @include screen(tablet) {
+      @include min-screen(tablet) {
         width: max-content;
       }
-      @include screen(tablet-2x) {
+      @include min-screen(tablet-2x) {
         width: max-content;
       }
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         width: max-content;
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         width: max-content;
       }
     }
@@ -265,12 +265,12 @@
             stroke: $white;
           }
         }
-        @include screen(tablet-2x) {
+        @include min-screen(tablet-2x) {
           display: flex;
           align-items: center;
           justify-content: center;
         }
-        @include screen(laptop) {
+        @include min-screen(laptop) {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -281,7 +281,7 @@
             }
           }
         }
-        @include screen(desktop) {
+        @include min-screen(desktop) {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -296,20 +296,20 @@
       &-prev {
         transform: rotate(180deg);
         left: -10px;
-        @include screen(laptop) {
+        @include min-screen(laptop) {
           left: -20px;
         }
-        @include screen(desktop) {
+        @include min-screen(desktop) {
           left: -20px;
         }
 
       }
       &-next {
         right: -10px;
-        @include screen(laptop) {
+        @include min-screen(laptop) {
           right: -20px;
         }
-        @include screen(desktop) {
+        @include min-screen(desktop) {
           right: -20px;
         }
       }

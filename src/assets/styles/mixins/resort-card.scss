@@ -3,17 +3,17 @@
   width: 100%;
   height: 100%;
   aspect-ratio: 4 / 2.67;
-  @include screen(tablet-2x) {
+  @include min-screen(tablet-2x) {
     aspect-ratio: 1 / 1;
     border-radius: 10px;
     overflow: hidden;
   }
-  @include screen(laptop) {
+  @include min-screen(laptop) {
     aspect-ratio: 1 / 1;
     border-radius: 10px;
     overflow: hidden;
   }
-  @include screen(desktop) {
+  @include min-screen(desktop) {
     aspect-ratio: 1 / 1;
     border-radius: 10px;
     overflow: hidden;
@@ -23,11 +23,11 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       top: 30px;
       left: 30px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       top: 30px;
       left: 30px;
     }
@@ -59,10 +59,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       padding: 30px 70px 30px 30px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       padding: 30px 70px 30px 30px;
     }
 
@@ -96,11 +96,11 @@
     color: $white;
     display: inline-block;
     transition: color $transition-default;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       font-size: 24px;
       line-height: 24px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       font-size: 24px;
       line-height: 24px;
     }
@@ -113,14 +113,14 @@
         color: $orange-500;
       }
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       &:hover {
         .resort-card__title {
           color: $orange-500;
         }
       }
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       &:hover {
         .resort-card__title {
           color: $orange-500;
@@ -135,10 +135,10 @@
     flex-wrap: wrap;
     row-gap: 14px;
     column-gap: 20px;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       margin-top: 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       margin-top: 20px;
     }
   }
@@ -152,7 +152,7 @@
     &:active {
       color: $orange-500;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       font-size: 18px;
       font-weight: 500;
       line-height: 18px;
@@ -160,7 +160,7 @@
         color: $orange-500;
       }
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       font-size: 18px;
       font-weight: 500;
       line-height: 18px;
@@ -172,40 +172,40 @@
 
   &--mini {
     min-height: 120px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       min-height: 200px;
       aspect-ratio: auto;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       min-height: 200px;
       aspect-ratio: auto;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       min-height: 200px;
       aspect-ratio: auto;
     }
     .resort-card {
       &__container {
         padding: 20px;
-        @include screen(laptop) {
+        @include min-screen(laptop) {
           padding: 30px;
         }
-        @include screen(desktop) {
+        @include min-screen(desktop) {
           padding: 30px;
         }
       }
       &__cost {
         display: none;
-        @include screen(tablet) {
+        @include min-screen(tablet) {
           display: inline-block;
         }
-        @include screen(tablet-2x) {
+        @include min-screen(tablet-2x) {
           display: inline-block;
         }
-        @include screen(laptop) {
+        @include min-screen(laptop) {
           display: inline-block;
         }
-        @include screen(desktop) {
+        @include min-screen(desktop) {
           display: inline-block;
         }
       }

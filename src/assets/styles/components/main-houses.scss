@@ -1,17 +1,17 @@
 .main-houses {
   padding-top: 60px;
   padding-bottom: 40px;
-  @include screen(tablet-2x) {
+  @include min-screen(tablet-2x) {
     background-color: $white;
     padding-top: 90px;
     padding-top: 60px;
   }
-  @include screen(laptop) {
+  @include min-screen(laptop) {
     background-color: $white;
     padding-top: 90px;
     padding-top: 60px;
   } 
-  @include screen(desktop) {
+  @include min-screen(desktop) {
     background-color: $white;
     padding-top: 90px;
     padding-top: 60px;
@@ -23,11 +23,11 @@
     font-weight: 400;
     line-height: 24px;
     color: $black-300;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       font-size: 16px;
       line-height: 20px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       font-size: 16px;
       line-height: 20px;
     }
@@ -38,14 +38,14 @@
       margin-top: 30px;
       padding: 0 20px;
 
-      @include screen(tablet-2x) {
+      @include min-screen(tablet-2x) {
         padding: 0;
       }
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         padding: 0;
         margin-top: 40px;
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         padding: 0;
         margin-top: 40px;
       }
@@ -68,13 +68,16 @@
       white-space: nowrap;
       transition: color $transition-default;
     }
-    @include screen(laptop) {
+    &:active {
+      border-color: $orange-500;
+    }
+    @include min-screen(laptop) {
       &:hover {
         border-color: $orange-500;
       }
       padding: 10px 16px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       &:hover {
         border-color: $orange-500;
       }
@@ -93,20 +96,20 @@
     margin-top: 30px;
     padding-left: 20px;
     padding-bottom: 20px;
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       padding-left: 0;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       padding-left: 0;
     }
   }
   .swiper {
     &-scrollbar {
       background-color: #EEF3FB;
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         display: none;
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         display: none;
       }
       &-drag {

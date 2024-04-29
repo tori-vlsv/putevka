@@ -2,17 +2,17 @@
   padding-top: 30px;
   padding-bottom: 30px;
   overflow: hidden;
-  @include screen(tablet-2x) {
+  @include min-screen(tablet-2x) {
     padding-top: 45px;
     padding-bottom: 45px;
     background-color: $bg-blue;
   }
-  @include screen(laptop) {
+  @include min-screen(laptop) {
     padding-top: 45px;
     padding-bottom: 45px;
     background-color: $bg-blue;
   }
-  @include screen(desktop) {
+  @include min-screen(desktop) {
     padding-top: 45px;
     padding-bottom: 45px;
     background-color: $bg-blue;
@@ -24,15 +24,15 @@
     grid-template-columns: 1fr;
     gap: 5px;
     justify-items: center;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
@@ -44,19 +44,19 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 5px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       margin-top: 24px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
       gap: 24px;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       margin-top: 24px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
       gap: 24px;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       margin-top: 24px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -68,27 +68,27 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       display: none;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       display: none;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       display: none;
     }
     a {
       width: 100%;
-      @include screen(tablet) {
+      @include min-screen(tablet) {
         width: max-content;
       }
-      @include screen(tablet-2x) {
+      @include min-screen(tablet-2x) {
         width: max-content;
       }
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         width: max-content;
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         width: max-content;
       }
     }
@@ -99,17 +99,17 @@
     margin-top: 50px;
     max-height: 246px;
     padding-left: 10px;
-    @include screen(tablet-2x) {
+    @include min-screen(tablet-2x) {
       display: flex;
       row-gap: 20px;
       flex-wrap: wrap;
     }
-    @include screen(laptop) {
+    @include min-screen(laptop) {
       display: flex;
       row-gap: 20px;
       flex-wrap: wrap;
     }
-    @include screen(desktop) {
+    @include min-screen(desktop) {
       display: flex;
       row-gap: 20px;
       flex-wrap: wrap;
@@ -130,7 +130,7 @@
           background-color: $orange-500;
         }
       }
-      @include screen(laptop) {
+      @include min-screen(laptop) {
         &:hover {
           color: $orange-500;
           &:before {
@@ -138,7 +138,7 @@
           }
         }
       }
-      @include screen(desktop) {
+      @include min-screen(desktop) {
         &:hover {
           color: $orange-500;
           &:before {
