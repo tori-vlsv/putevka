@@ -1,0 +1,230 @@
+.about-video {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include max-screen(mobile) {
+    background-image: url("/assets/images/about-video/bg.svg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+  @include max-screen(tablet) {
+    padding-top: 50px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__media {
+    width: auto;
+    @include max-screen(tablet) {
+      height: 280px;
+      margin-left: 5%;
+    }
+    @include mm-screen(tablet) {
+      height: 495px;
+    }
+    @include mm-screen(tablet-2x) {
+      height: 400px;
+    }
+    @include max-screen(tablet-2x) {
+      position: relative;
+    }
+    @include min-screen(laptop) {
+      height: 495px;
+      position: absolute;
+      z-index: 2;
+      top: -125px;
+      right: 0;
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 20px 30px 0px #194A6633;
+      stroke: transparent;
+      border-radius: 50%;
+      fill: $orange-500;
+      fill-opacity: 0.75;
+      @include max-screen(tablet) {
+        width: 70px;
+        height: 70px;
+      }
+      @include min-screen(tablet-2x) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    button {
+      &:active {
+        svg {
+          fill-opacity: 1;
+        }
+      }
+      @include min-screen(laptop) {
+        svg {
+          transition: fill-opacity $transition-default;
+        }
+        &:hover {
+          svg {
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__bg {
+    mask: url("/assets/images/about-video/mask.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    width: 100%;
+    height: 100%;
+    // box-shadow: 30px 35px 90px 0px #64749A66;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    @include mm-screen(tablet-2x) {
+      max-width: 610px;
+    }
+    @include min-screen(laptop) {
+      max-width: 636px;
+    }
+    &:before {
+      position: absolute;
+      content: url("/assets/images/about-video/arrow-1.svg");
+      width: 62px;
+      height: 74px;
+      bottom: -65px;
+      @include max-screen(mobile) {
+        right: 35px;
+      }
+      @include max-screen(tablet) {
+        display: block;
+      }
+      @include mm-screen(tablet) {
+        right: 202px;
+      }
+      @include min-screen(tablet-2x) {
+        display: none;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: url("/assets/images/about-video/arrow-2.svg");
+      width: 149px;
+      height: 29px;
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+        display: block;
+      }
+      @include mm-screen(tablet-2x) {
+        right: -5px;
+        bottom: 35px;
+      }
+      @include min-screen(laptop) {
+        right: -39px;
+        bottom: 17px;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    @include max-screen(tablet) {
+      gap: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+    }
+    svg {
+      stroke: transparent;
+      @include max-screen(tablet) {
+        width: 40px;
+        height: 40px;
+      }
+      @include min-screen(tablet-2x) {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    span {
+      font-family: 'Panton';
+      font-weight: 600;
+      color: $gray-400;
+      @include max-screen(tablet) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    color: $black-400;
+    @include max-screen(tablet) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 25px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__text {
+    margin-top: 50px;
+    font-weight: 400;
+    @include max-screen(tablet) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include mm-screen(tablet) {
+      text-align: center;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    span {
+      font-weight: 700;
+      @include max-screen(tablet) {
+        display: block;
+      }
+    }
+  }
+}

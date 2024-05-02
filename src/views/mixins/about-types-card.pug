@@ -1,0 +1,11 @@
+mixin about-types-card(data)
+  .about-types-card(class="" + data.color)
+    .about-types-card__content
+      h3.about-types-card__title= data.title
+      p.about-types-card__text= data.text
+      a.about-types-card__link(href="" +data.link.src)= data.link.name
+    .about-types-card__icon
+      svg(width="80" height="80" viewBox="0 0 80 80")
+        use(xlink:href="#svg-" + data.icon)
+      
+

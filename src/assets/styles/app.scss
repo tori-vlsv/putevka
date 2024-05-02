@@ -20,16 +20,20 @@
 @import "./mixins/button-transparent";
 @import "./mixins/resort-card";
 @import "./mixins/house-card";
+@import "./mixins/about-types-card";
 
 /*
   Компоненты
 */
-@import "./components/main-faq";
-@import "./components/main-promo";
-@import "./components/main-resorts";
-@import "./components/main-procedures";
-@import "./components/main-about";
-@import "./components/main-houses";
+@import "./components/main/main-faq";
+@import "./components/main/main-promo";
+@import "./components/main/main-resorts";
+@import "./components/main/main-procedures";
+@import "./components/main/main-about";
+@import "./components/main/main-houses";
+
+@import "./components/about/about-video";
+@import "./components/about/about-types";
 
 
 
