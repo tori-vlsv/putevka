@@ -14,13 +14,18 @@
 
   &:before {
     position: absolute;
-    content: url("/assets/images/about-types/bg-mob.svg");
-    // bottom: -7px;
-    // right: 0;
-    width: 100px;
-    right: 0;
-    top: -55px;
     z-index: -1;
+    @include max-screen(mobile) {
+      content: url("/assets/images/about-types/bg-mob.svg");
+      width: 100px;
+      right: 0;
+      top: -55px;
+    }
+    @include min-screen(tablet-2x) {
+      content: url("/assets/images/about-types/bg.svg");
+      top: -187px;
+      right: 0;
+    }
   }
 
   &__title {
@@ -34,6 +39,11 @@
     @include min-screen(tablet-2x) {
       font-size: 40px;
       line-height: 40px;
+    }
+    br {
+      @include min-screen(tablet) {
+        display: none;
+      }
     }
   }
 

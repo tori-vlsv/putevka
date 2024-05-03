@@ -1,0 +1,35 @@
+section.about-team
+  .about-team__bg
+    picture
+      source(
+        srcset="/assets/images/about-team/team.png" 
+        media="(min-width: 1024px)") 
+      img(src="/assets/images/about-team/team-mob.png" alt="bg-team" loading="lazy")
+  .wrapper
+    .about-team__wrapper
+      h2.about-team__title Команда «Путевки»: <br> Более 120 профессионалов
+      .about-team__cards
+        +about-team-card(
+          {
+            icon: 'users',
+            title: 'Более 80 экспертов по санаторно-курортному отдыху и туризму',
+            titleSize: '',
+            text: 'Каждый менеджер компании Путевка проходит регулярное обучение, посещает рекламные туры и мы гарантируем точность предоставляемой информации.'
+          }
+        )
+        +about-team-card(
+          {
+            icon: 'stethoscope',
+            title: '<span>У нас в штате есть медицинские специалисты и консультанты.</span>',
+            titleSize: 'about-team-card__title--small',
+            text: 'Они контролируют всю информацию по лечению, процедурам и сложным медицинским запросам от клиентов.'
+          }
+        )
+        +about-team-card(
+          {
+            icon: 'brackets-curly',
+            title: '<span>Большая IT-команда Путевки</span> занимается разработкой и постоянным улучшением нашего сайта и мобильных приложений.',
+            titleSize: 'about-team-card__title--small',
+            text: 'Вы получаете лучший туристический продукт!'
+          }
+        )

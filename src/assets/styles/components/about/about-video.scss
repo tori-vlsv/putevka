@@ -1,7 +1,6 @@
 .about-video {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   @include max-screen(mobile) {
     background-image: url("/assets/images/about-video/bg.svg");
     background-position: left bottom;

@@ -1,0 +1,8 @@
+mixin about-team-card(data)
+  .about-team-card
+    svg.about-team-card__icon(width="48" height="48" viewBox="0 0 48 48")
+        use(xlink:href="#svg-" + data.icon)
+    h3.about-team-card__title(class="" + data.titleSize) !{ data.title }
+    p.about-team-card__text !{ data.text }
+      
+

@@ -21,6 +21,7 @@
 @import "./mixins/resort-card";
 @import "./mixins/house-card";
 @import "./mixins/about-types-card";
+@import "./mixins/about-team-card";
 
 /*
   Компоненты
@@ -34,7 +35,4 @@
 
 @import "./components/about/about-video";
 @import "./components/about/about-types";
-
-
-
-
+@import "./components/about/about-team";
