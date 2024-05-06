@@ -35,7 +35,7 @@ function aboutHistorySlider() {
                   <use xlink:href="#svg-point"></use>
                 </svg>
               </div>
-              <div class="about-history__year">${years[index]}</div>
+              <button type="button" aria-label="Year" class="about-history__year">${years[index]}</button>
             </div>
             <div class="about-history__text">${titles[index]}</div>
           </div>

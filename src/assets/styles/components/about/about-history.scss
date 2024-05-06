@@ -1,12 +1,10 @@
 .about-history {
   overflow: hidden;
-
   @include max-screen(tablet) {
     padding: 30px 0;
   }
   @include min-screen(tablet-2x) {
     padding: 45px 0;
-
   }
 
   &__wrapper {
@@ -29,16 +27,18 @@
   &__tabs {
     margin-top: 60px;
     display: flex;
-    position: relative;
-    gap: 24px;
     @include max-screen(tablet) {
       overflow-x: auto;
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
     }
     &:before {
       position: absolute;
       content: '';
-      border: 1px dashed #2768C933;
-      width: 100px;
+      border: 1px dashed rgba($color: $blue-700, $alpha: 0.2);
+      width: 100%;
       top: 6px;
       left: 88%;
       height: 1px;
@@ -47,6 +47,9 @@
       }
       @include min-screen(tablet-2x) {
         display: block;
+      }
+      @include min-screen(desktop) {
+        left: 86%;
       }
     }
   }
@@ -75,7 +78,7 @@
   &__icon {
     position: relative;
     svg {
-      stroke: #2768C9;
+      stroke: $blue-700;
       fill: $white;
       stroke-opacity: 0.2;
       transition: stroke $transition-default, stroke-opacity $transition-default;
@@ -93,6 +96,16 @@
     padding: 4px 10px;
     max-width: max-content;
     transition: color $transition-default, background-color $transition-default;
+    &:active {
+      color: $white;
+      background-color: $orange-500;
+    }
+    @include min-screen(tablet-2x) {
+      &:hover {
+        color: $white;
+        background-color: $orange-500;
+      }
+    }
   }
 
   &__text {
@@ -202,8 +215,13 @@
         left: 30px;
         right: 0;
         background-color: rgba($color: $blue-700, $alpha: 0.2) ;
-        width: 119%;
         height: 2px;
+        @include max-screen(tablet) {
+          width: 128%;
+        }
+        @include min-screen(tablet-2x) {
+          width: 119%;
+        }
       }
       &:last-child {
         &:before {
@@ -220,7 +238,7 @@
           svg {
             stroke: $orange-500;
             stroke-opacity: 1;
-            opacity: 1;
+            // opacity: 1;
           }
         }
       }
@@ -237,7 +255,7 @@
   &__navigation {
     position: absolute;
     z-index: 2;
-    background-color: rgba($color: #F2F4F8, $alpha: 0.15);
+    background-color: rgba($color: $white-100, $alpha: 0.15);
     border-radius: 50px;
     height: 40px;
     display: flex;
@@ -267,6 +285,12 @@
         justify-content: center;
         border-radius: 50px;
         background-color: $white;
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
         @include min-screen(laptop) {
           transition: background-color $transition-default;
           svg {
@@ -298,9 +322,9 @@
         right: 0;
       }
       &-disabled {
-        background-color: #FFFFFF1A;
+        background-color: rgba($color: $white, $alpha: 0.1);
         svg {
-          stroke: #FFFFFF40;
+          stroke: rgba($color: $white, $alpha: 0.25);
         }
       }
     }
