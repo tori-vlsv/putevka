@@ -10,3 +10,5 @@ import "./base/common/get-header-height";
 import "./components/mainPromoSlider";
 import "./components/mainHousesSlider";
 import "./components/mainTabsSlider";
+import "./components/aboutHistorySlider";
+
