@@ -1,0 +1,251 @@
+.about-media {
+  overflow: hidden;
+  @include max-screen(tablet) {
+    padding: 30px 0;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 45px 0;
+  }
+
+  &__title {
+    color: $black-400;
+    font-weight: 400;
+    @include max-screen(tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @include min-screen(tablet-2x) {
+      line-height: 40px;
+      font-size: 40px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__button {
+    border-radius: 8px;
+    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include max-screen(tablet) {
+      padding: 6px 10px;
+
+    }
+    @include min-screen(tablet-2x) {
+      padding: 11px 20px;
+      &:hover {
+        span {
+          color: $orange-500;
+        }
+      }
+    }
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $blue-500;
+      transition: color $transition-default;
+      &:active {
+        color: $orange-500;
+      }
+    }
+  }
+
+  &__slider.swiper {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    @include max-screen(tablet) {
+      overflow: visible;
+    }
+    @include min-screen(tablet-2x) {
+      overflow: hidden;
+    }
+    .swiper {
+      &-wrapper {
+        align-items: stretch;
+      }
+      &-slide {
+        height: auto;
+      }
+    }
+  }
+
+  &__card {
+    border-radius: 10px;
+    background-color: $white-100;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    color: $black-400;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @include max-screen(tablet) {
+      line-height: 18px;
+      font-size: 16px;
+      margin-top: 30px;
+      -webkit-line-clamp: 3;
+    }
+    @include min-screen(tablet-2x) {
+      line-height: 24px;
+      font-size: 18px;
+      margin-top: 40px;
+      -webkit-line-clamp: 2;
+
+      
+    }
+    a {
+      &:active {
+        color: $orange-500;
+      }
+      @include min-screen(tablet-2x) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+
+    }
+  }
+
+  &__text {
+    color: $black-300;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @include max-screen(tablet) {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 16px;
+      -webkit-line-clamp: 6;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 20px;
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 18px;
+    color: $blue-500;
+    &:active {
+      color: $orange-500;
+    }
+    @include max-screen(tablet) {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 30px;
+      font-size: 18px;
+      transition: color $transition-default;
+      &:hover {
+        color: $orange-500;
+      }
+    }
+  }
+
+  .swiper-scrollbar {
+    background-color: rgba($color: $blue-700, $alpha: 0.07);
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+    &-drag {
+      background-color: rgba($color: $blue-700, $alpha: 0.15)
+    }
+  }
+  .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  } 
+
+  &__navigation {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    @include max-screen(tablet) {
+      display: none;
+    }
+    @include min-screen(tablet-2x) {
+      display: block;
+    }
+    .swiper-button {
+      &-next, 
+      &-prev {
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: $white;
+        box-shadow: 0px 5px 15px 0px #4B6AA626, 0px 1px 4px 0px #14448B0D;
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
+        @include min-screen(laptop) {
+          transition: background-color $transition-default;
+          svg {
+            transition: stroke $transition-default;
+          }
+          &:hover {
+            background-color: $blue-500;
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+        svg {
+          width: 10px;
+          height: 16px;
+          fill: transparent;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &-prev {
+        left: 0;
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &-next {
+        right: 0;
+      }
+      &-disabled {
+        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        svg {
+          stroke: rgba($color: $blue-500, $alpha: 0.25);
+        }
+      }
+    }
+  }
+}

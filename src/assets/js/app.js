@@ -11,4 +11,6 @@ import "./components/mainPromoSlider";
 import "./components/mainHousesSlider";
 import "./components/mainTabsSlider";
 import "./components/aboutHistorySlider";
+import "./components/aboutMediaSlider";
+
 

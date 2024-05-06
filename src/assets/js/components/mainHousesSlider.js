@@ -29,7 +29,6 @@ function mainHousesSlider() {
         grid: {
           fill: 'row',
           rows: 2,
-          // column: 4,
         },
       }
     }
