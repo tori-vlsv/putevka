@@ -1,0 +1,179 @@
+.about-gratitude {
+  overflow: hidden;
+  background-color: $bg-blue-200;
+  @include max-screen(tablet) {
+    padding: 50px 0;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 80px 0 64px;
+  }
+
+  &__wrapper {
+    @include min-screen(tablet-2x) {
+      display: flex;
+      gap: 64px;
+      flex-direction: row;
+    }
+  }
+
+  &__slider.swiper {
+    @include max-screen(tablet) {
+      overflow: visible;
+      margin-top: 40px;
+      padding-bottom: 20px;
+
+    }
+    @include min-screen(tablet-2x) {
+      overflow: hidden;
+      margin-top: 0;
+      max-width: 768px;
+    }
+    .swiper {
+      &-wrapper {
+        align-items: stretch;
+      }
+      &-slide {
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+    @include max-screen(tablet) {
+
+    }
+    @include min-screen(tablet-2x) {
+      width: 464px;
+    }
+  }
+
+  &__title {
+    color: $black-400;
+    @include max-screen(tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+  &__text {
+    color: $black-300;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 40px;
+    }
+  }
+
+  &__img {
+    border-radius: 8px;
+    background-color: $white;
+    box-shadow: 0px 5px 20px 0px #26314105, 0px 1px 3px 1px #2631410D;
+    @include max-screen(tablet) {
+      padding: 10px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 20px;
+    }
+  }
+
+  &__name {
+    color: $gray-400;
+    margin-top: 10px;
+    @include max-screen(tablet) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+    @include min-screen(tablet-2x) {
+      text-align: center;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__navigation {
+    margin-top: 64px;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    @include max-screen(tablet) {
+      display: none;
+    }
+    @include min-screen(tablet-2x) {
+      display: block;
+    }
+    .swiper-button {
+      &-next, 
+      &-prev {
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: $white;
+        box-shadow: 0px 5px 15px 0px #4B6AA626, 0px 1px 4px 0px #14448B0D;
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
+        @include min-screen(laptop) {
+          transition: background-color $transition-default;
+          svg {
+            transition: stroke $transition-default;
+          }
+          &:hover {
+            background-color: $blue-500;
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+        svg {
+          width: 10px;
+          height: 16px;
+          fill: transparent;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &-prev {
+        left: 0;
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &-next {
+        right: 0;
+      }
+    }
+  }
+
+  .swiper-scrollbar {
+    background-color: rgba($color: $blue-700, $alpha: 0.07);
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+    &-drag {
+      background-color: rgba($color: $blue-700, $alpha: 0.15)
+    }
+  }
+  .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  } 
+}

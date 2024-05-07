@@ -12,5 +12,4 @@ import "./components/mainHousesSlider";
 import "./components/mainTabsSlider";
 import "./components/aboutHistorySlider";
 import "./components/aboutMediaSlider";
-
-
+import "./components/aboutMediaGratitude";
