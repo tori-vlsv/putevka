@@ -13,6 +13,7 @@ import "./components/mainTabsSlider";
 import "./components/aboutHistorySlider";
 import "./components/aboutMediaSlider";
 import "./components/aboutGratitudeSlider";
+import "./components/aboutGratitudeGallery";
 import "./components/aboutPartnersSlider";
 import "./components/aboutMapToggle";
 

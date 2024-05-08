@@ -64,6 +64,52 @@ html(lang="ru")
       function autorun() {}
       if (window.addEventListener) window.addEventListener("load", autorun, false);
       else window.onload = autorun;
+      
+    script(src="https://api-maps.yandex.ru/v3/?apikey=7a5c4165-0520-40cb-82e7-515d4b0ff65c&lang=ru_RU")
+    //- bf5cab9f-4e9a-4a7b-9462-7916dda073ad
+    script.
+      async function initMap() {
+        await ymaps3.ready;
+
+        const {
+            YMap,
+            YMapDefaultFeaturesLayer,
+            YMapFeature,
+            YMapMarker
+          } = ymaps3;
+        
+        const map = new YMap(document.getElementById('map-yandex'),
+            {
+                location: {
+                    center: [55.76, 37.64],
+                    zoom: 17,
+                }
+            },
+            [
+                new YMapDefaultFeaturesLayer({})
+            ]
+        );
+
+
+        const markerElement = document.createElement('img');
+              markerElement.className = 'icon-marker';
+              markerElement.src = '/assets/images/marker.svg';
+              
+        map.addChild(new YMapMarker({coordinates: [37.454346, 55.847763]}, markerElement));
+        
+      }
+      
+      initMap();
+
+    style.
+      .icon-marker {
+        min-width: 48px;
+        min-height: 48px;
+        border-radius: 50%;
+        background-color: #000;
+        position: relative;
+        transform: translate(-50%, -50%);
+      }
     noscript.
       Похоже у вас отключён Javascript, поэтому вы видете это сообщение.
 

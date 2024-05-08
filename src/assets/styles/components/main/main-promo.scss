@@ -227,6 +227,9 @@
       }
       &-prev {
         transform: rotate(180deg);
+        svg {
+          margin-right: 2px;
+        }
         @include max-screen(tablet-2x) {
           left: -10px;
         }
@@ -235,6 +238,9 @@
         }
       }
       &-next {
+        svg {
+          margin-left: 2px;
+        }
         @include max-screen(tablet-2x) {
           right: -10px;
         }

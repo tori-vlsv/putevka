@@ -234,11 +234,15 @@
       &-prev {
         left: 0;
         svg {
+          margin-right: 2px;
           transform: rotate(180deg);
         }
       }
       &-next {
         right: 0;
+        svg {
+          margin-left: 2px;
+        }
       }
       &-disabled {
         background-color: rgba($color: $blue-700, $alpha: 0.05);

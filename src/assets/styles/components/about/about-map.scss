@@ -9,6 +9,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &__title {
@@ -26,16 +27,36 @@
 
   &__amount {
     display: flex;
-    gap: 14px;
+    @include max-screen(tablet) {
+      gap: 6px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 14px;
+    }
+
     span {
       color: $gray-400;
       font-family: 'Panton';
-      font-size: 40px;
-      line-height: 40px;
+      @include max-screen(tablet) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 40px;
+        line-height: 40px;
+      }
     }
     svg {
       stroke: transparent;
       fill: transparent;
+      @include max-screen(tablet) {
+        width: 24px;
+        height: 24px;
+      }
+      @include min-screen(tablet-2x) {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -149,6 +170,14 @@
           border-color: transparent;
         }
       }
+    }
+  }
+  .ymap-container {
+    height: 550px;
+    width: 100%;
+    #map-yandex {
+      height: 100%;
+      width: 100%;
     }
   }
 }

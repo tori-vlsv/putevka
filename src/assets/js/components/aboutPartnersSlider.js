@@ -6,7 +6,6 @@ function aboutPartnersSlider() {
     modules: [ Navigation, Scrollbar ],
     slidesPerView: 2.2,
     spaceBetween: 20,
-    loop: true,
     speed: 800,
     navigation: {
       nextEl: '.about-partners__navigation .swiper-button-next',
@@ -21,6 +20,7 @@ function aboutPartnersSlider() {
         spaceBetween: 24,
       },
       1024: {
+        loop: true,
         slidesPerView: 6,
         spaceBetween: 0,
       }
