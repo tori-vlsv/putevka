@@ -19,9 +19,8 @@ function aboutGratitudeSlider() {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2.3,
+        slidesPerView: 3.5,
         spaceBetween: 24,
-        allowTouchMove: true,
       },
       1024: {
         slidesPerView: 3,
@@ -29,6 +28,8 @@ function aboutGratitudeSlider() {
       }
     }
   });
+
+
 };
 aboutGratitudeSlider();
 

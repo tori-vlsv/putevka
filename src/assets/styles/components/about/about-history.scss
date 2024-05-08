@@ -268,9 +268,17 @@
     }
     @include min-screen(tablet-2x) {
       bottom: 50px;
-      left: 34%;
       right: auto;
       width: 174px;
+    }
+    @include mm-screen(tablet-2x) {
+      left: 43%;
+    }
+    @include mm-screen(laptop) {
+      left: 35%;
+    }
+    @include min-screen(desktop) {
+      left: 34%;
     }
     .swiper-button {
       &-next, 
