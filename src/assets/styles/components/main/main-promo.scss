@@ -1,17 +1,9 @@
 .main-promo {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  @include max-screen(tablet) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
   @include min-screen(tablet-2x) {
-    padding-top: 20px;
-    padding-bottom: 45px;
-    background-color: $bg-blue;
-  }
-  @include min-screen(laptop) {
-    padding-top: 20px;
-    padding-bottom: 45px;
-    background-color: $bg-blue;
-  }
-  @include min-screen(desktop) {
     padding-top: 20px;
     padding-bottom: 45px;
     background-color: $bg-blue;
@@ -23,19 +15,13 @@
 
   &__block {
     display: block;
-    border-radius: 6px;
     overflow: hidden;
     position: relative;
-    height: 230px;
+    @include max-screen(tablet) {
+      height: 230px;
+      border-radius: 6px;
+    }
     @include min-screen(tablet-2x) {
-      border-radius: 0;
-      height: 300px;
-    }
-    @include min-screen(laptop) {
-      border-radius: 0;
-      height: 300px;
-    }
-    @include min-screen(desktop) {
       border-radius: 0;
       height: 300px;
     }
@@ -77,14 +63,10 @@
     max-width: max-content;
     background-color: $orange-500;
     border-radius: 6px;
-    padding: 8.5px 16px;
+    @include max-screen(tablet) {
+      padding: 8.5px 16px;
+    }
     @include min-screen(tablet-2x) {
-      padding: 10.5px 20px;
-    }
-    @include min-screen(laptop) {
-      padding: 10.5px 20px;
-    }
-    @include min-screen(desktop) {
       padding: 10.5px 20px;
     }
     span {
@@ -97,17 +79,11 @@
   }
 
   &__picture {
-    height: 50px;
-    width: 49px;
+    @include max-screen(tablet) {
+      height: 50px;
+      width: 49px;
+    }
     @include min-screen(tablet-2x) {
-      width: 68px;
-      height: 70px;
-    }
-    @include min-screen(laptop) {
-      width: 68px;
-      height: 70px;
-    }
-    @include min-screen(desktop) {
       width: 68px;
       height: 70px;
     }
@@ -119,17 +95,13 @@
   }
 
   &__button {
-    padding: 8.5px 16px;
     background-color: $white;
     border-radius: 7px;
     max-width: max-content;
+    @include max-screen(tablet) {
+      padding: 8.5px 16px;
+    }
     @include min-screen(tablet-2x) {
-      padding: 10.5px 20px;
-    }
-    @include min-screen(laptop) {
-      padding: 10.5px 20px;
-    }
-    @include min-screen(desktop) {
       padding: 10.5px 20px;
     }
     span {
@@ -146,30 +118,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 20px;
+    @include max-screen(tablet) {
+      padding: 30px 20px;
+    }
     @include min-screen(tablet-2x) {
-      padding: 30px;
-    }
-    @include min-screen(laptop) {
-      padding: 30px;
-    }
-    @include min-screen(desktop) {
       padding: 30px;
     }
   }
 
   &__title {
-    font-size: 24px;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.01em;
     color: $white;
-    @include min-screen(laptop) {
-      font-size: 30px;
-      line-height: 30px;
-      letter-spacing: -0.02em;
+    @include max-screen(tablet-2x) {
+      letter-spacing: -0.01em;
+      font-size: 24px;
+      line-height: 24px;
     }
-    @include min-screen(desktop) {
+    @include min-screen(laptop) {
       font-size: 30px;
       line-height: 30px;
       letter-spacing: -0.02em;
@@ -182,22 +147,14 @@
   }
 
   &__text {
-    margin-top: 10px;
-    font-size: 14px;
     font-weight: 600;
-    line-height: 18px;
     color: $white;
+    @include max-screen(tablet) {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 18px;
+    }
     @include min-screen(tablet-2x) {
-      margin-top: 20px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-    @include min-screen(laptop) {
-      margin-top: 20px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-    @include min-screen(desktop) {
       margin-top: 20px;
       font-size: 16px;
       line-height: 20px;
@@ -209,29 +166,18 @@
 
   &__buttons {
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    @include max-screen(tablet) {
+      display: flex;
+      justify-content: center;
+    }
     @include min-screen(tablet-2x) {
       display: none;
     }
-    @include min-screen(laptop) {
-      display: none;
-    }
-    @include min-screen(desktop) {
-      display: none;
-    }
     a {
-      width: 100%;
+      @include max-screen(mobile) {
+        width: 100%;
+      }
       @include min-screen(tablet) {
-        width: max-content;
-      }
-      @include min-screen(tablet-2x) {
-        width: max-content;
-      }
-      @include min-screen(laptop) {
-        width: max-content;
-      }
-      @include min-screen(desktop) {
         width: max-content;
       }
     }
@@ -271,20 +217,6 @@
           justify-content: center;
         }
         @include min-screen(laptop) {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover {
-            background-color: $blue-500;
-            svg {
-              stroke: $white;
-            }
-          }
-        }
-        @include min-screen(desktop) {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           &:hover {
             background-color: $blue-500;
             svg {
@@ -295,21 +227,18 @@
       }
       &-prev {
         transform: rotate(180deg);
-        left: -10px;
+        @include max-screen(tablet-2x) {
+          left: -10px;
+        }
         @include min-screen(laptop) {
           left: -20px;
         }
-        @include min-screen(desktop) {
-          left: -20px;
-        }
-
       }
       &-next {
-        right: -10px;
-        @include min-screen(laptop) {
-          right: -20px;
+        @include max-screen(tablet-2x) {
+          right: -10px;
         }
-        @include min-screen(desktop) {
+        @include min-screen(laptop) {
           right: -20px;
         }
       }

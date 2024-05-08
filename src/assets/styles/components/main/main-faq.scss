@@ -16,6 +16,7 @@
     }
     @include mm-screen(tablet-2x) {
       padding: 20px;
+      gap: 20px
     }
     @include min-screen(laptop) {
       padding: 30px;
@@ -66,29 +67,37 @@
       }
     }
     & > a {
-      position: absolute; 
       inset: 0;
       z-index: 1;
+      @include max-screen(tablet) {
+        position: absolute; 
+      }
       @include min-screen(tablet-2x) {
         position: relative;
       }
     }
     &--cyan {
-      background-color: $cyan-400;
+      @include max-screen(tablet) {
+        background-color: $cyan-400;
+      }
       &:before,
       &:after {
         background-color: $cyan-400;
       }
     }
     &--blue {
-      background-color: $blue-400;
+      @include max-screen(tablet) {
+        background-color: $blue-400;
+      }
       &:before,
       &:after {
         background-color: $blue-400;
       }
     }
     &--green {
-      background-color: $green-400;
+      @include max-screen(tablet) {
+        background-color: $green-400;
+      }
       &:before,
       &:after {
         background-color: $green-400;
@@ -106,31 +115,33 @@
   &__top {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    @include max-screen(tablet) {
+      align-items: center;
+    }
     @include min-screen(tablet-2x) {
-      align-items: flex-start;
-    }
-    @include min-screen(laptop) {
-      align-items: flex-start;
-    }
-    @include min-screen(desktop) {
       align-items: flex-start;
     }
   }
 
   h3 {
-    max-width: 224px;
-    font-size: 16px;
     font-weight: 700;
-    line-height: 18px;
     text-align: left;
-    color: $white;
+    @include max-screen(mobile) {
+      max-width: 224px;
+    }
     @include min-screen(tablet) {
       max-width: 500px;
+    }
+    @include mm-screen(tablet) {
       br {
         display: none;
       }
+    }
+    @include max-screen(tablet) {
+      color: $white;
+      font-size: 16px;
+      line-height: 18px;
     }
     @include min-screen(tablet-2x) {
       color: $black-400;
@@ -139,13 +150,9 @@
       }
     }
     @include min-screen(laptop) {
-      color: $black-400;
       font-size: 20px;
       line-height: 24px;
       max-width: 330px;
-      br {
-        display: block;
-      }
     }
   }
 
@@ -156,21 +163,11 @@
   }
 
   &__description {
-    display: none;
     position: relative;
+    @include max-screen(tablet) {
+      display: none;
+    }
     @include min-screen(tablet-2x) {
-      display: block;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
-    }
-    @include min-screen(laptop) {
-      display: block;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
-    }
-    @include min-screen(desktop) {
       display: block;
       font-size: 16px;
       font-weight: 500;
@@ -191,18 +188,13 @@
           border-color: $orange-500;
         }
       }
-      @include min-screen(desktop) {
-        transition: color $transition-default, border-color $transition-default;
-        &:hover {
-          color: $orange-500;
-          border-color: $orange-500;
-        }
-      }
     }
   }
 
   &__arrow {
-    margin-left: 10px;
+    @include max-screen(mobile) {
+      margin-left: 10px;
+    }
     @include min-screen(tablet) {
       margin-left: 0;
     }
@@ -224,7 +216,6 @@
         svg {
           stroke: $white;
           fill: transparent;
-
         }
       }
       svg {
@@ -321,35 +312,24 @@
     @include min-screen(tablet-2x) {
       display: none;
     }
-    @include min-screen(laptop) {
-      display: none;
-    }
-    @include min-screen(desktop) {
-      display: none;
-    }
   }
 
   &__bg {
     position: absolute;
-    right: -20px;
     bottom: 0;
+    @include max-screen(tablet) {
+      right: -20px;
+    }
     @include min-screen(tablet-2x) {
-      right: 0;
-    }
-    @include min-screen(laptop) {
-      right: 0;
-    }
-    @include min-screen(desktop) {
       right: 0;
     }
   }
 
   &__list {
-    gap: 4px;
-    @include min-screen(laptop) {
-      gap: 10px;
+    @include max-screen(tablet-2x) {
+      gap: 4px;
     }
-    @include min-screen(desktop) {
+    @include min-screen(laptop) {
       gap: 10px;
     }
   }

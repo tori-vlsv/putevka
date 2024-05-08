@@ -1,6 +1,8 @@
 .main-houses {
-  padding-top: 60px;
   padding-bottom: 40px;
+  @include max-screen(tablet) {
+    padding-top: 60px;
+  }
   @include min-screen(tablet-2x) {
     background-color: $white;
     padding-top: 90px;
@@ -9,10 +11,12 @@
 
   &__text {
     margin-top: 20px;
-    font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
     color: $black-300;
+    @include max-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     @include min-screen(laptop) {
       font-size: 16px;
       line-height: 20px;
@@ -21,11 +25,14 @@
 
   &__tabs {
     &.swiper {
-      margin-top: 30px;
-      padding: 0 20px;
-
+      @include max-screen(tablet) {
+        padding: 0 20px;
+      }
       @include min-screen(tablet-2x) {
         padding: 0;
+      }
+      @include max-screen(tablet-2x) {
+        margin-top: 30px;
       }
       @include min-screen(laptop) {
         margin-top: 40px;
@@ -39,7 +46,6 @@
   &__tab {
     border: 1px solid $blue-border-light;
     border-radius: 8px;
-    padding: 8px 12px;
     transition: background-color $transition-default, border-color $transition-default;
     span {
       font-size: 16px;
@@ -51,6 +57,9 @@
     }
     &:active {
       border-color: $orange-500;
+    }
+    @include max-screen(tablet-2x) {
+      padding: 8px 12px;
     }
     @include min-screen(laptop) {
       &:hover {
@@ -69,13 +78,22 @@
 
   &__slider.swiper {
     margin-top: 30px;
-    padding-left: 20px;
     padding-bottom: 20px;
+    @include max-screen(tablet-2x) {
+      padding-left: 20px;
+    }
     @include min-screen(laptop) {
       padding-left: 0;
     }
   }
   .swiper {
+    &-wrapper {
+      position: relative;
+      align-items: stretch;
+    }
+    &-slide {
+      height: auto;
+    }
     &-scrollbar {
       background-color: #EEF3FB;
       @include min-screen(laptop) {

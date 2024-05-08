@@ -1,20 +1,10 @@
 .main-about {
-  padding-top: 100px;
-  padding-bottom: 60px;
-  background-image: linear-gradient(180deg, rgba(241, 244, 249, 0) 0%, #F4F6FA 100%);
+  @include max-screen(tablet) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(180deg, rgba(241, 244, 249, 0) 0%, #F4F6FA 100%);
+  }
   @include min-screen(tablet-2x) {
-    background-color: $bg-blue;
-    padding-bottom: 90px;
-    padding-top: 45px;
-    background-image: none;
-  }
-  @include min-screen(laptop) {
-    background-color: $bg-blue;
-    padding-bottom: 90px;
-    padding-top: 45px;
-    background-image: none;
-  }
-  @include min-screen(desktop) {
     background-color: $bg-blue;
     padding-bottom: 90px;
     padding-top: 45px;
@@ -29,34 +19,24 @@
       padding: 7px 16px;
     }
     a {
-      display: none;
+      @include max-screen(tablet) {
+        display: none;
+      }
       @include min-screen(tablet-2x) {
-        display: inline-block;
-      }
-      @include min-screen(laptop) {
-        display: inline-block;
-      }
-      @include min-screen(desktop) {
         display: inline-block;
       }
     }
   }
 
   &__items {
-    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 20px;
     row-gap: 24px;
+    @include max-screen(tablet) {
+      margin-top: 40px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     @include min-screen(tablet-2x) {
-      margin-top: 50px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    @include min-screen(laptop) {
-      margin-top: 50px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    @include min-screen(desktop) {
       margin-top: 50px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -65,13 +45,11 @@
   &__item {
     svg {
       stroke: transparent;
-      width: 36px;
-      height: 36px;
-      @include min-screen(laptop) {
-        width: 48px;
-        height: 48px;
+      @include max-screen(tablet-2x) {
+        width: 36px;
+        height: 36px;
       }
-      @include min-screen(desktop) {
+      @include min-screen(laptop) {
         width: 48px;
         height: 48px;
       }
@@ -79,17 +57,14 @@
   }
 
   &__title {
-    margin-top: 20px;
-    font-size: 18px;
     font-weight: 700;
-    line-height: 20px;
     color: $black-400;
-    @include min-screen(laptop) {
-      font-size: 24px;
-      line-height: 24px;
-      margin-top: 24px;
+    @include max-screen(tablet-2x) {
+      line-height: 20px;
+      font-size: 18px;
+      margin-top: 20px;
     }
-    @include min-screen(desktop) {
+    @include min-screen(laptop) {
       font-size: 24px;
       line-height: 24px;
       margin-top: 24px;
@@ -98,18 +73,14 @@
 
   &__text {
     margin-top: 16px;
-    font-size: 14px;
     font-weight: 400;
-    line-height: 16px;
     color: $black-300;
+    @include max-screen(tablet-2x) {
+      line-height: 16px;
+      font-size: 14px;
+    }
     @include min-screen(laptop) {
       font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
-    }
-    @include min-screen(desktop) {
-      font-size: 16px;
-      font-weight: 400;
       line-height: 20px;
     }
     a {
@@ -124,39 +95,23 @@
           color: $orange-500;
         }
       }
-      @include min-screen(desktop) {
-        &:hover {
-          color: $orange-500;
-        }
-      }
     }
   }
 
   &__buttons {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    @include max-screen(tablet) {
+      display: flex;
+      justify-content: center;
+    }
     @include min-screen(tablet-2x) {
       display: none;
     }
-    @include min-screen(laptop) {
-      display: none;
-    }
-    @include min-screen(desktop) {
-      display: none;
-    }
     a {
-      width: 100%;
+      @include max-screen(mobile) {
+        width: 100%;
+      }
       @include min-screen(tablet) {
-        width: max-content;
-      }
-      @include min-screen(tablet-2x) {
-        width: max-content;
-      }
-      @include min-screen(laptop) {
-        width: max-content;
-      }
-      @include min-screen(desktop) {
         width: max-content;
       }
     }
