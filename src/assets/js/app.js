@@ -14,3 +14,6 @@ import "./components/aboutHistorySlider";
 import "./components/aboutMediaSlider";
 import "./components/aboutGratitudeSlider";
 import "./components/aboutPartnersSlider";
+import "./components/aboutMapToggle";
+
+
