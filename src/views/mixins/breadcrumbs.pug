@@ -1,0 +1,20 @@
+mixin breadcrumbs(data)
+  .breadcrumbs.reveal-showed-up
+    .wrapper
+      ul.breadcrumbs__list
+        li 
+          a(href="/") Главная
+        for link in data
+          if link.href == ''
+            svg(width="16" height="16" viewBox="0 0 16 16")
+              use(xlink:href="#svg-chevron-right")
+            li= link.title
+            svg(width="16" height="16" viewBox="0 0 16 16")
+              use(xlink:href="#svg-chevron-right")
+          else 
+            svg(width="16" height="16" viewBox="0 0 16 16")
+              use(xlink:href="#svg-chevron-right")
+            li
+              a(href=""+link.href)= link.title
+            svg(width="16" height="16" viewBox="0 0 16 16")
+              use(xlink:href="#svg-chevron-right")

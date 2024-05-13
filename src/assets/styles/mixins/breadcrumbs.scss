@@ -1,0 +1,80 @@
+.breadcrumbs {
+  position: relative;
+  z-index: 2;
+  @include max-screen(tablet) {
+    padding: 20px 0;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    align-items: center;
+    display: inline-flex;
+    @include max-screen(tablet) {
+      gap: 4px;
+      background-color: rgba($color: $blue-700, $alpha: 0.07);
+      padding: 7px 10px;
+      border-radius: 6px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 10px;
+    }
+
+    li {
+      display: inline;
+      &:first-child {
+        @include max-screen(tablet) {
+          display: none;
+        }
+      }
+    }
+
+    li,
+    a, 
+    p {
+      @include max-screen(tablet) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      color: $blue-500;
+    }
+
+    svg {
+      fill: transparent;
+      display: inline-block;
+      @include max-screen(tablet) {
+        transform: rotate(180deg);
+        width: 14px;
+        height: 14px;
+        stroke: $blue-500;
+      }
+      @include min-screen(tablet-2x) {
+        stroke: $gray-400;
+        stroke-opacity: 0.5;
+      }
+      &:last-child {
+        @include max-screen(tablet) {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      &:active {
+        color: $orange-500;
+      }
+      @include min-screen(tablet-2x) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
+  }
+}
