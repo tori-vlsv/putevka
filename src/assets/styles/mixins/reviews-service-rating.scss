@@ -1,0 +1,78 @@
+.reviews-service-rating {
+  border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+  position: relative;
+  @include max-screen(tablet) {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  @include min-screen(tablet-2x) {
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  &__logo {
+    position: absolute;
+    display: inline-block;
+    max-height: 30px;
+    @include max-screen(tablet) {
+      left: 20px;
+      top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      left: 30px;
+      top: 30px;
+    }
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+
+    }
+    @include min-screen(tablet-2x) {
+      gap: 20px;
+      margin-top: 80px;
+    }
+  }
+
+  &__value {
+    @include max-screen(tablet) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__amount {
+    font-family: 'Proxima Nova Rg';
+    @include max-screen(tablet) {
+      font-size: 40px;
+      line-height: 32px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 48px;
+      line-height: 40px;
+    }
+  }
+  
+  &__stars {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $black-300;
+    @include min-screen(tablet-2x) {
+      margin-top: 4px;
+    }
+  }
+}

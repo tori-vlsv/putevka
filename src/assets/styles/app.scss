@@ -23,6 +23,7 @@
 @import "./mixins/house-card";
 @import "./mixins/about-types-card";
 @import "./mixins/about-team-card";
+@import "./mixins/reviews-service-rating";
 
 /*
   Компоненты
@@ -43,3 +44,4 @@
 @import "./components/about/about-partners";
 @import "./components/about/about-map";
 
+@import "./components/reviews/reviews-hero";

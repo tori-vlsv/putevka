@@ -1,0 +1,24 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Отзывы и публикации
+
+block basicSeo
+  meta(content="Это странца Отзывы и публикации" name="description")
+  meta(content="Страница, Отзывы и публикации" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    +breadcrumbs(
+      [
+        {
+          href: '/about',
+          title: 'О нас',
+        },
+      ]
+    )
+    include ../components/reviews/reviews-hero

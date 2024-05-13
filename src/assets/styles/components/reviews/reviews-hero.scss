@@ -1,0 +1,78 @@
+.reviews-hero {
+  @include max-screen(tablet) {
+    padding-bottom: 50px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-bottom: 70px;
+  }
+  &__title {
+    color: $black-400;
+    @include max-screen(tablet) {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 28px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    color: rgba($color: $black-300, $alpha: 0.75);
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 30px;
+    }
+    a {
+      color: $blue-500;
+      border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.5);
+      @include min-screen(tablet-2x) {
+        transition: color $transition-default, border-color $transition-default;
+        &:hover {
+          color: $orange-500;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-top: 50px;
+    font-weight: 700;
+    color: $gray-400;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 60px;
+    }
+  }
+
+  &__items {
+    margin-top: 20px;
+    display: grid;
+    @include max-screen(tablet) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 16px;
+
+    }
+    @include min-screen(tablet-2x) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+
+
+}

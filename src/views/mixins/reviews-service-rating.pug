@@ -1,0 +1,14 @@
+mixin reviews-service-rating(data)
+  .reviews-service-rating
+    a.reviews-service-rating__logo(href="" + data.link)
+      img(src="" + data.image.src alt="" + data.image.alt loading="lazy")
+    .reviews-service-rating__content
+      .reviews-service-rating__amount= data.amount
+      .reviews-service-rating__value
+        .reviews-service-rating__stars
+          img(src="" + data.star1.src alt="" + data.star1.alt loading="lazy")
+          img(src="" + data.star2.src alt="" + data.star2.alt loading="lazy")
+          img(src="" + data.star3.src alt="" + data.star3.alt loading="lazy")
+          img(src="" + data.star4.src alt="" + data.star4.alt loading="lazy")
+          img(src="" + data.star5.src alt="" + data.star5.alt loading="lazy")
+        .reviews-service-rating__text= data.text
