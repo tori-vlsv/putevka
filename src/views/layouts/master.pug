@@ -65,41 +65,8 @@ html(lang="ru")
       if (window.addEventListener) window.addEventListener("load", autorun, false);
       else window.onload = autorun;
       
-    script(src="https://api-maps.yandex.ru/v3/?apikey=7a5c4165-0520-40cb-82e7-515d4b0ff65c&lang=ru_RU")
+    script(src="https://api-maps.yandex.ru/v3/?apikey=85de22fa-9981-42e8-8e62-8bed92d4a8b7&lang=ru_RU")
     //- bf5cab9f-4e9a-4a7b-9462-7916dda073ad
-    script.
-      async function initMap() {
-        await ymaps3.ready;
-
-        const {
-            YMap,
-            YMapDefaultFeaturesLayer,
-            YMapFeature,
-            YMapMarker
-          } = ymaps3;
-        
-        const map = new YMap(document.getElementById('map-yandex'),
-            {
-                location: {
-                    center: [55.76, 37.64],
-                    zoom: 17,
-                }
-            },
-            [
-                new YMapDefaultFeaturesLayer({})
-            ]
-        );
-
-
-        const markerElement = document.createElement('img');
-              markerElement.className = 'icon-marker';
-              markerElement.src = '/assets/images/marker.svg';
-              
-        map.addChild(new YMapMarker({coordinates: [37.454346, 55.847763]}, markerElement));
-        
-      }
-      
-      initMap();
 
     style.
       .icon-marker {
@@ -118,6 +85,7 @@ html(lang="ru")
     
     .render
 
+    include ../mixins/breadcrumbs
     include ../mixins/resort-card
     include ../mixins/house-card
     include ../mixins/button-transparent
@@ -131,3 +99,52 @@ html(lang="ru")
     include ../components/footer
 
     block js
+
+    script.
+      async function initMap() {
+        await ymaps3.ready;
+
+        const {
+          YMap,
+          YMapDefaultSchemeLayer,
+          YMapDefaultFeaturesLayer,
+          YMapFeature,
+          YMapMarker,
+          YMapControls
+        } = ymaps3;
+        
+        const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+        const map = new YMap(document.getElementById('map-yandex'),
+          {
+            location: {
+              center: [37.623150, 55.752507],
+              zoom: 7,
+            }
+          },
+          [
+            // Add a map scheme layer
+            new YMapDefaultSchemeLayer({}),
+            // Add a layer of geo objects to display the line
+            new YMapDefaultFeaturesLayer({})
+          ]
+        );
+
+        map.addChild(
+          // Here we place the control on the right
+          new YMapControls({position: 'left'})
+            // Add the first zoom control to the map
+            .addChild(new YMapZoomControl({}))
+        );
+
+        const markerElement = document.createElement('img');
+        markerElement.className = 'icon-marker';
+        markerElement.src = '/assets/images/pin.png';
+
+        map.addChild(new YMapMarker({coordinates: [37.623150, 55.752507]}, markerElement));
+        
+      }
+      
+      if (document.querySelector('.ymap-container') !== null) {
+        initMap();
+      }

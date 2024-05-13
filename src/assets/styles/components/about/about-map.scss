@@ -173,8 +173,15 @@
     }
   }
   .ymap-container {
-    height: 550px;
     width: 100%;
+    @include max-screen(tablet) {
+      margin-top: 20px;
+      height: 500px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+      height: 550px;
+    }
     #map-yandex {
       height: 100%;
       width: 100%;
