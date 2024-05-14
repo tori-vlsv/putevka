@@ -24,6 +24,7 @@
 @import "./mixins/about-types-card";
 @import "./mixins/about-team-card";
 @import "./mixins/reviews-service-rating";
+@import "./mixins/reviews-clients-card";
 
 /*
   Компоненты
@@ -45,3 +46,5 @@
 @import "./components/about/about-map";
 
 @import "./components/reviews/reviews-hero";
+@import "./components/reviews/reviews-clients";
+@import "./components/reviews/reviews-popup";

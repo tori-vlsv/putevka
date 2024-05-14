@@ -16,5 +16,7 @@ import "./components/aboutGratitudeSlider";
 import "./components/aboutGratitudeGallery";
 import "./components/aboutPartnersSlider";
 import "./components/aboutMapToggle";
+import "./components/reviewsPopup";
+
 
 

@@ -1,0 +1,54 @@
+.reviews-clients {
+  background-color: $bg-blue;
+  @include max-screen(tablet) {
+    padding: 50px 0;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 60px 0;
+  }
+
+  &__header {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    @include min-screen(tablet-2x) {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    border-radius: 8px;
+    max-width: max-content;
+    svg {
+      stroke: transparent;
+      fill: transparent;
+    }
+    span {
+      color: $blue-500;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    @include max-screen(tablet) {
+      gap: 16px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @include min-screen(tablet-2x) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+}

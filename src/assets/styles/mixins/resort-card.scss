@@ -8,26 +8,12 @@
     border-radius: 10px;
     overflow: hidden;
   }
-  @include min-screen(laptop) {
-    aspect-ratio: 1 / 1;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  @include min-screen(desktop) {
-    aspect-ratio: 1 / 1;
-    border-radius: 10px;
-    overflow: hidden;
-  }
 
   &__top {
     position: absolute;
     top: 20px;
     left: 20px;
     @include min-screen(laptop) {
-      top: 30px;
-      left: 30px;
-    }
-    @include min-screen(desktop) {
       top: 30px;
       left: 30px;
     }
@@ -62,10 +48,6 @@
     @include min-screen(laptop) {
       padding: 30px 70px 30px 30px;
     }
-    @include min-screen(desktop) {
-      padding: 30px 70px 30px 30px;
-    }
-
   }
 
   &__cost {
@@ -100,10 +82,6 @@
       font-size: 24px;
       line-height: 24px;
     }
-    @include min-screen(desktop) {
-      font-size: 24px;
-      line-height: 24px;
-    }
   }
 
   &__link {
@@ -120,13 +98,6 @@
         }
       }
     }
-    @include min-screen(desktop) {
-      &:hover {
-        .resort-card__title {
-          color: $orange-500;
-        }
-      }
-    }
   }
 
   &__items {
@@ -136,9 +107,6 @@
     row-gap: 14px;
     column-gap: 20px;
     @include min-screen(laptop) {
-      margin-top: 20px;
-    }
-    @include min-screen(desktop) {
       margin-top: 20px;
     }
   }
@@ -160,27 +128,11 @@
         color: $orange-500;
       }
     }
-    @include min-screen(desktop) {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 18px;
-      &:hover {
-        color: $orange-500;
-      }
-    }
   }
 
   &--mini {
     min-height: 120px;
     @include min-screen(tablet-2x) {
-      min-height: 200px;
-      aspect-ratio: auto;
-    }
-    @include min-screen(laptop) {
-      min-height: 200px;
-      aspect-ratio: auto;
-    }
-    @include min-screen(desktop) {
       min-height: 200px;
       aspect-ratio: auto;
     }
@@ -190,22 +142,10 @@
         @include min-screen(laptop) {
           padding: 30px;
         }
-        @include min-screen(desktop) {
-          padding: 30px;
-        }
       }
       &__cost {
         display: none;
         @include min-screen(tablet) {
-          display: inline-block;
-        }
-        @include min-screen(tablet-2x) {
-          display: inline-block;
-        }
-        @include min-screen(laptop) {
-          display: inline-block;
-        }
-        @include min-screen(desktop) {
           display: inline-block;
         }
       }

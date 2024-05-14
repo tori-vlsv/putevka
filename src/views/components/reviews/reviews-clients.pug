@@ -1,0 +1,46 @@
+section.reviews-clients
+  .wrapper
+    .reviews-clients__wrapper
+      .reviews-clients__header
+        h2 Отзывы наших клиентов
+        button.reviews-clients__button(type="button")
+          svg(width="18" height="18" viewBox="0 0 18 18")
+            use(xlink:href="#svg-pencil")
+          span Написать отзыв
+      .reviews-clients__cards
+        +reviews-clients-card(
+          {
+            info: 'А****на <time datetime="2022-03-28"> - 28.03.2022</time>',
+            link: 'Yell'
+          }
+        )
+        +reviews-clients-card(
+          {
+            info: 'А************ов <time datetime="2017-02-13"> - 13.02.2017</time>',
+            link: 'Отзовик'
+          }
+        )
+        +reviews-clients-card(
+          {
+            info: 's************na <time datetime="2017-02-13"> - 13.02.2017</time>',
+            link: 'Яндекс Карты'
+          }
+        )
+        +reviews-clients-card(
+          {
+            info: 'М*******88 <time datetime="2017-02-13"> - 13.02.2017</time>',
+            link: 'IRecommend'
+          }
+        )
+        +reviews-clients-card(
+          {
+            info: 'А************ов <time datetime="2017-02-13"> - 13.02.2017</time>',
+            link: 'Otzyvru.com'
+          }
+        )
+        +reviews-clients-card(
+          {
+            info: 'М*******88 <time datetime="2017-02-13"> - 13.02.2017</time>',
+            link: 'Google Maps'
+          }
+        )

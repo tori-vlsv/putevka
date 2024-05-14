@@ -1,0 +1,117 @@
+.reviews-clients-card {
+  background-color: $white;
+  border-radius: 8px;
+  @include max-screen(tablet) {
+    padding: 24px;
+    box-shadow: 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.03);
+  }
+  @include min-screen(tablet-2x) {
+    padding: 30px;
+    box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.02), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.05);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $gray-400;
+    font-weight: 400;
+    line-height: 20px;
+    @include max-screen(tablet) {
+      font-size: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+    }
+    a {
+      color: $blue-500;
+      font-weight: 600;
+      &:active {
+        color: $orange-500;
+      }
+      @include min-screen(tablet-2x) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
+    svg {
+      stroke: transparent;
+      fill: transparent;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    img {
+      @include max-screen(tablet) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $black-300;
+    time {
+      color: $gray-400;
+    }
+  }
+
+  &__text {
+    color: $black-300;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $black-300;
+    border-bottom: 1px dashed rgba($color: $black-300, $alpha: 0.5);
+    &:active {
+      color: $orange-500;
+      border-color: transparent;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default, border-color $transition-default;
+      &:hover {
+        color: $orange-500;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    @include max-screen(tablet) {
+      margin-top: 24px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 30px;
+    }
+  }
+}
