@@ -1,0 +1,363 @@
+.reviews-create-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $black, $alpha: 0.08);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+  &.active {
+    z-index: 2901;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    position: absolute;
+    background-color: $white;
+    border-radius: 6px;
+    box-shadow: 0px 15px 45px 0px rgba($color: $black-600, $alpha: 0.25);
+    @include max-screen(tablet) {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    @include min-screen(tablet-2x) {
+      width: 636px;
+      max-height: 843px;
+      height: calc(100dvh - 100px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include max-screen(tablet) {
+      padding: 18px 20px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 24px 30px;
+    }
+    h3 {
+      line-height: 24px;
+      font-weight: 700;
+      color: $black-400;
+      @include max-screen(tablet) {
+        font-size: 18px;
+        text-align: center;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  h4 {
+    color: $gray-400;
+    font-family: 'Tilda Sans';
+    font-size: 16px;
+    line-height: 20px;
+    @include max-screen(tablet) {
+      text-align: center;
+      font-weight: 500;
+    }
+    @include min-screen(tablet-2x) {
+      font-weight: 700;
+    }
+  }
+
+  &__main {
+    position: relative;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    @include min-screen(tablet-2x) {
+      height: calc(100% - 70px);
+    }
+  }
+
+  &__middle {
+    background-color: $bg-blue;
+    @include max-screen(tablet) {
+      padding: 24px 20px 30px 20px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 30px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include max-screen(tablet) {
+      margin-top: 20px;
+      gap: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 24px;
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    background-color: $white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include max-screen(tablet) {
+      width: 152px;
+      height: 44px;
+    }
+    @include min-screen(tablet-2x) {
+      width: 178px;
+      height: 50px;
+    }
+    @include min-screen(laptop) {
+      box-shadow: transparent;
+      transition: box-shadow $transition-default;
+      &:hover {
+        box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.07), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.04);
+      }
+    }
+    &:active {
+      box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.07), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.04);
+    }
+    &--small {
+      @include max-screen(tablet) {
+        width: 96px;
+      }
+    }
+    img {
+      width: auto;
+      @include max-screen(tablet) {
+        height: 20px;
+      }
+      @include min-screen(tablet-2x) {
+        height: 24px;
+      }
+    }
+  }
+
+  &__form {
+    @include max-screen(tablet) {
+      padding: 30px 20px 40px 20px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 30px;
+    }
+  }
+
+  &__rating {
+    margin-top: 20px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    @include max-screen(tablet) {
+      flex-direction: column;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 20px;
+      border-top: 1px solid rgba($color: $blue-700, $alpha: 0.1);
+    }
+    span {
+      color: $gray-400;
+      @include max-screen(tablet) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__create {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+    input {
+      border-radius: 4px;
+      width: 100%;
+      border: 1px solid rgba($blue-700, 0.15);
+      background-color: rgba($color: $blue-700, $alpha: 0.05);
+      outline: none;
+      padding: 13px 16px;
+  
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $black-400;
+      
+      &::placeholder {
+        font-family: 'Tilda Sans';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $gray-400;
+      }
+      &:active {
+        background-color: $white;
+      }
+    }
+  }
+
+  &__textarea {
+    textarea {
+      display: block;
+      resize: none;
+      width: 100%;
+      border: 1px solid rgba($blue-700, 0.15);
+      background-color: rgba($color: $blue-700, $alpha: 0.05);
+      border-radius: 4px;
+      padding: 13px 16px;
+
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $black-400;
+      @include max-screen(tablet) {
+        height: 120px;
+      }
+      @include min-screen(tablet-2x) {
+        height: 140px;
+      }
+      &::placeholder {
+        font-family: 'Tilda Sans';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $gray-400;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    @include max-screen(mobile-2x) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    @include min-screen(mobile) {
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+    @include max-screen(tablet) {
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 30px;
+    }
+  }
+
+  &__button {
+    background-color: $orange-500;
+    border-radius: 6px;
+    padding: 8px 27.5px;
+    &:active {
+      background-color: $orange-300;
+    }
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: $orange-300;
+      }
+    }
+    span {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 18px;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    label {
+      @include min-screen(laptop) {
+        &:hover {
+          span {
+            &:before {
+              border-color: $blue-500;
+            }
+          }
+        }
+      }
+    }
+    span {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      color: $gray-400;
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      & ~ span {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+          position: absolute;
+          content: '';
+          display: inline-block;
+          top: 50%;
+          left: 0%;
+          transform: translate(0, -50%);
+          border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+          background-color: rgba($color: $blue-700, $alpha: 0.05);
+          width: 20px;
+          height: 20px;
+          border-radius: 3px;
+          transition: border-color $transition-default;
+        }
+      }
+      &:checked ~ .reviews-create-popup__icon {
+        opacity: 1;
+        transition: opacity $transition-default;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 2px;
+    opacity: 0;
+    transition: opacity $transition-default;
+    background-color: $blue-500;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      stroke: transparent;
+    }
+  }
+}

@@ -56,6 +56,12 @@
       @content;
     }
   }
+
+  @if $breakpoint == mobile-2x {
+    @media (max-width: 639px) {
+      @content;
+    }
+  }
 }
 
 // ______________________

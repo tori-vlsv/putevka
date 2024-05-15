@@ -1,0 +1,29 @@
+.stars-rating {
+  direction: rtl;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    svg {
+      cursor: pointer;
+      stroke: transparent;
+      fill: rgba($color: $blue-700, $alpha: 0.1);
+      transition: fill $transition-default;
+    }
+  }
+  &__input:checked ~ &__label svg {
+    fill: $yellow-400;
+  }
+  @include min-screen(tablet-2x) {
+    &__label:hover svg,
+    &__label:hover ~ &__label svg {
+      fill: $yellow-400;
+    }
+  }
+}

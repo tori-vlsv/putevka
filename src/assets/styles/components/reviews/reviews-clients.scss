@@ -23,30 +23,57 @@
   &__button {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 11px 20px;
     border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
     border-radius: 8px;
     max-width: max-content;
+    @include max-screen(tablet) {
+      padding: 8px 16px;
+      gap: 8px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 11px 20px;
+      gap: 10px;
+    }
+    &:active {
+      span {
+        color: $orange-500;
+      }
+    }
+    @include min-screen(laptop) {
+      &:hover {
+        span {
+          color: $orange-500;
+        }
+      }
+    }
     svg {
       stroke: transparent;
       fill: transparent;
+      @include max-screen(tablet) {
+        width: 14px;
+        height: 14px;
+      }
     }
     span {
       color: $blue-500;
       font-size: 16px;
       font-weight: 600;
       line-height: 18px;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+      }
     }
   }
 
   &__cards {
     display: grid;
     @include max-screen(tablet) {
+      margin-top: 30px;
       gap: 16px;
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     @include min-screen(tablet-2x) {
+      margin-top: 40px;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
     }

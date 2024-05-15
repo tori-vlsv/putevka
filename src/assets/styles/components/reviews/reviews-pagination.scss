@@ -1,0 +1,113 @@
+.reviews-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include max-screen(tablet) {
+    margin-top: 24px;
+  }
+  @include min-screen(tablet-2x) {
+    margin-top: 40px;
+  }
+  &__wrapper {
+    display: flex;
+    @include max-screen(tablet) {
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 10px;
+    }
+  }
+
+  &__amounts {
+    display: flex;
+    align-items: center;
+    @include max-screen(tablet) {
+      gap: 7px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 10px;
+    }
+  }
+  &__amount {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      text-align: center;
+      color: $blue-500;
+    }
+    svg {
+      stroke: $blue-500;
+      fill: transparent;
+    }
+    &--hidden {
+      @include max-screen(tablet) {
+        display: none;
+      }
+    }
+    &.active {
+      cursor: default;
+      border-radius: 100%;
+      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      span {
+        color: $black-400;
+      }
+    }
+    &.not-active {
+      cursor: default;
+      svg {
+        stroke: rgba($color: $blue-700, $alpha: 0.25);
+      }
+    }
+    &:not(.not-active):not(.active) {
+      &:active {
+        background-color: $blue-500;
+        span {
+          color: $white;
+        }
+        svg {
+          stroke: $white;
+        }
+      }
+      @include min-screen(laptop) {
+        transition: background-color $transition-default;
+        span {
+          transition: color $transition-default;
+        }
+        svg {
+          transition: stroke $transition-default;
+        }
+        &:hover {
+          background-color: $blue-500;
+          span {
+            color: $white;
+          }
+          svg {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &--next {
+      @include min-screen(tablet-2x) {
+        margin-left: 10px;
+
+      }
+    }
+  }
+}

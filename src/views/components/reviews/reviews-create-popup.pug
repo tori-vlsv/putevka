@@ -1,0 +1,49 @@
+.reviews-create-popup
+  .reviews-create-popup__wrapper
+    .reviews-create-popup__header
+      h3 Оставьте отзыв о нашей работе
+      button.reviews-create-popup__close(type="button")
+        svg(width="24" height="24" viewBox="0 0 24 24")
+          use(xlink:href="#svg-close")
+    .reviews-create-popup__main(data-scroll-lock-scrollable)
+      .reviews-create-popup__middle
+        h4 Оцените нашу работу на независимых сервисах:
+        .reviews-create-popup__links
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/yandex.svg", alt="yandex-map")
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/otzyvru.svg", alt="otzyvru")
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/yellru.png", alt="yellru")
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/rating.svg", alt="rating-seven-ya")
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/irecommend.png", alt="irecommend")
+          a.reviews-create-popup__link(href="#")
+            img(src="/assets/images/reviews/logos/google-maps.svg", alt="google-maps")
+          a.reviews-create-popup__link.reviews-create-popup__link--small(href="#")
+            img(src="/assets/images/reviews/logos/2gis.svg", alt="2gis")
+          a.reviews-create-popup__link.reviews-create-popup__link--small(href="#")
+            img(src="/assets/images/reviews/logos/otzovik.svg", alt="otzovik")
+          a.reviews-create-popup__link.reviews-create-popup__link--small(href="#")
+            img(src="/assets/images/reviews/logos/cataloxy.svg", alt="cataloxy")
+      form.reviews-create-popup__form(action="#")
+        h4 Или оставьте отзыв прямо у нас на сайте:
+        .reviews-create-popup__rating
+          include ./stars-rating
+          span поставьте оценку
+        .reviews-create-popup__create
+          .reviews-create-popup__input
+            input(type="text" placeholder="Ваше имя и фамилия" name="name" required)
+          .reviews-create-popup__textarea
+            textarea(placeholder="Опишите плюсы и минусы" max="9000" min="80" name="ad-description" required)
+        .reviews-create-popup__controls
+          button.reviews-create-popup__button(type="submit")
+            span Оставить отзыв
+          .reviews-create-popup__checkbox
+            label
+              input(type="checkbox")
+              span Анонимный отзыв
+              .reviews-create-popup__icon
+                svg(width="12" height="10" viewBox="0 0 12 10")
+                  use(xlink:href="#svg-check")
