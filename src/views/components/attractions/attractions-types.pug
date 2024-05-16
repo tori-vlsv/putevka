@@ -1,0 +1,113 @@
+section.attractions-types
+  .wrapper
+    .attractions-types__wrapper
+      .attractions-types__cards
+        +attractions-types-card(
+          {
+            title: 'Музейный комплекс «Михайловское укрепление»',
+            image: {
+              src: '/assets/images/attractions/1.png',
+              alt: 'attractions-1'
+            },
+            label: '',
+            location: 'Железноводск',
+            text: 'Одним из самых интересных исторических объектов Геленджикского района, включённых практически во все туристических маршруты, является музейный комплекс «Михайловское укрепление» ...',
+          }
+        )
+        +attractions-types-card(
+          {
+            title: 'Рязанский государственный областной художественный музей им. И.П. Пожалостина',
+            image: {
+              src: '/assets/images/attractions/2.png',
+              alt: 'attractions-2'
+            },
+            label: 'Панорама 360°',
+            location: 'Рязань',
+            text: 'Приехав в Рязань, обязательно посетите Художественный музей имени И.П. Пожалостина. Вы будете поражены огромной коллекцией произведений искусства — всего 12000 экспонатов ...',
+          }
+        )
+        +attractions-types-card(
+          {
+            title: 'Кипарисовое озеро',
+            image: {
+              src: '/assets/images/attractions/3.png',
+              alt: 'attractions-3'
+            },
+            label: '',
+            location: 'Анапа, Сукко',
+            text: 'Так называемое «Кипарисовое озеро» или озеро Сукко – необыкновенный пруд с чистейшей водой бирюзового цвета, в северной части которого прямо в воде растут кипарисы. Это особый вид кипарисов ...',
+          }
+        )
+        +attractions-types-card(
+          {
+            title: 'Набережная Геленджика',
+            image: {
+              src: '/assets/images/attractions/4.png',
+              alt: 'attractions-4'
+            },
+            label: '',
+            location: 'Геленджик',
+            text: 'Набережная Геленджика – главная достопримечательность и гордость этого популярного курорта, любимое место отдыха и прогулок жителей и гостей города. Она по праву считается самой ...',
+          }
+        )
+        +attractions-types-card(
+          {
+            title: '33 водопада',
+            image: {
+              src: '/assets/images/attractions/5.png',
+              alt: 'attractions-5'
+            },
+            label: '',
+            location: 'Туапсе',
+            text: 'Приехав в Рязань, обязательно посетите Художественный музей имени И.П. Пожалостина. Вы будете поражены огромной коллекцией произведений искусства — всего 12000 экспонатов ...',
+          }
+        )
+        +attractions-types-card(
+          {
+            title: '«Дагомысские корыта» Западного Дагомыса',
+            image: {
+              src: '/assets/images/attractions/6.png',
+              alt: 'attractions-6'
+            },
+            label: '',
+            location: 'Дагомыс',
+            text: 'Удивительное по своей красоте место есть на реке Западный Дагомыс, между посёлками Дагомыс и Солохаул. Это так называемые Дагомысские Корыта или, как их ещё часто именуют, Озёра Любви. Эти ...',
+          }
+        )
+      .attractions-types__information
+        .attractions-types__bg
+          picture
+            source(
+              srcset="/assets/images/attractions/bg.svg" 
+              media="(min-width: 1024px)") 
+            img(src="/assets/images/attractions/bg-mob.svg" alt="bg-links" loading="lazy")
+        h2.attractions-types__title Посмотрите еще в <br> Краснодарском крае
+        .attractions-types__links
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-water-default")
+            span Санатории и пансионаты
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-bed-default")
+            span Отели и гостиницы
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-building-default")
+            span Апартаменты и квартиры посуточно
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-house-default")
+            span Базы отдыха
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-shape-default")
+            span Кемпинги и глэмпинги
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-direction-default")
+            span Экскурсии с гидом
+          a.attractions-types__link(href="#")
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-car-default")
+            span Трансферы/такси

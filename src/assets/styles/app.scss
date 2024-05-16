@@ -25,6 +25,7 @@
 @import "./mixins/about-team-card";
 @import "./mixins/reviews-service-rating";
 @import "./mixins/reviews-clients-card";
+@import "./mixins/attractions-types-card";
 
 /*
   Компоненты
@@ -55,3 +56,5 @@
 @import "./components/pagination-huge";
 @import "./components/pagination";
 
+@import "./components/attractions/attractions-hero";
+@import "./components/attractions/attractions-types";
