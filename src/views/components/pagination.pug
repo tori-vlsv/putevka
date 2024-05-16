@@ -1,0 +1,20 @@
+.pagination.pagination-huge
+  .pagination-huge__wrapper
+
+    .pagination-huge__arrows.pagination-huge__arrows--prev
+      a(href="#").pagination-huge__amount.not-active
+        svg(width="36" height="36" viewBox="0 0 36 36")
+          use(xlink:href="#svg-arrow-right-big")
+
+    .pagination-huge__amounts
+      a(href="#").pagination-huge__amount.active 
+        span 1
+      a(href="#").pagination-huge__amount
+        span 2
+      a(href="#").pagination-huge__amount.pagination-huge__amount--show
+        span 3
+
+    .pagination-huge__arrows.pagination-huge__arrows--next
+      a(href="#").pagination-huge__amount
+        svg(width="36" height="36" viewBox="0 0 36 36")
+          use(xlink:href="#svg-arrow-right-big")

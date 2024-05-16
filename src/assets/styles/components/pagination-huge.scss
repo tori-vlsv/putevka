@@ -1,4 +1,4 @@
-.reviews-pagination {
+.pagination-huge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,14 @@
     }
     &--hidden {
       @include max-screen(tablet) {
+        display: none;
+      }
+    }
+    &--show {
+      @include max-screen(tablet) {
+        display: flex;
+      }
+      @include min-screen(tablet-2x) {
         display: none;
       }
     }

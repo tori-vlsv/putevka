@@ -1,0 +1,17 @@
+.pagination {
+  .pagination-huge {
+    &__wrapper {
+      @include max-screen(tablet) {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    &__arrows {
+      &--next {
+        @include min-screen(tablet-2x) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
