@@ -4,8 +4,8 @@ function reviewsCreatePopup() {
   let button = $('.reviews-clients__button');
   let popup =  $('.reviews-create-popup');
   let container =  $('.reviews-create-popup__wrapper');
-  let close =  $('.reviews-create-popup__button');
-  let submit =  $('.reviews-create-popup__close');
+  let close =  $('.reviews-create-popup__close');
+  let submit =  $('.reviews-create-popup__button');
 
   button.on('click', function() {
     popup.addClass('active');
@@ -21,7 +21,7 @@ function reviewsCreatePopup() {
   });
 
   $(document).mouseup( function(e){
-		if ( !container.is(e.target) && container.has(e.target).length === 0 ) { 
+		if ( popup.hasClass('active') && !container.is(e.target) && container.has(e.target).length === 0 ) { 
       popup.removeClass('active');
       enablePageScroll();
 		}

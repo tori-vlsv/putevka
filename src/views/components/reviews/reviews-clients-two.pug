@@ -1,0 +1,59 @@
+section.reviews-clients
+  .wrapper
+    .reviews-clients__wrapper
+      .reviews-clients__header
+        h2 Отзывы наших клиентов
+        button.reviews-clients__button(type="button")
+          svg(width="18" height="18" viewBox="0 0 18 18")
+            use(xlink:href="#svg-pencil")
+          span Написать отзыв
+      .reviews-clients__cards
+        +reviews-clients-card-two(
+          {
+            info: 'Ольга Бадьянова <time datetime="2022-03-28">- 28.03.2022</time>',
+            link: 'Yell'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Анна Назарова <time datetime="2017-02-13">- 13.02.2017</time>',
+            link: 'Отзовик'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Ольга Самохина <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'Яндекс Карты'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Татьяна Владимировна <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'IRecommend'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Инкогнито 9658 <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'Otzyvru.com'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Андрей Егошин <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'Google Maps'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'Анна Елизарова <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'Yell'
+          }
+        )
+        +reviews-clients-card-two(
+          {
+            info: 'tatiana Skakalina <time datetime="2022-04-17">- 17.04.2022</time>',
+            link: 'Яндекс Карты'
+          }
+        )
+      include ../pagination-huge

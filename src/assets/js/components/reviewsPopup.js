@@ -17,7 +17,7 @@ function reviewsPopup() {
   });
 
   $(document).mouseup( function(e){
-		if ( !container.is(e.target) && container.has(e.target).length === 0 ) { 
+		if ( popup.hasClass('active') && !container.is(e.target) && container.has(e.target).length === 0 ) { 
       popup.removeClass('active');
       enablePageScroll();
 		}

@@ -18,22 +18,20 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: $gray-400;
-    font-weight: 400;
-    line-height: 20px;
-    @include max-screen(tablet) {
-      font-size: 16px;
-    }
-    @include min-screen(tablet-2x) {
-      font-size: 18px;
-    }
     a {
+      line-height: 20px;
       color: $blue-500;
       font-weight: 600;
       &:active {
         color: $orange-500;
       }
+      @include max-screen(tablet) {
+        font-size: 16px;
+      }
       @include min-screen(tablet-2x) {
+        font-size: 18px;
+      }
+      @include min-screen(laptop) {
         transition: color $transition-default;
         &:hover {
           color: $orange-500;
@@ -112,6 +110,48 @@
     }
     @include min-screen(tablet-2x) {
       margin-top: 30px;
+    }
+  }
+  &--default {
+    .reviews-clients-card {
+      &__top {
+        @include max-screen(tablet) {
+          flex-direction: column;
+          gap: 10px;
+          
+        }
+        @include min-screen(tablet-2x) {
+
+        }
+      }
+      &__info {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        time {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+      &__link {
+        span {
+          color: $gray-400;
+          @include max-screen(tablet) {
+            display: none;
+          }
+          @include min-screen(tablet-2x) {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+        }
+      }
+      &__button {
+        font-weight: 400;
+      }
     }
   }
 }

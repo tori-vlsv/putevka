@@ -1,4 +1,4 @@
-mixin reviews-clients-card2(data)
+mixin reviews-clients-card-two(data)
   .reviews-clients-card.reviews-clients-card--default
     .reviews-clients-card__top
       .reviews-clients-card__info !{ data.info }
@@ -11,7 +11,8 @@ mixin reviews-clients-card2(data)
     p.reviews-clients-card__text Отдыхали с мужем в Крыму в санатории "Ай-Петри" в прошлом году, летом, это близ поселка Кореиз. Путёвку бронировали через "Путевка.ком". Менеджер оказался очень доброжелательным, молодым человеком, оперативно оформил все документы. Из плюсов: море и пл...
     .reviews-clients-card__bottom
       button.reviews-clients-card__button(type="button") Отзыв полностью
-      .reviews-clients-card__link Размещен на
+      .reviews-clients-card__link
+        span Размещен на
         a(href="#")= data.link
         svg(width="12" height="12" viewBox="0 0 12 12")
           use(xlink:href="#svg-share")
