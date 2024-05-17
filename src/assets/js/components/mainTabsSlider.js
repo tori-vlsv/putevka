@@ -3,7 +3,7 @@ import { Scrollbar, Grid, Mousewheel } from 'swiper/modules';
 
 
 function mainTabsSlider() {
-  new Swiper('.main-houses__tabs', {
+  new Swiper('.main-sanatorium__tabs', {
     modules: [ Scrollbar, Grid, Mousewheel ],
     grabCursor: true,
     slidesPerView: 'auto',

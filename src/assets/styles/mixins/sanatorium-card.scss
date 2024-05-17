@@ -1,8 +1,9 @@
-.house-card {
+.sanatorium-card {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 5px 20px 0px #26314108, 0px 1px 3px 1px #26314112;
   position: relative;
+  height: 100%;
 
   &__content {
     display: flex;
@@ -53,19 +54,17 @@
     background-color: $white;
     padding: 16px;
     @include max-screen(tablet) {
-      min-height: 256px;
-      height: 256px;
+      height: calc(100% - 200px);
     }
     @include min-screen(tablet-2x) {
-      min-height: 230px;
-      height: 230px;
+      height: calc(100% - 240px);
     }
   }
 
   &__title {
     font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 20px;
     color: $black-400;
     transition: color $transition-default;
     display: -webkit-box;
@@ -88,6 +87,9 @@
     gap: 3px;
     align-items: center;
     span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15px;
       color: $black-300;
     }
     svg {
@@ -116,6 +118,27 @@
     svg {
       stroke: transparent;
     }
+  }
+
+  &__profile {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      stroke: transparent;
+    }
+  }
+
+  &__treatment {
+    color: $blue-500;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.25);
   }
 
   &__button {

@@ -1,41 +1,41 @@
-section.main-houses
+section.main-sanatorium
   .wrapper
     h2 Рейтинг лучших санаториев и пансионатов
-    p.main-houses__text Рейтинг составляется автоматически на основе количества бронирований и оценок отдыхающих
+    p.main-sanatorium__text Рейтинг составляется автоматически на основе количества бронирований и оценок отдыхающих
   .wide-wrapper
 
-    .swiper.main-houses__tabs
+    .swiper.main-sanatorium__tabs
       .swiper-wrapper
         .swiper-slide
-          button.main-houses__tab.active(type="button") 
+          button.main-sanatorium__tab.active(type="button") 
             span Краснодарский край
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span Крым
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span КавМинВоды
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span Абхазия
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span Беларусь
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span Москва и область
         .swiper-slide
-          button.main-houses__tab(type="button") 
+          button.main-sanatorium__tab(type="button") 
             span Алтай
 
-    .swiper.main-houses__slider
+    .swiper.main-sanatorium__slider
       .swiper-wrapper
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/1.png',
+                  src: '/assets/images/main-sanatorium/1.png',
                   alt: 'house-1'
                 },
                 price: 'От 19 990 ₽',
@@ -62,15 +62,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 150 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/2.png',
+                  src: '/assets/images/main-sanatorium/2.png',
                   alt: 'house-2'
                 },
                 price: '',
@@ -97,15 +98,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 320 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/3.png',
+                  src: '/assets/images/main-sanatorium/3.png',
                   alt: 'house-3'
                 },
                 price: '',
@@ -132,15 +134,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 50 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/4.png',
+                  src: '/assets/images/main-sanatorium/4.png',
                   alt: 'house-4'
                 },
                 price: '',
@@ -167,15 +170,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 725 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/5.png',
+                  src: '/assets/images/main-sanatorium/5.png',
                   alt: 'house-5'
                 },
                 price: '',
@@ -202,15 +206,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 320 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/6.png',
+                  src: '/assets/images/main-sanatorium/6.png',
                   alt: 'house-6'
                 },
                 price: '',
@@ -237,15 +242,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 150 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/7.png',
+                  src: '/assets/images/main-sanatorium/7.png',
                   alt: 'house-7'
                 },
                 price: '',
@@ -272,15 +278,16 @@ section.main-houses
                     },
                     title: 'До пляжа: 725 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
         .swiper-slide
-          +house-card(
+          +sanatorium-card(
               {
                 className: '',
                 image: {
-                  src: '/assets/images/main-houses/8.png',
+                  src: '/assets/images/main-sanatorium/8.png',
                   alt: 'house-8'
                 },
                 price: '',
@@ -307,7 +314,8 @@ section.main-houses
                     },
                     title: 'До пляжа: 50 метров'
                   },
-                ]
+                ],
+                profile: '',
               }
             )
       .swiper-scrollbar

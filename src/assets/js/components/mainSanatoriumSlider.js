@@ -1,14 +1,14 @@
 import Swiper from 'swiper';
 import { Scrollbar, Grid } from 'swiper/modules';
 
-function mainHousesSlider() {
-  new Swiper('.main-houses__slider', {
+function mainSanatoriumSlider() {
+  new Swiper('.main-sanatorium__slider', {
     modules: [ Scrollbar, Grid ],
     slidesPerView: 1.1,
     spaceBetween: 20,
     speed: 800,
     scrollbar: {
-      el: ".main-houses__slider .swiper-scrollbar",
+      el: ".main-sanatorium__slider .swiper-scrollbar",
     },
     breakpoints: {
       490: {
@@ -26,12 +26,9 @@ function mainHousesSlider() {
       1280: {
         slidesPerView: 4,
         allowTouchMove: false,
-        grid: {
-          fill: 'row',
-          rows: 2,
-        },
+        spaceBetween: 20,
       }
     }
   });
 };
-mainHousesSlider();
+mainSanatoriumSlider();

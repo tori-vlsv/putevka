@@ -8,7 +8,7 @@ import "./base/common/get-current-year";
 import "./base/common/get-header-height";
 
 import "./components/mainPromoSlider";
-import "./components/mainHousesSlider";
+import "./components/mainSanatoriumSlider";
 import "./components/mainTabsSlider";
 import "./components/aboutHistorySlider";
 import "./components/aboutMediaSlider";
@@ -18,6 +18,7 @@ import "./components/aboutPartnersSlider";
 import "./components/aboutMapToggle";
 import "./components/reviewsPopup";
 import "./components/reviewsCreatePopup";
+import "./components/attractionsSanatoriumSlider";
 
 
 

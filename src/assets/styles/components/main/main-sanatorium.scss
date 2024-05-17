@@ -1,4 +1,4 @@
-.main-houses {
+.main-sanatorium {
   padding-bottom: 40px;
   @include max-screen(tablet) {
     padding-top: 60px;
@@ -86,6 +86,17 @@
       padding-left: 0;
     }
   }
+  &__slider {
+    .swiper {
+      &-wrapper {
+        @include min-screen(laptop) {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 20px;
+        }
+      }
+    }
+  }
   .swiper {
     &-wrapper {
       position: relative;
@@ -95,7 +106,7 @@
       height: auto;
     }
     &-scrollbar {
-      background-color: #EEF3FB;
+      background-color: $bg-blue-200;
       @include min-screen(laptop) {
         display: none;
       }

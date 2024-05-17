@@ -20,7 +20,7 @@
 @import "./mixins/breadcrumbs";
 @import "./mixins/button-transparent";
 @import "./mixins/resort-card";
-@import "./mixins/house-card";
+@import "./mixins/sanatorium-card";
 @import "./mixins/about-types-card";
 @import "./mixins/about-team-card";
 @import "./mixins/reviews-service-rating";
@@ -35,7 +35,7 @@
 @import "./components/main/main-resorts";
 @import "./components/main/main-procedures";
 @import "./components/main/main-about";
-@import "./components/main/main-houses";
+@import "./components/main/main-sanatorium";
 
 @import "./components/about/about-video";
 @import "./components/about/about-types";
@@ -58,3 +58,4 @@
 
 @import "./components/attractions/attractions-hero";
 @import "./components/attractions/attractions-types";
+@import "./components/attractions/attractions-sanatorium";

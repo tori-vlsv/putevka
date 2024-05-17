@@ -1,0 +1,39 @@
+mixin sanatorium-card(data)
+  .sanatorium-card(class="" + data.className)
+    .sanatorium-card__bg
+      img(src="" + data.image.src alt="" + data.image.alt loading="lazy")
+    .sanatorium-card__container
+      if data.price || data.discount || data.booking
+        if data.price
+          .sanatorium-card__cost.sanatorium-card__cost--orange
+            span= data.price
+        if data.discount
+          .sanatorium-card__cost.sanatorium-card__cost--red
+            span= data.discount
+        if data.booking
+          .sanatorium-card__cost.sanatorium-card__cost--green
+            span= data.booking
+      .sanatorium-card__content
+        .sanatorium-card__top
+          a.sanatorium-card__link(href="#") 
+            h4.sanatorium-card__title= data.title
+          .sanatorium-card__location
+            svg(width="11" height="13" viewBox="0 0 11 13")
+              use(xlink:href="#svg-location")
+            span= data.location
+        .sanatorium-card__bottom
+          if data.facilities.length > 0
+            .sanatorium-card__items
+              each item in data.facilities
+                .sanatorium-card__item 
+                  svg(width="18" height="18" viewBox="0 0 18 18")
+                    use(xlink:href="#svg-" + item.icon.href)
+                  span= item.title
+          if data.profile
+            .sanatorium-card__profile
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-medic-profile")
+              .sanatorium-card__treatment Профилей лечения:
+                span= data.profile
+          a(href="#").sanatorium-card__button
+            span Подробнее
