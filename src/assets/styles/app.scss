@@ -26,6 +26,7 @@
 @import "./mixins/reviews-service-rating";
 @import "./mixins/reviews-clients-card";
 @import "./mixins/attractions-types-card";
+@import "./mixins/excursion-card"; 
 
 /*
   Компоненты
@@ -59,3 +60,4 @@
 @import "./components/attractions/attractions-hero";
 @import "./components/attractions/attractions-types";
 @import "./components/attractions/attractions-sanatorium";
+@import "./components/attractions/attractions-excursion";

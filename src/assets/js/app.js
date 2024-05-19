@@ -19,6 +19,4 @@ import "./components/aboutMapToggle";
 import "./components/reviewsPopup";
 import "./components/reviewsCreatePopup";
 import "./components/attractionsSanatoriumSlider";
-
-
-
+import "./components/attractionsExcursionSlider";

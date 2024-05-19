@@ -1,0 +1,161 @@
+.attractions-excursion {
+  @include max-screen(tablet) {
+    padding: 30px 0;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 35px 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__buttons {
+    @include max-screen(tablet) {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    @include min-screen(tablet-2x) {
+      display: flex;
+    }
+    &:active {
+      color: $orange-500;
+    }
+    @include min-screen(laptop) {
+      &:hover {
+        span {
+          color: $orange-500;
+        }
+      }
+    }
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $blue-500;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+      }
+    }
+  }
+
+  &__navigation {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    @include max-screen(tablet) {
+      display: none;
+    }
+    @include min-screen(tablet-2x) {
+      display: block;
+    }
+    .swiper-button {
+      &-next, 
+      &-prev {
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: $white;
+        box-shadow: 0px 5px 15px 0px #4B6AA626, 0px 1px 4px 0px #14448B0D;
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
+        @include min-screen(laptop) {
+          transition: background-color $transition-default;
+          svg {
+            transition: stroke $transition-default;
+          }
+          &:hover {
+            background-color: $blue-500;
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+        svg {
+          width: 10px;
+          height: 16px;
+          fill: transparent;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &-prev {
+        left: 0;
+        svg {
+          margin-right: 2px;
+          transform: rotate(180deg);
+        }
+      }
+      &-next {
+        right: 0;
+        svg {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  &__slider.swiper {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    @include max-screen(tablet-2x) {
+      padding-left: 20px;
+    }
+    @include min-screen(laptop) {
+      padding-left: 0;
+    }
+  }
+
+  .swiper {
+    &-wrapper {
+      position: relative;
+      align-items: stretch;
+    }
+    &-slide {
+      height: auto;
+    }
+    &-scrollbar {
+      background-color: $bg-blue-200;
+      @include min-screen(laptop) {
+        display: none;
+      }
+      &-drag {
+        background-color: $blue-border-light;
+      }
+    }
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      left: 20px;
+      bottom: 0;
+    } 
+  }
+}

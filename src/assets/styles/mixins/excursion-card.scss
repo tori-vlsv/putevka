@@ -1,10 +1,10 @@
-.sanatorium-card {
+.excursion-card {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.03), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.07);
   position: relative;
   height: 100%;
-
+  box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.03), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.07);
+  
   &__content {
     display: flex;
     flex-direction: column;
@@ -27,29 +27,6 @@
     }
   }
 
-  &__cost {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    padding: 1px 5px;
-    span {
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16.8px;
-      text-align: center;
-      color: $white;
-    }
-    &--orange {
-      background-color: $orange-500;
-    }
-    &--red {
-      background-color: $red-500;
-    }
-    &--green {
-      background-color: $green-500;
-    }
-  }
-
   &__container {
     background-color: $white;
     padding: 16px;
@@ -68,7 +45,7 @@
     color: $black-400;
     transition: color $transition-default;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     &:active {
@@ -81,64 +58,53 @@
     }
   }
 
-  &__location {
-    margin-top: 8px;
-    display: flex;
-    gap: 3px;
-    align-items: center;
-    span {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 15px;
-      color: $black-300;
-    }
-    svg {
-      stroke: transparent;
-    }
+  &__text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: rgba($color: $black-300, $alpha: 0.75);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__items {
     margin-top: 24px;
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 8px;
+    gap: 4px;
+    align-items: center;
+    span {
+      background-color: $gray-400;
+      width: 2px;
+      height: 2px;
+      border-radius: 100px;
+    }
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    span {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 18px;
-      color: $black-300;
-    }
-    svg {
-      stroke: transparent;
-    }
-  }
-
-  &__profile {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    svg {
-      stroke: transparent;
-    }
-  }
-
-  &__treatment {
-    color: $blue-500;
     font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
+    line-height: 14px;
+    color: $black-300;
+  }
+
+  &__cost {
+    margin-top: 10px;
+    font-family: 'Panton';
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: $black-400;
     display: flex;
-    align-items: center;
-    gap: 3px;
-    border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.25);
+    gap: 4px;
+    span {
+      font-family: 'Tilda Sans';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
   }
 
   &__button {

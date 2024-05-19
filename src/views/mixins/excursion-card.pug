@@ -1,0 +1,19 @@
+mixin excursion-card(data)
+  .excursion-card
+    .excursion-card__bg
+      img(src="" + data.image.src alt="" + data.image.alt loading="lazy")
+    .excursion-card__container
+      .excursion-card__content
+        .excursion-card__top
+          a.excursion-card__link(href="#") 
+            h3.excursion-card__title= data.title
+          .excursion-card__text= data.text 
+        .excursion-card__bottom
+          .excursion-card__items
+            .excursion-card__item= data.type
+            span
+            .excursion-card__item= data.time
+          .excursion-card__cost= data.cost 
+            span= data.service
+          a.excursion-card__button(href="#")
+            span Заказ и описание
