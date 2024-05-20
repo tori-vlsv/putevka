@@ -2,15 +2,17 @@ section.attractions-map
   .wrapper
     .attractions-map__wrapper
       h2 Достопримечательности Краснодарского края на карте
-      .attractions-map__items
-        .attractions-map__item Населенные пункты с достопримечательностями:
-        .attractions-map__item Геленджик
-        .attractions-map__item Анапа
-        .attractions-map__item Витязево
-        .attractions-map__item Сукко
-        .attractions-map__item Сочи
-        .attractions-map__item Туапсе
-        .attractions-map__item Горячий Ключ
+      .attractions-map__tabs
+        span Населенные пункты с достопримечательностями:
+        button.attractions-map__tab(type="button") Геленджик
+        button.attractions-map__tab(type="button") Анапа
+        button.attractions-map__tab(type="button") Витязево
+        button.attractions-map__tab(type="button") Сукко
+        button.attractions-map__tab(type="button") Сочи
+        button.attractions-map__tab(type="button") Туапсе
+        button.attractions-map__tab(type="button") Горячий Ключ
+  .ymap-container
+    #map-yandex
 
 
 
