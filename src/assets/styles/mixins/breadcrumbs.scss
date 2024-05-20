@@ -9,9 +9,9 @@
     padding-bottom: 20px;
   }
 
-  &__list {
-    align-items: center;
+  &__button {
     display: inline-flex;
+    align-items: center;
     @include max-screen(tablet) {
       gap: 4px;
       background-color: rgba($color: $blue-700, $alpha: 0.07);
@@ -19,25 +19,56 @@
       border-radius: 6px;
     }
     @include min-screen(tablet-2x) {
+      display: none;
+    }
+    svg {
+      fill: transparent;
+      stroke: $blue-500;
+      transform: rotate(180deg);
+      width: 14px;
+      height: 14px;
+    }
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $blue-500;
+      &:active {
+        color: $orange-500;
+      }
+    }
+  }
+
+  &__list {
+    align-items: center;
+    display: inline-flex;
+    @include max-screen(tablet) {
+      display: none;
+      // gap: 4px;
+      // background-color: rgba($color: $blue-700, $alpha: 0.07);
+      // padding: 7px 10px;
+      // border-radius: 6px;
+    }
+    @include min-screen(tablet-2x) {
       gap: 10px;
     }
 
     li {
       display: inline;
-      &:first-child {
-        @include max-screen(tablet) {
-          display: none;
-        }
-      }
+      // &:first-child {
+      //   @include max-screen(tablet) {
+      //     display: none;
+      //   }
+      // }
     }
 
     li,
     a, 
     p {
-      @include max-screen(tablet) {
-        font-size: 14px;
-        line-height: 16px;
-      }
+      // @include max-screen(tablet) {
+      //   font-size: 14px;
+      //   line-height: 16px;
+      // }
       @include min-screen(tablet-2x) {
         font-size: 16px;
         line-height: 18px;
@@ -48,21 +79,18 @@
     svg {
       fill: transparent;
       display: inline-block;
-      @include max-screen(tablet) {
-        transform: rotate(180deg);
-        width: 14px;
-        height: 14px;
-        stroke: $blue-500;
-      }
-      @include min-screen(tablet-2x) {
-        stroke: $gray-400;
-        stroke-opacity: 0.5;
-      }
-      &:last-child {
-        @include max-screen(tablet) {
-          display: none;
-        }
-      }
+      stroke: $gray-400;
+      stroke-opacity: 0.5;
+      // @include max-screen(tablet) {
+      //   transform: rotate(180deg);
+      //   stroke: $blue-500;
+      // }
+
+      // &:last-child {
+      //   @include max-screen(tablet) {
+      //     display: none;
+      //   }
+      // }
     }
 
     a {

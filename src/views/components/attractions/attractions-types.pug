@@ -74,42 +74,6 @@ section.attractions-types
             text: 'Удивительное по своей красоте место есть на реке Западный Дагомыс, между посёлками Дагомыс и Солохаул. Это так называемые Дагомысские Корыта или, как их ещё часто именуют, Озёра Любви. Эти ...',
           }
         )
-      .attractions-types__information
-        .attractions-types__bg
-          picture
-            source(
-              srcset="/assets/images/attractions/bg.svg" 
-              media="(min-width: 1024px)") 
-            img(src="/assets/images/attractions/bg-mob.svg" alt="bg-links" loading="lazy")
-        h2.attractions-types__title Посмотрите еще в <br> Краснодарском крае
-        .attractions-types__links
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-water-default")
-            span Санатории и пансионаты
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-bed-default")
-            span Отели и гостиницы
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-building-default")
-            span Апартаменты и квартиры посуточно
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-house-default")
-            span Базы отдыха
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-shape-default")
-            span Кемпинги и глэмпинги
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-direction-default")
-            span Экскурсии с гидом
-          a.attractions-types__link(href="#")
-            svg(width="18" height="18" viewBox="0 0 18 18")
-              use(xlink:href="#svg-car-default")
-            span Трансферы/такси
+      include ./attractions-information
       include ../pagination-huge
       

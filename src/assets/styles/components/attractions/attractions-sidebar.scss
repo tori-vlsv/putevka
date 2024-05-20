@@ -1,0 +1,113 @@
+.attractions-sidebar {
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__block {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px 0px rgba($color: $black-700, $alpha: 0.12);
+    padding: 30px;
+    border: 2px solid transparent;
+    &--orange {
+      border-color: rgba($color: $orange-500, $alpha: 0.5);
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $orange-500;
+    }
+    h4 {
+      font-family: 'Tilda Sans';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $gray-400;
+    }
+  }
+
+  &__title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    svg {
+      stroke: transparent;
+      width: 24px;
+      height: 24px;
+      fill: $orange-500;
+    }
+  }
+
+  &__types {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+    }
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $blue-500;
+      max-width: max-content;
+      &:active {
+        color: $orange-500;
+      }
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
+  }
+
+  &__main {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $blue-500;
+    max-width: max-content;
+    border-bottom: 1px dashed transparent;
+    &--bold {
+      font-weight: 600;
+    }
+    &:active {
+      border-color: rgba($color: $blue-500, $alpha: 0.5);
+    }
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+      &:hover {
+        border-color: rgba($color: $blue-500, $alpha: 0.5);
+      }
+    }
+  }
+}

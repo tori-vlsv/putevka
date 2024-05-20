@@ -15,15 +15,20 @@ block content
   main
     +breadcrumbs(
       [
-        { 
+        {
           href: '/',
-          title: 'Краснодарский край',
+          title: 'Рязанская область',
+        },
+        {
+          href: '/',
+          title: 'Рязань',
+        },
+        {
+          href: '/',
+          title: 'Достопримечательности Рязани',
         },
       ],
       'Назад'
     )
-    include ../components/attractions/attractions-hero
-    include ../components/attractions/attractions-types
-    include ../components/attractions/attractions-sanatorium
-    include ../components/attractions/attractions-excursion
-    include ../components/attractions/attractions-map
+    include ../components/attractions-city/attractions-city-hero
+    include ../components/attractions-city/attractions-city-main

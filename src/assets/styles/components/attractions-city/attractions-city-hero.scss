@@ -1,0 +1,36 @@
+.attractions-city-hero {
+  @include max-screen(tablet) {
+    padding-bottom: 40px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    color: $black-400;
+    @include max-screen(tablet) {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 28px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+  }
+
+  &__text {
+    color: rgba($color: $black-300, $alpha: 0.75);
+    @include max-screen(tablet) {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

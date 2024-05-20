@@ -1,0 +1,7 @@
+.attractions-city-main {
+  &__wrapper {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 306px;
+  }
+}
