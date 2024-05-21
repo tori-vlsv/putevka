@@ -1,0 +1,100 @@
+.attractions-city-types
+  .wrapper
+    .attractions-city-types__wrapper
+      .attractions-city-types__header
+        h2 Другие интересные места и достопримечательности Рязани
+        .attractions-city-types__navigation
+          button(type="button", aria-label="Previous").swiper-button-prev
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+          button(type="button", aria-label="Next").swiper-button-next
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+  .wide-wrapper
+    .swiper.attractions-city-types__slider
+      .swiper-wrapper
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: 'Музейный комплекс «Михайловское укрепление»',
+              image: {
+                src: '/assets/images/attractions/1.png',
+                alt: 'attractions-1'
+              },
+              label: '',
+              location: '',
+              text: 'Одним из самых интересных исторических объектов Геленджикского района, включённых практически во все туристических маршруты, является музейный комплекс «Михайловское укрепление» ...',
+            }
+          )
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: 'Рязанский государственный областной художественный музей им. И.П. Пожалостина',
+              image: {
+                src: '/assets/images/attractions/2.png',
+                alt: 'attractions-2'
+              },
+              label: 'Панорама 360°',
+              location: '',
+              text: 'Приехав в Рязань, обязательно посетите Художественный музей имени И.П. Пожалостина. Вы будете поражены огромной коллекцией произведений искусства — всего 12000 экспонатов ...',
+            }
+          )
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: 'Кипарисовое озеро',
+              image: {
+                src: '/assets/images/attractions/3.png',
+                alt: 'attractions-3'
+              },
+              label: '',
+              location: '',
+              text: 'Так называемое «Кипарисовое озеро» или озеро Сукко – необыкновенный пруд с чистейшей водой бирюзового цвета, в северной части которого прямо в воде растут кипарисы. Это особый вид кипарисов ...',
+            }
+          )
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: 'Набережная Геленджика',
+              image: {
+                src: '/assets/images/attractions/4.png',
+                alt: 'attractions-4'
+              },
+              label: '',
+              location: '',
+              text: 'Набережная Геленджика – главная достопримечательность и гордость этого популярного курорта, любимое место отдыха и прогулок жителей и гостей города. Она по праву считается самой ...',
+            }
+          )
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: '33 водопада',
+              image: {
+                src: '/assets/images/attractions/5.png',
+                alt: 'attractions-5'
+              },
+              label: '',
+              location: '',
+              text: 'Приехав в Рязань, обязательно посетите Художественный музей имени И.П. Пожалостина. Вы будете поражены огромной коллекцией произведений искусства — всего 12000 экспонатов ...',
+            }
+          )
+        .swiper-slide
+          +attractions-types-card(
+            {
+              class: 'attractions-types-card--mini',
+              title: '33 водопада',
+              image: {
+                src: '/assets/images/attractions/5.png',
+                alt: 'attractions-5'
+              },
+              label: '',
+              location: '',
+              text: 'Приехав в Рязань, обязательно посетите Художественный музей имени И.П. Пожалостина. Вы будете поражены огромной коллекцией произведений искусства — всего 12000 экспонатов ...',
+            }
+          )
+      .swiper-scrollbar

@@ -7,6 +7,7 @@
   }
 
   &__link {
+    display: none;
     padding: 9px 16px;
     border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
     border-radius: 8px;
@@ -16,6 +17,9 @@
     line-height: 18px;
     &:active {
       color: $orange-500;
+    }
+    @include min-screen(tablet-2x) {
+      display: block;
     }
     @include min-screen(laptop) {
       transition: color $transition-default;
@@ -47,6 +51,15 @@
       &:hover {
         color: $black-400;
       }
+    }
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @include min-screen(tablet-2x) {
+      display: none;
     }
   }
 }

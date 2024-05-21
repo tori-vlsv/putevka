@@ -1,5 +1,5 @@
 mixin attractions-types-card(data)
-  .attractions-types-card
+  .attractions-types-card(class="" + data.class)
     .attractions-types-card__img
       h3.attractions-types-card__title
         a(href="#")= data.title
@@ -10,10 +10,11 @@ mixin attractions-types-card(data)
           span= data.label
       
     .attractions-types-card__content
-      .attractions-types-card__location
-        svg(width="11" height="13" viewBox="0 0 11 13")
-          use(xlink:href="#svg-location")
-        span= data.location
+      if data.location
+        .attractions-types-card__location
+          svg(width="11" height="13" viewBox="0 0 11 13")
+            use(xlink:href="#svg-location")
+          span= data.location
       p.attractions-types-card__text= data.text
       .attractions-types-card__buttons
         a.attractions-types-card__button.attractions-types-card__button--orange(href="#")

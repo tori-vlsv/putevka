@@ -18,5 +18,7 @@ import "./components/aboutPartnersSlider";
 import "./components/aboutMapToggle";
 import "./components/reviewsPopup";
 import "./components/reviewsCreatePopup";
-import "./components/attractionsSanatoriumSlider";
+import "./components/attractionsSanatoriumSliderFour";
+import "./components/attractionsSanatoriumSliderThree";
 import "./components/attractionsExcursionSlider";
+import "./components/attractionsCityTypesSlider";

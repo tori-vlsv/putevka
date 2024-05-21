@@ -4,7 +4,6 @@
   background-color: $white;
   box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.03), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.07);
 
-
   &__img {
     position: relative;
     padding: 16px;
@@ -189,6 +188,16 @@
     svg {
       stroke: transparent;
       fill: $gray-400;
+    }
+  }
+  &--mini .attractions-types-card {
+    &__text {
+      margin-top: 0;
+    }
+    &__button {
+      svg {
+        display: none;
+      }
     }
   }
 }

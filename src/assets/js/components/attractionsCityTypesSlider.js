@@ -1,18 +1,18 @@
 import Swiper from 'swiper';
 import { Scrollbar, Navigation } from 'swiper/modules';
 
-function mainSanatoriumSlider() {
-  new Swiper('.attractions-sanatorium__slider', {
+function attractionsCityTypesSlider() {
+  new Swiper('.attractions-city-types__slider', {
     modules: [ Scrollbar, Navigation ],
     slidesPerView: 1.1,
     spaceBetween: 20,
     speed: 800,
     scrollbar: {
-      el: ".attractions-sanatorium__slider .swiper-scrollbar",
+      el: ".attractions-city-types__slider .swiper-scrollbar",
     },
     navigation: {
-      nextEl: '.attractions-sanatorium__navigation .swiper-button-next',
-      prevEl: '.attractions-sanatorium__navigation .swiper-button-prev',
+      nextEl: '.attractions-city-types__navigation .swiper-button-next',
+      prevEl: '.attractions-city-types__navigation .swiper-button-prev',
     },
     breakpoints: {
       490: {
@@ -25,14 +25,15 @@ function mainSanatoriumSlider() {
         slidesPerView: 2.9,
       },
       1024: {
-        slidesPerView: 3.2,
+        slidesPerView: 3,
+        spaceBetween: 24,
       },
       1280: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         allowTouchMove: false,
-        spaceBetween: 20,
+        spaceBetween: 24,
       }
     }
   });
 };
-mainSanatoriumSlider();
+attractionsCityTypesSlider();
