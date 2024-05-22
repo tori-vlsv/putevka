@@ -10,12 +10,18 @@
         +attractions-sanatorium(
           {
             title: 'Санатории в Рязани',
-            className: '',
+            className: 'attractions-sanatorium--three',
             sliderName: 'attractions-sanatorium__slider--three'
           }
         )
         include ../attractions-city/attractions-city-content-3
-        include ../attractions/attractions-excursion
+        +attractions-excursion(
+          {
+            title: 'Экскурсии в Рязани',
+            className: 'attractions-excursion--three',
+            sliderName: 'attractions-excursion__slider--three'
+          }
+        )
         include ../attractions-city/attractions-city-content-4
         include ../attractions-city/attractions-city-content-5
         include ../attractions-city/attractions-city-content-6

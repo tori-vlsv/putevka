@@ -1,23 +1,41 @@
 .attractions-city-main {
-  padding-bottom: 30px;
   position: relative;
+  @include max-screen(tablet) {
+    margin-top: -70px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-bottom: 30px;
+  }
   &:before {
     position: absolute;
     z-index: -1;
     content: '';
-    top: 50px;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: $bg-blue;
     height: calc(100% - 50px);
     width: 100%;
+    @include max-screen(tablet) {
+      top: 510px;
+    }
+    @include min-screen(tablet-2x) {
+      top: 50px;
+    }
   }
   &__wrapper {
     display: grid;
-    gap: 24px;
-    grid-template-columns: 1fr 306px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    @include mm-screen(laptop) {
+      grid-template-columns: 910px 306px;
+      gap: 24px;
+    }
+    @include min-screen(desktop) {
+      grid-template-columns: 966px 306px;
+      gap: 24px;
+    }
   }
+
   .attractions-sanatorium,
   .attractions-excursion {
     @include min-screen(tablet-2x) {
@@ -26,8 +44,26 @@
   }
 
   &__sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    @include max-screen(tablet-2x) {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $black, $alpha: 0.08);
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+    }
+    @include min-screen(laptop) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &.active {
+      z-index: 2901;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

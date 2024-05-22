@@ -6,6 +6,13 @@
     padding: 35px 0;
   }
 
+  &--three.attractions-excursion {
+    @include max-screen(tablet) {
+      padding: 0;
+      margin: 50px 0;
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;

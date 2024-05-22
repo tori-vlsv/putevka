@@ -15,14 +15,8 @@ function mainSanatoriumSliderThree() {
       prevEl: '.attractions-sanatorium__navigation .swiper-button-prev',
     },
     breakpoints: {
-      490: {
-        slidesPerView: 1.7,
-      },
-      640: {
-        slidesPerView: 2.2,
-      },
-      820: {
-        slidesPerView: 2.9,
+      768: {
+        slidesPerView: 2.4,
       },
       1024: {
         slidesPerView: 3,

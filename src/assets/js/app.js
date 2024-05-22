@@ -20,5 +20,7 @@ import "./components/reviewsPopup";
 import "./components/reviewsCreatePopup";
 import "./components/attractionsSanatoriumSliderFour";
 import "./components/attractionsSanatoriumSliderThree";
-import "./components/attractionsExcursionSlider";
+import "./components/attractionsExcursionSliderFour";
+import "./components/attractionsExcursionSliderThree";
 import "./components/attractionsCityTypesSlider";
+import "./components/attractionsPopup";

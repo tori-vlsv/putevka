@@ -1,4 +1,4 @@
-mixin breadcrumbs(data, back)
+mixin breadcrumbs(data, back, buttonClass)
   .breadcrumbs.reveal-showed-up
     .wrapper
       ul.breadcrumbs__list
@@ -16,7 +16,7 @@ mixin breadcrumbs(data, back)
               a(href=""+link.href)= link.title
             svg(width="16" height="16" viewBox="0 0 16 16")
               use(xlink:href="#svg-chevron-right")
-      ul.breadcrumbs__button
+      ul.breadcrumbs__button(class="" + buttonClass)
         svg(width="16" height="16" viewBox="0 0 16 16")
           use(xlink:href="#svg-chevron-right")
         a(href="#")= back

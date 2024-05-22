@@ -5,26 +5,68 @@
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0px 4px 25px 0px rgba($color: $black-700, $alpha: 0.12);
-    padding: 30px;
     border: 2px solid transparent;
+    @include max-screen(tablet) {
+      padding: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 30px;
+    }
     &--orange {
       position: relative;
       top: auto;
       border-color: rgba($color: $orange-500, $alpha: 0.5);
+      @include max-screen(tablet-2x) {
+        margin-top: 20px;
+        display: none;
+      }
+      @include min-screen(laptop) {
+        display: block;
+      }
     }
-    h3 {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 24px;
-      color: $orange-500;
+    &--default {
+      @include max-screen(tablet-2x) {
+        display: block;
+        width: 300px;
+        position: fixed;
+        z-index: 2902;
+        right: 0;
+        transform: translateX(100%);
+        border-radius: 0;
+        top: 0;
+        padding: 20px;
+        transition: transform $transition-slow;
+        height: 100dvh;
+      }
+      &.active {
+        transform: translateX(0);
+      }
     }
     h4 {
+      color: $orange-500;
+      @include max-screen(tablet) {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+    }
+    h5 {
       font-family: 'Tilda Sans';
       font-size: 16px;
       font-weight: 700;
-      line-height: 20px;
+      line-height: 24px;
       color: $gray-400;
     }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__title {
@@ -34,17 +76,28 @@
 
     svg {
       stroke: transparent;
-      width: 24px;
-      height: 24px;
       fill: $orange-500;
+      @include max-screen(tablet) {
+        width: 20px;
+        height: 20px;
+      }
+      @include min-screen(tablet-2x) {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
   &__types {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include max-screen(tablet) {
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 30px;
+    }
   }
 
   &__type {
@@ -79,13 +132,24 @@
     margin-top: 24px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    @include max-screen(tablet-2x) {
+      gap: 10px;
+      height: calc(100dvh - 88px);
+      overflow-y: auto;
+    }
+    @include min-screen(laptop) {
+      gap: 24px;
+      height: calc(100dvh - 128px);
+      overflow-y: auto;
+    }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    @include min-screen(laptop) {
+      gap: 16px;
+    }
   }
 
   &__link {
@@ -93,19 +157,30 @@
     font-weight: 400;
     line-height: 18px;
     color: $blue-500;
-    max-width: max-content;
     border-bottom: 1px dashed transparent;
+    @include max-screen(tablet-2x) {
+      padding: 6px 0 8px;
+    }
+    @include min-screen(laptop) {
+      max-width: max-content;
+    }
     &--bold {
       font-weight: 600;
-    }
-    &:active {
-      border-color: rgba($color: $blue-500, $alpha: 0.5);
+      @include max-screen(tablet-2x) {
+        padding: 11px 0;
+      }
     }
     @include min-screen(laptop) {
       transition: border-color $transition-default;
       &:hover {
         border-color: rgba($color: $blue-500, $alpha: 0.5);
       }
+    }
+  }
+
+  &__close {
+    @include min-screen(laptop) {
+      display: none;
     }
   }
 }

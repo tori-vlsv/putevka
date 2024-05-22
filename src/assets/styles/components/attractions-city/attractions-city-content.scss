@@ -1,26 +1,52 @@
 .attractions-city-content {
   margin: 30px 0;
   h2 {
-    padding-bottom: 30px;
+    font-weight: 700;
+    @include max-screen(tablet) {
+      padding-bottom: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      padding-bottom: 30px;
+    }
   }
 
   h3 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 24px;
-    padding-bottom: 24px;
-    margin-top: 40px;
+    @include max-screen(tablet) {
+      margin-top: 30px;
+      line-height: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      padding-bottom: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+      line-height: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 24px;
+    }
   }
   &__text {
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    @include max-screen(tablet) {
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+      padding-right: 20px;
+    }
     p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 24px;
-      color: $black-300;
+      @include max-screen(tablet) {
+        font-size: 16px;
+        line-height: 22px;
+        color: $black-400;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 18px;
+        line-height: 24px;
+        color: $black-300;
+      }
     }
     span {
       color: $black-400;
@@ -29,11 +55,21 @@
   }
 
   &__picture {
-    margin: 40px 0;
+    @include max-screen(tablet) {
+      margin: 30px 0;
+    }
+    @include min-screen(tablet-2x) {
+      margin: 40px 0;
+    }
   }
 
   &__img {
-    height: 400px;
+    @include max-screen(tablet) {
+      height: 224px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 400px;
+    }
     img {
       height: 100%;
       width: auto;
@@ -58,12 +94,19 @@
   }
 
   &__link {
-    margin-top: 40px;
     display: inline-block;
-    font-size: 16px;
-    line-height: 16px;
     color: $gray-400;
     border-bottom: 1px dashed rgba($color: $gray-400, $alpha: 0.5);
+    @include max-screen(tablet) {
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   .ymap-container {

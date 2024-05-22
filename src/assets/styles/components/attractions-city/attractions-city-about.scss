@@ -1,14 +1,108 @@
 .attractions-city-about {
-  &__wrapper {
+  &__container {
+    position: relative;
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+  }
+
+  &__share {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $white, $alpha: 0.85);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 20px;
+    svg {
+      fill: transparent;
+    }
   }
 
   &__img {
-    height: 500px;
     width: 100%;
+    @include max-screen(tablet) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 220px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 500px;
+    }
     img {
       height: 100%;
-      width: auto;
       object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    @include max-screen(tablet) {
+      padding-top: 244px;
+    }
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: $black-400;
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba($color: $black-300, $alpha: 0.75);
+  }
+
+  &__button {
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:active {
+      span {
+        color: $orange-500;
+      }
+    }
+    @include min-screen(laptop) {
+      display: none;
+    }
+    & > svg {
+      transform: rotate(90deg);
+      fill: transparent;
+      stroke: $gray-400;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    svg {
+      stroke: $gray-400;
+      fill: transparent;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $blue-500;
     }
   }
 
@@ -16,10 +110,20 @@
     background-color: rgba($color: $blue-700, $alpha: 0.1);
     padding: 24px;
     display: flex;
-    gap: 100px;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 8px;
+    }
+    @include max-screen(tablet-2x) {
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 100px;
+    }
   }
 
-  &__title {
+  &__name {
     font-size: 16px;
     font-weight: 600;
     line-height: 18px;
@@ -34,26 +138,56 @@
     gap: 2px;
     li {
       position: relative;
-      padding-left: 18px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
       color: $black-400;
+      @include max-screen(tablet) {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 16px;
+
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 18px;
+      }
 
       &:before {
         content: "";
-        width: 6px;
-        height: 6px;
         border-radius: 50%;
         background-color: $black-400;
         position: absolute;
         left: 0;
-        top: 9px;
+        @include max-screen(tablet) {
+          width: 4px;
+          height: 4px;
+          top: 8px;
+        }
+        @include min-screen(tablet-2x) {
+          top: 9px;
+          width: 6px;
+          height: 6px;
+        }
       }
     }
   }
 
   &__content {
     margin-top: 40px;
+  }
+
+  .attractions-city-content__text {
+    @include max-screen(tablet) {
+      margin-top: 50px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+    }
+  }
+
+  .attractions-sidebar__block--orange {
+    display: block;
+    @include min-screen(laptop) {
+      display: none;
+    }
   }
 }

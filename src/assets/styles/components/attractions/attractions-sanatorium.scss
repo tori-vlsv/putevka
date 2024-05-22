@@ -8,6 +8,13 @@
     padding-top: 80px;
   }
 
+  &--three.attractions-sanatorium {
+    @include max-screen(tablet) {
+      padding: 0;
+      margin: 50px 0;
+    }
+  }
+
   &__buttons {
     @include max-screen(tablet) {
       display: flex;

@@ -21,6 +21,9 @@
     @include min-screen(tablet-2x) {
       display: none;
     }
+    &-white {
+      background-color: rgba($color: $white, $alpha: 0.85);
+    }
     svg {
       fill: transparent;
       stroke: $blue-500;

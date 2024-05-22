@@ -1,128 +1,128 @@
 mixin attractions-excursion(data)
-.attractions-excursion(class="" + data.className)
-  .wrapper
-    .attractions-excursion__wrapper
-      .attractions-excursion__header
-        h2= data.title
-        .attractions-excursion__controls
-          .attractions-excursion__navigation
-            button(type="button", aria-label="Previous").swiper-button-prev
-              svg(width="10" height="16" viewBox="0 0 10 16")
-                use(xlink:href="#svg-arrow-right")
-            button(type="button", aria-label="Next").swiper-button-next
-              svg(width="10" height="16" viewBox="0 0 10 16")
-                use(xlink:href="#svg-arrow-right")
-          a.attractions-excursion__button(href="#")
-            span Все экскурсии
-  .wide-wrapper
-    .swiper.attractions-excursion__slider(class="" + data.sliderName)
-      .swiper-wrapper
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Экскурсия по Рязани с посещением Музея леденца или Музея шоколада',
-              text: 'Познакомиться с историческими местами и святынями города, а после узнать, чем лакомились в старину',
-              type: 'Индивидуальная',
-              time: '1 час',
-              cost: '1 000 ₽',
-              service: 'за экскурсию',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Велопрогулка к Мещерским озерам',
-              text: 'Прочувствовать глубину и красоту Мещерского края, услышать его истории и пройти тропами Паустовского',
-              type: 'Индивидуальная',
-              time: '2,5 часа',
-              cost: '4 685 ₽',
-              service: 'за экскурсию',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Интерактивная прогулка по нетуристическим местам Рязани',
-              text: 'Увидеть потайные уголки города и узнать, во что рязанцы превратили «Сад трезвости»',
-              type: 'Групповая',
-              time: '1 час',
-              cost: '600 ₽',
-              service: 'за человека',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Стамбул атмосферный: районы Таксим и Бейоглу',
-              text: 'Прогуляться по ярким улочкам, подняться на Галатскую башню и услышать о жизни города',
-              type: 'Индивидуальная',
-              time: '8 часов',
-              cost: '28 350 ₽',
-              service: 'за экскурсию',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Велопрогулка к Мещерским озерам',
-              text: 'Прочувствовать глубину и красоту Мещерского края, услышать его истории и пройти тропами Паустовского',
-              type: 'Индивидуальная',
-              time: '2,5 часа',
-              cost: '4 685 ₽',
-              service: 'за экскурсию',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Интерактивная прогулка по нетуристическим местам Рязани',
-              text: 'Увидеть потайные уголки города и узнать, во что рязанцы превратили «Сад трезвости»',
-              type: 'Групповая',
-              time: '1 час',
-              cost: '600 ₽',
-              service: 'за человека',
-            }
-          )
-        .swiper-slide
-          +excursion-card(
-            {
-              image: {
-                src: '/assets/images/main-sanatorium/1.png',
-                alt: 'house-1'
-              },
-              title: 'Стамбул атмосферный: районы Таксим и Бейоглу',
-              text: 'Прогуляться по ярким улочкам, подняться на Галатскую башню и услышать о жизни города',
-              type: 'Индивидуальная',
-              time: '8 часов',
-              cost: '28 350 ₽',
-              service: 'за экскурсию',
-            }
-          )
-      .swiper-scrollbar
-  .wrapper
-    .attractions-sanatorium__buttons
-      +button-transparent('Все экскурсии', '#')
+  .attractions-excursion(class="" + data.className)
+    .wrapper
+      .attractions-excursion__wrapper
+        .attractions-excursion__header
+          h2= data.title
+          .attractions-excursion__controls
+            .attractions-excursion__navigation
+              button(type="button", aria-label="Previous").swiper-button-prev
+                svg(width="10" height="16" viewBox="0 0 10 16")
+                  use(xlink:href="#svg-arrow-right")
+              button(type="button", aria-label="Next").swiper-button-next
+                svg(width="10" height="16" viewBox="0 0 10 16")
+                  use(xlink:href="#svg-arrow-right")
+            a.attractions-excursion__button(href="#")
+              span Все экскурсии
+    .wide-wrapper
+      .swiper.attractions-excursion__slider(class="" + data.sliderName)
+        .swiper-wrapper
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Экскурсия по Рязани с посещением Музея леденца или Музея шоколада',
+                text: 'Познакомиться с историческими местами и святынями города, а после узнать, чем лакомились в старину',
+                type: 'Индивидуальная',
+                time: '1 час',
+                cost: '1 000 ₽',
+                service: 'за экскурсию',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Велопрогулка к Мещерским озерам',
+                text: 'Прочувствовать глубину и красоту Мещерского края, услышать его истории и пройти тропами Паустовского',
+                type: 'Индивидуальная',
+                time: '2,5 часа',
+                cost: '4 685 ₽',
+                service: 'за экскурсию',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Интерактивная прогулка по нетуристическим местам Рязани',
+                text: 'Увидеть потайные уголки города и узнать, во что рязанцы превратили «Сад трезвости»',
+                type: 'Групповая',
+                time: '1 час',
+                cost: '600 ₽',
+                service: 'за человека',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Стамбул атмосферный: районы Таксим и Бейоглу',
+                text: 'Прогуляться по ярким улочкам, подняться на Галатскую башню и услышать о жизни города',
+                type: 'Индивидуальная',
+                time: '8 часов',
+                cost: '28 350 ₽',
+                service: 'за экскурсию',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Велопрогулка к Мещерским озерам',
+                text: 'Прочувствовать глубину и красоту Мещерского края, услышать его истории и пройти тропами Паустовского',
+                type: 'Индивидуальная',
+                time: '2,5 часа',
+                cost: '4 685 ₽',
+                service: 'за экскурсию',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Интерактивная прогулка по нетуристическим местам Рязани',
+                text: 'Увидеть потайные уголки города и узнать, во что рязанцы превратили «Сад трезвости»',
+                type: 'Групповая',
+                time: '1 час',
+                cost: '600 ₽',
+                service: 'за человека',
+              }
+            )
+          .swiper-slide
+            +excursion-card(
+              {
+                image: {
+                  src: '/assets/images/main-sanatorium/1.png',
+                  alt: 'house-1'
+                },
+                title: 'Стамбул атмосферный: районы Таксим и Бейоглу',
+                text: 'Прогуляться по ярким улочкам, подняться на Галатскую башню и услышать о жизни города',
+                type: 'Индивидуальная',
+                time: '8 часов',
+                cost: '28 350 ₽',
+                service: 'за экскурсию',
+              }
+            )
+        .swiper-scrollbar
+    .wrapper
+      .attractions-sanatorium__buttons
+        +button-transparent('Все экскурсии', '#')
