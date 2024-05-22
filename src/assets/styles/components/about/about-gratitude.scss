@@ -253,7 +253,7 @@
 
 .lg-next {
   &:before {
-    margin-left: 2px;
+    margin-right: -2px;
     position: absolute;
     right: 0;
     width: 20px;
@@ -262,7 +262,6 @@
     background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 14.5L8.25 8L1.75 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center;
-    right: 0;
     background-position: 50% 50%;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -281,7 +280,7 @@
 .lg-prev {
   transform: rotate(180deg);
   &:after {
-    margin-right: 2px;
+    margin-right: -2px;
     position: absolute;
     width: 20px;
     height: 20px;
