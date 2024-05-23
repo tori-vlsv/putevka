@@ -91,5 +91,20 @@
     svg {
       stroke: transparent;
     }
+    &--green {
+      svg {
+        fill: $green-300;
+      }
+    }
+    &--blue {
+      svg {
+        fill: $blue-400;
+      }
+    }
+    &--orange {
+      svg {
+        fill: $orange-500;
+      }
+    }
   }
 }
