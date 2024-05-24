@@ -21,10 +21,16 @@ function mainSanatoriumSlider() {
       640: {
         slidesPerView: 2.2,
       },
-      820: {
-        slidesPerView: 2.9,
+      680: {
+        slidesPerView: 2.4,
       },
-      1024: {
+      780: {
+        slidesPerView: 2.7,
+      },
+      820: {
+        slidesPerView: 2.95,
+      },
+      920: {
         slidesPerView: 3.2,
       },
       1280: {

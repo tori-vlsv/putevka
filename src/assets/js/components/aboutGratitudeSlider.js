@@ -18,6 +18,15 @@ function aboutGratitudeSlider() {
       el: ".about-gratitude__slider .swiper-scrollbar",
     },
     breakpoints: {
+      460: {
+        slidesPerView: 2.5,
+      },
+      520: {
+        slidesPerView: 2.7,
+      },
+      620: {
+        slidesPerView: 3.1,
+      },
       768: {
         slidesPerView: 3.5,
         spaceBetween: 24,

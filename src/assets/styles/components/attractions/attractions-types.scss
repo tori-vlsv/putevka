@@ -9,9 +9,13 @@
 
   &__cards {
     display: grid;
-    @include max-screen(tablet) {
+    @include max-screen(mobile) {
       gap: 20px;
       grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @include mm-screen(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
     @include min-screen(tablet-2x) {
       gap: 24px;

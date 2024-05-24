@@ -1,8 +1,16 @@
 .attractions-information {
   background-color: $blue-700;
   position: relative;
-  @include max-screen(tablet) {
+  @include max-screen(mobile-2x) {
     padding: 24px 6px;
+  }
+  @include mm-screen(mobile) {
+    padding: 24px 20px;
+  }
+  @include mm-screen(tablet) {
+    padding: 24px 20px;
+  }
+  @include max-screen(tablet) {
     margin: 30px 0;
   }
   @include min-screen(tablet-2x) {

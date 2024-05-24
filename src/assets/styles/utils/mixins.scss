@@ -84,4 +84,10 @@
       @content;
     }
   }
+
+  @if $breakpoint == mobile {
+    @media (min-width: 640px) and (max-width: 767px) {
+      @content;
+    }
+  }
 }

@@ -137,11 +137,9 @@
   &__slider.swiper {
     margin-top: 30px;
     padding-bottom: 20px;
-    @include max-screen(tablet-2x) {
+    @include max-screen(tablet) {
       padding-left: 20px;
-    }
-    @include min-screen(laptop) {
-      padding-left: 0;
+      padding-right: 20px;
     }
   }
 
@@ -165,6 +163,7 @@
     .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
       left: 20px;
       bottom: 0;
+      width: calc(100% - 40px);
     } 
   }
 }

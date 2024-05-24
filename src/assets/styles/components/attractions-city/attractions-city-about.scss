@@ -1,28 +1,4 @@
 .attractions-city-about {
-  &__container {
-    position: relative;
-    @include min-screen(tablet-2x) {
-      display: none;
-    }
-  }
-
-  &__share {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba($color: $white, $alpha: 0.85);
-    border-radius: 6px;
-    position: absolute;
-    z-index: 3;
-    right: 0;
-    top: 20px;
-    svg {
-      fill: transparent;
-    }
-  }
-
   &__img {
     width: 100%;
     @include max-screen(tablet) {
@@ -186,6 +162,10 @@
 
   .attractions-sidebar__block--orange {
     display: block;
+  }
+
+  .attractions-sidebar__block--orange,
+  .attractions-sidebar__block--verified {
     @include min-screen(laptop) {
       display: none;
     }

@@ -1,7 +1,7 @@
 .pagination {
   .pagination-huge {
     &__wrapper {
-      @include max-screen(tablet) {
+      @include max-screen(mobile-2x) {
         width: 100%;
         justify-content: space-between;
       }

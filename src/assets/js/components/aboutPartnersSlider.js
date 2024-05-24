@@ -15,6 +15,15 @@ function aboutPartnersSlider() {
       el: ".about-partners__slider .swiper-scrollbar",
     },
     breakpoints: {
+      420: {
+        slidesPerView: 2.6,
+      },
+      540: {
+        slidesPerView: 2.9,
+      },
+      620: {
+        slidesPerView: 3.2,
+      },
       768: {
         slidesPerView: 4.1,
         spaceBetween: 24,
