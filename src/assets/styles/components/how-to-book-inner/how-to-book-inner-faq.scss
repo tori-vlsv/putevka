@@ -1,0 +1,75 @@
+.how-to-book-inner-faq {
+  padding-top: 90px;
+  padding-bottom: 40px;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba($color: $black-300, $alpha: 0.75);
+    margin-top: 20px;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: $black-400;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    transition: color $transition-default, border-color $transition-default, background-color $transition-default;
+    &.active {
+      border-color: $blue-700;
+      background-color: $blue-700;
+      color: $white;
+    }
+  }
+
+  &__items {
+    display: none;
+    margin-top: 40px;
+    border-top: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    &.active {
+      .how-to-book-inner-faq__answer {
+        display: block;
+      }
+    }
+  }
+
+  &__question {
+    padding: 30px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $black-400;
+    cursor: pointer;
+  }
+
+  &__answer {
+    display: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $black-300;
+    padding-bottom: 40px;
+  }
+}

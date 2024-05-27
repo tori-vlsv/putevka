@@ -5,19 +5,6 @@
   @include min-screen(tablet-2x) {
     padding-bottom: 70px;
   }
-  &__title {
-    color: $black-400;
-    @include max-screen(tablet) {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 28px;
-    }
-    @include min-screen(tablet-2x) {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 50px;
-    }
-  }
 
   &__text {
     font-weight: 400;

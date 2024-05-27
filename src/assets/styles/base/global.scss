@@ -27,8 +27,21 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+h1 {
+  color: $black-400;
+  @include max-screen(tablet) {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+  }
+  @include min-screen(tablet-2x) {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+}
+
 h2 {
-  font-family: "Panton";
   font-weight: 400;
   text-align: left;
   @include max-screen(tablet-2x) {
@@ -41,7 +54,7 @@ h2 {
   }
 }
 
-h1, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Panton";
 }
 
