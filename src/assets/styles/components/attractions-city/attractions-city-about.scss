@@ -164,6 +164,10 @@
     display: block;
   }
 
+  .attractions-sidebar__block--orange {
+    display: grid;
+  }
+
   .attractions-sidebar__block--orange,
   .attractions-sidebar__block--verified {
     @include min-screen(laptop) {

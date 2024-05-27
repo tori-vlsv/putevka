@@ -1,6 +1,5 @@
 .attractions-sidebar {
   &__block {
-    top: 20px;
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0px 4px 25px 0px rgba($color: $black-700, $alpha: 0.12);
@@ -18,6 +17,7 @@
       @include max-screen(tablet-2x) {
         margin-top: 20px;
         display: none;
+        padding-bottom: 24px;
       }
       @include min-screen(laptop) {
         display: block;
@@ -25,6 +25,7 @@
     }
     &--default {
       position: sticky;
+      top: 20px;
       @include max-screen(tablet-2x) {
         display: block;
         width: 300px;
@@ -44,14 +45,15 @@
     }
     &--verified {
       padding: 20px;
-      display: grid;
       justify-content: start;
       align-items: center;
       column-gap: 16px;
       @include max-screen(tablet-2x) {
+        display: none;
         margin-top: 20px;
       }
       @include min-screen(laptop) {
+        display: grid;
         row-gap: 20px;
       }
       @include min-screen(desktop) {
