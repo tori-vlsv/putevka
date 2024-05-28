@@ -4,6 +4,14 @@ section.how-to-book-questions
       .how-to-book-questions__block
         .how-to-book-questions__content
           h2.how-to-book-questions__title Остались вопросы?
-          p.how-to-book-questions__text Если у Вас возникли вопросы по бронированию или работе сайта, и Вы не нашли их в разделах выше, задайте нам вопрос по телефону: <a href="tel:+7 499 703-01-20">+7 499 703-01-20</a>
+          p.how-to-book-questions__text Если у Вас возникли вопросы по бронированию или работе сайта, и Вы не нашли их в разделах выше, задайте нам вопрос по телефону: 
+            .how-to-book-questions__link
+              svg(width="20" height="20" viewBox="0 0 20 20")
+                use(xlink:href="#svg-call")
+              <a href="tel:+7 499 703-01-20">+7 499 703-01-20</a>
         .how-to-book-questions__icon  
-          img(src="/assets/images/how-to-book/icon.svg" alt="icon")
+          picture
+            source(
+              srcset="/assets/images/how-to-book/icon.svg" 
+              media="(min-width: 1024px)")
+            img(src="/assets/images/how-to-book/icon-mob.svg" alt="icon" loading="lazy")

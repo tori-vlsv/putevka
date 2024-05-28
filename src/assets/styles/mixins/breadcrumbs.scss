@@ -108,4 +108,36 @@
       }
     }
   }
+
+  &--centered {
+    @include max-screen(tablet) {
+      padding-top: 50px;
+    }
+    @include min-screen(tablet-2x) {
+      padding-top: 90px;
+    }
+    .breadcrumbs {
+      &__list {
+        @include min-screen(tablet-2x) {
+          display: flex;
+          justify-content: center;
+        }
+        li {
+          &:first-child {
+            display: none;
+          }
+        }
+        svg {
+          transform: rotate(180deg);
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--blue {
+    background-color: $bg-blue;
+  }
 }

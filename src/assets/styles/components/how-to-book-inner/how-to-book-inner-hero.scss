@@ -1,7 +1,11 @@
 .how-to-book-inner-hero {
-  padding-top: 90px;
-  padding-bottom: 35px;
   background-color: $bg-blue;
+  @include max-screen(tablet) {
+    padding-bottom: 35px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-bottom: 35px;
+  }
 
   &__wrapper {
     display: flex;

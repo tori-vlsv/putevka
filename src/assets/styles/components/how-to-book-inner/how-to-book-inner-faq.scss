@@ -1,23 +1,39 @@
 .how-to-book-inner-faq {
-  padding-top: 90px;
-  padding-bottom: 40px;
+  @include max-screen(tablet) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
 
   &__title {
     font-weight: 700;
   }
 
   &__text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
     color: rgba($color: $black-300, $alpha: 0.75);
     margin-top: 20px;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__buttons {
-    margin-top: 40px;
     display: flex;
     gap: 10px;
+    @include max-screen(tablet) {
+      margin-top: 30px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+    }
   }
 
   &__button {
@@ -26,42 +42,99 @@
     line-height: 20px;
     color: $black-400;
 
-    padding: 10px 16px;
     border-radius: 8px;
     border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
     transition: color $transition-default, border-color $transition-default, background-color $transition-default;
+    @include max-screen(tablet) {
+      padding: 8px 12px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 10px 16px;
+    }
     &.active {
       border-color: $blue-700;
       background-color: $blue-700;
       color: $white;
+      cursor: default;
+    }
+    &:not(.active) {
+      @include min-screen(laptop) {
+        &:hover {
+          border-color: $orange-500;
+        }
+      }
     }
   }
 
   &__items {
     display: none;
-    margin-top: 40px;
     border-top: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    @include max-screen(tablet) {
+      margin-top: 30px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 40px;
+    }
     &.active {
       display: block;
     }
   }
 
   &__item {
+    cursor: pointer;
     border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
     &.active {
       .how-to-book-inner-faq__answer {
         display: block;
       }
+      .how-to-book-inner-faq__question {
+        svg {
+          transform: rotate(270deg);
+        }
+      }
     }
   }
 
   &__question {
-    padding: 30px 0;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    color: $black-400;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:active {
+      h3 {
+        color: $orange-500;
+      }
+    }
+    @include max-screen(tablet) {
+      padding: 24px 6px 24px 0;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 30px 8px 30px 0;
+    }
+    @include min-screen(laptop) {
+      &:hover {
+        h3 {
+          color: $orange-500;
+        }
+      }
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $black-400;
+      @include max-screen(tablet) {
+        max-width: 282px;
+      }
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+      }
+    }
+    svg {
+      stroke: $blue-500;
+      fill: transparent;
+      transform: rotate(90deg);
+      transition: transform $transition-default;
+    }
   }
 
   &__answer {

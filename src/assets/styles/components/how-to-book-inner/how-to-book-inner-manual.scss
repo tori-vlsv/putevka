@@ -1,39 +1,85 @@
 .how-to-book-inner-manual {
-  padding-top: 35px;
-  padding-bottom: 20px;
-  margin-bottom: 45px;
   background-color: $bg-blue;
+  @include max-screen(tablet) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 35px;
+    margin-bottom: 45px;
+    padding-bottom: 20px;
+  }
 
   &__steps {
+    @include max-screen(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
     position: relative;
   }
 
   &__line {
-    position: absolute;
-    top: 66px;
-    left: 350px;
+    @include max-screen(tablet) {
+      display: none;
+    }
+    @include min-screen(tablet-2x) {
+      position: absolute;
+      top: 66px;
+      left: 350px;
+      display: block;
+    }
   }
 
   &__step {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .how-to-book-inner-manual__img {
-      margin-right: -32px;
+    @include max-screen(tablet) {
+      flex-direction: column-reverse;
     }
+    @include min-screen(tablet-2x) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &--reverse {
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      .how-to-book-inner-manual__img {
-        margin-left: -32px;
+
+      @include max-screen(tablet) {
       }
+      @include min-screen(tablet-2x) {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__title {
+    @include max-screen(tablet) {
+      margin-bottom: 30px;
+    }
+    @include min-screen(tablet-2x) {
+      display: none;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
     }
   }
 
   &__block {
     max-width: 636px;
+    @include max-screen(tablet) {
+    }
+    @include min-screen(tablet-2x) {
+    }
     h2 {
-      font-weight: 600;
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+        font-weight: 600;
+      }
     }
   }
 
@@ -44,16 +90,27 @@
     flex-direction: column;
     gap: 20px;
     list-style-position: inside;
+    @include max-screen(tablet) {
+    }
+    @include min-screen(tablet-2x) {
+    }
   }
 
   &__item {
-    padding-left: 46px;
     counter-increment: number 1;
     position: relative;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
     color: $black-300;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 40px;
+
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+      padding-left: 46px;
+    }
     &:before {
       content: counter(number);
       position: absolute;
@@ -72,6 +129,10 @@
       height: 30px;
       border-radius: 100px;
       background-color: rgba($color: $green-300, $alpha: 0.1);
+      @include max-screen(tablet) {
+      }
+      @include min-screen(tablet-2x) {
+      }
     }
     a {
       color: $blue-500;

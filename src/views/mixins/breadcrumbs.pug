@@ -1,5 +1,5 @@
-mixin breadcrumbs(data, back, buttonClass)
-  .breadcrumbs.reveal-showed-up
+mixin breadcrumbs(data, back, buttonClass, className)
+  .breadcrumbs.reveal-showed-up(class="" + className)
     .wrapper
       ul.breadcrumbs__list
         li 

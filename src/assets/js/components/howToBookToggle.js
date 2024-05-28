@@ -24,11 +24,10 @@ howToBookToggle();
 
 function howToBookItemDropdown() {
   let button = $('.how-to-book-inner-faq__item');
-  let answer = $('.how-to-book-inner-faq__answer');
 
   button.on('click', function() {
     $(this).toggleClass('active');
-    button.not(this).removeClass('active');
   });
 }
 howToBookItemDropdown();
+

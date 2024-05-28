@@ -1,13 +1,40 @@
 .how-to-book-types {
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: $bg-blue;
+  position: relative;
+  @include max-screen(tablet) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $bg-blue;
+    top: 100%;
+    width: 100%;
+    z-index: -1;
+    @include max-screen(tablet) {
+      height: 127px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 134px;
+    }
+  }
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 40px;
-    column-gap: 16px;
+    @include max-screen(mobile) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      row-gap: 10px;
+    }
+    @include min-screen(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 40px;
+      column-gap: 16px;
+    }
   }
 
   &__item {
@@ -40,10 +67,28 @@
   &__content {
     display: flex;
     align-items: center;
-    gap: 24px;
+    @include max-screen(tablet) {
+      gap: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+    }
   }
 
   &__name {
+    color: $black-400;
+    font-weight: 700;
+    @include max-screen(mobile-2x) {
+      max-width: 154px;
+    }
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     @include min-screen(laptop) {
       transition: color $transition-default;
     }
