@@ -1,11 +1,11 @@
 .how-to-book-inner-faq {
   @include max-screen(tablet) {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 40px;
   }
   @include min-screen(tablet-2x) {
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 
   &__title {

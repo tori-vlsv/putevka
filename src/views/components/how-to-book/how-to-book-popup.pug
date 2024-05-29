@@ -1,7 +1,9 @@
-.how-to-book-popup.active
-  button.how-to-book-popup__button(type="button")
+.how-to-book-popup
+  button.how-to-book-popup__close(type="button")
     svg(width="24" height="24" viewBox="0 0 24 24")
       use(xlink:href="#svg-close")
   .how-to-book-popup__wrapper
     .how-to-book-popup__video
-      <iframe src="https://www.youtube.com/embed/pxIJg3GYAtM?si=0wCkSQWcONkv9utg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      iframe(class="youtube-player" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+  .how-to-book-popup__text 
+    p Как забронировать санаторий

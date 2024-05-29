@@ -1,29 +1,46 @@
 .how-to-book-inner-manual {
+  position: relative;
   background-color: $bg-blue;
   @include max-screen(tablet) {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-top: 30px;
   }
   @include min-screen(tablet-2x) {
     padding-top: 35px;
-    margin-bottom: 45px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $bg-blue;
+    top: 100%;
+    width: 100%;
+    z-index: -1;
+    @include max-screen(tablet) {
+      height: 147px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 134px;
+    }
   }
 
   &__steps {
-    @include max-screen(tablet) {
-      display: flex;
-      flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include max-screen(tablet-2x) {
       gap: 60px;
     }
-    position: relative;
+    @include min-screen(laptop) {
+      gap: 70px;
+    }
   }
 
   &__line {
-    @include max-screen(tablet) {
+    @include max-screen(tablet-2x) {
       display: none;
     }
-    @include min-screen(tablet-2x) {
+    @include min-screen(laptop) {
       position: absolute;
       top: 66px;
       left: 350px;
@@ -33,19 +50,21 @@
 
   &__step {
     display: flex;
-    @include max-screen(tablet) {
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    @include max-screen(tablet-2x) {
       flex-direction: column-reverse;
     }
-    @include min-screen(tablet-2x) {
+    @include min-screen(laptop) {
       justify-content: space-between;
-      align-items: center;
     }
 
     &--reverse {
 
-      @include max-screen(tablet) {
+      @include max-screen(tablet-2x) {
       }
-      @include min-screen(tablet-2x) {
+      @include min-screen(laptop) {
         flex-direction: row-reverse;
         align-items: flex-start;
       }
@@ -53,10 +72,10 @@
   }
 
   &__title {
-    @include max-screen(tablet) {
+    @include max-screen(tablet-2x) {
       margin-bottom: 30px;
     }
-    @include min-screen(tablet-2x) {
+    @include min-screen(laptop) {
       display: none;
     }
     h2 {
@@ -69,15 +88,11 @@
 
   &__block {
     max-width: 636px;
-    @include max-screen(tablet) {
-    }
-    @include min-screen(tablet-2x) {
-    }
     h2 {
-      @include max-screen(tablet) {
+      @include max-screen(tablet-2x) {
         display: none;
       }
-      @include min-screen(tablet-2x) {
+      @include min-screen(laptop) {
         font-weight: 600;
       }
     }
@@ -90,10 +105,6 @@
     flex-direction: column;
     gap: 20px;
     list-style-position: inside;
-    @include max-screen(tablet) {
-    }
-    @include min-screen(tablet-2x) {
-    }
   }
 
   &__item {

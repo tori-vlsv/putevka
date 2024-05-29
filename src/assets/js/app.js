@@ -25,4 +25,5 @@ import "./components/attractionsExcursionSliderThree";
 import "./components/attractionsCityTypesSlider";
 import "./components/attractionsPopup";
 import "./components/howToBookToggle";
+import "./components/howToBookPopup";
 
