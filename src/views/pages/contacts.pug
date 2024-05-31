@@ -1,0 +1,71 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Контакты
+
+block basicSeo
+  meta(content="Это странца Контакты" name="description")
+  meta(content="Страница, Контакты" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    +breadcrumbs(
+      [
+      ],
+      'Главная',
+    )
+    include ../components/contacts/contacts-hero
+    include ../components/contacts/contacts-map
+    include ../components/contacts/contacts-feedback
+  script.
+    async function initMap() {
+      await ymaps3.ready;
+
+      const {
+        YMap,
+        YMapDefaultSchemeLayer,
+        YMapDefaultFeaturesLayer,
+        YMapFeature,
+        YMapMarker,
+        YMapControls
+      } = ymaps3;
+      
+      const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+        const map = new YMap(document.getElementById('map-yandex-contacts'),
+          {
+            location: {
+              center: [37.626027, 55.766917],
+              zoom: 16,
+            }
+          },
+          [
+            // Add a map scheme layer
+            new YMapDefaultSchemeLayer({}),
+            // Add a layer of geo objects to display the line
+            new YMapDefaultFeaturesLayer({})
+          ]
+        );
+
+        map.addChild(
+          // Here we place the control on the right
+          new YMapControls({position: 'left'})
+            // Add the first zoom control to the map
+            .addChild(new YMapZoomControl({}))
+        );
+
+        const markerElement = document.createElement('img');
+        markerElement.className = 'icon-marker';
+        markerElement.src = '/assets/images/pin.png';
+
+        map.addChild(new YMapMarker({coordinates: [37.626027, 55.766917]}, markerElement));
+      }
+    if (document.getElementById('map-yandex-contacts') !== null) {
+      initMap();
+    }
+  
+    

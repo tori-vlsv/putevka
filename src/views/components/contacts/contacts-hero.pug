@@ -1,0 +1,33 @@
+section.contacts-hero
+  .wrapper
+    .contacts-hero__wrapper
+      h1.contacts-hero__title Контакты Путевка.ком
+      .contacts-hero__blocks
+
+        .contacts-hero__block.contacts-hero__block--small
+          .contacts-hero__item
+            .contacts-hero__name Быстрое бронирование 24/7
+            a.contacts-hero__link.contacts-hero__link--blue(href="tel:+7 499 703-01-20") +7 499 703-01-20
+          .contacts-hero__item
+            .contacts-hero__name Бесплатный звонок по РФ
+            a.contacts-hero__link.contacts-hero__link--blue(href="tel:8-800-333-41-99") 8-800-333-41-99
+
+        .contacts-hero__block.contacts-hero__block--large
+          .contacts-hero__name Центральный офис
+          a.contacts-hero__link(href="https://yandex.ru/maps/-/CDf7f2Kn") г. Москва, ул. Рождественский бульвар, д. 9, оф. 213
+          .contacts-hero__undergrounds
+            .contacts-hero__underground
+              svg(width="18" height="12" viewBox="0 0 18 12")
+                use(xlink:href="#svg-metro-green")
+              span Трубная ~ 3 мин.
+            .contacts-hero__underground
+              svg(width="18" height="12" viewBox="0 0 18 12")
+                use(xlink:href="#svg-metro")
+              span Цветной бульвар ~ 7 мин.
+          .contacts-hero__text 
+            p В офисе можно оплатить оформленное бронирование наличными или картой, и забрать документы.
+            p Перед посещением офиса необходимо заранее забронировать путевку на сайте или по телефону и записаться на конкретное время, чтобы не ждать в очереди.
+          .contacts-hero__buttons
+            +button-transparent('Схема прохода в офис', '#') 
+        
+

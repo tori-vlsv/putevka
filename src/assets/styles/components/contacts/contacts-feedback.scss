@@ -1,0 +1,115 @@
+.contacts-feedback {
+  position: relative;
+  background-color: $bg-blue;
+  @include max-screen(tablet) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $bg-blue;
+    bottom: 100%;
+    height: 150px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__blocks {
+    display: grid;
+    @include max-screen(tablet) {
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__block {
+    background-color: $white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    @include max-screen(tablet) {
+      padding: 20px;
+      gap: 30px;
+    }
+    @include min-screen(tablet-2x) {
+      justify-content: space-between;
+      padding: 40px;
+      min-height: 240px;
+    }
+    &--large {
+      @include min-screen(tablet-2x) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    @include max-screen(tablet) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    color: rgba($color: $black-300, $alpha: 0.75);
+    @include max-screen(tablet) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 16px;
+
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    svg {
+      stroke: transparent;
+      fill: transparent;
+      @include max-screen(tablet) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    a {
+      font-weight: 700;
+      color: $blue-500;
+      &:active {
+        color: $orange-500;
+      }
+      @include max-screen(tablet) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.contacts-map {
+  @include max-screen(tablet) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
+  .ymap-container {
+    width: 100%;
+    @include max-screen(tablet) {
+      height: 260px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 300px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: $white;
+      box-shadow: 0px 10px 50px 0px rgba($color: $gray-800, $alpha: 0.15), 0px 0px 6px 0px rgba($color: $blue-900, $alpha: 0.05);
+    }
+    #map-yandex-contacts {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

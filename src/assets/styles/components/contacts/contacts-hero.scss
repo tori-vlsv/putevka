@@ -1,0 +1,128 @@
+.contacts-hero {
+
+  &__blocks {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    @include min-screen(tablet-2x) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 70px;
+    }
+  }
+
+  &__block {
+    &--large {
+      @include mm-screen(tablet-2x) {
+        max-width: 610px;
+      }
+      @include min-screen(laptop) {
+        max-width: 740px;
+      }
+    }
+    &--small {
+      @include min-screen(tablet-2x) {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $gray-400;
+  }
+
+  &__link {
+    font-family: 'Panton';
+    display: inline-block;
+    color: $black-400;
+    &:active {
+      color: $orange-500;
+    }
+    @include max-screen(tablet) {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 16px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default;
+      &:hover {
+        color: $orange-500;
+      }
+    }
+    &--blue {
+      @include max-screen(tablet) {
+        color: $blue-500;
+      }
+      @include min-screen(tablet-2x) {
+      }
+    }
+  }
+
+  &__undergrounds {
+    margin-top: 30px;
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 6px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+    }
+  }
+
+  &__underground {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $black-300;
+    }
+    svg {
+      stroke: transparent;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    @include max-screen(tablet-2x) {
+      gap: 20px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+      color: rgba($color: $black-300, $alpha: 0.75);
+    }
+  }
+
+  &__buttons {
+    margin-top: 30px;
+  }
+
+  .button-transparent {
+    @include min-screen(tablet-2x) {
+      padding: 11px 16px;
+    }
+  }
+}
