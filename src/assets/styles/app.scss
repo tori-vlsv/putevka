@@ -31,6 +31,10 @@
 /*
   Компоненты
 */
+@import "./components/footer";
+@import "./components/footer/footer-reviews";
+@import "./components/footer/footer-confirmation";
+
 @import "./components/main/main-faq";
 @import "./components/main/main-promo";
 @import "./components/main/main-resorts";

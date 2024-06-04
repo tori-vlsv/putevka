@@ -1,0 +1,171 @@
+.footer-reviews {
+  padding-bottom: 60px;
+  @include max-screen(tablet) {
+  }
+  @include min-screen(tablet-2x) {
+  }
+  &__wrapper {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+    }
+    @include min-screen(tablet-2x) {
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-top: 20px;
+    color: $black-300;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__number {
+    color: $black-300;
+    @include max-screen(tablet) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 7px;
+    }
+  }
+
+  &__buttons {
+    @include max-screen(tablet) {
+      margin-top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 56px;
+    }
+    &--desk {
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+        display: block;
+      }
+    }
+    &--mob {
+      @include max-screen(tablet) {
+        display: block;
+      }
+      @include min-screen(tablet-2x) {
+        display: none;
+      }
+    }
+  }
+
+  &__ratings {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 24px;
+    }
+  }
+
+  &__rating {
+    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    position: relative;
+    @include max-screen(tablet) {
+      border-radius: 8px;
+      padding: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      border-radius: 10px;
+      padding: 30px;
+    }
+    @include mm-screen(tablet-2x) {
+      min-width: 290px;
+    }
+    @include min-screen(laptop) {
+      min-width: 416px;
+    }
+  }
+  
+  &__logo {
+    position: absolute;
+    display: inline-block;
+    @include max-screen(tablet) {
+      height: 24px;
+      left: 20px;
+      top: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 30px;
+      left: 30px;
+      top: 30px;
+    }
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    @include max-screen(tablet) {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 20px;
+      margin-top: 94px;
+    }
+  }
+
+  &__value {
+    @include max-screen(tablet) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__amount {
+    font-family: 'Proxima Nova Rg';
+    @include max-screen(tablet) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+  
+  &__stars {
+    display: flex;
+    img {
+      @include max-screen(tablet) {
+        width: 18px;
+        height: 18px;
+      }
+      @include min-screen(tablet-2x) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.footer-confirmation {
+  background-color: $bg-blue-200;
+  border-radius: 10px;
+  @include max-screen(tablet) {
+    padding: 20px;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 30px;
+  }
+
+  &__text {
+    p {
+      
+    }
+  }
+}
