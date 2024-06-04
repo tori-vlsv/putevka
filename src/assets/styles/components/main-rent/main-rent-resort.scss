@@ -1,0 +1,236 @@
+.main-rent-resort {
+  @include max-screen(tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    &:first-child {
+      margin-top: 0;
+    }
+    @include max-screen(tablet) {
+      margin-top: 30px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 50px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 400;
+    @include max-screen(tablet) {
+      line-height: 24px;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      line-height: 32px;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__block {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &:active {
+      .main-rent-resort__city  {
+        color: $orange-500;
+      }
+    }
+    @include max-screen(tablet) {
+      height: 190px;
+      border-radius: 6px;
+    }
+    @include min-screen(tablet-2x) {
+      border-radius: 10px;
+      height: 260px;
+    }
+    @include min-screen(laptop) {
+      &:hover {
+        .main-rent-resort__city  {
+          color: $orange-500;
+        }
+      }
+    }
+
+    & > a {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(209.85deg, rgba(13, 25, 43, 0) 41.15%, rgba(13, 25, 43, 0.5625) 70.35%, rgba(13, 25, 43, 0.75) 99.79%);
+
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include max-screen(tablet) {
+      padding: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      padding: 24px;
+    }
+  }
+
+  &__city {
+    font-weight: 700;
+    color: $white;
+    font-family: 'Panton';
+    @include max-screen(tablet) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 24px;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    color: $white;
+    @include max-screen(tablet) {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  .swiper {
+    @include max-screen(tablet) {
+      padding-left: 20px;
+    }
+    @include max-screen(tablet-2x) {
+      padding-bottom: 20px;
+    }
+    &-button {
+      &-next,
+      &-prev {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $white;
+        box-shadow: 0px 5px 15px 0px $box-shadow-two, 0px 1px 4px 0px $box-shadow-three;
+        border-radius: 50%;
+        transition: background-color $transition-default;
+        svg {
+          width: 10px;
+          height: 16px;
+          fill: transparent;
+          stroke: $blue-500;
+          transition: stroke $transition-default;
+        }
+        &:after {
+          display: none;
+        }
+        &:active {
+          background-color: $blue-500;
+          svg {
+            stroke: $white;
+          }
+        }
+        @include min-screen(laptop) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @include min-screen(laptop) {
+          &:hover {
+            background-color: $blue-500;
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+      }
+      &-prev {
+        transform: rotate(180deg);
+        svg {
+          margin-right: 2px;
+        }
+        @include max-screen(tablet-2x) {
+          left: -10px;
+        }
+        @include min-screen(laptop) {
+          left: -20px;
+        }
+      }
+      &-next {
+        svg {
+          margin-left: 2px;
+        }
+        @include max-screen(tablet-2x) {
+          right: -10px;
+        }
+        @include min-screen(laptop) {
+          right: -20px;
+        }
+      }
+      &-disabled {
+        display: none;
+      }
+    }
+    &-scrollbar {
+      background-color: $bg-blue-200;
+      @include min-screen(laptop) {
+        display: none;
+      }
+      &-drag {
+        background-color: $blue-border-light;
+      }
+    }
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      left: 20px;
+      bottom: 0;
+      width: calc(100% - 40px);
+    } 
+  }
+}

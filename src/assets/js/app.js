@@ -26,4 +26,6 @@ import "./components/attractionsCityTypesSlider";
 import "./components/attractionsPopup";
 import "./components/howToBookToggle";
 import "./components/howToBookPopup";
-
+import "./components/mainRentPopularSlider";
+import "./components/mainRentResortSlider";
+import "./components/mainRentDropdown";

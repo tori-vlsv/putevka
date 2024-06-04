@@ -1,0 +1,19 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Посуточная аренда
+
+block basicSeo
+  meta(content="Это странца Посуточная аренда" name="description")
+  meta(content="Страница, Посуточная аренда" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    include ../components/main-rent/main-rent-popular
+    include ../components/main-rent/main-rent-resort
+    +main-about('main-about--white')
+    include ../components/main-rent/main-rent-abroad

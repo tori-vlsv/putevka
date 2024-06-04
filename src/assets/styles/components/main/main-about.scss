@@ -11,6 +11,11 @@
     background-image: none;
   }
 
+  &--white {
+    background-color: $white;
+    background-image: none;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
