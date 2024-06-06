@@ -1,0 +1,222 @@
+.footer-nav {
+  background-color: $bg-blue;
+  @include max-screen(tablet) {
+    padding: 40px 0 60px;
+  }
+  @include min-screen(tablet-2x) {
+    padding: 60px 0 70px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__blocks {
+    @include min-screen(tablet-2x) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 40px;
+    }
+    &--center {
+      @include max-screen(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+    &--border {
+      @include max-screen(tablet) {
+        border-top: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+      }
+    }
+  }
+
+  &__dropdown {
+    @include max-screen(tablet) {
+      border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+      padding: 20px 6px 20px 0;
+    }
+  }
+
+  &__block {
+    &--none {
+      @include max-screen(tablet) {
+        display: none;
+      }
+    }
+    &.active {
+      .footer-nav__menu {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-nav__header {
+        svg {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+
+  .footer-nav__menu {
+    @include max-screen(tablet) {
+      display: none;
+    }
+  }
+
+  &__tel {
+    font-weight: 700;
+    color: $black-400;
+    &:active {
+      color: $orange-500;
+    }
+    @include max-screen(tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default;
+      &:hover {
+        color: $orange-500;
+      }
+    }
+  }
+
+  &__comment {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray-400;
+    @include max-screen(tablet) {
+      margin-top: 6px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 10px;
+    }
+  }
+
+  &__button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $blue-500;
+  }
+
+  &__header {
+    @include max-screen(tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    svg {
+      fill: transparent;
+      stroke: $black-300;
+      transform: rotate(90deg);
+      transition: transform $transition-default;
+      @include min-screen(tablet-2x) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Tilda Sans';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    @include max-screen(tablet) {
+      color: $black-400;
+    }
+    @include min-screen(tablet-2x) {
+      color: $gray-400;
+    }
+  }
+
+  &__links {
+    flex-direction: column;
+    gap: 20px;
+    @include max-screen(tablet) {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      display: flex;
+      margin-top: 24px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $black-300;
+    max-width: max-content;
+    &:active {
+      color: $orange-500;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default;
+      &:hover {
+        color: $orange-500;
+      }
+    }
+  }
+
+  &__address {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $black-300;
+    address {
+      font-style: normal;
+    }
+  }
+
+  &__undergrounds {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__underground {
+    display: flex;
+    gap: 5px;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: $black-300;
+      line-height: 30px;
+    }
+    svg {
+      stroke: transparent;
+      width: 15px;
+      min-width: 15px;
+      margin-top: 9px;
+    }
+  }
+
+  &__map {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $blue-500;
+    &:active {
+      color: $orange-500;
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default;
+      &:hover {
+        color: $orange-500;
+      }
+    }
+  }
+}

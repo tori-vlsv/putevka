@@ -1,0 +1,191 @@
+.footer-about {
+  @include max-screen(tablet) {
+    padding-bottom: 20px;
+  }
+  @include min-screen(tablet-2x) {
+    background-color: $blue-150;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include max-screen(tablet) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      justify-content: space-between;
+      padding: 50px 0 40px;
+    }
+  }
+
+  &__container {
+    @include max-screen(tablet) {
+      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 53px;
+      display: flex;
+    }
+    &--small {
+      @include max-screen(tablet) {
+        width: 100%;
+      }
+      display: flex;
+      width: 416px;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    &--midle {
+      @include max-screen(tablet) {
+        background-color: rgba($color: $blue-700, $alpha: 0.15);
+      }
+      @include max-screen(tablet-2x) {
+        display: none;
+      }
+      @include min-screen(laptop) {
+        display: flex;
+        gap: 40px;
+        max-width: 372px;
+      }
+    }
+    &--small {
+      max-width: 306px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -40px;
+    left: -33px;
+  }
+
+  &__title {
+    color: $black-400;
+    @include max-screen(tablet) {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    @include min-screen(tablet-2x) {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  &__description {
+    color: $gray-400;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  &__code {
+    position: relative;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: $white;
+    border-radius: 10px;
+    max-width: max-content;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: left;
+    color: $black-300;
+    @include max-screen(tablet) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    min-width: 181px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+  }
+
+  &__links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__icon {
+    @include max-screen(tablet) {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+    }
+    @include min-screen(tablet-2x) {
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 40px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+    // @include max-screen(tablet) {
+    // }
+    // @include min-screen(tablet-2x) {
+    // }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    // flex-grow: 1;
+  }
+
+  &__bubble {
+    color: $gray-400;
+    font-weight: 600;
+    line-height: 14px;
+    @include max-screen(tablet) {
+      font-size: 12px;
+      max-width: 70px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 14px;
+      background-image: url("/assets/images/footer/bubble.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 105px;
+      height: 42px;
+      padding: 4px 10px 4px 16px;
+    }
+    span {
+      font-size: 14px;
+      color: $black-400;
+      line-height: 18px;
+    }
+  }
+}

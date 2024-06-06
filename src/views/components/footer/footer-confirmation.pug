@@ -2,11 +2,24 @@ section.footer-confirmation
   .footer-confirmation__wrapper
     .footer-confirmation__info
       .footer-confirmation__img
-        img(src="/assets/images/footer/confirmation.svg" alt="confirmation" loading="lazy")
-      .footer-confirmation__text 
+        picture
+          source(
+            srcset="/assets/images/footer/confirmation.svg" 
+            media="(min-width: 1024px)") 
+          img(src="/assets/images/footer/confirmation-mob.svg" alt="confirmation" loading="lazy")
+      .footer-confirmation__text.footer-confirmation__text--large
         p Номер в реестре туроператоров <a href="#">РТО 014980</a>
-    .footer-confirmation__requisites
-      .footer-confirmation__title ООО «Система бронирования Путевка»
-      .footer-confirmation__text
-        p 107045, г.Москва, Рождественский б-р, 9, строение 1, Помещение I, комната 30 <br> ИНН 7725851033  КПП 770201001  ОГРН 5147746438175
-        p Р/с. №40702810338000017283 ПАО «Сбербанк России» г. Москва <br> БИК 044525225, К/с. №30101810400000000225
+    .footer-confirmation-requisites
+      .footer-confirmation-requisites__wrapper
+        .footer-confirmation-requisites__header
+          h2.footer-confirmation-requisites__title Реквизиты
+          button.footer-confirmation-requisites__close(type="button")
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+        .footer-confirmation-requisites__main
+          .footer-confirmation__title ООО «Система бронирования Путевка»
+          .footer-confirmation__text
+            p 107045, г.Москва, Рождественский б-р, 9, строение 1, Помещение I, комната 30 <span> ИНН 7725851033 <br>  КПП 770201001 <br>  ОГРН 5147746438175 </span>
+            p <span>Р/с. №40702810338000017283 <br> ПАО «Сбербанк России» г. Москва </span> <span>БИК 044525225 <br> К/с. №30101810400000000225</span>
+  button.footer-confirmation__button(type="button")
+    span Смотреть реквизиты

@@ -29,3 +29,6 @@ import "./components/howToBookPopup";
 import "./components/mainRentPopularSlider";
 import "./components/mainRentResortSlider";
 import "./components/mainRentDropdown";
+import "./components/footerConfirmation";
+import "./components/footerDropdown";
+import "./components/footerCityDropdown";

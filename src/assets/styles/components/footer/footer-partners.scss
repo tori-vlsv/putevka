@@ -1,0 +1,40 @@
+.footer-partners {
+  margin-bottom: 40px;
+
+  &__title {
+    font-family: 'Tilda Sans';
+    font-weight: 700;
+    color: $gray-400;
+    @include max-screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include min-screen(tablet-2x) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__items {
+    margin-top: 20px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+
+    @include max-screen(tablet) {
+      gap: 30px;
+      padding: 0 20px;
+    }
+    @include min-screen(tablet-2x) {
+      justify-content: space-between;
+      border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+      padding: 30px 40px;
+      border-radius: 10px;
+    }
+  }
+
+  &__item {
+    min-width: max-content;
+    min-height: 36px;
+  }
+}

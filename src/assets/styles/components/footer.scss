@@ -1,3 +1,8 @@
 .footer {
-  padding-top: 100px;
+  @include max-screen(tablet) {
+    padding-top: 40px;
+  }
+  @include min-screen(tablet-2x) {
+    padding-top: 50px;
+  }
 }
