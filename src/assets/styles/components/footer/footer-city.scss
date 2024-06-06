@@ -21,38 +21,33 @@
 
   &__links {
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    
     @include max-screen(tablet) {
-      row-gap: 10px;
-      column-gap: 16px;
-      max-height: 42px;
+      -webkit-line-clamp: 2;
     }
     @include min-screen(tablet-2x) {
-      row-gap: 16px;
-      column-gap: 24px;
-      max-height: 18px;
+      -webkit-line-clamp: 1;
     }
     &.active {
-      max-height: 100%;
-      overflow: visible;
-      .footer-city__link--hidden {
-        display: block;
-      }
+      -webkit-line-clamp: inherit;
     }
   }
 
   &__link {
+    display: inline-block;
     font-weight: 500;
     line-height: 16px;
     color: $blue-500;
     @include max-screen(tablet) {
       font-size: 14px;
+      margin-right: 16px;
     }
     @include min-screen(tablet-2x) {
       font-size: 16px;
+      margin-right: 24px;
     }
     &:active {
       color: $orange-500;
@@ -63,22 +58,40 @@
         color: $orange-500;
       }
     }
-    &--hidden {
-      display: none;
-    }
   }
 
   &__button {
     display: flex;
     gap: 6px;
+    position: absolute;
+    right: 0;
+    background-color: $white;
     &.active {
       display: none;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 20px;
+      left: -20px;
+      top: 0;
+      background: linear-gradient(-90deg, $white, transparent);
     }
     &:active {
       span {
         color: $orange-500;
         border-color: transparent;
       }
+    }
+    @include max-screen(tablet) {
+      top: 21px;
+      padding: 8px;
+
+    }
+    @include min-screen(tablet-2x) {
+      top: -6px;
+      padding: 11px;
     }
     @include min-screen(laptop) {
       &:hover {
