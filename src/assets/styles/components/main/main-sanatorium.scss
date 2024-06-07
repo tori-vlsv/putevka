@@ -44,7 +44,7 @@
   }
 
   &__tab {
-    border: 1px solid $blue-border-light;
+    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
     border-radius: 8px;
     transition: background-color $transition-default, border-color $transition-default;
     span {
@@ -106,12 +106,12 @@
       height: auto;
     }
     &-scrollbar {
-      background-color: $bg-blue-200;
+      background-color: $bg-blue-100;
       @include min-screen(laptop) {
         display: none;
       }
       &-drag {
-        background-color: $blue-border-light;
+        background-color: rgba($color: $blue-700, $alpha: 0.15);
       }
     }
     .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {

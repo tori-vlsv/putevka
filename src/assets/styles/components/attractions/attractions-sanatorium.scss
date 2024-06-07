@@ -152,18 +152,22 @@
       height: auto;
     }
     &-scrollbar {
-      background-color: $bg-blue-200;
-      @include min-screen(laptop) {
+      background-color: $bg-blue-100;
+      @include min-screen(tablet-2x) {
         display: none;
       }
       &-drag {
-        background-color: $blue-border-light;
+        background-color: rgba($color: $blue-700, $alpha: 0.15);
       }
     }
     .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
       left: 20px;
       bottom: 0;
       width: calc(100% - 40px);
+      @include min-screen(tablet-2x) {
+        left: 0;
+        width: 100%;
+      }
     } 
   }
 }

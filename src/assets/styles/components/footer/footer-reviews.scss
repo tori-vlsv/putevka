@@ -63,7 +63,8 @@
     }
     &--mob {
       @include max-screen(tablet) {
-        display: block;
+        display: flex;
+        justify-content: center;
       }
       @include min-screen(tablet-2x) {
         display: none;

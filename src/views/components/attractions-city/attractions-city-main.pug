@@ -7,21 +7,27 @@
         include ../attractions-city/attractions-city-content
         include ../attractions-city/attractions-city-hotel
         include ../attractions-city/attractions-city-content-2
-        +attractions-sanatorium(
-          {
-            title: 'Санатории в Рязани',
-            className: 'attractions-sanatorium--three',
-            sliderName: 'attractions-sanatorium__slider--three'
-          }
-        )
+  +attractions-sanatorium(
+    {
+      title: 'Санатории в Рязани',
+      className: 'attractions-sanatorium--three',
+      sliderName: 'attractions-sanatorium__slider--three'
+    }
+  )
+  .wrapper
+    .attractions-city-main__wrapper
+      .attractions-city-main__blocks
         include ../attractions-city/attractions-city-content-3
-        +attractions-excursion(
-          {
-            title: 'Экскурсии в Рязани',
-            className: 'attractions-excursion--three',
-            sliderName: 'attractions-excursion__slider--three'
-          }
-        )
+  +attractions-excursion(
+    {
+      title: 'Экскурсии в Рязани',
+      className: 'attractions-excursion--three',
+      sliderName: 'attractions-excursion__slider--three'
+    }
+  )
+  .wrapper
+    .attractions-city-main__wrapper
+      .attractions-city-main__blocks
         include ../attractions-city/attractions-city-content-4
         include ../attractions-city/attractions-city-content-5
         include ../attractions-city/attractions-city-content-6
