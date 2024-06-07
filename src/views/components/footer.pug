@@ -6,6 +6,18 @@ footer.footer
   .wrapper
     include ./footer/footer-city
   include ./footer/footer-about
+  +breadcrumbs-footer(
+    [
+      {
+        href: '/',
+        title: 'О нас',
+      },
+      {
+        href: '',
+        title: 'Отзывы и публикации',
+      },
+    ],
+  )
   include ./footer/footer-nav
   include ./footer/footer-places
   include ./footer/footer-bottom

@@ -10,7 +10,12 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    @include max-screen(tablet) {
+      gap: 10px;
+    }
+    @include min-screen(tablet-2x) {
+      gap: 50px;
+    }
   }
 
   &__blocks {

@@ -1,0 +1,16 @@
+mixin breadcrumbs-footer(data)
+  .breadcrumbs-footer
+    .wrapper
+      ul.breadcrumbs-footer__list
+        li 
+          a(href="/") Главная
+        svg(width="16" height="16" viewBox="0 0 16 16")
+          use(xlink:href="#svg-chevron-right")
+        for link in data
+          if link.href == ''
+            li= link.title
+          else
+            li
+              a(href=""+link.href)= link.title
+            svg(width="16" height="16" viewBox="0 0 16 16")
+              use(xlink:href="#svg-chevron-right")
