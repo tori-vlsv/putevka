@@ -118,12 +118,6 @@
     }
   }
 
-  // &__bottom {
-  //   padding-top: 20px;
-  //   display: flex;
-  //   gap: 16px;
-  // }
-
   &__photo {
     border-radius: 100px;
     overflow: hidden;
@@ -305,6 +299,9 @@
   &__close {
     @include min-screen(laptop) {
       display: none;
+    }
+    svg {
+      stroke: $gray-400;
     }
   }
 }

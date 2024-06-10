@@ -92,7 +92,10 @@
     top: 0;
     @include min-screen(tablet-2x) {
       right: 0;
-    } 
+    }
+    svg {
+      stroke: $gray-400;
+    }
   }
 
   &__main {
