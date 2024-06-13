@@ -32,3 +32,6 @@ import "./components/mainRentDropdown";
 import "./components/footerConfirmation";
 import "./components/footerDropdown";
 import "./components/footerCityDropdown";
+import "./components/search-sorting-dropdown";
+import "./components/slider/search-card";
+

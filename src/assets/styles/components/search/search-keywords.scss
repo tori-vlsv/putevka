@@ -1,0 +1,72 @@
+.search-keywords {
+  @include max-screen(tablet) {
+    display: none;
+  }
+  @include min-screen(tablet-2x) {
+
+  }
+  &__title {
+    font-family: 'Tilda Sans';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $black-300;
+  }
+
+  &__buttons {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    padding: 6px 4px 6px 10px;
+    background-color: rgba($color: $blue-700, $alpha: 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke: $gray-400;
+      @include min-screen(laptop) {
+        transition: stroke $transition-default;
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $black-300;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+      }
+    }
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: rgba($color: $red-400, $alpha: 0.07);
+        svg {
+          stroke: $red-400;
+        }
+        span {
+          color: $red-400;
+        }
+      }
+
+    }
+    &-reset {
+      background-color: rgba($color: $red-400, $alpha: 0.07);
+      svg {
+        stroke: $red-400;
+      }
+      span {
+        color: $red-400;
+      }
+    }
+  }
+}

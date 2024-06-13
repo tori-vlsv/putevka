@@ -1,0 +1,25 @@
+.search-link {
+  @include max-screen(tablet) {
+    display: none;
+  }
+  @include min-screen(tablet-2x) {
+
+  }
+  &__items {
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $blue-500;
+    padding: 7px 12px;
+    background-color: rgba($color: $orange-500, $alpha: 0.15);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+}

@@ -28,6 +28,7 @@
 @import "./mixins/reviews-clients-card";
 @import "./mixins/attractions-types-card";
 @import "./mixins/excursion-card"; 
+@import "./mixins/search-card"; 
 
 /*
   Компоненты
@@ -102,3 +103,10 @@
 @import "./components/main-rent/main-rent-popular";
 @import "./components/main-rent/main-rent-resort";
 @import "./components/main-rent/main-rent-abroad";
+
+@import "./components/search/search";
+@import "./components/search/search-sidebar";
+@import "./components/search/search-link";
+@import "./components/search/search-keywords";
+@import "./components/search/search-sorting";
+@import "./components/search/search-cards";

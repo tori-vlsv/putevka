@@ -1,0 +1,100 @@
+mixin search-card(data)
+  .search-card
+    .search-card__image
+      .search-card__benefits
+        if data.cashback || data.landlord
+          if data.cashback
+            .search-card__cashback !{ data.cashback }
+          if data.landlord
+            .search-card__landlord= data.landlord
+      .search-card__slider.swiper
+        .swiper-wrapper
+          .swiper-slide
+            img(src="/assets/images/search/1.png" alt="hotel-room" loading="lazy")
+          .swiper-slide
+            img(src="/assets/images/search/2.png" alt="hotel-room" loading="lazy")
+          .swiper-slide
+            img(src="/assets/images/search/3.png" alt="hotel-room" loading="lazy")
+          .swiper-slide
+            img(src="/assets/images/search/4.png" alt="hotel-room" loading="lazy")
+        button(type="button", aria-label="Previous").swiper-button-prev
+          svg(width="10" height="16" viewBox="0 0 10 16")
+            use(xlink:href="#svg-arrow-right")
+        button(type="button", aria-label="Next").swiper-button-next
+          svg(width="10" height="16" viewBox="0 0 10 16")
+            use(xlink:href="#svg-arrow-right")
+        .swiper-pagination
+    .search-card__content
+      .search-card__information
+        .search-card__top
+          p.search-card__name !{ data.name }
+          h2.search-card__title= data.title
+          .search-card__items
+            each item in data.characteristic
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-user")
+                p= item.guest
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-bed")
+                p= item.bed
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-door")
+                p= item.room
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-params")
+                p= item.area
+        .search-card__bottom
+          if data.metro
+            each item in data.metro
+              .search-card__underground
+                svg.search-card__metro(class="" + item.color)(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-metro")
+                span= item.name
+          p.search-card__location= data.location
+      .search-card__information
+        .search-card__top
+          .search-card__review
+            svg(width="30" height="30" viewBox="0 0 30 30")
+              use(xlink:href="#svg-star")
+            p !{ data.review }
+        .search-card__bottom
+          .search-card__statuses
+            if data.statusOrange || data.statusGreen || data.statusBlue
+              if data.statusGreen
+                .search-card__status.search-card__status--green
+                  svg(width="12" height="15" viewBox="0 0 12 15" )
+                    use(xlink:href="#svg-search-sale")
+                  span= data.statusGreen
+              if data.statusBlue
+                .search-card__status.search-card__status--blue
+                  svg(width="12" height="15" viewBox="0 0 12 15" )
+                    use(xlink:href="#svg-search-circle-blue")
+                  span= data.statusBlue
+              if data.statusRed
+                .search-card__status.search-card__status--blue
+                  svg(width="12" height="15" viewBox="0 0 12 15" )
+                    use(xlink:href="#svg-search-circle-red")
+                  span= data.statusRed
+              if data.statusOrange
+                .search-card__status.search-card__status--orange
+                  svg(width="12" height="14" viewBox="0 0 12 14" )
+                    use(xlink:href="#svg-search-flash")
+                  span= data.statusOrange
+          if data.cost || data.oldCost
+              if data.cost
+                .search-card__costs
+                  .search-card__cost 
+                    p !{ data.cost }
+              if data.oldCost
+                each item in data.oldCost
+                  .search-card__costs
+                    .search-card__oldprice= item.oldPrice
+                    .search-card__cost.search-card__cost--red
+                      .search-card__percent %
+                      p !{ item.Price }
+          button.search-card__button(type="button")
+            span Забронировать
