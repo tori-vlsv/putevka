@@ -6,6 +6,161 @@
     padding: 0 20px;
   }
 
+  &__help {
+    position: relative;
+    svg {
+      stroke: $gray-400;
+      fill: transparent;
+      transition: stroke $transition-default;
+    }
+    &:hover {
+      svg {
+        stroke: $blue-500;
+      }
+    }
+    &--stations {
+      &:hover {
+        .search-sidebar__hint {
+          z-index: 2901;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__hint {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+
+    position: absolute;
+    z-index: 15;
+    top: 27px;
+    left: -40px;
+    width: 270px;
+    height: auto;
+    padding: 16px;
+    background-color: $black-400;
+    box-shadow: 0px 5px 25px 0px rgba($color: $blue-900, $alpha: 0.15), 0px 3px 6px 0px rgba($color: $blue-900, $alpha: 0.07);
+    border-radius: 5px;
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 100%;
+      left: 43px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid $black-400;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 100%;
+      left: 40px;
+      width: 16px;
+      height: 27px;
+      background-color: transparent;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $white;
+    }
+  }
+
+  &__stations {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__station {
+    background-color: $bg-blue-100;
+    border-radius: 4px;
+    padding: 6px 4px 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color $transition-default;
+    position: relative;
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke: $gray-400;
+      transition: stroke $transition-default
+    }
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $black-400;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      background-color: rgba($color: $red-400, $alpha: 0.1);
+      svg {
+        stroke: $red-400;
+      }
+    }
+  }
+
+  &__circles {
+    display: flex;
+    align-items: center;
+  }
+
+  &__circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid $white;
+    border-radius: 100px;
+    margin-left: -4px;
+    &--green {
+      background-color: $green-700;
+    }
+    &--red {
+      background-color: $red-700;
+    }
+    &--blue {
+      background-color: $blue-850;
+    }
+    &--blue-light {
+      background-color: $blue-200;
+    }
+    &--brown {
+      background-color: $brown-700;
+    }
+  }
+
+  &__button {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    transition: border-color $transition-default;
+    max-width: max-content;
+    cursor: pointer;
+    &:hover {
+      border-color: rgba($color: $blue-500, $alpha: 0.5);
+    }
+    &--open {
+      margin-top: 20px;
+    }
+  }
+
   &__switchers {
     padding: 20px 0;
     display: flex;
@@ -80,6 +235,54 @@
     gap: 10px;
   }
 
+  &__inner {
+    margin-top: 20px;
+    padding: 7px 0;
+  }
+
+  &__costs {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  &__cost {
+    padding: 12px 36px;
+    background-color: rgba($color: $blue-700, $alpha: 0.05);
+    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 16px;
+    position: relative;
+    cursor: pointer;
+    &--left {
+      border-radius: 4px 0 0 4px;
+    }
+    &--right {
+      border-radius: 0 4px 4px 0;
+    }
+    input {
+      padding-left: 36px;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &__value {
+    position: relative;
+    span {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $gray-400;
+    }
+  }
+
   &__prices {
     display: flex;
     align-items: center;
@@ -98,9 +301,12 @@
       background-color: rgba($color: $blue-700, $alpha: 0.15);
       color: $black-300;
     }
+    &:not(.active) {
+      cursor: pointer;
+    }
   }
 
-  &__currency {
+  &__parameter {
     color: $gray-400;
     font-size: 16px;
     font-weight: 700;
@@ -131,18 +337,36 @@
     color: $black-400;
   }
 
+  &__subtitle {
+    margin-top: 20px;
+    font-family: 'Tilda Sans';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $gray-400;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
     margin-top: 20px;
   }
 
   &__label {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      .search-sidebar__checkbox {
+        &:before {
+          border-color: $blue-700;
+          background-color: rgba($color: $blue-700, $alpha: 0.1);
+        }
+      }
+    }
   }
 
   &__checkbox {
@@ -174,6 +398,7 @@
         width: 20px;
         height: 20px;
         border-radius: 3px;
+        transition: border-color $transition-default, background-color $transition-default;
       }
     }
     &:checked ~ .search-sidebar__icon {
@@ -189,12 +414,71 @@
     }
   }
 
+  &__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & ~ .search-sidebar__checkbox {
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 50%;
+        left: 0%;
+        transform: translate(0, -50%);
+        border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        transition: border-color $transition-default, background-color $transition-default;
+      }
+      &:hover {
+        &:before {
+          border-color: $blue-700;
+          background-color: rgba($color: $blue-700, $alpha: 0.1);
+        }
+      }
+    }
+    &:checked ~ .search-sidebar__checkbox {
+      &:before {
+        background-color: $white;
+        border-width: 6px;
+        border-color: $blue-700;
+      }
+    }
+  }
+
   &__icon {
     stroke: transparent;
     position: absolute;
     left: 4px;
-    top: 4px;
+    top: 5px;
     opacity: 0;
     transition: opacity $transition-default;
+  }
+
+  .ui-slider {
+    height: 4px;
+    border-radius: 30px;
+    background-color: rgba($color: $blue-700, $alpha: 0.15);
+    border: none;
+  }
+
+  .ui-slider-handle {
+    background-color: $orange-500;
+    border: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px 1px rgba($color: $black-400, $alpha: 0.05 );
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .ui-slider-range {
+    height: 4px;
+    background-color: rgba($color: $orange-500, $alpha: 0.5);
   }
 }

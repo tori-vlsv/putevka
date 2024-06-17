@@ -7,7 +7,7 @@
     @include max-screen(tablet) {
 
     }
-    @include min-screen(tablet-2x) {
+    @include min-screen(laptop) {
       grid-template-columns: 306px 1fr;
       column-gap: 24px;
       display: grid;
@@ -16,8 +16,13 @@
   }
 
   &__sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    @include max-screen(tablet-2x) {
+      display: none;
+    }
+    @include min-screen(laptop) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 }

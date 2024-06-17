@@ -418,14 +418,14 @@
     @include min-screen(tablet-2x) {
       max-height: 220px;
       border-radius: 8px 0 0 8px;
-    }
-    @include mm-screen(laptop) {
-      width: 240px;
-      min-width: 240px;
-    }
-    @include min-screen(desktop) {
       width: 300px;
       min-width: 300px;
+    }
+    @include mm-screen(laptop) {
+      
+    }
+    @include min-screen(desktop) {
+      
     }
     img {
       height: 100%;

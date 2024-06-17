@@ -16,17 +16,20 @@
     font-weight: 400;
     line-height: 16px;
     color: rgba($color: $black-300, $alpha: 0.75);
-
   }
+
+  &__button {
+    @include max-screen(tablet-2x) {
+      display: none;
+    }
+    @include min-screen(laptop) {
+      display: block;
+    }
+  }
+
   &-dropdown {
     max-width: max-content;
     position: relative;
-    @include max-screen(tablet) {
-      display: none;
-    }
-    @include min-screen(tablet-2x) {
-
-    }
     &__button {
       cursor: pointer;
       display: flex;

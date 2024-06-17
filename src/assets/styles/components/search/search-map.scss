@@ -44,5 +44,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color $transition-default, color $transition-default;
+    &:hover {
+      background-color: $white;
+      color: $orange-500;
+    }
   }
 }
