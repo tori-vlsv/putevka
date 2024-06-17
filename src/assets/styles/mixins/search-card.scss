@@ -9,22 +9,47 @@
   @include min-screen(tablet-2x) {
   }
   &__information {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     @include max-screen(tablet) {
       flex-direction: column-reverse;
+      overflow: hidden;
     }
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 18px;
-      color: rgba($color: $black-300, $alpha: 0.75);
-      span {
-        font-weight: 800;
-        color: $black-400;
+    &--top {
+      @include max-screen(tablet) {
+        margin-top: 16px;
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          width: 30px;
+          background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
       }
     }
+    &--bottom {
+      @include max-screen(tablet) {
+        margin-top: 20px;
+        .search-card__bottom {
+          display: grid;
+        }
+      }
+    }
+    // p {
+    //   font-size: 16px;
+    //   font-weight: 400;
+    //   line-height: 18px;
+    //   color: rgba($color: $black-300, $alpha: 0.75);
+    //   span {
+    //     font-weight: 800;
+    //     color: $black-400;
+    //   }
+    // }
     svg {
       display: inline-block;
       stroke: transparent;
@@ -40,11 +65,33 @@
   }
 
   &__name {
-    display: flex;
     span {
       width: 10px;
       height: 10px;
       color: rgba($color: $black-300, $alpha: 0.75);
+    }
+    svg {
+      stroke: transparent;
+    }
+    &--mob {
+      @include max-screen(tablet) {
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        color: rgba($color: $black-300, $alpha: 0.75);
+      }
+      @include min-screen(tablet-2x) {
+        display: none;
+      }
+    }
+    &--desktop {
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+        display: flex;
+      }
     }
   }
 
@@ -89,6 +136,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    @include max-screen(tablet-2x) {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+    }
   }
 
   &__cost {
@@ -117,7 +168,6 @@
   }
 
   &__button {
-    margin-top: 10px;
     background-color: $orange-500;
     border-radius: 6px;
     display: flex;
@@ -125,6 +175,14 @@
     justify-content: center;
     width: 100%;
     padding: 11px;
+    @include max-screen(tablet) {
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 2;
+      margin-top: 16px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 10px;
+    }
     span {
       font-size: 16px;
       font-weight: 800;
@@ -138,6 +196,9 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    @include max-screen(tablet-2x) {
+      grid-row: 1 / span 1;
+    }
   }
 
   &__status {
@@ -170,23 +231,66 @@
   }
 
   &__review {
+    @include max-screen(tablet) {
+      flex-direction: column;
+      align-items: flex-end;
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      justify-content: flex-end;
+    }
+    @include min-screen(tablet-2x) {
+      align-items: center;
+    }
+    &--mob {
+      @include max-screen(tablet) {
+        display: flex;
+      }
+      @include min-screen(tablet-2x) {
+        display: none;
+      }
+    }
+    &--desktop {
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+        display: flex;
+      }
+    }
+    span {
+      @include max-screen(tablet) {
+        display: none;
+      }
+      @include min-screen(tablet-2x) {
+      }
+    }
+  }
+
+  &__rating {
     display: flex;
     align-items: center;
-    gap: 4px;
     svg {
       width: 18px;
       height: 18px;
       fill: $yellow-400;
       stroke: transparent;
     }
-    span {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 14px;
+    p {
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 18px;
     }
   }
 
+  &__comments {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba($color: $black-300, $alpha: 0.75);
+  }
+
   &__underground {
+    white-space: nowrap;
     display: flex;
     align-items: center;
     span {
@@ -208,23 +312,64 @@
   }
 
   &__location {
-    margin-top: 6px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba($color: $black-300, $alpha: 0.75);
+    @include max-screen(tablet) {
+      margin-top: 4px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 6px;
+    }
   }
 
   &__title {
-    margin-top: 8px;
     font-size: 18px;
     font-weight: 700;
-    line-height: 22px;
+    line-height: 20px;
     color: $black-400;
-    max-width: 410px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    @include max-screen(tablet) {
+      padding-top: 16px;
+      margin-top: 16px;
+      position: relative;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 8px;
+      max-width: 410px;
+    }
+    &:before {
+      @include max-screen(tablet) {
+        position: absolute;
+        content: '';
+        width: calc(100% + 32px);
+        height: 1px;
+        background-color: $gray-500;
+        top: 0;
+        left: -16px;
+        right: 0;
+      }
+      @include min-screen(tablet-2x) {
+      }
+    }
   }
 
   &__items {
-    margin-top: 20px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    @include max-screen(tablet) {
+      margin-top: 16px;
+      gap: 10px;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 20px;
+      gap: 16px;
+    }
   }
 
   &__item {
@@ -239,21 +384,25 @@
       @include min-screen(tablet-2x) {
       }
     }
-
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: rgba($color: $black-300, $alpha: 0.75);
+    }
   }
 
   &__content {
     background-color: $white;
-    padding: 20px 20px 20px 30px;
     display: grid;
-    column-gap: 42px;
     width: 100%;
     @include max-screen(tablet) {
-
+      padding: 16px;
     }
     @include min-screen(tablet-2x) {
+      column-gap: 42px;
       grid-template-columns: 1fr 176px;
-
+      padding: 20px 20px 20px 30px;
     }
   }
 
@@ -265,7 +414,6 @@
     @include max-screen(tablet) {
       width: 100%;
       max-height: 210px;
-
     }
     @include min-screen(tablet-2x) {
       max-height: 220px;

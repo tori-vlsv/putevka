@@ -1,1 +1,46 @@
-aside.sidebar
+aside.search-sidebar
+  .search-sidebar__wrapper
+
+    .search-sidebar__switchers
+      .search-sidebar-switcher
+        .search-sidebar-switcher__name Быстрое бронирование
+        label.search-sidebar-switcher__button
+          input(type="checkbox" name="switcher-booking-fast" checked)
+          span.search-sidebar-switcher__toggle
+      .search-sidebar-switcher
+        .search-sidebar-switcher__name Без депозита
+        label.search-sidebar-switcher__button
+          input(type="checkbox" name="switcher-booking-without-deposit")
+          span.search-sidebar-switcher__toggle
+    
+    .search-sidebar__block
+      h3.search-sidebar__title Популярные фильтры
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="popular"
+              value="Суперхозяева"
+            )
+            span.search-sidebar__checkbox Суперхозяева
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="popular"
+              value="Бесконтактное заселение"
+            )
+            span.search-sidebar__checkbox Бесконтактное заселение
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+    
+    .search-sidebar__block
+      .search-sidebar__header
+        .search-sidebar__left
+          h3.search-sidebar__title Цена за
+          .search-sidebar__prices
+            .search-sidebar__price.active 1 сутки
+            .search-sidebar__price 7 суток
+        .search-sidebar__right
+          .search-sidebar__currency ₽

@@ -25,9 +25,10 @@ mixin search-card(data)
             use(xlink:href="#svg-arrow-right")
         .swiper-pagination
     .search-card__content
-      .search-card__information
+      p.search-card__name.search-card__name--mob !{ data.name }
+      .search-card__information.search-card__information--top
         .search-card__top
-          p.search-card__name !{ data.name }
+          p.search-card__name.search-card__name--desktop !{ data.name }
           h2.search-card__title= data.title
           .search-card__items
             each item in data.characteristic
@@ -55,13 +56,23 @@ mixin search-card(data)
                   use(xlink:href="#svg-search-metro")
                 span= item.name
           p.search-card__location= data.location
-      .search-card__information
+      .search-card__information.search-card__information--bottom
         .search-card__top
-          .search-card__review
-            svg(width="30" height="30" viewBox="0 0 30 30")
-              use(xlink:href="#svg-star")
-            p !{ data.review }
+          .search-card__review.search-card__review--desktop
+            .search-card__rating
+              svg(width="30" height="30" viewBox="0 0 30 30")
+                use(xlink:href="#svg-star")
+              p 8,7
+            span •
+            .search-card__comments  156 отзывов
         .search-card__bottom
+          .search-card__review.search-card__review--mob
+            .search-card__rating
+              svg(width="30" height="30" viewBox="0 0 30 30")
+                use(xlink:href="#svg-star")
+              p 8,7
+            span •
+            .search-card__comments  156 отзывов
           .search-card__statuses
             if data.statusOrange || data.statusGreen || data.statusBlue
               if data.statusGreen

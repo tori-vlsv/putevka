@@ -1,0 +1,200 @@
+.search-sidebar {
+  background-color: $white;
+  border-radius: 10px;
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__switchers {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-switcher {
+    display: flex;
+    justify-content: space-between;
+    &__button {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 24px;
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked + .search-sidebar-switcher__toggle {
+          background-color: $blue-700;
+          &:before {
+            -webkit-transform: translateX(18px);
+            -ms-transform: translateX(18px);
+            transform: translateX(18px);
+          }
+        } 
+      }
+    }
+    &__toggle {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: $blue-700, $alpha: 0.1);
+      -webkit-transition: $transition-default;
+      transition: $transition-default;
+      border-radius: 100px;
+      &:before {
+        position: absolute;
+        border-radius: 50%;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $white;
+        box-shadow: 0px 2px 3px 1px rgba($color: $black-400, $alpha: 0.1);
+        -webkit-transition: $transition-default;
+        transition: $transition-default;
+      }
+    }
+    &__name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $black-300;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 12px;
+    color: $blue-500;
+    transition: color $transition-default, background-color $transition-default;
+    &.active {
+      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      color: $black-300;
+    }
+  }
+
+  &__currency {
+    color: $gray-400;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  &__block {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      border: 1px dashed rgba($color: $blue-700, $alpha: 0.15);
+      width: calc(100% + 40px);
+      height: 1px;
+      left: -20px;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__title {
+    font-family: 'Tilda Sans';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $black-400;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $black-300;
+    &-uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & ~ .search-sidebar__checkbox {
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 50%;
+        left: 0%;
+        transform: translate(0, -50%);
+        border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+      }
+    }
+    &:checked ~ .search-sidebar__icon {
+      opacity: 1;
+      transition: opacity $transition-default;
+    }
+    &:checked ~ .search-sidebar__checkbox {
+      &:before {
+        background-color: $blue-700;
+        border: 1px solid $blue-700;
+
+      }
+    }
+  }
+
+  &__icon {
+    stroke: transparent;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    opacity: 0;
+    transition: opacity $transition-default;
+  }
+}
