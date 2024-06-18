@@ -37,3 +37,4 @@ import "./components/slider/search-card";
 import "./components/toggle/search-sidebar/search-sidebar-toggle";
 import "./components/toggle/search-sidebar/search-sidebar-area";
 import "./components/toggle/search-sidebar/search-sidebar-days";
+import "./components/toggle/search-sidebar/search-sidebar-filter";

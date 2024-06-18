@@ -1,858 +1,911 @@
 aside.search-sidebar
   .search-sidebar__wrapper
+    //- .search-sidebar__top
+    //-   span Изменить параметры
+    //-   svg.search-sidebar__close(width="24" height="24" viewBox="0 0 24 24")
+    //-     use(xlink:href="#svg-close")
+    //- .search-sidebar__bottom
+    //-   button.search-sidebar__submit(type="button") Найти жилье посуточно
+    .search-sidebar__container
+      .search-keywords
+        .search-keywords__header
+          h3.search-keywords__title Выбранные фильтры
+          button.search-keywords__button.search-keywords__button-reset(type="button")
+            span Сбросить все
+        .search-keywords__buttons
+          button.search-keywords__button(type="button")
+            span Быстрое бронирование
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Суперхозяева
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Отели, гостиницы
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Апарт-отели
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Квартиры, апартаменты
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Дома, коттеджи
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Мини-гостиницы
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Гостевые дома
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span Глэмпинги, базы отдыха
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
+          button.search-keywords__button(type="button")
+            span От 500 ₽ до 11000 ₽ за 1 сутки
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-close")
 
-    .search-sidebar__switchers
-      .search-sidebar-switcher
-        .search-sidebar-switcher__name Быстрое бронирование
-        label.search-sidebar-switcher__button
-          input(type="checkbox" name="switcher-booking-fast" checked)
-          span.search-sidebar-switcher__toggle
-      .search-sidebar-switcher
-        .search-sidebar-switcher__name Без депозита
-        label.search-sidebar-switcher__button
-          input(type="checkbox" name="switcher-booking-without-deposit")
-          span.search-sidebar-switcher__toggle
-    
-    .search-sidebar__block
-      h3.search-sidebar__title Популярные фильтры
-        .search-sidebar__list
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              type="checkbox"
-              name="popular"
-              value="Суперхозяева"
-            )
-            span.search-sidebar__checkbox Суперхозяева
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              type="checkbox"
-              name="popular"
-              value="Бесконтактное заселение"
-            )
-            span.search-sidebar__checkbox Бесконтактное заселение
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Цена за
-          .search-sidebar__prices
-            .search-sidebar__price.active 1 сутки
-            .search-sidebar__price 7 суток
-        .search-sidebar__right
-          .search-sidebar__parameter ₽
-      .search-sidebar__costs
-        .search-sidebar__value
-          span От
-          input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from" value="500")
-        .search-sidebar__value
-          span До
-          input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to" value="11 000")
-      .search-sidebar__inner
-        .search-sidebar__toggle
+      .search-sidebar__switchers
+        .search-sidebar-switcher
+          .search-sidebar-switcher__name Быстрое бронирование
+          label.search-sidebar-switcher__button
+            input(type="checkbox" name="switcher-booking-fast" checked)
+            span.search-sidebar-switcher__toggle
+        .search-sidebar-switcher
+          .search-sidebar-switcher__name Без депозита
+          label.search-sidebar-switcher__button
+            input(type="checkbox" name="switcher-booking-without-deposit")
+            span.search-sidebar-switcher__toggle
+      
+      .search-sidebar__block
+        h3.search-sidebar__title Популярные фильтры
+          .search-sidebar__list
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                type="checkbox"
+                name="popular"
+                value="Суперхозяева"
+              )
+              span.search-sidebar__checkbox Суперхозяева
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                type="checkbox"
+                name="popular"
+                value="Бесконтактное заселение"
+              )
+              span.search-sidebar__checkbox Бесконтактное заселение
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Цена за
+            .search-sidebar__prices
+              .search-sidebar__price.active 1 сутки
+              .search-sidebar__price 7 суток
+          .search-sidebar__right
+            .search-sidebar__parameter ₽
+        .search-sidebar__costs
+          .search-sidebar__value
+            span От
+            input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from" value="500")
+          .search-sidebar__value
+            span До
+            input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to" value="11 000")
+        .search-sidebar__inner
+          .search-sidebar__toggle
 
-    .search-sidebar__block
-      h3.search-sidebar__title Типы жилья
-        .search-sidebar__list
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Квартиры, апартаменты"
-            )
-            span.search-sidebar__checkbox Квартиры, апартаменты
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Дома, коттеджи"
-            )
-            span.search-sidebar__checkbox Дома, коттеджи
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Комнаты"
-            )
-            span.search-sidebar__checkbox Комнаты
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Отели, гостиницы"
-            )
-            span.search-sidebar__checkbox Отели, гостиницы
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Апарт-отели"
-            )
-            span.search-sidebar__checkbox Апарт-отели
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Мини-гостиницы"
-            )
-            span.search-sidebar__checkbox Мини-гостиницы
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Гостевые дома"
-            )
-            span.search-sidebar__checkbox Гостевые дома
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              checked
-              type="checkbox"
-              name="types-of-housing"
-              value="Глэмпинги, базы отдыха"
-            )
-            span.search-sidebar__checkbox Глэмпинги, базы отдыха
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              type="checkbox"
-              name="types-of-housing"
-              value="Хостелы"
-            )
-            span.search-sidebar__checkbox Хостелы
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check") 
-          label.search-sidebar__label
-            input.search-sidebar__input(
-              type="checkbox"
-              name="types-of-housing"
-              value="Студии"
-            )
-            span.search-sidebar__checkbox Студии
-            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-              use(xlink:href="#svg-search-check")
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Метро рядом
-          button.search-sidebar__button(type="button") Выбрать станции
-        .search-sidebar__right
-          .search-sidebar__help.search-sidebar__help--stations
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-            .search-sidebar__hint
-              p Выберите одну или несколько станций и укажите время ходьбы от объекта до метро. Или просто выберите время до любой ближайшей станнции.
+      .search-sidebar__block
+        h3.search-sidebar__title Типы жилья
+          .search-sidebar__list
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Квартиры, апартаменты"
+              )
+              span.search-sidebar__checkbox Квартиры, апартаменты
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Дома, коттеджи"
+              )
+              span.search-sidebar__checkbox Дома, коттеджи
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Комнаты"
+              )
+              span.search-sidebar__checkbox Комнаты
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Отели, гостиницы"
+              )
+              span.search-sidebar__checkbox Отели, гостиницы
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Апарт-отели"
+              )
+              span.search-sidebar__checkbox Апарт-отели
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Мини-гостиницы"
+              )
+              span.search-sidebar__checkbox Мини-гостиницы
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Гостевые дома"
+              )
+              span.search-sidebar__checkbox Гостевые дома
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                checked
+                type="checkbox"
+                name="types-of-housing"
+                value="Глэмпинги, базы отдыха"
+              )
+              span.search-sidebar__checkbox Глэмпинги, базы отдыха
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                type="checkbox"
+                name="types-of-housing"
+                value="Хостелы"
+              )
+              span.search-sidebar__checkbox Хостелы
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check") 
+            label.search-sidebar__label
+              input.search-sidebar__input(
+                type="checkbox"
+                name="types-of-housing"
+                value="Студии"
+              )
+              span.search-sidebar__checkbox Студии
+              svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+                use(xlink:href="#svg-search-check")
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Метро рядом
+            button.search-sidebar__button(type="button") Выбрать станции
+          .search-sidebar__right
+            .search-sidebar__help.search-sidebar__help--stations
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+              .search-sidebar__hint
+                p Выберите одну или несколько станций и укажите время ходьбы от объекта до метро. Или просто выберите время до любой ближайшей станнции.
 
-      .search-sidebar__stations
-        .search-sidebar__station
-          .search-sidebar__circle.search-sidebar__circle--green
-          span Маяковская
-          button(type="button")
-            svg(width="24" height="24" viewBox="0 0 24 24")
-              use(xlink:href="#svg-close")
-        .search-sidebar__station
-          .search-sidebar__circle.search-sidebar__circle--red
-          span Лубянка
-          button(type="button")
-            svg(width="24" height="24" viewBox="0 0 24 24")
-              use(xlink:href="#svg-close")
-        .search-sidebar__station
-          .search-sidebar__circles
-            .search-sidebar__circle.search-sidebar__circle--blue
-            .search-sidebar__circle.search-sidebar__circle--blue-light
-          span Арбатская
-          button(type="button")
-            svg(width="24" height="24" viewBox="0 0 24 24")
-              use(xlink:href="#svg-close")
-        .search-sidebar__station
-          .search-sidebar__circles
-            .search-sidebar__circle.search-sidebar__circle--blue
-            .search-sidebar__circle.search-sidebar__circle--blue-light
-            .search-sidebar__circle.search-sidebar__circle--brown
-          span Киевская
-          button(type="button")
-            svg(width="24" height="24" viewBox="0 0 24 24")
-              use(xlink:href="#svg-close")
-      h4.search-sidebar__subtitle Пешком до метро
+        .search-sidebar__stations
+          .search-sidebar__station
+            .search-sidebar__circle.search-sidebar__circle--green
+            span Маяковская
+            button(type="button")
+              svg(width="24" height="24" viewBox="0 0 24 24")
+                use(xlink:href="#svg-close")
+          .search-sidebar__station
+            .search-sidebar__circle.search-sidebar__circle--red
+            span Лубянка
+            button(type="button")
+              svg(width="24" height="24" viewBox="0 0 24 24")
+                use(xlink:href="#svg-close")
+          .search-sidebar__station
+            .search-sidebar__circles
+              .search-sidebar__circle.search-sidebar__circle--blue
+              .search-sidebar__circle.search-sidebar__circle--blue-light
+            span Арбатская
+            button(type="button")
+              svg(width="24" height="24" viewBox="0 0 24 24")
+                use(xlink:href="#svg-close")
+          .search-sidebar__station
+            .search-sidebar__circles
+              .search-sidebar__circle.search-sidebar__circle--blue
+              .search-sidebar__circle.search-sidebar__circle--blue-light
+              .search-sidebar__circle.search-sidebar__circle--brown
+            span Киевская
+            button(type="button")
+              svg(width="24" height="24" viewBox="0 0 24 24")
+                use(xlink:href="#svg-close")
+        h4.search-sidebar__subtitle Пешком до метро
+          .search-sidebar__list
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                checked
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="Неважно"
+              )
+              span.search-sidebar__checkbox Неважно
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="5 минут"
+              )
+              span.search-sidebar__checkbox 5 минут
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="10 минут"
+              )
+              span.search-sidebar__checkbox 10 минут
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="15 минут"
+              )
+              span.search-sidebar__checkbox 15 минут
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="20 минут"
+              )
+              span.search-sidebar__checkbox 20 минут
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="walking-distance-tо-the-metro"
+                value="30 минут"
+              )
+              span.search-sidebar__checkbox 30 минут
+      
+      .search-sidebar__block
+        h3.search-sidebar__title Отдельные спальни
+          .search-sidebar__list
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                checked
+                type="radio"
+                name="separate-bedrooms"
+                value="Неважно"
+              )
+              span.search-sidebar__checkbox Неважно
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="separate-bedrooms"
+                value="1 и более"
+              )
+              span.search-sidebar__checkbox 1 и более
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="separate-bedrooms"
+                value="2 и более"
+              )
+              span.search-sidebar__checkbox 2 и более
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="separate-bedrooms"
+                value="3 и более"
+              )
+              span.search-sidebar__checkbox 3 и более
+            label.search-sidebar__label
+              input.search-sidebar__radio(
+                type="radio"
+                name="separate-bedrooms"
+                value="4 и более"
+              )
+              span.search-sidebar__checkbox 4 и более
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Спальные места
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        h4.search-sidebar__subtitle Кровати, диваны
         .search-sidebar__list
           label.search-sidebar__label
             input.search-sidebar__radio(
               checked
               type="radio"
-              name="walking-distance-tо-the-metro"
+              name="beds-and-sofas"
               value="Неважно"
             )
             span.search-sidebar__checkbox Неважно
           label.search-sidebar__label
             input.search-sidebar__radio(
               type="radio"
-              name="walking-distance-tо-the-metro"
-              value="5 минут"
-            )
-            span.search-sidebar__checkbox 5 минут
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="walking-distance-tо-the-metro"
-              value="10 минут"
-            )
-            span.search-sidebar__checkbox 10 минут
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="walking-distance-tо-the-metro"
-              value="15 минут"
-            )
-            span.search-sidebar__checkbox 15 минут
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="walking-distance-tо-the-metro"
-              value="20 минут"
-            )
-            span.search-sidebar__checkbox 20 минут
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="walking-distance-tо-the-metro"
-              value="30 минут"
-            )
-            span.search-sidebar__checkbox 30 минут
-    
-    .search-sidebar__block
-      h3.search-sidebar__title Отдельные спальни
-        .search-sidebar__list
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              checked
-              type="radio"
-              name="separate-bedrooms"
-              value="Неважно"
-            )
-            span.search-sidebar__checkbox Неважно
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="separate-bedrooms"
-              value="1 и более"
-            )
-            span.search-sidebar__checkbox 1 и более
-          label.search-sidebar__label
-            input.search-sidebar__radio(
-              type="radio"
-              name="separate-bedrooms"
+              name="beds-and-sofas"
               value="2 и более"
             )
             span.search-sidebar__checkbox 2 и более
           label.search-sidebar__label
             input.search-sidebar__radio(
               type="radio"
-              name="separate-bedrooms"
+              name="beds-and-sofas"
               value="3 и более"
             )
             span.search-sidebar__checkbox 3 и более
           label.search-sidebar__label
             input.search-sidebar__radio(
               type="radio"
-              name="separate-bedrooms"
+              name="beds-and-sofas"
               value="4 и более"
             )
             span.search-sidebar__checkbox 4 и более
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Спальные места
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      h4.search-sidebar__subtitle Кровати, диваны
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            checked
-            type="radio"
-            name="beds-and-sofas"
-            value="Неважно"
-          )
-          span.search-sidebar__checkbox Неважно
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="beds-and-sofas"
-            value="2 и более"
-          )
-          span.search-sidebar__checkbox 2 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="beds-and-sofas"
-            value="3 и более"
-          )
-          span.search-sidebar__checkbox 3 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="beds-and-sofas"
-            value="4 и более"
-          )
-          span.search-sidebar__checkbox 4 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="beds-and-sofas"
-            value="5 и более"
-          )
-          span.search-sidebar__checkbox 5 и более
-      h4.search-sidebar__subtitle Двуспальные
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            checked
-            type="radio"
-            name="double-beds"
-            value="Неважно"
-          )
-          span.search-sidebar__checkbox Неважно
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="double-beds"
-            value="2 и более"
-          )
-          span.search-sidebar__checkbox 2 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="double-beds"
-            value="3 и более"
-          )
-          span.search-sidebar__checkbox 3 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="double-beds"
-            value="4 и более"
-          )
-          span.search-sidebar__checkbox 4 и более
-        label.search-sidebar__label
-          input.search-sidebar__radio(
-            type="radio"
-            name="double-beds"
-            value="5 и более"
-          )
-          span.search-sidebar__checkbox 5 и более
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Площадь объекта
-        .search-sidebar__right
-          .search-sidebar__parameter м2
-      .search-sidebar__costs
-        .search-sidebar__value
-          span От
-          input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from")
-        .search-sidebar__value
-          span До
-          input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to")
-      .search-sidebar__inner
-        .search-sidebar__area
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              type="radio"
+              name="beds-and-sofas"
+              value="5 и более"
+            )
+            span.search-sidebar__checkbox 5 и более
+        h4.search-sidebar__subtitle Двуспальные
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              checked
+              type="radio"
+              name="double-beds"
+              value="Неважно"
+            )
+            span.search-sidebar__checkbox Неважно
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              type="radio"
+              name="double-beds"
+              value="2 и более"
+            )
+            span.search-sidebar__checkbox 2 и более
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              type="radio"
+              name="double-beds"
+              value="3 и более"
+            )
+            span.search-sidebar__checkbox 3 и более
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              type="radio"
+              name="double-beds"
+              value="4 и более"
+            )
+            span.search-sidebar__checkbox 4 и более
+          label.search-sidebar__label
+            input.search-sidebar__radio(
+              type="radio"
+              name="double-beds"
+              value="5 и более"
+            )
+            span.search-sidebar__checkbox 5 и более
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Площадь объекта
+          .search-sidebar__right
+            .search-sidebar__parameter м2
+        .search-sidebar__costs
+          .search-sidebar__value
+            span От
+            input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from")
+          .search-sidebar__value
+            span До
+            input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to")
+        .search-sidebar__inner
+          .search-sidebar__area
 
-    .search-sidebar__block
-      h3.search-sidebar__title Этаж
-      .search-sidebar__costs
-        .search-sidebar__value
-          span От
-          input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from")
-        .search-sidebar__value
-          span До
-          input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="floor"
-            value="Не первый"
-          )
-          span.search-sidebar__checkbox Не первый
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="floor"
-            value="Не цоколь"
-          )
-          span.search-sidebar__checkbox Не цоколь
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="floor"
-            value="Последний"
-          )
-          span.search-sidebar__checkbox Последний
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="floor"
-            value="Не последний"
-          )
-          span.search-sidebar__checkbox Не последний
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
+      .search-sidebar__block
+        h3.search-sidebar__title Этаж
+        .search-sidebar__costs
+          .search-sidebar__value
+            span От
+            input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="from")
+          .search-sidebar__value
+            span До
+            input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="to")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="floor"
+              value="Не первый"
+            )
+            span.search-sidebar__checkbox Не первый
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="floor"
+              value="Не цоколь"
+            )
+            span.search-sidebar__checkbox Не цоколь
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="floor"
+              value="Последний"
+            )
+            span.search-sidebar__checkbox Последний
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="floor"
+              value="Не последний"
+            )
+            span.search-sidebar__checkbox Не последний
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
 
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Правила размещения
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Правила размещения
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
 
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="rules"
-            value="Курение разрешено"
-          )
-          span.search-sidebar__checkbox Курение разрешено
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="rules"
-            value="Вечеринки разрешены"
-          )
-          span.search-sidebar__checkbox Вечеринки разрешены
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="rules"
+              value="Курение разрешено"
+            )
+            span.search-sidebar__checkbox Курение разрешено
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="rules"
+              value="Вечеринки разрешены"
+            )
+            span.search-sidebar__checkbox Вечеринки разрешены
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
 
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title В помещении
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Интернет Wi-fi"
-          )
-          span.search-sidebar__checkbox Интернет Wi-fi
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Кондиционер"
-          )
-          span.search-sidebar__checkbox Кондиционер
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Кухня"
-          )
-          span.search-sidebar__checkbox Кухня
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check") 
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Холодильник"
-          )
-          span.search-sidebar__checkbox Холодильник
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check") 
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Балкон, лоджия"
-          )
-          span.search-sidebar__checkbox Балкон, лоджия
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check") 
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Детская кроватка"
-          )
-          span.search-sidebar__checkbox Детская кроватка
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check") 
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="inside"
-            value="Стиральная машина"
-          )
-          span.search-sidebar__checkbox Стиральная машина
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check") 
-      .search-sidebar__button.search-sidebar__button--open Показать еще 14
-    
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title В помещении
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Интернет Wi-fi"
+            )
+            span.search-sidebar__checkbox Интернет Wi-fi
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Кондиционер"
+            )
+            span.search-sidebar__checkbox Кондиционер
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Кухня"
+            )
+            span.search-sidebar__checkbox Кухня
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check") 
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Холодильник"
+            )
+            span.search-sidebar__checkbox Холодильник
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check") 
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Балкон, лоджия"
+            )
+            span.search-sidebar__checkbox Балкон, лоджия
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check") 
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Детская кроватка"
+            )
+            span.search-sidebar__checkbox Детская кроватка
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check") 
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="inside"
+              value="Стиральная машина"
+            )
+            span.search-sidebar__checkbox Стиральная машина
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check") 
+        .search-sidebar__button.search-sidebar__button--open Показать еще 14
+      
 
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title На территории
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="on-territory"
-            value="Парковка"
-          )
-          span.search-sidebar__checkbox Парковка
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="on-territory"
-            value="Беседка"
-          )
-          span.search-sidebar__checkbox Беседка
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="on-territory"
-            value="Мангал"
-          )
-          span.search-sidebar__checkbox Мангал
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="on-territory"
-            value="Бассеин"
-          )
-          span.search-sidebar__checkbox Бассеин
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="on-territory"
-            value="Детская площадка"
-          )
-          span.search-sidebar__checkbox Детская площадка
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title На территории
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="on-territory"
+              value="Парковка"
+            )
+            span.search-sidebar__checkbox Парковка
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="on-territory"
+              value="Беседка"
+            )
+            span.search-sidebar__checkbox Беседка
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="on-territory"
+              value="Мангал"
+            )
+            span.search-sidebar__checkbox Мангал
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="on-territory"
+              value="Бассеин"
+            )
+            span.search-sidebar__checkbox Бассеин
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="on-territory"
+              value="Детская площадка"
+            )
+            span.search-sidebar__checkbox Детская площадка
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
 
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Вид из окна
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="views"
-            value="На море"
-          )
-          span.search-sidebar__checkbox На море
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="views"
-            value="На горы"
-          )
-          span.search-sidebar__checkbox На горы
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="views"
-            value="На реку, озеро"
-          )
-          span.search-sidebar__checkbox На реку, озеро
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="views"
-            value="На город"
-          )
-          span.search-sidebar__checkbox На город
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Санузел
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="bathroom"
-            value="Своя ванная комната"
-          )
-          span.search-sidebar__checkbox Своя ванная комната
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="bathroom"
-            value="Свой туалет"
-          )
-          span.search-sidebar__checkbox Свой туалет
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Питание
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="food"
-            value="Завтрак"
-          )
-          span.search-sidebar__checkbox Завтрак
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="food"
-            value="Обед"
-          )
-          span.search-sidebar__checkbox Обед
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="food"
-            value="Ужин"
-          )
-          span.search-sidebar__checkbox Ужин
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Звездность отеля
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="star-rating"
-            value="5 звезд"
-          )
-          span.search-sidebar__checkbox 5 звезд
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="star-rating"
-            value="4 звезды"
-          )
-          span.search-sidebar__checkbox 4 звезды
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="star-rating"
-            value="3 звезды"
-          )
-          span.search-sidebar__checkbox 3 звезды
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="star-rating"
-            value="2 звезды"
-          )
-          span.search-sidebar__checkbox 2 звезды
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="star-rating"
-            value="1 звезда, без звезд"
-          )
-          span.search-sidebar__checkbox 1 звезда, без звезд
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Доступность
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="availability"
-            value="Лифт"
-          )
-          span.search-sidebar__checkbox Лифт
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="availability"
-            value="Доступ для инвалидов"
-          )
-          span.search-sidebar__checkbox Доступ для инвалидов
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-    
-    .search-sidebar__block
-      .search-sidebar__header
-        .search-sidebar__left
-          h3.search-sidebar__title Дополнительно
-        .search-sidebar__right
-          button.search-sidebar__help(type="button")
-            svg(width="16" height="16" viewBox="0 0 16 16")
-              use(xlink:href="#svg-search-help")
-      .search-sidebar__list
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Быстро отвечают"
-          )
-          span.search-sidebar__checkbox Быстро отвечают
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Трансфер"
-          )
-          span.search-sidebar__checkbox Трансфер
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="С хорошими отзывами"
-          )
-          span.search-sidebar__checkbox С хорошими отзывами
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Ранний заезд разрешен"
-          )
-          span.search-sidebar__checkbox Ранний заезд разрешен
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Поздний заезд разрешен"
-          )
-          span.search-sidebar__checkbox Поздний заезд разрешен
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Отчётные документы"
-          )
-          span.search-sidebar__checkbox Отчётные документы
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
-        label.search-sidebar__label
-          input.search-sidebar__input(
-            type="checkbox"
-            name="additionally"
-            value="Без посредников"
-          )
-          span.search-sidebar__checkbox Без посредников
-          svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
-            use(xlink:href="#svg-search-check")
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Вид из окна
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="views"
+              value="На море"
+            )
+            span.search-sidebar__checkbox На море
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="views"
+              value="На горы"
+            )
+            span.search-sidebar__checkbox На горы
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="views"
+              value="На реку, озеро"
+            )
+            span.search-sidebar__checkbox На реку, озеро
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="views"
+              value="На город"
+            )
+            span.search-sidebar__checkbox На город
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Санузел
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="bathroom"
+              value="Своя ванная комната"
+            )
+            span.search-sidebar__checkbox Своя ванная комната
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="bathroom"
+              value="Свой туалет"
+            )
+            span.search-sidebar__checkbox Свой туалет
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Питание
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="food"
+              value="Завтрак"
+            )
+            span.search-sidebar__checkbox Завтрак
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="food"
+              value="Обед"
+            )
+            span.search-sidebar__checkbox Обед
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="food"
+              value="Ужин"
+            )
+            span.search-sidebar__checkbox Ужин
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Звездность отеля
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="star-rating"
+              value="5 звезд"
+            )
+            span.search-sidebar__checkbox 5 звезд
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="star-rating"
+              value="4 звезды"
+            )
+            span.search-sidebar__checkbox 4 звезды
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="star-rating"
+              value="3 звезды"
+            )
+            span.search-sidebar__checkbox 3 звезды
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="star-rating"
+              value="2 звезды"
+            )
+            span.search-sidebar__checkbox 2 звезды
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="star-rating"
+              value="1 звезда, без звезд"
+            )
+            span.search-sidebar__checkbox 1 звезда, без звезд
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Доступность
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="availability"
+              value="Лифт"
+            )
+            span.search-sidebar__checkbox Лифт
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="availability"
+              value="Доступ для инвалидов"
+            )
+            span.search-sidebar__checkbox Доступ для инвалидов
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+      
+      .search-sidebar__block
+        .search-sidebar__header
+          .search-sidebar__left
+            h3.search-sidebar__title Дополнительно
+          .search-sidebar__right
+            button.search-sidebar__help(type="button")
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+        .search-sidebar__list
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Быстро отвечают"
+            )
+            span.search-sidebar__checkbox Быстро отвечают
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Трансфер"
+            )
+            span.search-sidebar__checkbox Трансфер
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="С хорошими отзывами"
+            )
+            span.search-sidebar__checkbox С хорошими отзывами
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Ранний заезд разрешен"
+            )
+            span.search-sidebar__checkbox Ранний заезд разрешен
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Поздний заезд разрешен"
+            )
+            span.search-sidebar__checkbox Поздний заезд разрешен
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Отчётные документы"
+            )
+            span.search-sidebar__checkbox Отчётные документы
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")
+          label.search-sidebar__label
+            input.search-sidebar__input(
+              type="checkbox"
+              name="additionally"
+              value="Без посредников"
+            )
+            span.search-sidebar__checkbox Без посредников
+            svg.search-sidebar__icon(width="12" height="10" viewBox="0 0 12 10")
+              use(xlink:href="#svg-search-check")

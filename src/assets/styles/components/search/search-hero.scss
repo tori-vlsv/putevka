@@ -1,0 +1,133 @@
+.search-hero {
+  background-color: $blue-700;
+
+  &__wrapper {
+    border-top: 1px solid rgba($color: $white, $alpha: 0.15);
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    background-color: rgba($color: $white, $alpha: 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    svg {
+      width: 20px;
+      height: 20px;
+      stroke: transparent;
+      fill: rgba($color: $white, $alpha: 0.75);
+    }
+    span {
+      color: rgba($color: $white, $alpha: 0.75);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+    &.active {
+      background-color: $orange-500;
+      svg {
+        fill: $white;
+      }
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 32px;
+    color: $white;
+  }
+
+  &__form {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: 554px 1fr 1fr 1fr;
+    column-gap: 1px;
+  }
+
+  &__input {
+    position: relative;
+    input {
+      // border-radius: 6px;
+      width: 100%;
+      background-color: $white;
+      outline: none;
+      padding: 26px 14px 8px 50px;
+      font-family: 'Panton';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $black-400;
+      &::placeholder {
+        font-family: 'Panton';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $black-400;
+      }
+    }
+    svg {
+      position: absolute;
+      left: 14px;
+      top: 15px;
+      fill: transparent;
+    }
+    span {
+      position: absolute;
+      left: 50px;
+      top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      color: rgba($color: $black-400, $alpha: 0.5);
+    }
+  }
+
+  &__button {
+    background-color: $white;
+    padding: 26px 14px 8px 14px;
+    font-family: 'Panton';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $black-400;
+    span {
+      position: absolute;
+      left: 14px;
+      top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      color: rgba($color: $black-400, $alpha: 0.5);
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke: $gray-400;
+      fill: transparent;
+      position: absolute;
+      right: 10px;
+      top: 18px;
+    }
+  }
+}

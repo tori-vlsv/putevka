@@ -1,10 +1,18 @@
 .search-keywords {
   @include max-screen(tablet-2x) {
     display: none;
+    padding-top: 20px;
   }
   @include min-screen(laptop) {
     display: block;
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__title {
     font-family: 'Tilda Sans';
     font-size: 16px;
@@ -61,6 +69,10 @@
     }
     &-reset {
       background-color: rgba($color: $red-400, $alpha: 0.07);
+      @include max-screen(tablet-2x) {
+        background-color: transparent;
+        padding: 0;
+      }
       svg {
         stroke: $red-400;
       }

@@ -4,6 +4,9 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  @include max-screen(tablet-2x) {
+    display: none;
+  }
 
   &__bg {
     position: absolute;

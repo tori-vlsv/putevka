@@ -1,0 +1,40 @@
+.search-filter {
+  background-color: $white;
+  @include min-screen(laptop) {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $blue-500;
+  }
+
+  &__amount {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: $white;
+
+    padding: 2px 4px;
+    background-color: $orange-500;
+    border-radius: 50px;
+  }
+}

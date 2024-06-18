@@ -1,9 +1,68 @@
 .search-sidebar {
   background-color: $white;
   border-radius: 10px;
+  @include max-screen(tablet-2x) {
+    
+  }
 
   &__wrapper {
     padding: 0 20px;
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: 18px 20px;
+    background-color: $blue-700;
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-family: 'Panton';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    padding: 18px 20px;
+    border-top: 1px solid rgba($color: $blue-700, $alpha: 0.12);
+    background-color: $white;
+  }
+
+  &__submit {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: center;
+    color: $white;
+    background-color: $orange-500;
+    padding: 9px;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &__close {
+    stroke: rgba($color: $white, $alpha: 0.5);
+  }
+
+  .search-keywords {
+    @include max-screen(tablet-2x) {
+      display: block;
+    }
+    @include min-screen(laptop) {
+      display: none;
+    }
   }
 
   &__help {
