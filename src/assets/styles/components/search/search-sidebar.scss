@@ -10,11 +10,6 @@
   }
 
   &__top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
     padding: 18px 20px;
     background-color: $blue-700;
     display: flex;
@@ -25,6 +20,34 @@
       font-weight: 700;
       line-height: 24px;
       color: $white;
+    }
+    @include min-screen(laptop) {
+      display: none;
+    }
+  }
+
+  &__container {
+    @include max-screen(tablet-2x) {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: calc(100dvh - 60px - 77px);
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $blue-700;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__hero {
+    height: 215px;
+    background-color: $blue-700;
+    @include min-screen(laptop) {
+      display: none;
     }
   }
 
@@ -38,6 +61,9 @@
     padding: 18px 20px;
     border-top: 1px solid rgba($color: $blue-700, $alpha: 0.12);
     background-color: $white;
+    @include min-screen(laptop) {
+      display: none;
+    }
   }
 
   &__submit {
@@ -53,7 +79,9 @@
   }
 
   &__close {
-    stroke: rgba($color: $white, $alpha: 0.5);
+    svg {
+      stroke: rgba($color: $white, $alpha: 0.5);
+    }
   }
 
   .search-keywords {

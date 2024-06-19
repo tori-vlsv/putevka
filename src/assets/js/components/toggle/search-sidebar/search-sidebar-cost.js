@@ -1,7 +1,7 @@
 
 import slider from 'jquery-ui/ui/widgets/slider'
 
-function searchSidebarToggle() {
+function searchSidebarArea() {
   function prettify(num) {
     let n = num.toString();
     let separator = " ";
@@ -10,12 +10,12 @@ function searchSidebarToggle() {
   $(".search-sidebar__toggle").slider({
     range: true,
     min: 0,
-    max: 30000,
-    values: [ 500, 11000 ],
+    max: 1000,
+    values: [ 0, 1000 ],
     slide: function( event, ui ) {
-      $( ".from" ).val(prettify(ui.values[0]));
-      $( ".to" ).val(prettify(ui.values[1]));
+      $( ".search-sidebar__cost--from" ).val(prettify(ui.values[0]));
+      $( ".search-sidebar__cost--to" ).val(prettify(ui.values[1]));
     }
   });
 };
-searchSidebarToggle();
+searchSidebarArea();

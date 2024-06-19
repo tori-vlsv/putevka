@@ -13,8 +13,8 @@ function searchSidebarArea() {
     max: 1000,
     values: [ 0, 1000 ],
     slide: function( event, ui ) {
-      $( ".from" ).val(prettify(ui.values[0]));
-      $( ".to" ).val(prettify(ui.values[1]));
+      $( ".search-sidebar__area--from" ).val(prettify(ui.values[0]));
+      $( ".search-sidebar__area--to" ).val(prettify(ui.values[1]));
     }
   });
 };

@@ -29,7 +29,8 @@ mixin search-card(data)
       .search-card__information.search-card__information--top
         .search-card__top
           p.search-card__name.search-card__name--desktop !{ data.name }
-          h2.search-card__title= data.title
+          h2.search-card__title
+            a(href="#")= data.title
           .search-card__items
             each item in data.characteristic
               .search-card__item
@@ -52,7 +53,7 @@ mixin search-card(data)
           if data.metro
             each item in data.metro
               .search-card__underground
-                svg.search-card__metro(class="" + item.color)(width="18" height="18" viewBox="0 0 18 18")
+                svg.search-card__metro(class="" + item.color width="18" height="18" viewBox="0 0 18 18")
                   use(xlink:href="#svg-search-metro")
                 span= item.name
           p.search-card__location= data.location

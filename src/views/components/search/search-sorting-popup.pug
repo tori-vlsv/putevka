@@ -1,0 +1,31 @@
+.search-sorting-popup
+  .search-sorting-popup__wrapper
+    .search-sorting-popup__header
+      span Сортировать
+      button.search-sorting-popup__close(type="button")
+        svg(width="24" height="24" viewBox="0 0 24 24")
+          use(xlink:href="#svg-close")
+    .search-sorting-popup__main
+      .search-sorting-popup__list
+        label.search-sidebar__label
+          input.search-sidebar__radio(
+            checked
+            type="radio"
+            name="walking-distance-tо-the-metro"
+            value="По популярности"
+          )
+          span.search-sidebar__checkbox По популярности
+        label.search-sidebar__label
+          input.search-sidebar__radio(
+            type="radio"
+            name="walking-distance-tо-the-metro"
+            value="По рейтингу"
+          )
+          span.search-sidebar__checkbox По рейтингу
+        label.search-sidebar__label
+          input.search-sidebar__radio(
+            type="radio"
+            name="walking-distance-tо-the-metro"
+            value="Дешево и быстро"
+          )
+          span.search-sidebar__checkbox Дешево и быстро

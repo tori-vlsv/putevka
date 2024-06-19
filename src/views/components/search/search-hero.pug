@@ -1,54 +1,43 @@
 .search-hero
+  .wide-wrapper
+    .search-buttons__slider
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-water-default")
+              span Санатории
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-bed-default")
+              span Отели
+          .swiper-slide
+            button.search-hero__link.active(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-building-default")
+              span Жилье посуточно
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="20" height="20" viewBox="0 0 20 20")
+                use(xlink:href="#svg-flying-default")
+              span Авиабилеты
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-direction-default")
+              span Экскурсии
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-house-default")
+              span Базы отдыха
+          .swiper-slide
+            button.search-hero__link(type="button")
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-shape-default")
+              span Детские лагеря
   .wrapper
     .search-hero__wrapper
-      .search-hero__links
-        button.search-hero__link(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-water-default")
-          span Санатории
-        button.search-hero__link(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-bed-default")
-          span Отели
-        button.search-hero__link.active(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-building-default")
-          span Жилье посуточно
-        button.search-hero__link(type="button")
-          svg(width="20" height="20" viewBox="0 0 20 20")
-            use(xlink:href="#svg-flying-default")
-          span Авиабилеты
-        button.search-hero__link(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-direction-default")
-          span Экскурсии
-        button.search-hero__link(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-house-default")
-          span Базы отдыха
-        button.search-hero__link(type="button")
-          svg(width="18" height="18" viewBox="0 0 18 18")
-            use(xlink:href="#svg-shape-default")
-          span Детские лагеря
       h1.search-hero__title Апартаменты и квартиры посуточно в Санкт-Петербурге
-      form.search-hero__form(action="")
-        .search-hero__inputs
-          .search-hero__input.search-hero__input--large
-            input(type="text" placeholder="Санкт-Петербург" autocomplete="on" name="city")
-            svg(width="24" height="24" viewBox="0 0 24 24")
-              use(xlink:href="#svg-search-magnifier")
-            span Курорт, город или адрес:
-          button.search-hero__button(type="button")
-            svg(width="14" height="14" viewBox="0 0 14 14")
-              use(xlink:href="#svg-arrow-down")
-            p 2 взрослых
-            span Отдыхающие:
-          button.search-hero__button(type="button")
-            span Дата заезда:
-            p 03.07.2023
-          button.search-hero__button(type="button")
-            svg(width="14" height="14" viewBox="0 0 14 14")
-              use(xlink:href="#svg-arrow-down")
-            span Количество ночей:
-            p 7 ночей
-        button.search-hero__button(type="submit") Найти

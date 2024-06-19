@@ -7,6 +7,11 @@
     flex-direction: column;
   }
   @include min-screen(tablet-2x) {
+    transition: box-shadow $transition-default;
+    &:hover {
+      box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.07), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.04);
+
+    }
   }
   &__information {
     position: relative;
@@ -175,6 +180,9 @@
     justify-content: center;
     width: 100%;
     padding: 11px;
+    &:active {
+      background-color: $orange-300;
+    }
     @include max-screen(tablet) {
       grid-row: 3 / span 1;
       grid-column: 1 / span 2;
@@ -182,6 +190,12 @@
     }
     @include min-screen(tablet-2x) {
       margin-top: 10px;
+    }
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: $orange-300;
+      }
     }
     span {
       font-size: 16px;
@@ -331,23 +345,6 @@
   }
 
   &__title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    color: $black-400;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    @include max-screen(tablet) {
-      padding-top: 16px;
-      margin-top: 16px;
-      position: relative;
-    }
-    @include min-screen(tablet-2x) {
-      margin-top: 8px;
-      max-width: 410px;
-    }
     &:before {
       @include max-screen(tablet) {
         position: absolute;
@@ -359,7 +356,34 @@
         left: -16px;
         right: 0;
       }
-      @include min-screen(tablet-2x) {
+    }
+    @include max-screen(tablet) {
+      padding-top: 16px;
+      margin-top: 16px;
+      position: relative;
+    }
+    @include min-screen(tablet-2x) {
+      margin-top: 8px;
+      max-width: 410px;
+    }
+    a {
+      font-family: 'Panton';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      &:active {
+        color: $orange-500;
+      }
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
       }
     }
   }
