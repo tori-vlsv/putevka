@@ -12,15 +12,10 @@ function searchButtonsSlider() {
     new Swiper('.search-buttons__slider-' + i + ' .swiper-' + i, {
       // slideToClickedSlide: true,
       grabCursor: true,
-      modules: [ Mousewheel ],
       slidesPerView: 'auto',
       freeMode: true,
       spaceBetween: 10,
       speed: 800,
-      mousewheel: {
-        enabled: true,
-        sensitivity: 4,
-      },
     });
   }
 };

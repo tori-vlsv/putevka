@@ -47,8 +47,6 @@
       z-index: 2;
     }
     .swiper {
-      @include max-screen(tablet) {
-      }
       &-slide {
         width: auto;
       }

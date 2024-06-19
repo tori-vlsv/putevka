@@ -274,6 +274,7 @@
       }
       @include min-screen(tablet-2x) {
         display: flex;
+        gap: 4px;
       }
     }
     span {
@@ -302,10 +303,15 @@
   }
 
   &__comments {
-    font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     color: rgba($color: $black-300, $alpha: 0.75);
+    @include max-screen(tablet-2x) {
+      font-size: 14px;
+    }
+    @include min-screen(laptop) {
+      font-size: 16px;
+    }
   }
 
   &__underground {

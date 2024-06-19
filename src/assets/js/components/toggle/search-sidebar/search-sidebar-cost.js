@@ -10,8 +10,8 @@ function searchSidebarArea() {
   $(".search-sidebar__toggle").slider({
     range: true,
     min: 0,
-    max: 1000,
-    values: [ 0, 1000 ],
+    max: 11000,
+    values: [ 500, 11000 ],
     slide: function( event, ui ) {
       $( ".search-sidebar__cost--from" ).val(prettify(ui.values[0]));
       $( ".search-sidebar__cost--to" ).val(prettify(ui.values[1]));

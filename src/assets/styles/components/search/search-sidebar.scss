@@ -270,9 +270,9 @@
         &:checked + .search-sidebar-switcher__toggle {
           background-color: $blue-700;
           &:before {
-            -webkit-transform: translateX(18px);
-            -ms-transform: translateX(18px);
-            transform: translateX(18px);
+            -webkit-transform: translateX(16px);
+            -ms-transform: translateX(16px);
+            transform: translateX(16px);
           }
         } 
       }

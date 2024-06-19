@@ -1,0 +1,34 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Результаты поиска
+
+block basicSeo
+  meta(content="Это странца Результаты поиска" name="description")
+  meta(content="Страница, Результаты поиска" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    .search
+      include ../components/search/search-hero
+      .search__main
+        include ../components/search/search-filter
+        .wrapper
+          include ../components/search/search-button
+          .search__wrapper
+            .search__sidebar
+              include ../components/search/search-map
+              include ../components/search/search-sidebar
+            .search__blocks
+              include ../components/search/search-keywords
+              include ../components/search/search-sorting
+              include ../components/search/search-cards
+              include ../components/attractions/attractions-information
+              include ../components/search/search-cards
+              include ../components/pagination-huge
+
+
