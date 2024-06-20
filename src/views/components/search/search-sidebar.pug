@@ -99,15 +99,15 @@ aside.search-sidebar
                 .search-sidebar__price 7 суток
             .search-sidebar__right
               .search-sidebar__parameter ₽
-          .search-sidebar__costs
-            .search-sidebar__value
-              span От
-              input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="search-sidebar__cost--from" value="500")
-            .search-sidebar__value
-              span До
-              input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="search-sidebar__cost--to" value="11 000")
-          .search-sidebar__inner
-            .search-sidebar__toggle
+          .search-sidebar-cost
+            .search-sidebar__costs
+              .search-sidebar__value
+                span От
+                input.search-sidebar__cost.search-sidebar__cost--left(type="number" class="filter__input")
+              .search-sidebar__value
+                span До
+                input.search-sidebar__cost.search-sidebar__cost--right(type="number" class="filter__input")
+            #search-sidebar-cost__slider.search-sidebar-cost__slider
 
         .search-sidebar__block
           h3.search-sidebar__title Типы жилья
@@ -429,15 +429,15 @@ aside.search-sidebar
               h3.search-sidebar__title Площадь объекта
             .search-sidebar__right
               .search-sidebar__parameter м2
-          .search-sidebar__costs
-            .search-sidebar__value
-              span От
-              input.search-sidebar__cost.search-sidebar__cost--left(type="text" class="search-sidebar__area--from")
-            .search-sidebar__value
-              span До
-              input.search-sidebar__cost.search-sidebar__cost--right(type="text" class="search-sidebar__area--to")
-          .search-sidebar__inner
-            .search-sidebar__area
+          .search-sidebar-area
+            .search-sidebar__costs
+              .search-sidebar__value
+                span От
+                input.search-sidebar__cost.search-sidebar__cost--left(type="number")
+              .search-sidebar__value
+                span До
+                input.search-sidebar__cost.search-sidebar__cost--right(type="number")
+            #search-sidebar-area__slider.search-sidebar-area__slider
 
         .search-sidebar__block
           h3.search-sidebar__title Этаж
