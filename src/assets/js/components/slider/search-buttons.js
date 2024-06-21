@@ -1,5 +1,4 @@
 import Swiper from 'swiper';
-import { Mousewheel } from 'swiper/modules';
 
 function searchButtonsSlider() {
   const myCustomSlider = document.querySelectorAll('.search-buttons__slider .swiper');
@@ -11,7 +10,6 @@ function searchButtonsSlider() {
     sections[i].classList.add('search-buttons__slider-' + i);
     new Swiper('.search-buttons__slider-' + i + ' .swiper-' + i, {
       // slideToClickedSlide: true,
-      grabCursor: true,
       slidesPerView: 'auto',
       freeMode: true,
       spaceBetween: 10,
