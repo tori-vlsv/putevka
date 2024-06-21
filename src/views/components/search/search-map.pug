@@ -1,5 +1,33 @@
 .search-map
-  .search-map__bg
-    img(src="/assets/images/search/map.png", alt="map")
-  .search-map__wrapper
-    a.search-map__button(href="#") Смотреть на карте
+  .search-map__card.search-map__card--mini
+    +search-card(
+    {
+      cashback: 'Кэшбек <span>500 ₽</span>',
+      landlord: '',
+      name: '2-комнатная Квартира',
+      title: 'Апартаменты с видом на город в центре Минска. Royal apartments Minsk.',
+      characteristic: [
+        {
+          guest: '2 гостя',
+          bed: '1 кровати',
+          room: '1 спальня',
+          area: '33 м²',
+        }
+      ],
+      metro: [
+        {
+          color: 'search-card__metro--green',
+          name: 'Суконная слобода ~ 49 мин. пешком',
+        }
+      ],
+      location: 'Казань, Разведчика Ахмерова улица, 5',
+      review: '<span>9,2</span> • 6 отзывов',
+      statusOrange: 'Быстрое бронирование',
+      statusBlue: '',
+      statusRed: 'Последний номер',
+      statusGreen: '',
+      cost: '<span>6 040 ₽</span> за сутки'
+    }
+  )
+  .ymap-container
+    #map-yandex

@@ -1,56 +1,332 @@
 .search-map {
-  height: 76px;
-  min-height: 76px;
-  border-radius: 10px;
-  overflow: hidden;
   position: relative;
-  @include max-screen(tablet-2x) {
-    display: none;
-  }
-
-  &__bg {
-    position: absolute;
-    inset: 0;
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-    &:before {
-      position: absolute;
-      content: '';
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($color: $black-600, $alpha: 0.15);
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-    padding: 20px;
-    height: 100%;
-  }
-
-  &__button {
-    background-color: rgba($color: $white, $alpha: 0.75);
-    border-radius: 8px;
-
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 18px;
-    color: $black-400;
-
+  .ymap-container {
     width: 100%;
-    height: 100%;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color $transition-default, color $transition-default;
-    &:hover {
-      background-color: $white;
-      color: $orange-500;
+    @include max-screen(tablet-2x) {
+      height: calc(100dvh - 212px);
+    }
+    @include min-screen(laptop) {
+      height: calc(100dvh - 256px);
+    }
+    #map-yandex {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    z-index: 5000;
+    position: absolute;
+    @include max-screen(laptop) {
+      max-width: 360px;
+      padding: 0 20px;
+      width: 100%;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include min-screen(desktop) {
+      width: 300px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .search-card {
+      box-shadow: 0px 0px 20px 0px rgba($color: $black, $alpha: 0.2);
+      flex-direction: column;
+      &__benefits {
+        display: none;
+      }
+      &__information {
+        overflow: hidden;
+        &--top {
+          @include max-screen(laptop) {
+            margin-top: 0;
+          }
+          @include min-screen(desktop) {
+            margin-top: 6px;
+          }
+          &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 30px;
+            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+          }
+        }
+        &--bottom {
+          @include max-screen(laptop) {
+            margin-top: 0;
+          }
+          @include min-screen(desktop) {
+            margin-top: 24px;
+          }
+          .search-card__bottom {
+            display: grid;
+
+            @include min-screen(desktop) {
+            }
+          }
+        }
+      }
+      &__top {
+        .search-card__items {
+          @include min-screen(desktop) {
+            display: none;
+          }
+        }
+      }
+      &__bottom {
+          margin-top: 0;
+        @include min-screen(desktop) {
+          display: flex;
+          flex-direction: column;
+        }
+        .search-card__items {
+          @include min-screen(desktop) {
+            display: flex;
+            margin-top: 6px;
+          }
+        }
+        
+      }
+      &__underground {
+        @include max-screen(laptop) {
+          display: none;
+        }
+        @include min-screen(desktop) {
+          margin-top: 24px;
+        }
+        span {
+          color: rgba($color: $black-300, $alpha: 0.75);
+        }
+      }
+      &__name {
+        font-weight: 400;
+        span {
+          @include min-screen(desktop) {
+            width: 10px;
+            height: 10px;
+            color: rgba($color: $black-300, $alpha: 0.75);
+          }
+        }
+        svg {
+          @include min-screen(desktop) {
+            stroke: transparent;
+          }
+        }
+        &--mob {
+          display: flex;
+          font-weight: 400;
+          line-height: 18px;
+          color: rgba($color: $black-300, $alpha: 0.75);
+          @include max-screen(laptop) {
+            font-size: 14px;
+          }
+          @include min-screen(desktop) {
+            font-size: 16px;
+          }
+        }
+        &--desktop {
+          display: none;
+        }
+      }
+      &__costs {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 2;
+        @include min-screen(desktop) {
+         
+        }
+      }
+      &__button {
+        @include max-screen(laptop) {
+          display: none;
+        }
+        padding: 6px;
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 2;
+        margin-top: 16px;
+      }
+      &__statuses {
+        @include max-screen(laptop) {
+          display: none;
+        }
+        @include min-screen(desktop) {
+          grid-row: 1 / span 1;
+        }
+      }
+      &__rating {
+        @include max-screen(laptop) {
+          font-size: 14px;
+        }
+      }
+      &__review {
+        justify-content: flex-start;
+        align-items: flex-end;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        @include max-screen(laptop) {
+          flex-direction: row-reverse;
+        }
+        @include min-screen(desktop) {
+          flex-direction: column;
+        }
+        &--mob {
+          display: flex;
+        }
+        &--desktop {
+          display: none;
+        }
+        span {
+          display: none;
+        }
+      }
+      &__comments {
+        @include min-screen(desktop) {
+          font-size: 14px;
+        }
+      }
+      &__metro {
+        min-width: 18px;
+      }
+      &__location {
+        display: none;
+      }
+      &__title {
+        margin-top: 0;
+        @include max-screen(laptop) {
+          padding: 0;
+          &:before {
+            display: none;
+          }
+        }
+        a {
+          -webkit-line-clamp: 1;
+        }
+      }
+      &__items {
+        gap: 10px;
+        @include max-screen(laptop) {
+          margin-top: 10px;
+        }
+        @include min-screen(desktop) {
+          margin-top: 16px;
+        }
+      }
+      &__item {
+        svg {
+          display: none;
+        }
+      }
+      &__content {
+        @include max-screen(laptop) {
+          padding: 10px 16px 14px;
+        }
+        @include min-screen(tablet-2x) {
+          display: block;
+          width: 100%;
+        }
+        @include min-screen(desktop) {
+          padding: 16px;
+        }
+      }
+      &__image {
+        @include max-screen(laptop) {
+          width: 320px;
+          height: 150px;
+        }
+        @include min-screen(desktop) {
+          width: 300px;
+          min-width: 300px;
+        }
+      }
+      &__slider {
+        .swiper-pagination {
+          @include max-screen(laptop) {
+            display: none;
+          }
+        }
+      }
+    }
+    // мини карточка
+    &--mini {
+      .search-card {
+        @include max-screen(laptop) {
+          flex-direction: row;
+        }
+        &__image {
+          @include max-screen(laptop) {
+            width: 100px;
+            height: 106px;
+            min-width: 100px;
+          }
+        }
+        &__content {
+          @include max-screen(laptop) {
+            padding: 12px 16px;
+          }
+        }
+        &__name {
+          @include max-screen(laptop) {
+            display: none;
+          }
+        }
+        &__room {
+          @include max-screen(laptop) {
+            margin-top: 6px;
+            display: flex;
+            gap: 8px;
+            p,
+            span {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16px;
+              color: rgba($color: $black-300, $alpha: 0.75);
+            }
+          }
+        }
+        &__items {
+          @include max-screen(laptop) {
+            display: none;
+          }
+        }
+        &__information {
+          @include max-screen(laptop) {
+            flex-direction: column;
+          }
+        }
+        &__review {
+          @include max-screen(laptop) {
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+        }
+        &__costs {
+          @include max-screen(laptop) {
+            margin-top: 8px;
+          }
+        }
+        &__cost {
+          p {
+            @include max-screen(laptop) {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 14px;
+            }
+          }
+          span {
+            @include max-screen(laptop) {
+              display: block;
+              font-size: 16px;
+              font-weight: 800;
+              line-height: 18px;
+            }
+          }
+        }
+      }
     }
   }
 }

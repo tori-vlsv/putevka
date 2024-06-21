@@ -15,20 +15,56 @@ block content
   main
     .search
       include ../components/search/search-hero
-      .search__main
-        include ../components/search/search-filter
-        .wrapper
-          include ../components/search/search-button
-          .search__wrapper
-            .search__sidebar
-              include ../components/search/search-map
-              include ../components/search/search-sidebar
-            .search__blocks
-              include ../components/search/search-keywords
-              include ../components/search/search-sorting
-              include ../components/search/search-cards
-              include ../components/attractions/attractions-information
-              include ../components/search/search-cards
-              include ../components/pagination-huge
+      include ../components/search/search-map
+  
+  script.
+    async function initMap() {
+      await ymaps3.ready;
+
+      const {
+        YMap,
+        YMapDefaultSchemeLayer,
+        YMapDefaultFeaturesLayer,
+        YMapFeature,
+        YMapMarker,
+        YMapControls
+      } = ymaps3;
+      
+      const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+        const map = new YMap(document.getElementById('map-yandex'),
+          {
+            location: {
+              center: [37.623150, 55.752507],
+              zoom: 7,
+            }
+          },
+          [
+            // Add a map scheme layer
+            new YMapDefaultSchemeLayer({}),
+            // Add a layer of geo objects to display the line
+            new YMapDefaultFeaturesLayer({})
+          ]
+        );
+
+        map.addChild(
+          // Here we place the control on the right
+          new YMapControls({position: 'left'})
+            // Add the first zoom control to the map
+            .addChild(new YMapZoomControl({}))
+        );
+
+        const markerElement = document.createElement('img');
+        markerElement.className = 'icon-marker';
+        markerElement.src = '/assets/images/pin.png';
+
+        map.addChild(new YMapMarker({coordinates: [37.623150, 55.752507]}, markerElement));
+      }
+      
+    if (document.getElementById('map-yandex') !== null) {
+      initMap();
+    }
+
+
 
 

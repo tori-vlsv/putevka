@@ -31,6 +31,10 @@ mixin search-card(data)
           p.search-card__name.search-card__name--desktop !{ data.name }
           h2.search-card__title
             a(href="#")= data.title
+          .search-card__room
+            each item in data.characteristic
+              p= item.area
+              span Комната
           .search-card__items
             each item in data.characteristic
               .search-card__item
@@ -56,6 +60,24 @@ mixin search-card(data)
                 svg.search-card__metro(class="" + item.color width="18" height="18" viewBox="0 0 18 18")
                   use(xlink:href="#svg-search-metro")
                 span= item.name
+          .search-card__items
+            each item in data.characteristic
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-user")
+                p= item.guest
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-bed")
+                p= item.bed
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-door")
+                p= item.room
+              .search-card__item
+                svg(width="18" height="18" viewBox="0 0 18 18")
+                  use(xlink:href="#svg-search-params")
+                p= item.area
           p.search-card__location= data.location
       .search-card__information.search-card__information--bottom
         .search-card__top

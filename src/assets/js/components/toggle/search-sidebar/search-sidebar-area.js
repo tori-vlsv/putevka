@@ -3,6 +3,7 @@ import noUiSlider from 'nouislider';
 function searchSidebarArea() {
   const slider = document.getElementById('search-sidebar-area__slider');
   const parent = document.querySelector('.search-sidebar-area');
+  if(!parent) return;
   const filterInputs = parent.querySelectorAll('.search-sidebar__value input');
   
   noUiSlider.create(slider, {
