@@ -22,6 +22,7 @@
     background-color: rgba($color: $orange-500, $alpha: 0.15);
     border-radius: 4px;
     white-space: nowrap;
+    cursor: pointer;
     &:active {
       color: $black-400;
     }
