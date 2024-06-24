@@ -125,23 +125,33 @@
     position: absolute;
     z-index: 15;
     top: 27px;
-    left: -40px;
     width: 270px;
     height: auto;
     padding: 16px;
     background-color: $black-400;
     box-shadow: 0px 5px 25px 0px rgba($color: $blue-900, $alpha: 0.15), 0px 3px 6px 0px rgba($color: $blue-900, $alpha: 0.07);
     border-radius: 5px;
+    @include max-screen(tablet-2x) {
+      right: -10px;
+    }
+    @include min-screen(laptop) {
+      left: -40px;
+    }
     &:before {
       position: absolute;
       content: '';
       bottom: 100%;
-      left: 43px;
       width: 0;
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
       border-bottom: 5px solid $black-400;
+      @include max-screen(tablet-2x) {
+        right: 12px;
+      }
+      @include min-screen(laptop) {
+        left: 43px;
+      }
     }
     &:after {
       position: absolute;
