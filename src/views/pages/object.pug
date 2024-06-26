@@ -13,19 +13,12 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    .search
-      include ../components/search/search-hero
-      .search__main
-          .search__wrapper
-            .search__sidebar
-              include ../components/search/search-map-button
-              include ../components/search/search-sidebar
-            .search__blocks
-              include ../components/search/search-keywords
-              include ../components/search/search-sorting
-              include ../components/search/search-cards
-              include ../components/attractions/attractions-information
-              include ../components/search/search-cards
-              include ../components/pagination-huge
+   .object
+    .wrapper
+      .object__wrapper
+        .object__blocks
+          include ../components/object/object-information
+          include ../components/object/object-transfer
 
-
+        .object__sidebar
+          include ../components/object/object-sidebar

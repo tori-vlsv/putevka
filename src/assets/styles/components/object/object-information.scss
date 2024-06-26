@@ -1,0 +1,93 @@
+.object-information {
+  border-radius: 10px;
+  background-color: $white;
+  padding: 30px 24px 30px 24px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 16px;
+  }
+
+  &__container {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    margin-bottom: 30px;
+    &:last-child {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    span,
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $black-300;
+    }
+    a {
+      border-bottom: 1px dashed rgba($color: $black-300, $alpha: 0.5);
+      &:active {
+        border-color: transparent;
+        color: $orange-500;
+      }
+      @include min-screen(laptop) {
+        transition: border-color $transition-default, color $transition-default;
+        &:hover {
+          border-color: transparent;
+          color: $orange-500;
+        }
+      }
+    }
+    svg {
+      stroke: transparent;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+    }
+    &--large {
+      grid-column: span 2;
+    }
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .object__link {
+    margin-top: 0;
+    &--blue {
+      width: auto;
+    }
+  }
+
+  &__description {
+    &--large {
+      grid-column: span 2;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    color: $black-400;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $black-300;
+    margin-top: 10px;
+  }
+}

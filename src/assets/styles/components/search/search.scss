@@ -1,9 +1,5 @@
 .search {
-
   &__wrapper {
-    @include max-screen(tablet) {
-
-    }
     @include min-screen(laptop) {
       grid-template-columns: 306px 1fr;
       column-gap: 24px;
@@ -38,7 +34,6 @@
       inset: 0;
       display: block;
       z-index: 25;
-      // padding-top: 292px;
     }
   }
 }

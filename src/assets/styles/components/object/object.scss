@@ -1,0 +1,51 @@
+.object {
+  background-color: $bg-blue;
+
+  &__wrapper {
+    @include min-screen(laptop) {
+      grid-template-columns: 1fr 306px;
+      column-gap: 24px;
+      display: grid;
+      margin-top: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 30px;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $blue-500;
+      border-bottom: 1px dashed transparent;
+      &:active {
+        border-color: rgba($color: $blue-500, $alpha: 0.5);
+      }
+      @include min-screen(laptop) {
+        transition: border-color $transition-default;
+        &:hover {
+          border-color: rgba($color: $blue-500, $alpha: 0.5);
+        }
+      }
+    }
+    &--small {
+      margin-top: 0;
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+    }
+    &--blue {
+      padding: 11px 16px;
+      width: 100%;
+      background-color: $bg-blue;
+      border-radius: 8px;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
