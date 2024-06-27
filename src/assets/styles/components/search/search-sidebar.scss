@@ -555,6 +555,7 @@
     top: 5px;
     opacity: 0;
     transition: opacity $transition-default;
+    fill: $white;
   }
 
   &-cost,

@@ -1,0 +1,307 @@
+.search-station-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $black-600, $alpha: 0.5);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+  &.active {
+    z-index: 2901;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    position: absolute;
+    inset: 0;
+    background-color: $white;
+    padding: 24px 30px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-family: 'Panton';
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $black-400;
+    }
+  }
+
+  &__close {
+    svg {
+      stroke: $gray-400;
+    }
+  }
+
+  &__controls {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__field {
+    width: 300px;
+    min-width: 300px;
+    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    background-color: rgba($color: $blue-700, $alpha: 0.05);
+    border-radius: 4px;
+    padding: 7px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $black-400;
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $gray-400;
+    }
+    &:focus {
+      background-color: $white;
+      border-color: rgba($color: $blue-700, $alpha: 0.5);
+    }
+  }
+
+  &__dropdowns {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    width: 140px;
+    min-width: 140px;
+    padding: 11px;
+    border-radius: 6px;
+    &--clear {
+      background-color: transparent;
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        color: $red-400;
+        border-bottom: 1px dashed transparent;
+        @include min-screen(laptop) {
+          transition: border-color $transition-default;
+          &:hover {
+            border-color: rgba($color: $red-400, $alpha: 0.5);
+          }
+        }
+      }
+    }
+    &--confirm {
+      background-color: $orange-500;
+      span {
+        color: $white;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+      }
+      @include min-screen(laptop) {
+        transition: background-color $transition-default;
+        &:hover {
+          background-color: $orange-300;
+        }
+      }
+    }
+  }
+
+  &__input {
+    display: flex;
+    gap: 16px;
+  }
+
+  &-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 360px;
+    min-width: 360px;
+    padding: 7px 12px;
+    background-color: rgba($color: $blue-700, $alpha: 0.05);
+    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color $transition-default, background-color $transition-default;
+    &.active {
+      border-color: rgba($color: $blue-700, $alpha: 0.5);
+      background-color: $white;
+      .search-station-popup-dropdown__arrow {
+        stroke: $black-400;
+        transform: rotate(180deg);
+      }
+      .search-station-popup-dropdown__container {
+        z-index: 2901;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__arrow {
+      fill: transparent;
+      width: 16px;
+      height: 16px;
+      stroke: $gray-400;
+      transition: transform $transition-default, stroke $transition-default;
+    }
+    &__name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $gray-400;
+    }
+    &__container {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 4px;
+      padding: 10px 7px 10px 0;
+      margin: 1px 0 0 0;
+      background-color: $white;
+      box-shadow: 0px 5px 15px 0px rgba($color: $black, $alpha: 0.1), 0px 1px 2px 0px rgba($color: $black, $alpha: 0.1);
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+    }
+    &__menu {
+      overflow-y: auto;
+      max-height: 300px;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        border: 3px solid $orange-500;
+      }   
+      &::-webkit-scrollbar-track {
+        background-color: $bg-blue;
+        border: 3px solid $bg-blue;
+        border-radius: 5px;
+      }     
+    }
+  }
+
+  &__checkbox {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $black-400;
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & ~ .search-station-popup__checkbox {
+      position: relative;
+      padding-left: 8px;
+    }
+    &:checked ~ .search-station-popup__icon {
+      opacity: 1;
+      transition: opacity $transition-default;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 16px;
+    transition: background-color $transition-default;
+    &:hover {
+      background-color: rgba($color: $orange-700, $alpha: 0.1)
+    }
+    &:active {
+      background-color: rgba($color: $orange-700, $alpha: 0.2)
+    }
+  }
+
+  &__icon {
+    stroke: transparent;
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    opacity: 0;
+    fill: $black-300;
+    transition: opacity $transition-default;
+    width: 16px;
+  }
+  
+  &__color {
+    margin-left: 26px;
+    width: 20px;
+    min-width: 20px;
+    height: 12px;
+    border-radius: 50px;
+    border: 2px solid $white;
+    &--yellow {
+      background-color: $yellow-500;
+    }
+    &--cyan {
+      background-color: $cyan-400;
+    }
+    &--lime {
+      background-color: $lime-400;
+    }
+    &--brown {
+      background-color: $brown-700;
+    }
+    &--blue {
+      background-color: $blue-200;
+    }
+    &--blue-light {
+      background-color: $blue-50;
+    }
+    &--blue-dark {
+      background-color: $blue-850;
+    }
+    &--green {
+      background-color: $green-700;
+    }
+    &--orange {
+      background-color: $orange-800;
+    }
+    &--orange-light {
+      background-color: $orange-200;
+    }
+    &--red {
+      background-color: $red-700;
+    }
+    &--rose {
+      background-color: $rose-400;
+    }
+    &--rose-light {
+      background-color: $rose-300;
+    }
+    &--rose-dark {
+      background-color: $rose-500;
+    }
+    &--violet {
+      background-color: $violet-400;
+    }
+    &--purple {
+      background-color: $purple-400;
+    }
+    &--gray {
+      background-color: $gray-600;
+    }
+  }
+}

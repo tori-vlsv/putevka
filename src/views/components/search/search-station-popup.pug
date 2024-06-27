@@ -1,0 +1,219 @@
+.search-station-popup
+  .search-station-popup__wrapper
+    .search-station-popup__header
+      span Выбрать станции метро
+      button.search-station-popup__close(type="button")
+        svg(width="24" height="24" viewBox="0 0 24 24")
+          use(xlink:href="#svg-close")
+    .search-station-popup__controls
+      .search-station-popup__dropdowns
+        input.search-station-popup__field(type="text" placeholder="Поиск по названию станции" name="name-station")
+        .search-station-popup-dropdown
+          span.search-station-popup-dropdown__name Выбрать линию метро
+          svg.search-station-popup-dropdown__arrow(width="14" height="14" viewBox="0 0 14 14")
+            use(xlink:href="#svg-arrow-down")
+          .search-station-popup-dropdown__container
+            ul.search-station-popup-dropdown__menu
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Калининско-Солнцевская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--yellow
+                  span.search-station-popup__checkbox Калининско-Солнцевская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li 
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Замоскворецкая линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--green
+                  span.search-station-popup__checkbox Замоскворецкая линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Калужско-Рижская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--orange
+                  span.search-station-popup__checkbox Калужско-Рижская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Сокольническая линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--red
+                  span.search-station-popup__checkbox Сокольническая линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Арбатско-Покровская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--blue-dark
+                  span.search-station-popup__checkbox Арбатско-Покровская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Филёвская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--blue
+                  span.search-station-popup__checkbox Филёвская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Серпуховско-Тимирязевская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--gray
+                  span.search-station-popup__checkbox Серпуховско-Тимирязевская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Таганско-Краснопресненская длинное название линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--purple
+                  span.search-station-popup__checkbox Таганско-Краснопресненская длинное название линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Кольцевая линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--brown
+                  span.search-station-popup__checkbox Кольцевая линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Люблинско-Дмитровская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--lime
+                  span.search-station-popup__checkbox Люблинско-Дмитровская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Каховская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--cyan
+                  span.search-station-popup__checkbox Каховская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Бутовская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--blue-light
+                  span.search-station-popup__checkbox Бутовская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Московское центральное кольцо"
+                  )
+                  .search-station-popup__color.search-station-popup__color--rose-light
+                  span.search-station-popup__checkbox Московское центральное кольцо
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Московский монорельс"
+                  )
+                  .search-station-popup__color.search-station-popup__color--violet
+                  span.search-station-popup__checkbox Московский монорельс
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Большая кольцевая линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--cyan
+                  span.search-station-popup__checkbox Большая кольцевая линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="Некрасовская линия"
+                  )
+                  .search-station-popup__color.search-station-popup__color--rose
+                  span.search-station-popup__checkbox Некрасовская линия
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="МЦД-1"
+                  )
+                  .search-station-popup__color.search-station-popup__color--orange-light
+                  span.search-station-popup__checkbox МЦД-1
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+              li
+                label.search-station-popup__label
+                  input.search-station-popup__input(
+                    type="checkbox"
+                    name="metro-station"
+                    value="МЦД-2"
+                  )
+                  .search-station-popup__color.search-station-popup__color--rose-dark
+                  span.search-station-popup__checkbox МЦД-2
+                  svg.search-station-popup__icon(width="12" height="10" viewBox="0 0 12 10")
+                    use(xlink:href="#svg-search-check")
+      .search-station-popup__buttons
+        button.search-station-popup__button.search-station-popup__button--clear(type="button") 
+          span Очистить выбор
+        button.search-station-popup__button.search-station-popup__button--confirm(type="button") 
+          span Выбрать

@@ -1,6 +1,6 @@
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-function attractionsPopup() {
+function searchSidebarSorting() {
   let button = $('.search-filter__sorting');
   let popup =  $('.search-sorting-popup');
   let container =  $('.search-sorting-popup__wrapper');
@@ -25,4 +25,4 @@ function attractionsPopup() {
 		}
 	});
 }
-attractionsPopup();
+searchSidebarSorting();

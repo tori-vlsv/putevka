@@ -45,6 +45,7 @@ import "./components/toggle/search-sidebar/search-sidebar-cost";
 import "./components/toggle/search-sidebar/search-sidebar-days";
 import "./components/toggle/search-sidebar/search-sidebar-filter";
 import "./components/toggle/search-sidebar/search-sidebar-sorting";
+import "./components/toggle/search-sidebar/search-sidebar-station";
 
 import "./components/toggle/search/toggle-search-buttons";
 import "./components/toggle/main/toggle-main-tabs";
