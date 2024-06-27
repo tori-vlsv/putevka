@@ -1,0 +1,50 @@
+.object-conditions {
+  padding: 24px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $orange-600;
+    }
+    svg {
+      stroke: transparent;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    border-bottom: 1px dashed;
+    &--blue {
+      color: $blue-500;
+      border-color: rgba($color: $blue-500, $alpha: 0.5);
+    }
+    &--green {
+      color: $green-300;
+      border-color: rgba($color: $green-300, $alpha: 0.5);
+    }
+    &--red {
+      color: $red-800;
+      border-color: rgba($color: $red-800, $alpha: 0.5);
+    }
+    @include min-screen(laptop) {
+      transition: color $transition-default, border-color $transition-default;
+      &:hover {
+        color: $orange-500;
+        border-color: transparent;
+      }
+    }
+  }
+}

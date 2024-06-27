@@ -1,0 +1,61 @@
+.object-card
+  .object-card__wrapper
+    .object-card__block
+      .object-card__image
+        .object-card__free Остался один свободный номер
+        .object-card__slider.swiper
+          .swiper-wrapper
+            .swiper-slide
+              img(src="/assets/images/search/1.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/2.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/3.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/4.png" alt="hotel-room" loading="lazy")
+          button(type="button", aria-label="Previous").swiper-button-prev
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+          button(type="button", aria-label="Next").swiper-button-next
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+          .swiper-pagination
+      .object-card__information
+        h2.object-card__title Стандартный 2-местный 1-комнатный ПК
+        .object-card__items
+          .object-card__item
+            .object-card__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-building")
+              span Корпус:
+          .object-card__item  №1, №3, №4, №5
+            .search-sidebar__help.search-sidebar__help--stations
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+              .search-sidebar__hint
+                p Выберите одну или несколько станций и укажите
+          .object-card__item
+            .object-card__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-search-params")
+              span Площадь:
+          .object-card__item 18,8 кв.м.
+          .object-card__item
+            .object-card__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-bath")
+              span Санузел:
+          .object-card__item с душем, унитаз, умывальник, туалетные принадлежности, фен, набор полотенец, пляжное полотенце (с мая по октябрь).
+          .object-card__item
+            .object-card__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-user-plus")
+              span Доп. место:
+          .object-card__item еврораскладушка
+      .object-card__information.object-card__information--end
+        h4.object-card__named В номере:
+        .object-card__item 2 большие кровати, диван, микроволновая печь, кондиционер, холодильник без наполнения, стиральная машина, два телевизора, телефон, два сейфа, чайник, посуда (тарелки, чайные кружки, бокалы, набор столовых приборов), гладильная доска и утюг, Wi-Fi, балкон.
+    .object-card__line
+      .object-card__left
+        .object-card__co
+      h3.object-card__subtitle 

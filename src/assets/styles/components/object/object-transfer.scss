@@ -2,8 +2,76 @@
   background-color: rgba($color: $blue-700, $alpha: 0.1);
   border-radius: 10px;
   margin-top: 30px;
+  padding: 24px 30px;
   
   &__wrapper {
     display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__icon {
+    svg {
+      stroke: transparent;
+    }
+  }
+
+  &__title {  
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $black-400;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $black-300;
+    span {
+      font-weight: 700;
+    }
+    a {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $blue-500;
+      margin-left: 5px;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-width: 220px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    color: $blue-500;
+    padding: 17px 29px;
+    background-color: $white;
+    border-radius: 8px;
+    transition: color $transition-default;
+    @include min-screen(laptop) {
+      &:hover {
+        color: $orange-500;
+      }
+    }
+  }
+
+  .object__link {
+    margin-top: 0;
   }
 }
