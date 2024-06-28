@@ -176,5 +176,105 @@ svg {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
+}
+
+
+.lg {
+  &-backdrop {
+    background-color: $blue-1000;
+  }
+
+  &-download,
+  &-pager-outer {
+    display: none;
+  }
+  &-close {
+    margin-right: 30px;
+    margin-top: 30px;
+    &:after {
+      color: $white;
+    }
+  }
+  &-counter {
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: rgba($color: $white, $alpha: 0.05);
+    border-radius: 6px;
+    padding: 12px 16px;
+    span {
+      color: $white;
+    }
+  }
+}
+
+.lg-toolbar .lg-icon {
+  background-color: rgba($color: $white, $alpha: 0.05);
+  padding: 6px;
+  border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  color: $gray-400;
+}
+
+.lg-next, 
+.lg-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color: $white, $alpha: 0.05);
+  border-radius: 100px;
+}
+
+
+.lg-next {
+  &:before {
+    margin-right: -2px;
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 14.5L8.25 8L1.75 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+}
+
+.lg-sub-html {
+  font-family: "Tilda Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  padding: 30px 40px;
+}
+
+.lg-prev {
+  transform: rotate(180deg);
+  &:after {
+    margin-right: -2px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 14.5L8.25 8L1.75 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    background-position: 50% 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+}
+
+.lg-outer .lg-thumb-outer {
+  background-color: $blue-1000;
+}
+.lg-outer .lg-thumb-item {
+  border-radius: 2px;
+  border: none;
 }

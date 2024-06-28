@@ -39,6 +39,8 @@ import "./components/search-sorting-dropdown";
 import "./components/slider/search-card";
 import "./components/slider/search-buttons";
 import "./components/slider/object-card";
+import "./components/slider/object-gallery";
+import "./components/slider/object-slider";
 
 import "./components/toggle/search-sidebar/search-sidebar-area";
 import "./components/toggle/search-sidebar/search-sidebar-cost";

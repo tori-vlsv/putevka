@@ -13,15 +13,16 @@ block manifestBrowserconfigFiles
 
 block content
   main
-   .object
-    .wrapper
-      .object__wrapper
-        .object__blocks
-          include ../components/object/object-information
-          include ../components/object/object-transfer
-        .object__sidebar
-          include ../components/object/object-sidebar
-      
-      include ../components/object/object-search
-      include ../components/object/object-conditions
-      include ../components/object/object-card
+    .object
+      include ../components/object/object-gallery
+      .wrapper
+        .object__wrapper
+          .object__blocks
+            include ../components/object/object-information
+            include ../components/object/object-transfer
+          .object__sidebar
+            include ../components/object/object-sidebar
+        
+        include ../components/object/object-search
+        include ../components/object/object-conditions
+        include ../components/object/object-card
