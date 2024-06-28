@@ -73,15 +73,53 @@
   }
 
   &__img {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    @include max-screen(mobile-2x) {
+      height: 161px;
+      max-height: 161px;
+    }
+    @include mm-screen(mobile) {
+      height: 255px;
+      max-height: 255px;
+    }
+    @include mm-screen(tablet) {
+      height: 255px;
+      max-height: 255px;
+    }
+    @include min-screen(tablet-2x) {
+      height: 280px;
+      max-height: 280px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      @include max-screen(tablet) {
+        object-fit: contain;
+      }
+      @include mm-screen(tablet) {
+        height: 63%;
+      }
+    }
+  }
+
+  &__container {
     position: relative;
+    overflow: hidden;
     border-radius: 8px;
     background-color: $white;
     box-shadow: 0px 5px 20px 0px #26314105, 0px 1px 3px 1px #2631410D;
     @include max-screen(tablet) {
+      height: 181px;
+      max-height: 181px;
       padding: 10px;
     }
     @include min-screen(tablet-2x) {
       padding: 20px;
+      height: 320px;
+      max-height: 320px;
     }
     @include min-screen(laptop) {
       cursor: pointer;
