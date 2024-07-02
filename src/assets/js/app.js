@@ -41,6 +41,7 @@ import "./components/slider/search-buttons";
 import "./components/slider/object-card";
 import "./components/slider/object-gallery";
 import "./components/slider/object-slider";
+import "./components/slider/object-services-gallery";
 
 import "./components/toggle/search-sidebar/search-sidebar-area";
 import "./components/toggle/search-sidebar/search-sidebar-cost";
@@ -49,5 +50,9 @@ import "./components/toggle/search-sidebar/search-sidebar-filter";
 import "./components/toggle/search-sidebar/search-sidebar-sorting";
 import "./components/toggle/search-sidebar/search-sidebar-station";
 
+
 import "./components/toggle/search/toggle-search-buttons";
 import "./components/toggle/main/toggle-main-tabs";
+
+import "./components/toggle/object/object-service";
+
