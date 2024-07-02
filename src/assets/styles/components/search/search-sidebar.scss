@@ -59,7 +59,7 @@
     z-index: 2;
 
     padding: 18px 20px;
-    border-top: 1px solid rgba($color: $blue-700, $alpha: 0.12);
+    border-top: 1px solid rgba($blue-700, 0.12);
     background-color: $white;
     @include min-screen(laptop) {
       display: none;
@@ -80,7 +80,7 @@
 
   &__close {
     svg {
-      stroke: rgba($color: $white, $alpha: 0.5);
+      stroke: rgba($white, 0.5);
     }
   }
 
@@ -129,7 +129,7 @@
     height: auto;
     padding: 16px;
     background-color: $black-400;
-    box-shadow: 0px 5px 25px 0px rgba($color: $blue-900, $alpha: 0.15), 0px 3px 6px 0px rgba($color: $blue-900, $alpha: 0.07);
+    box-shadow: 0px 5px 25px 0px rgba($blue-900, 0.15), 0px 3px 6px 0px rgba($blue-900, 0.07);
     border-radius: 5px;
     @include max-screen(tablet-2x) {
       right: -10px;
@@ -204,7 +204,7 @@
       transform: translate(-50%, -50%);
     }
     &:hover {
-      background-color: rgba($color: $red-400, $alpha: 0.1);
+      background-color: rgba($red-400, 0.1);
       svg {
         stroke: $red-400;
       }
@@ -251,7 +251,7 @@
     max-width: max-content;
     cursor: pointer;
     &:hover {
-      border-color: rgba($color: $blue-500, $alpha: 0.5);
+      border-color: rgba($blue-500, 0.5);
     }
     &--open {
       margin-top: 20px;
@@ -294,7 +294,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba($color: $blue-700, $alpha: 0.1);
+      background-color: rgba($blue-700, 0.1);
       -webkit-transition: $transition-default;
       transition: $transition-default;
       border-radius: 100px;
@@ -307,7 +307,7 @@
         left: 4px;
         bottom: 4px;
         background-color: $white;
-        box-shadow: 0px 2px 3px 1px rgba($color: $black-400, $alpha: 0.1);
+        box-shadow: 0px 2px 3px 1px rgba($black-400, 0.1);
         -webkit-transition: $transition-default;
         transition: $transition-default;
       }
@@ -344,8 +344,8 @@
 
   &__cost {
     padding: 12px 36px;
-    background-color: rgba($color: $blue-700, $alpha: 0.05);
-    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    background-color: rgba($blue-700, 0.05);
+    border: 1px solid rgba($blue-700, 0.15);
     font-size: 14px;
     font-weight: 500;
     width: 100%;
@@ -395,7 +395,7 @@
     color: $blue-500;
     transition: color $transition-default, background-color $transition-default;
     &.active {
-      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      background-color: rgba($blue-700, 0.15);
       color: $black-300;
     }
     &:not(.active) {
@@ -417,7 +417,7 @@
     &:before {
       content: '';
       position: absolute;
-      border: 1px dashed rgba($color: $blue-700, $alpha: 0.15);
+      border: 1px dashed rgba($blue-700, 0.15);
       width: calc(100% + 40px);
       height: 1px;
       left: -20px;
@@ -460,7 +460,7 @@
       .search-sidebar__checkbox {
         &:before {
           border-color: $blue-700;
-          background-color: rgba($color: $blue-700, $alpha: 0.1);
+          background-color: rgba($blue-700, 0.1);
         }
       }
     }
@@ -490,8 +490,8 @@
         top: 50%;
         left: 0%;
         transform: translate(0, -50%);
-        border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
-        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        border: 1px solid rgba($blue-700, 0.15);
+        background-color: rgba($blue-700, 0.05);
         width: 20px;
         height: 20px;
         border-radius: 3px;
@@ -525,8 +525,8 @@
         top: 50%;
         left: 0%;
         transform: translate(0, -50%);
-        border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
-        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        border: 1px solid rgba($blue-700, 0.15);
+        background-color: rgba($blue-700, 0.05);
         width: 20px;
         height: 20px;
         border-radius: 50px;
@@ -535,7 +535,7 @@
       &:hover {
         &:before {
           border-color: $blue-700;
-          background-color: rgba($color: $blue-700, $alpha: 0.1);
+          background-color: rgba($blue-700, 0.1);
         }
       }
     }
@@ -563,13 +563,13 @@
     &__slider {
       max-width: 412px;
       margin-top: 27px;
-      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      background-color: rgba($blue-700, 0.15);
       border-radius: 30px;
       border: none;
       height: 4px;
       box-shadow: none;
       .noUi-connect {
-        background-color: rgba($color: $orange-500, $alpha: 0.5);
+        background-color: rgba($orange-500, 0.5);
       }
       .noUi-origin {
         width: calc(100% - 17px);
@@ -581,7 +581,7 @@
         width: 18px;
         height: 18px;
         border-radius: 50px;
-        box-shadow: 0px 2px 3px 1px rgba($color: $black-400, $alpha: 0.05 );
+        box-shadow: 0px 2px 3px 1px rgba($black-400, 0.05 );
         cursor: pointer;
         &:before,
         &:after {

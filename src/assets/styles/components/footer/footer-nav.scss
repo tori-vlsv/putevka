@@ -34,14 +34,14 @@
     }
     &--border {
       @include max-screen(tablet) {
-        border-top: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+        border-top: 1px solid rgba($blue-700, 0.15);
       }
     }
   }
 
   &__dropdown {
     @include max-screen(tablet) {
-      border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+      border-bottom: 1px solid rgba($blue-700, 0.15);
       padding: 20px 6px 20px 0;
     }
   }

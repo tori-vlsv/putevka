@@ -139,7 +139,7 @@
       width: 30px;
       height: 30px;
       border-radius: 100px;
-      background-color: rgba($color: $green-300, $alpha: 0.1);
+      background-color: rgba($green-300, 0.1);
       @include max-screen(tablet) {
       }
       @include min-screen(tablet-2x) {

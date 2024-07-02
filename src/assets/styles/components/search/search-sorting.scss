@@ -15,7 +15,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
   }
 
   &__button {
@@ -51,7 +51,7 @@
       @include min-screen(laptop) {
         transition: border-color $transition-default;
         &:hover {
-          border-color: rgba($color: $blue-500, $alpha: 0.5);
+          border-color: rgba($blue-500, 0.5);
         }
       }
     }
@@ -74,7 +74,7 @@
       flex-direction: column;
       opacity: 0;
       min-width: 200px;
-      box-shadow: 0px 5px 15px 0px rgba($color: $black, $alpha: 0.1), 0px 1px 2px 0px rgba($color: $black, $alpha: 0.1);
+      box-shadow: 0px 5px 15px 0px rgba($black, 0.1), 0px 1px 2px 0px rgba($black, 0.1);
       padding: 10px 0;
       border-radius: 5px;
       z-index: -1;
@@ -102,7 +102,7 @@
 
       @include min-screen(laptop) {
         &:hover {
-          background-color: rgba($color: $orange-500, $alpha: 0.1);
+          background-color: rgba($orange-500, 0.1);
         }
       }
       &.active {

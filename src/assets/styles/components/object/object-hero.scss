@@ -1,0 +1,132 @@
+.object-hero {
+  background-color: $white;
+
+  .breadcrumbs {
+    padding-top: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+    // display: flex;
+    // justify-content: space-between;
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+    top: -38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__status {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $red-800;
+    }
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__price {
+    margin-top: 20px;
+    font-family: 'Panton';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    color: $black-400;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+    padding: 9px 32px;
+    background-color: $orange-500;
+    border-radius: 6px;
+    transition: background-color $transition-default;
+    @include min-screen(laptop) {
+      &:hover {
+        background-color: $orange-300;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 32px;
+    text-align: left;
+    color: $black-400;
+  }
+
+  &__adress {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      stroke: transparent;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: rgba($black-300, 0.75);
+    }
+    a {
+      margin-left: 14px;
+      color: $blue-500;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      border-bottom: 1px dashed transparent;
+      @include min-screen(laptop) {
+        transition: border-color $transition-default;
+        &:hover {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 30px;
+    padding: 16px 0 20px;
+    border-top: 1px solid rgba($blue-700, 0.15);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgba($black-300, 0.75);
+    border-bottom: 1px dashed transparent;
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+    }
+    &.active {
+      color: $black-400;
+    }
+    &:not(.active) {
+      @include min-screen(laptop) {
+        &:hover {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+  }
+}

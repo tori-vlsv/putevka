@@ -7,7 +7,7 @@
     overflow: hidden;
     border-radius: 10px;
     background-color: $white;
-    box-shadow: 0px 12px 35px 0px rgba($color: $gray-800, $alpha: 0.15), 0px 0px 6px 0px rgba($color: $blue-900, $alpha: 0.05);
+    box-shadow: 0px 12px 35px 0px rgba($gray-800, 0.15), 0px 0px 6px 0px rgba($blue-900, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@
   }
 
   &__text {
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet) {
       margin-top: 16px;
     }

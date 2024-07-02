@@ -112,7 +112,7 @@
     span {
       font-weight: 500;
       color: $black-300;
-      border-bottom: 1px dashed rgba($color: $black-300, $alpha: 0.5);
+      border-bottom: 1px dashed rgba($black-300, 0.5);
       @include max-screen(tablet) {
         font-size: 14px;
         line-height: 14px;

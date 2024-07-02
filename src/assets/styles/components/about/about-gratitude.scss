@@ -231,12 +231,12 @@
   }
 
   .swiper-scrollbar {
-    background-color: rgba($color: $blue-700, $alpha: 0.07);
+    background-color: rgba($blue-700, 0.07);
     @include min-screen(tablet-2x) {
       display: none;
     }
     &-drag {
-      background-color: rgba($color: $blue-700, $alpha: 0.15)
+      background-color: rgba($blue-700, 0.15)
     }
   }
   .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {

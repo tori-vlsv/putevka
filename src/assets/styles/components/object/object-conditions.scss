@@ -29,15 +29,15 @@
     border-bottom: 1px dashed;
     &--blue {
       color: $blue-500;
-      border-color: rgba($color: $blue-500, $alpha: 0.5);
+      border-color: rgba($blue-500, 0.5);
     }
     &--green {
       color: $green-300;
-      border-color: rgba($color: $green-300, $alpha: 0.5);
+      border-color: rgba($green-300, 0.5);
     }
     &--red {
       color: $red-800;
-      border-color: rgba($color: $red-800, $alpha: 0.5);
+      border-color: rgba($red-800, 0.5);
     }
     @include min-screen(laptop) {
       transition: color $transition-default, border-color $transition-default;

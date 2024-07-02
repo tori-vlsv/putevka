@@ -7,7 +7,7 @@
   }
 
   &__text {
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet) {
       margin-top: 20px;
       font-size: 16px;
@@ -25,11 +25,11 @@
       }
       @include max-screen(tablet) {
         color: $blue-500;
-        border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.5);
+        border-bottom: 1px dashed rgba($blue-500, 0.5);
       }
       @include min-screen(tablet-2x) {
-        color: rgba($color: $black-300, $alpha: 1.0);
-        border-bottom: 1px dashed rgba($color: $black-300, $alpha: 0.5);
+        color: rgba($black-300, 1.0);
+        border-bottom: 1px dashed rgba($black-300, 0.5);
       }
       @include min-screen(laptop) {
         transition: color $transition-default, border-color $transition-default;

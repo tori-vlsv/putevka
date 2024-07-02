@@ -54,7 +54,7 @@
     position: relative;
     @include max-screen(tablet) {
       padding: 20px 10px;
-      border: 1px solid rgba($color: $blue-700, $alpha: 0.1);
+      border: 1px solid rgba($blue-700, 0.1);
       border-radius: 6px;
     }
     @include min-screen(tablet-2x) {
@@ -67,7 +67,7 @@
         bottom: 0;
         width: 1px;
         height: 100%;
-        background-color: rgba($color: $blue-700, $alpha: 0.1);
+        background-color: rgba($blue-700, 0.1);
       }
     }
   }
@@ -89,7 +89,7 @@
         bottom: 0;
         width: 1px;
         height: 100%;
-        background-color: rgba($color: $blue-700, $alpha: 0.1);
+        background-color: rgba($blue-700, 0.1);
       }
     }
     .swiper {
@@ -171,12 +171,12 @@
   }
 
   .swiper-scrollbar {
-    background-color: rgba($color: $blue-700, $alpha: 0.07);
+    background-color: rgba($blue-700, 0.07);
     @include min-screen(tablet-2x) {
       display: none;
     }
     &-drag {
-      background-color: rgba($color: $blue-700, $alpha: 0.15)
+      background-color: rgba($blue-700, 0.15)
     }
   }
   .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {

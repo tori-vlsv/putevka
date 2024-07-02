@@ -37,7 +37,7 @@
     &:before {
       position: absolute;
       content: '';
-      border: 1px dashed rgba($color: $blue-700, $alpha: 0.2);
+      border: 1px dashed rgba($blue-700, 0.2);
       width: 100%;
       top: 6px;
       left: 88%;
@@ -214,7 +214,7 @@
         top: 6px;
         left: 30px;
         right: 0;
-        background-color: rgba($color: $blue-700, $alpha: 0.2) ;
+        background-color: rgba($blue-700, 0.2) ;
         height: 2px;
         @include max-screen(tablet) {
           width: 128%;
@@ -255,7 +255,7 @@
   &__navigation {
     position: absolute;
     z-index: 2;
-    background-color: rgba($color: $white-100, $alpha: 0.15);
+    background-color: rgba($white-100, 0.15);
     border-radius: 50px;
     height: 40px;
     display: flex;
@@ -334,9 +334,9 @@
         }
       }
       &-disabled {
-        background-color: rgba($color: $white, $alpha: 0.1);
+        background-color: rgba($white, 0.1);
         svg {
-          stroke: rgba($color: $white, $alpha: 0.25);
+          stroke: rgba($white, 0.25);
         }
       }
     }

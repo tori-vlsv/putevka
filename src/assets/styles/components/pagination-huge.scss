@@ -62,7 +62,7 @@
     &.active {
       cursor: default;
       border-radius: 100%;
-      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      background-color: rgba($blue-700, 0.15);
       span {
         color: $black-400;
       }
@@ -70,7 +70,7 @@
     &.not-active {
       cursor: default;
       svg {
-        stroke: rgba($color: $blue-700, $alpha: 0.25);
+        stroke: rgba($blue-700, 0.25);
       }
     }
     &:not(.not-active):not(.active) {

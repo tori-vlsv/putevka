@@ -11,7 +11,7 @@
     display: inline-flex;
     @include max-screen(tablet) {
       gap: 6px;
-      border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+      border-bottom: 1px solid rgba($blue-700, 0.15);
       padding: 10px 0;
       width: 100%;
     }

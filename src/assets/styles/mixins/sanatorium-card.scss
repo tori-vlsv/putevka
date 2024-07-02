@@ -1,7 +1,7 @@
 .sanatorium-card {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.03), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.07);
+  box-shadow: 0px 5px 20px 0px rgba($black-400, 0.03), 0px 1px 3px 1px rgba($black-400, 0.07);
   position: relative;
   height: 100%;
 
@@ -138,7 +138,7 @@
     display: flex;
     align-items: center;
     gap: 3px;
-    border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.25);
+    border-bottom: 1px dashed rgba($blue-500, 0.25);
   }
 
   &__button {

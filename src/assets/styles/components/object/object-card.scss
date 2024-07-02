@@ -1,6 +1,6 @@
 .object-card {
   background-color: $white;
-  box-shadow: 0px 4px 25px 0px rgba($color: $gray-800, $alpha: 0.12);
+  box-shadow: 0px 4px 25px 0px rgba($gray-800, 0.12);
   border-radius: 10px;
   padding: 24px;
 
@@ -8,7 +8,7 @@
     display: flex;
     gap: 24px;
     padding-bottom: 30px;
-    border-bottom: rgba($color: $blue-700, $alpha: 0.15);
+    border-bottom: 1px solid rgba($blue-700, 0.15);
   }
 
   &__image {
@@ -60,7 +60,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 20px;
-      color: rgba($color: $black-300, $alpha: 0.75);
+      color: rgba($black-300, 0.75);
     }
   }
 
@@ -147,7 +147,7 @@
     height: auto;
     padding: 16px;
     background-color: $black-400;
-    box-shadow: 0px 5px 25px 0px rgba($color: $blue-900, $alpha: 0.15), 0px 3px 6px 0px rgba($color: $blue-900, $alpha: 0.07);
+    box-shadow: 0px 5px 25px 0px rgba($blue-900, 0.15), 0px 3px 6px 0px rgba($blue-900, 0.07);
     border-radius: 5px;
     @include max-screen(tablet-2x) {
       right: -10px;
@@ -259,17 +259,87 @@
         height: 6px;
         background-color: $gray-700;
         opacity: 1;
-        box-shadow: 0px 0px 5px 0px rgba($color: $black-600, $alpha: 0.25);
+        box-shadow: 0px 0px 5px 0px rgba($black-600, 0.25);
         &-active {
           background-color: $white;
           width: 8px;
           height: 8px;
-          box-shadow: 0px 0px 5px 0px rgba($color: $black-600, $alpha: 0.25);
+          box-shadow: 0px 0px 5px 0px rgba($black-600, 0.25);
         }
       }
     }
     .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
       margin: 0 3px;
+    }
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba($blue-700, 0.15);
+  }
+
+  &__right {
+    display: flex;
+    gap: 140px;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-family: 'Panton';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $black-400;
+  }
+
+  &__link {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+      &:hover {
+        border-color: rgba($blue-500, 0.5);
+      }
+    }
+  }
+
+  &__price {
+    font-family: 'Panton';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $black-400;
+  }
+
+  &__amount {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba($black-300, 0.75);
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: center;
+    color: $white;
+
+    padding: 14.5px 36px;
+    border-radius: 6px;
+    background-color: $orange-500;
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: $orange-300;
+      }
     }
   }
 }

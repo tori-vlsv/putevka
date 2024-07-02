@@ -2,7 +2,7 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: $white;
-  box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.03), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.07);
+  box-shadow: 0px 5px 20px 0px rgba($black-400, 0.03), 0px 1px 3px 1px rgba($black-400, 0.07);
 
   &__img {
     position: relative;
@@ -170,7 +170,7 @@
       }
     }
     &--cyan {
-      background-color: rgba($color: $blue-700, $alpha: 0.07);
+      background-color: rgba($blue-700, 0.07);
       span {
         color: $blue-500;
         &:active {

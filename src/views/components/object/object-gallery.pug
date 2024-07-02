@@ -1,6 +1,14 @@
 .object-gallery
   .wrapper
     .object-gallery__wrapper
+      .object-gallery__buttons
+        button.object-gallery__button.object-gallery__images(type="button")
+          svg(width="24" height="24" viewBox="0 0 24 24")
+            use(xlink:href="#svg-object-youtube")
+          p Смотреть видео
+        button.object-gallery__button.object-gallery__images(type="button")
+          p Смотреть все фото
+          span 36
       .swiper.object-gallery__slider
         .swiper-wrapper.object-gallery__images
           .swiper-slide(data-src="/assets/images/object/1.png")
@@ -33,6 +41,15 @@
           .swiper-slide(data-src="/assets/images/object/6.png")
             .object-gallery__image(data-src="/assets/images/object/1.png")
               img(src="/assets/images/object/6.png" alt="Диплом от туроператора Криптон Диплом от туроператора Криптон" loading="lazy")
+          .swiper-slide(data-src="/assets/images/object/1.png")
+            .object-gallery__image(data-src="/assets/images/object/1.png")
+              img(src="/assets/images/object/1.png" alt="Диплом от туроператора Криптон Диплом от туроператора Криптон" loading="lazy")
+          .swiper-slide(data-src="/assets/images/object/2.png")
+            .object-gallery__image(data-src="/assets/images/object/1.png")
+              img(src="/assets/images/object/2.png" alt="Диплом от туроператора Криптон Диплом от туроператора Криптон" loading="lazy")
+          .swiper-slide(data-src="/assets/images/object/3.png")
+            .object-gallery__image(data-src="/assets/images/object/1.png")
+              img(src="/assets/images/object/3.png" alt="Диплом от туроператора Криптон Диплом от туроператора Криптон" loading="lazy")
         button(type="button", aria-label="Previous").swiper-button-prev
           svg(width="10" height="16" viewBox="0 0 10 16")
             use(xlink:href="#svg-arrow-right")

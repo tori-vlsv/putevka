@@ -39,13 +39,13 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
   }
 
   &__button {
     margin-top: 30px;
     border-radius: 8px;
-    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    border: 1px solid rgba($blue-800, 0.25);
     padding: 10px;
     width: 100%;
     display: flex;
@@ -83,7 +83,7 @@
   }
 
   &__block {
-    background-color: rgba($color: $blue-700, $alpha: 0.1);
+    background-color: rgba($blue-700, 0.1);
     padding: 24px;
     display: flex;
     @include max-screen(tablet) {

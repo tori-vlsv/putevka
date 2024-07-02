@@ -8,7 +8,7 @@
 
   &__text {
     font-weight: 400;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet) {
       font-size: 16px;
       line-height: 16px;
@@ -21,7 +21,7 @@
     }
     a {
       color: $blue-500;
-      border-bottom: 1px dashed rgba($color: $blue-500, $alpha: 0.5);
+      border-bottom: 1px dashed rgba($blue-500, 0.5);
       @include min-screen(tablet-2x) {
         transition: color $transition-default, border-color $transition-default;
         &:hover {

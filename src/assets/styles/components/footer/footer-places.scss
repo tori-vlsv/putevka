@@ -2,7 +2,7 @@
   background-color: $bg-blue;
 
   &__links {
-    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    border: 1px solid rgba($blue-700, 0.15);
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;

@@ -34,7 +34,7 @@
 
   &__button {
     border-radius: 8px;
-    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    border: 1px solid rgba($blue-800, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,12 +166,12 @@
   }
 
   .swiper-scrollbar {
-    background-color: rgba($color: $blue-700, $alpha: 0.07);
+    background-color: rgba($blue-700, 0.07);
     @include min-screen(tablet-2x) {
       display: none;
     }
     &-drag {
-      background-color: rgba($color: $blue-700, $alpha: 0.15)
+      background-color: rgba($blue-700, 0.15)
     }
   }
   .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -245,9 +245,9 @@
         }
       }
       &-disabled {
-        background-color: rgba($color: $blue-700, $alpha: 0.05);
+        background-color: rgba($blue-700, 0.05);
         svg {
-          stroke: rgba($color: $blue-500, $alpha: 0.25);
+          stroke: rgba($blue-500, 0.25);
         }
       }
     }

@@ -13,7 +13,7 @@
     svg {
       cursor: pointer;
       stroke: transparent;
-      fill: rgba($color: $blue-700, $alpha: 0.1);
+      fill: rgba($blue-700, 0.1);
       transition: fill $transition-default;
     }
   }

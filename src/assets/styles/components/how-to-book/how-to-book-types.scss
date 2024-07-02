@@ -39,14 +39,14 @@
 
   &__item {
     position: relative;
-    background-color: rgba($color: $white, $alpha: 0.85);
+    background-color: rgba($white, 0.85);
     border-radius: 6px;
     padding: 20px 24px 20px 20px;
-    box-shadow: 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.03);
+    box-shadow: 0px 1px 3px 1px rgba($black-400, 0.03);
     @include min-screen(laptop) {
       transition: box-shadow $transition-default;
       &:hover {
-        box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.07), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.04);
+        box-shadow: 0px 5px 20px 0px rgba($black-400, 0.07), 0px 1px 3px 1px rgba($black-400, 0.04);
         .how-to-book-types__name {
           color: $orange-500;
         }
@@ -105,7 +105,7 @@
     border-radius: 8px;
     width: 40px;
     height: 40px;
-    background-color: rgba($color: $green-300, $alpha: 0.1);
+    background-color: rgba($green-300, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,0 +1,42 @@
+.object-hero
+  +breadcrumbs(
+    [
+      {
+        href: '/about',
+        title: 'Краснодарский край',
+      },
+      {
+        href: '',
+        title: 'Адлер',
+      },
+    ],
+  )
+  .wrapper
+    .object-hero__wrapper
+      .object-hero__left
+        h1.object-hero__title Санаторий «Знание»
+        .object-hero__adress
+          svg(width="11" height="13" viewBox="0 0 11 13")
+            use(xlink:href="#svg-location")
+          p Россия, Краснодарский край, г. Адлер, ул. Калинина, д. 1
+          a(href="#") На карте
+      .object-hero__right
+        .object-hero__status
+          span  Забронировано 13 мин. назад
+          svg(width="18" height="18" viewBox="0 0 18 18")
+            use(xlink:href="#svg-object-forward")
+        .object-hero__price от 138 460 ₽
+        a.object-hero__button(href="#") Показать цены
+      .object-hero__links
+        a.object-hero__link.active(href="#") Информация
+        a.object-hero__link(href="#") Бронирование
+        a.object-hero__link(href="#") Удобства и услуги
+        a.object-hero__link(href="#") Лечение
+        a.object-hero__link(href="#") Лечебные программы
+        a.object-hero__link(href="#") Инфраструктура
+        a.object-hero__link(href="#") Отзывы
+        a.object-hero__link(href="#") Расположение
+        a.object-hero__link(href="#") Номера
+        a.object-hero__link(href="#") Вопрос-ответ
+
+

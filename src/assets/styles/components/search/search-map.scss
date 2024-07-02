@@ -32,7 +32,7 @@
       transform: translate(-50%, -50%);
     }
     .search-card {
-      box-shadow: 0px 0px 20px 0px rgba($color: $black, $alpha: 0.2);
+      box-shadow: 0px 0px 20px 0px rgba($black, 0.2);
       flex-direction: column;
       &__benefits {
         display: none;
@@ -101,7 +101,7 @@
           margin-top: 24px;
         }
         span {
-          color: rgba($color: $black-300, $alpha: 0.75);
+          color: rgba($black-300, 0.75);
         }
       }
       &__name {
@@ -110,7 +110,7 @@
           @include min-screen(desktop) {
             width: 10px;
             height: 10px;
-            color: rgba($color: $black-300, $alpha: 0.75);
+            color: rgba($black-300, 0.75);
           }
         }
         svg {
@@ -122,7 +122,7 @@
           display: flex;
           font-weight: 400;
           line-height: 18px;
-          color: rgba($color: $black-300, $alpha: 0.75);
+          color: rgba($black-300, 0.75);
           @include max-screen(laptop) {
             font-size: 14px;
           }
@@ -284,7 +284,7 @@
               font-size: 14px;
               font-weight: 400;
               line-height: 16px;
-              color: rgba($color: $black-300, $alpha: 0.75);
+              color: rgba($black-300, 0.75);
             }
           }
         }

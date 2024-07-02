@@ -1,5 +1,5 @@
 .footer-criterias {
-  border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+  border-bottom: 1px solid rgba($blue-700, 0.15);
   @include max-screen(tablet) {
     padding-bottom: 40px;
     margin-bottom: 80px;
@@ -89,7 +89,7 @@
         font-size: 14px;
         line-height: 14px;
       }
-      border-bottom: 1px dashed rgba($color: $black-300, $alpha: 0.5);
+      border-bottom: 1px dashed rgba($black-300, 0.5);
       @include min-screen(tablet-2x) {
         font-size: 16px;
         line-height: 16px;

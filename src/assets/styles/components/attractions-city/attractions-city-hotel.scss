@@ -14,7 +14,7 @@
   &__link {
     display: none;
     padding: 9px 16px;
-    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    border: 1px solid rgba($blue-800, 0.25);
     border-radius: 8px;
     color: $blue-500;
     font-size: 16px;
@@ -48,7 +48,7 @@
   }
 
   &__item {
-    background-color: rgba($color: $orange-500, $alpha: 0.15);
+    background-color: rgba($orange-500, 0.15);
     color: $blue-500;
     
     border-radius: 4px;

@@ -13,7 +13,7 @@
   }
 
   &__text {
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     margin-top: 20px;
     @include max-screen(tablet) {
       font-size: 16px;
@@ -43,7 +43,7 @@
     color: $black-400;
 
     border-radius: 8px;
-    border: 1px solid rgba($color: $blue-800, $alpha: 0.25);
+    border: 1px solid rgba($blue-800, 0.25);
     transition: color $transition-default, border-color $transition-default, background-color $transition-default;
     @include max-screen(tablet) {
       padding: 8px 12px;
@@ -68,7 +68,7 @@
 
   &__items {
     display: none;
-    border-top: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    border-top: 1px solid rgba($blue-700, 0.15);
     @include max-screen(tablet) {
       margin-top: 30px;
     }
@@ -82,7 +82,7 @@
 
   &__item {
     cursor: pointer;
-    border-bottom: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    border-bottom: 1px solid rgba($blue-700, 0.15);
     &.active {
       .how-to-book-inner-faq__answer {
         display: block;

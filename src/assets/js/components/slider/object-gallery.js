@@ -10,6 +10,8 @@ function objectGallery() {
       licenseKey: 'UNLICENSED',
       controls: true,
       lgThumbnail: true,
+      thumbMargin: 10,
+      thumbWidth: 117,
       plugins: [lgPager, lgThumbnail]
     });
   });

@@ -21,7 +21,7 @@
 
   &__container {
     @include max-screen(tablet) {
-      background-color: rgba($color: $blue-700, $alpha: 0.15);
+      background-color: rgba($blue-700, 0.15);
       padding: 20px;
       border-radius: 8px;
     }
@@ -44,7 +44,7 @@
     position: relative;
     &--midle {
       @include max-screen(tablet) {
-        background-color: rgba($color: $blue-700, $alpha: 0.15);
+        background-color: rgba($blue-700, 0.15);
       }
       @include max-screen(tablet-2x) {
         display: none;

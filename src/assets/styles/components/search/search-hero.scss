@@ -1,7 +1,7 @@
 .search-hero {
   background-color: $blue-700;
   padding-top: 30px;
-  border-top: 1px solid rgba($color: $white, $alpha: 0.15);
+  border-top: 1px solid rgba($white, 0.15);
   overflow: hidden;
   @include max-screen(tablet-2x) {
     height: 212px;
@@ -42,7 +42,7 @@
   }
 
   &__link {
-    background-color: rgba($color: $white, $alpha: 0.1);
+    background-color: rgba($white, 0.1);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -54,11 +54,11 @@
       width: 20px;
       height: 20px;
       stroke: transparent;
-      fill: rgba($color: $white, $alpha: 0.75);
+      fill: rgba($white, 0.75);
       transition: fill $transition-default;
     }
     span {
-      color: rgba($color: $white, $alpha: 0.75);
+      color: rgba($white, 0.75);
       font-size: 16px;
       font-weight: 700;
       line-height: 20px;
@@ -66,7 +66,7 @@
     }
     @include min-screen(laptop) {
       &:hover {
-        background-color: rgba($color: $white, $alpha: 0.2);
+        background-color: rgba($white, 0.2);
       }
     }
     &:not(.active) {

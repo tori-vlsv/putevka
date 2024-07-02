@@ -23,7 +23,7 @@
 
   &__text {
     text-align: center;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet) {
       font-size: 16px;
       line-height: 20px;

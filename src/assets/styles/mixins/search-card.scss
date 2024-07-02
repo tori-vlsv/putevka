@@ -3,14 +3,14 @@
   border-radius: 6px;
   overflow: hidden;
   background-color: $white;
-  box-shadow: 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.03);
+  box-shadow: 0px 1px 3px 1px rgba($black-400, 0.03);
   @include max-screen(tablet) {
     flex-direction: column;
   }
   @include min-screen(tablet-2x) {
     transition: box-shadow $transition-default;
     &:hover {
-      box-shadow: 0px 5px 20px 0px rgba($color: $black-400, $alpha: 0.07), 0px 1px 3px 1px rgba($color: $black-400, $alpha: 0.04);
+      box-shadow: 0px 5px 20px 0px rgba($black-400, 0.07), 0px 1px 3px 1px rgba($black-400, 0.04);
     }
   }
   &__room {
@@ -70,7 +70,7 @@
     span {
       width: 10px;
       height: 10px;
-      color: rgba($color: $black-300, $alpha: 0.75);
+      color: rgba($black-300, 0.75);
     }
     svg {
       stroke: transparent;
@@ -81,7 +81,7 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 18px;
-        color: rgba($color: $black-300, $alpha: 0.75);
+        color: rgba($black-300, 0.75);
       }
       @include min-screen(tablet-2x) {
         display: none;
@@ -302,7 +302,7 @@
   &__comments {
     font-weight: 400;
     line-height: 18px;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet-2x) {
       font-size: 14px;
     }
@@ -338,7 +338,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
-    color: rgba($color: $black-300, $alpha: 0.75);
+    color: rgba($black-300, 0.75);
     @include max-screen(tablet) {
       margin-top: 4px;
     }
@@ -420,7 +420,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba($color: $black-300, $alpha: 0.75);
+      color: rgba($black-300, 0.75);
     }
   }
 
@@ -569,13 +569,13 @@
         height: 6px;
         background-color: $gray-700;
         opacity: 1;
-        box-shadow: 0px 0px 5px 0px rgba($color: $black-600, $alpha: 0.25);
+        box-shadow: 0px 0px 5px 0px rgba($black-600, 0.25);
 
         &-active {
           background-color: $white;
           width: 8px;
           height: 8px;
-          box-shadow: 0px 0px 5px 0px rgba($color: $black-600, $alpha: 0.25);
+          box-shadow: 0px 0px 5px 0px rgba($black-600, 0.25);
         }
       }
     }

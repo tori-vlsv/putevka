@@ -85,7 +85,7 @@
   }
 
   &__rating {
-    border: 1px solid rgba($color: $blue-700, $alpha: 0.15);
+    border: 1px solid rgba($blue-700, 0.15);
     position: relative;
     @include max-screen(tablet) {
       border-radius: 8px;

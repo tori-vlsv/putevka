@@ -2,7 +2,7 @@
   &__block {
     background-color: $white;
     border-radius: 10px;
-    box-shadow: 0px 4px 25px 0px rgba($color: $gray-750, $alpha: 0.12);
+    box-shadow: 0px 4px 25px 0px rgba($gray-750, 0.12);
     border: 2px solid transparent;
     @include max-screen(tablet) {
       padding: 20px;
@@ -13,7 +13,7 @@
     &--orange {
       position: relative;
       top: auto;
-      border-color: rgba($color: $orange-500, $alpha: 0.5);
+      border-color: rgba($orange-500, 0.5);
       @include max-screen(tablet-2x) {
         margin-top: 20px;
         display: none;
@@ -94,7 +94,7 @@
       grid-column: 1 / span 7;
 
       padding-bottom: 16px;
-      border-bottom: 2px dashed rgba($color: $green-400, $alpha: 0.25);
+      border-bottom: 2px dashed rgba($green-400, 0.25);
     }
     svg {
       stroke: transparent;
@@ -178,7 +178,7 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 16px;
-      color: rgba($color: $black-300, $alpha: 0.75);
+      color: rgba($black-300, 0.75);
     }
   }
 
@@ -291,7 +291,7 @@
     @include min-screen(laptop) {
       transition: border-color $transition-default;
       &:hover {
-        border-color: rgba($color: $blue-500, $alpha: 0.5);
+        border-color: rgba($blue-500, 0.5);
       }
     }
   }
