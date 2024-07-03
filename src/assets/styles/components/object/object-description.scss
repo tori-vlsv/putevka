@@ -1,7 +1,262 @@
 .object-description {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  padding-top: 70px;
-  padding-bottom: 80px;
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    color: $black-400;
+    span {
+      font-weight: 400;
+      color: $gray-400;
+    }
+  }
+
+  &__container {
+    margin-top: 30px;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 30px 24px;
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 34px;
+    row-gap: 30px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    border-bottom: 1px solid rgba($blue-700, 0.15);
+    &--wide {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 16px;
+    svg {
+      stroke: transparent;
+      min-width: 24px;
+    }
+    &--large {
+      grid-row: span 6;
+    }
+    &--medium {
+      grid-row: span 4;
+    }
+    &--small {
+      grid-row: span 3;
+    }
+  }
+
+  &__content {
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+    &--gap {
+      margin-top: 30px;
+    }
+    h4 {
+      margin-top: 30px;
+      font-family: 'Tilda Sans';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $black-400;
+    }
+  }
+
+  &__check {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $black-300;
+      }
+    }
+  }
+
+  &__approve {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $black-300;
+      }
+      svg {
+        stroke: $green-300;
+        fill: $green-300;
+      }
+    }
+  }
+
+  &__dot {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $black-300;
+      padding-left: 18px;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 100px;
+        background-color: $black-400;
+        top: 6px;
+        left: 0;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    &:active {
+      border-color: rgba($blue-500, 0.5);
+    }
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+      &:hover {
+        border-color: rgba($blue-500, 0.5);
+      }
+    }
+  }
+
+  &-scheme {
+    margin-top: 20px;
+    &__image {
+      display: none;
+      &.active {
+        display: block;
+        width: 285px;
+        height: 200px;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-line {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba($blue-700, 0.15);
+    display: flex;
+    gap: 24px;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    &__image {
+      display: none;
+      &.active {
+        display: block;
+        width: 200px;
+        height: 150px;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+    &__text {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      &.active {
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    &__button {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $blue-500;
+      border-bottom: 1px dashed transparent;
+      &:active {
+        border-color: rgba($blue-500, 0.5);
+      }
+      @include min-screen(laptop) {
+        transition: border-color $transition-default;
+        &:hover {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+  }
 }

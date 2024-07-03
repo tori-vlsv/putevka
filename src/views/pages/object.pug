@@ -28,5 +28,20 @@ block content
         include ../components/object/object-conditions
         include ../components/object/object-card
         include ../components/object/object-contact
-        .object-description
-          include ../components/object/object-services
+        .object__descriptions
+          include ../components/object/object-description
+          include ../components/object/object-description-two
+          .object-description
+            .object-description__wrapper
+              h2.object-description__title Лечебные программы <span>в санатории «Знание»</span>
+            .object__dropdowns
+              include ../components/object/object-dropdown
+              include ../components/object/object-dropdown
+              include ../components/object/object-dropdown
+              include ../components/object/object-dropdown
+              include ../components/object/object-dropdown
+          include ../components/object/object-description-three
+          .object-description
+            .object-description__wrapper
+              h2.object-description__title 76 отзывов <span>о санатории «Знание»</span>
+                include ../components/object/object-rating

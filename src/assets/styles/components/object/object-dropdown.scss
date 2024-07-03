@@ -1,0 +1,136 @@
+.object-dropdown {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px 24px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include min-screen(laptop) {
+      &:hover {
+        .object-dropdown__title {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+    &.active {
+      .object-dropdown__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 24px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+    }
+  }
+
+  &__arrow {
+    fill: transparent;
+    stroke: $blue-500;
+    min-width: 24px;
+    height: 24px;
+    transition: transform $transition-default;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $black-400;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+
+  &__text {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+    }
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 34px;
+    row-gap: 10px;
+  }
+
+  &__block {
+    margin-top: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $black-300;
+      padding-left: 18px;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 100px;
+        background-color: $black-400;
+        top: 6px;
+        left: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__button {
+    max-width: max-content;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    &:active {
+      border-color: rgba($blue-500, 0.5);
+      
+    }
+    @include min-screen(laptop) {
+      transition: border-color $transition-default;
+      &:hover {
+        border-color: rgba($blue-500, 0.5);
+      }
+    }
+  }
+}

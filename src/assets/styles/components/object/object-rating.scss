@@ -1,0 +1,73 @@
+.object-rating {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__button {
+
+  }
+  
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__stars {
+    display: flex;
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $yellow-400;
+      stroke: transparent;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: rgba($black-300, 0.75);
+    &--black {
+      color: rgba($black-400, 1.0);
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+    padding: 9px 30px;
+    background-color: $orange-500;
+    border-radius: 6px;
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    text-align: center;
+    color: $white;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: $green-100;
+  }
+}
