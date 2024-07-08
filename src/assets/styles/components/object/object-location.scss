@@ -38,4 +38,45 @@
       color: $black-300;
     }
   }
+
+  &__list {
+    margin-top: 10px;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    li {
+      position: relative;
+      color: $black-400;
+      @include max-screen(tablet) {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 16px;
+
+      }
+      @include min-screen(tablet-2x) {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 18px;
+      }
+
+      &:before {
+        content: "";
+        border-radius: 50%;
+        background-color: $black-400;
+        position: absolute;
+        left: 0;
+        @include max-screen(tablet) {
+          width: 4px;
+          height: 4px;
+          top: 8px;
+        }
+        @include min-screen(tablet-2x) {
+          top: 9px;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
 }
