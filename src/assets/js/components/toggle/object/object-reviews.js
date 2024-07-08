@@ -1,25 +1,22 @@
-function objectDescription() {
-  let texts = $('.object-description-line__text');
-  let buttons = $('.object-description-line__button');
-  let descriptions = $('.object-description__open');
-
+function objectReviews() {
+  let texts = $('.object-reviews__text');
+  let buttons = $('.object-reviews__button');
 
   for( let i = 0; i < texts.length; i++ ) {
-    if($(texts[i]).height() > 50) {
+    if($(texts[i]).height() > 90) {
       $(buttons[i]).show();
-    } else {
+    }  else {
       $(buttons[i]).hide();
     };
+    console.log($(texts[i]).height());
   };
 
-  let textDefault = 'Развернуть описание';
+  let textDefault = 'Читать полностью';
   let textOther = 'Свернуть';
 
   buttons.each(function(i) {
     $(this).on('click', function() {
       $(texts[i]).toggleClass('active');
-      $(descriptions[i]).toggleClass('active');
-
       
       if ($(this).text() === textDefault) {
         $(this).text(textOther);
@@ -29,4 +26,4 @@ function objectDescription() {
     });
   });
 }
-objectDescription();
+objectReviews();

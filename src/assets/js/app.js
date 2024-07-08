@@ -43,6 +43,7 @@ import "./components/slider/object-gallery";
 import "./components/slider/object-slider";
 import "./components/slider/object-services-gallery";
 import "./components/slider/object-scheme-gallery";
+import "./components/slider/object-reviews-gallery";
 
 import "./components/toggle/search-sidebar/search-sidebar-area";
 import "./components/toggle/search-sidebar/search-sidebar-cost";
@@ -57,5 +58,4 @@ import "./components/toggle/main/toggle-main-tabs";
 
 import "./components/toggle/object/object-description";
 import "./components/toggle/object/object-dropdown";
-
-
+import "./components/toggle/object/object-reviews";

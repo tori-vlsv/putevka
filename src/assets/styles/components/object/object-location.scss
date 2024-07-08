@@ -1,0 +1,41 @@
+.object-location {
+  margin-top: 30px;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 30px 24px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $gray-400;
+  }
+
+  &__adress {
+    margin-top: 10px;
+    font-family: 'Panton';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $black-400;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $black-400;
+  }
+
+  &__text {
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($blue-700, 0.15);
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+    }
+  }
+}

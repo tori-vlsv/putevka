@@ -17,10 +17,6 @@
     align-items: center;
     gap: 30px;
   }
-
-  &__button {
-
-  }
   
   &__block {
     display: flex;
@@ -58,6 +54,12 @@
     padding: 9px 30px;
     background-color: $orange-500;
     border-radius: 6px;
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: $orange-300;
+      }
+    }
   }
 
   &__value {

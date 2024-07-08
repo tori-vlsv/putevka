@@ -18,5 +18,3 @@ function searchCardSlider() {
   });
 };
 searchCardSlider();
-
-
