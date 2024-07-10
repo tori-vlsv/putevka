@@ -99,8 +99,10 @@
     font-weight: 400;
     line-height: 20px;
     color: $black-300;
+    display: flex;
+    align-items: center;
     svg {
-      stroke: transparent;
+      // stroke: transparent;
       fill: transparent;
     }
   }
@@ -113,6 +115,7 @@
 
   &__help {
     position: relative;
+    margin-left: 5px;
     svg {
       stroke: $gray-400;
       fill: transparent;

@@ -5,45 +5,15 @@
     gap: 24px;
   }
 
-  &__block {
+  &__blocks {
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0px 4px 25px 0px rgba($gray-800, 0.12);
     padding: 24px;
-    &--small {
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
   }
 
-  &__rating {
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 24px;
-    text-align: center;
-    color: $white;
-    padding: 8px 10px;
-    background-color: $green-100;
-    border-radius: 4px;
-  }
-
-  &__stars {
-    display: flex;
-    align-items: center;
-    svg {
-      width: 14px;
-      height: 14px;
-      stroke: transparent;
-      fill: $yellow-400;
-    }
-  }
-
-  &__review {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  &__block {
+    padding-bottom: 30px;
   }
 
   &__title {
@@ -85,5 +55,59 @@
       font-weight: 700;
       color: $red-800;
     }
+  }
+
+  &__banner {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      background-color: rgba($black-600, 0.25);
+      z-index: 1;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__description {
+    font-family: 'Panton';
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: $white;
+    margin-top: 16px;
+  }
+
+  &__status {
+    max-width: max-content;
+    font-family: 'Panton';
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: $white;
+    text-transform: uppercase;
+
+    padding: 0 5px;
+    background-color: $red-400;
   }
 }

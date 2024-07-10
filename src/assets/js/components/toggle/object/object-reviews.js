@@ -8,7 +8,6 @@ function objectReviews() {
     }  else {
       $(buttons[i]).hide();
     };
-    console.log($(texts[i]).height());
   };
 
   let textDefault = 'Читать полностью';

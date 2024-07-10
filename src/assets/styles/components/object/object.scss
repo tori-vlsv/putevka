@@ -29,6 +29,7 @@
         }
       }
     }
+    
     &--small {
       margin-top: 0;
       span {
@@ -45,6 +46,10 @@
       align-items: center;
       justify-content: center;
     }
+    &--tiny {
+      width: auto;
+      max-width: max-content;
+    }
   }
 
   &__descriptions {
@@ -60,5 +65,32 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__description {
+    margin-top: 10px;
+    &--gap {
+      margin-top: 30px;
+    }
+    h4 {
+      margin-top: 30px;
+      font-family: 'Tilda Sans';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $black-400;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
