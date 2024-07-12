@@ -1,13 +1,19 @@
 .object-contact
   .object-contact__wrapper
-    .object-contact__block
-      h4.object-contact__title Контакты отдела бронирования
-      .object-contact__links
-        a.object-contact__link(href="tel:+7 499 703-01-20")  +7 499 703-01-20
-        a.object-contact__link(href="tel:8 800 333 41 99") 8 800 333 41 99
-        a.object-contact__link(href="mailto:info@putevka.com") info@putevka.com
-    .object-contact__block
-      h4.object-contact__title График работы отдела бронирования
-      .object-contact__text
-        p Понедельник - пятница: круглосуточно
-        p Суббота - воскресенье: 8:00 - 18:00
+    .object-contact__blocks
+      svg(width="32" height="32" viewBox="0 0 32 32")
+        use(xlink:href="#svg-object-call")
+      .object-contact__block
+        h4.object-contact__title Контакты отдела бронирования
+        .object-contact__links
+          a.object-contact__link(href="tel:+7 499 703-01-20")  +7 499 703-01-20
+          a.object-contact__link(href="tel:8 800 333 41 99") 8 800 333 41 99
+          a.object-contact__link(href="mailto:info@putevka.com") info@putevka.com
+    .object-contact__blocks
+      svg(width="32" height="32" viewBox="0 0 32 32")
+        use(xlink:href="#svg-object-backup")
+      .object-contact__block
+        h4.object-contact__title График работы отдела бронирования
+        .object-contact__text
+          p Понедельник - пятница: круглосуточно
+          p Суббота - воскресенье: 8:00 - 18:00

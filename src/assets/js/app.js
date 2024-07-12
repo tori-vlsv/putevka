@@ -59,3 +59,5 @@ import "./components/toggle/main/toggle-main-tabs";
 import "./components/toggle/object/object-description";
 import "./components/toggle/object/object-dropdown";
 import "./components/toggle/object/object-reviews";
+import "./components/toggle/object/object-about";
+import "./components/toggle/object/object-faq";

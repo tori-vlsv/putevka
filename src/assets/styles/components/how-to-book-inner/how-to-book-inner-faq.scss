@@ -81,21 +81,11 @@
   }
 
   &__item {
-    cursor: pointer;
     border-bottom: 1px solid rgba($blue-700, 0.15);
-    &.active {
-      .how-to-book-inner-faq__answer {
-        display: block;
-      }
-      .how-to-book-inner-faq__question {
-        svg {
-          transform: rotate(270deg);
-        }
-      }
-    }
   }
 
   &__question {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,6 +106,11 @@
         h3 {
           color: $orange-500;
         }
+      }
+    }
+    &.active {
+      svg {
+        transform: rotate(270deg);
       }
     }
     h3 {

@@ -23,10 +23,11 @@ export default function howToBookToggle() {
 howToBookToggle();
 
 function howToBookItemDropdown() {
-  let button = $('.how-to-book-inner-faq__item');
+  let button = $('.how-to-book-inner-faq__question');
 
   button.on('click', function() {
     $(this).toggleClass('active');
+    $(this).next().toggle();
   });
 }
 howToBookItemDropdown();
