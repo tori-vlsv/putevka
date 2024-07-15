@@ -1,0 +1,77 @@
+.object-popup-booking.active
+  .object-popup-booking__wrapper
+    .object-popup-booking__header
+      h2 Бронирование
+      button.object-popup-booking__close(type="button")
+        svg(width="24" height="24" viewBox="0 0 24 24")
+          use(xlink:href="#svg-close")
+    .object-popup-booking__main(data-scroll-lock-scrollable)
+      .object-popup-booking__blocks
+        .object-popup-booking__block
+          .object-popup-booking__container
+            .object-popup-booking__img
+              img(src="/assets/images/object/1.png" alt="" loading="lazy")
+            .object-popup-booking__content
+              h3 Санаторий «Знание»
+              p Россия, Краснодарский край, г. Адлер, ул. Калинина, д. 1
+        .object-popup-booking__block
+          .object-popup-booking__container
+            .object-popup-booking__img
+              img(src="/assets/images/object/1.png" alt="" loading="lazy")
+            .object-popup-booking__content
+              h4 Стандартный 2-местный 1-комнатный ПК
+              .object-popup-booking__items
+                .object-popup-booking__item
+                  svg(width="18" height="18" viewBox="0 0 18 18")
+                    use(xlink:href="#svg-search-params")
+                  span 18,8 кв.м.
+                .object-popup-booking__item
+                  svg(width="18" height="18" viewBox="0 0 18 18")
+                    use(xlink:href="#svg-search-params")
+                  span 18,8 кв.м.
+          .object-popup-booking__label
+            svg(width="20" height="20" viewBox="0 0 20 20")
+              use(xlink:href="#svg-object-bill")
+            span С лечением ИЛИ Реабилитация после Covid-19 (Полный пансион)
+          .object-popup-booking__informations
+            .object-popup-booking__information
+              span Заезд:
+              p 03.07.2023
+            .object-popup-booking__information
+              span Количество ночей:
+              p 7 ночей
+            .object-popup-booking__information
+              span Отдыхающие:
+              p 2 взрослых
+      .object-popup-booking__advantages
+        .object-popup-booking__advantage
+          .object-popup-booking__svg
+            svg(width="32" height="32" viewBox="0 0 32 32")
+              use(xlink:href="#svg-object-popup-approve")
+          span Моментальное подтверждение
+        .object-popup-booking__advantage
+          svg(width="32" height="32" viewBox="0 0 32 32")
+            use(xlink:href="#svg-object-popup-approve")
+          span Бесплатный перенос на другие даты
+        .object-popup-booking__advantage
+          svg(width="32" height="32" viewBox="0 0 32 32")
+            use(xlink:href="#svg-object-popup-approve")
+          span 100% предоплата - гарантия бронирования
+
+      form.object-popup-booking__form(action="#")
+        .object-popup-booking__inputs
+          .object-popup-booking__input.object-popup-booking__input--large
+            input(type="text" placeholder="Ваше имя и фамилия" name="name" autocomplete="on" required)
+            span Введите Ваше имя:
+          .object-popup-booking__input
+            input(type="number" placeholder="Ваш телефон" name="number")
+            span Телефон:
+          .object-popup-booking__input
+            input(type="email" placeholder="Email для получения документов" name="email")
+            span Электронная почта:
+        button.object-popup-booking__comment(type="button") 
+          span Добавить комментарий
+        button.object-popup-booking__button(type="submit")
+          span Запросить бронирование
+
+      .object-popup-booking__agreement Нажимая на кнопку, Вы принимаете условия <a href="#">Соглашения на обработку персональных данных</a>

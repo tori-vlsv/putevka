@@ -1,0 +1,318 @@
+.object-popup-booking {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.08);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-default, z-index $transition-default, visibility $transition-default;
+  // &.active {
+  //   z-index: 2901;
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+
+  &__close {
+    svg {
+      stroke: $white
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    background-color: $blue-500;
+    border-radius: 10px;
+    box-shadow: 0px 15px 45px 0px rgba($black-600, 0.25);
+
+    width: 636px;
+    height: calc(100dvh - 100px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__header {
+    padding-top: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $white;
+    }
+  }
+
+  &__main {
+    margin-top: 24px;
+    overflow-y: auto;
+    height: 522px;
+    padding-bottom: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__block {
+    background-color: $bg-blue;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__img {
+    width: 65px;
+    height: 50px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: rgba($black-300, 0.75);
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba($black-300, 0.75);
+    }
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__label {
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: rgba($orange-500, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    svg {
+      stroke: transparent;
+    }
+    span {
+      font-family: 'Panton';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+  }
+
+  &__informations {
+    margin-top: 20px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      color: rgba($black-300, 0.75);
+    }
+    p {
+      font-family: 'Panton';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+  }
+
+  &__advantages {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__svg {
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__advantage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    svg {
+      stroke: transparent;
+      min-width: 32px;
+      min-height: 32px;
+      width: 32px;
+      height: 32px;
+    }
+    span {
+      color: $white;
+      font-family: 'Panton';
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  &__input {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 26px 14px 8px 14px;
+      background-color: $white;
+      border-radius: 4px;
+
+      font-family: 'Panton';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $black-400;
+      &::placeholder {
+        font-family: 'Panton';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: rgba($black-400, 0.5);
+      }
+    }
+    &--large {
+      grid-column: 1 / span 2;
+    }
+    span {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      color: rgba($black-400, 0.5);
+      z-index: 1;
+      left: 14px;
+      top: 10px;
+    }
+  }
+
+  &__comment {
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgba($white, 0.15);
+    span {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      border-bottom: 1px dashed transparent;
+    }
+    &:active {
+      span {
+        border-color: rgba($white, 0.5);
+      }
+    }
+    @include min-screen(laptop) {
+      span {
+        transition: border-color $transition-default;
+      }
+      &:hover {
+        span {
+          border-color: rgba($white, 0.5);
+        }
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    background-color: $orange-500;
+    padding: 14px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    &:active {
+      background-color: $orange-300;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      color: $white;
+    }
+    @include min-screen(laptop) {
+      transition: background-color $transition-default, box-shadow $transition-default;
+      &:hover {
+        background-color: $orange-300;
+        box-shadow: 0px 7px 15px 0px rgba($black, 0.1), 0px 1px 2px 0px rgba($black, 0.15);
+      }
+    }
+  }
+
+  &__agreement {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $white;
+    a {
+      border-bottom: 1px solid $white;
+    }
+
+  }
+}

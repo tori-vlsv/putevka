@@ -92,7 +92,6 @@
 @import "./components/how-to-book/how-to-book-questions";
 @import "./components/how-to-book/how-to-book-popup";
 
-@import "./components/how-to-book-inner/how-to-book-inner";
 @import "./components/how-to-book-inner/how-to-book-inner-hero";
 @import "./components/how-to-book-inner/how-to-book-inner-video";
 @import "./components/how-to-book-inner/how-to-book-inner-manual";
@@ -136,5 +135,8 @@
 @import "./components/object/object-location";
 @import "./components/object/object-about";
 @import "./components/object/object-faq";
+@import "./components/object/object-popup-booking";
 
-
+@import "./components/object-booking/object-booking";
+@import "./components/object-booking/object-booking-sidebar";
+@import "./components/object-booking/object-booking-main";
