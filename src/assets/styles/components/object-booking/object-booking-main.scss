@@ -1,0 +1,393 @@
+.object-booking-main {
+  &__blocks {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__block {
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    background-color: $white;
+
+  }
+
+  &__img {
+    width: 117px;
+    height: 90px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: rgba($black-300, 0.75);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $black-400;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__review {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $blue-500;
+    border-bottom: 1px dashed transparent;
+    &--orange {
+      &:active {
+        color: $orange-300;
+      }
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-300;
+        }
+      }
+    }
+    &--dashed {
+      &:active {
+        border-color: rgba($blue-500, 0.5);
+      }
+      @include min-screen(laptop) {
+        transition: border-color $transition-default;
+        &:hover {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+  }
+
+  &__rating {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+    background-color: $green-100;
+    border-radius: 4px;
+    padding: 1px 4px;
+  }
+
+  &__items {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      fill: transparent;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba($black-300, 0.75);
+    }
+  }
+
+  &__rate {
+    margin-top: 24px;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  &__heading {
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $red-100;
+    cursor: pointer;
+    &.active {
+      border-radius: 6px 6px 0 0;
+      .object-booking-main__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    svg {
+      stroke: transparent;
+    }
+  }
+
+  &__arrow {
+    transition: transform $transition-default;
+    svg {
+      fill: transparent;
+      width: 20px;
+      height: 20px;
+      stroke: $blue-500;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__description {
+    border-radius: 0 0 10px 10px;
+    padding: 24px;
+    border: 2px solid $red-100;
+    border-width: 0 1px 1px 1px;
+    flex-direction: column;
+    display: none;
+    gap: 24px;
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $gray-400;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $black-300;
+  }
+
+  &__advantages {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__advantage {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      stroke: transparent;
+      fill: $green-300;
+    }
+    a,
+    span {
+      color: $green-300;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    a {
+      border-bottom: 1px dashed $green-300;
+      @include min-screen(laptop) {
+        transition: border-color $transition-default, color $transition-default;
+        &:hover {
+          border-color: transparent;
+          color: $orange-300;
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+    background-color: $blue-700;
+    padding: 24px;
+  }
+
+  &__inputs {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  &__input {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 26px 14px 8px 14px;
+      background-color: $white;
+      border-radius: 4px;
+
+      font-family: 'Panton';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $black-400;
+      &::placeholder {
+        font-family: 'Panton';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $gray-400;
+      }
+    }
+    &--large {
+      grid-column: 1 / span 2;
+    }
+    span {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 12px;
+      color: rgba($black-400, 0.5);
+      z-index: 1;
+      left: 14px;
+      top: 10px;
+    }
+  }
+
+  &__comment {
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgba($white, 0.15);
+    span {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      border-bottom: 1px dashed transparent;
+    }
+    &:active {
+      span {
+        border-color: rgba($white, 0.5);
+      }
+    }
+    @include min-screen(laptop) {
+      span {
+        transition: border-color $transition-default;
+      }
+      &:hover {
+        span {
+          border-color: rgba($white, 0.5);
+        }
+      }
+    }
+  }
+
+  &__button {
+    background-color: $orange-500;
+    padding: 14px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    &:active {
+      background-color: $orange-300;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      color: $white;
+    }
+    @include min-screen(laptop) {
+      transition: background-color $transition-default;
+      &:hover {
+        background-color: $orange-300;
+      }
+    }
+  }
+
+  &__agreement {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $black-400;
+    a {
+      border-bottom: 1px solid $black-400;
+      @include min-screen(laptop) {
+        transition: border-color $transition-default, color $transition-default;
+        &:hover {
+          border-color: $orange-300;
+          color: $orange-300;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-family: 'Panton';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $white;
+
+  }
+
+  &-security {
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 24px 30px;
+    background-color: rgba($blue-700, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &__title {
+      font-family: Panton;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $black-400;
+    }
+    &__text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $black-300;
+    }
+    &__svg {
+      min-width: 48px;
+      stroke: transparent;
+    }
+  }
+
+  &__buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}

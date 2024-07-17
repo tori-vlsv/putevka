@@ -61,3 +61,4 @@ import "./components/toggle/object/object-dropdown";
 import "./components/toggle/object/object-reviews";
 import "./components/toggle/object/object-about";
 import "./components/toggle/object/object-faq";
+import "./components/toggle/object/object-booking-main";

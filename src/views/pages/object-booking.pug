@@ -33,6 +33,6 @@ block content
     .object-booking__main
       .wrapper
         h1.object-booking__title Запросить бронирование
-        .object-booking__container
-          include ../components/object-booking/object-booking-sidebar
+        form.object-booking__container(action="#", method="post")
           include ../components/object-booking/object-booking-main
+          include ../components/object-booking/object-booking-sidebar

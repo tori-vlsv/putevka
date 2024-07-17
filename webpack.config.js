@@ -132,7 +132,7 @@ module.exports = (env) => {
       topLevelAwait: true,
     },
     optimization: {
-      minimize: true,
+      minimize: false,
       minimizer: [
         new TerserPlugin({
           parallel: true,

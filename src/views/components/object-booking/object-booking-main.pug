@@ -1,0 +1,89 @@
+.object-booking-main
+  .object-booking-main__blocks
+    .object-booking-main__block
+      .object-booking-main__img
+        img(src="/assets/images/object/1.png" alt="" loading="lazy")
+      .object-booking-main__content
+        h2.object-booking-main__title.object-booking-main__title--bold Санаторий «Знание»
+        p Россия, Краснодарский край, г. Адлер, ул. Калинина, д. 1
+        .object-booking-main__review
+          .object-booking-main__rating 4.9
+          a.object-booking-main__link.object-booking-main__link--dashed(href="#") 202 отзыва
+
+    .object-booking-main__block
+      .object-booking-main__img
+        img(src="/assets/images/object/1.png" alt="" loading="lazy")
+      .object-booking-main__content
+        h3.object-booking-main__title Стандартный 2-местный 1-комнатный ПК
+        .object-booking-main__items
+          .object-booking-main__item
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-search-params")
+            span 18,8 кв.м.
+          .object-booking-main__item
+            svg(width="18" height="18" viewBox="0 0 18 18")
+              use(xlink:href="#svg-search-params")
+            span 18,8 кв.м.
+
+  .object-booking-main__rate
+    .object-booking-main__header
+      h2.object-booking-main__title Тариф
+      button.object-booking-main__link.object-booking-main__link--orange(type="button") Изменить
+    .object-booking-main__heading
+      .object-booking-main__left
+          svg(width="20" height="20" viewBox="0 0 20 20")
+            use(xlink:href="#svg-object-bill")
+          h3 С лечением ИЛИ Реабилитация после Covid-19 (Полный пансион)
+          
+      button.object-booking-main__arrow(type="button")
+        svg(width="14" height="14" viewBox="0 0 14 14")
+          use(xlink:href="#svg-arrow-down")
+    .object-booking-main__description
+      .object-booking-main__paragraph
+        .object-booking-main__subtitle Питание
+        .object-booking-main__text Полупансион
+      .object-booking-main__paragraph
+        .object-booking-main__subtitle В тариф входит:
+        .object-booking-main__text Проживание, 3-разовое питание VIP по системе заказного меню, оздоровительные процедуры по назначению врача, пользование крытым бессейном с морской подогреваемой водой, открытым бассейном с морской водой в период их функционирования, пользование пляжем и пляжным оборудованием (шезлонг, зонт, аэрарий) в период функционирования, анимация для взрослых и детей.
+
+  .object-booking-main__advantages
+    .object-booking-main__advantage
+      svg(width="14" height="14" viewBox="0 0 14 14")
+        use(xlink:href="#svg-object-calendar")
+      a(href="#") Бесплатный перенос на другие даты
+    .object-booking-main__advantage
+      svg(width="15" height="14" viewBox="0 0 15 14")
+        use(xlink:href="#svg-object-wallet")
+      a(href="#") Частичная предоплата
+    .object-booking-main__advantage
+      svg(width="12" height="14" viewBox="0 0 12 14")
+        use(xlink:href="#svg-object-flash")
+      span  Моментальное подтверждение
+  
+  .object-booking-main__form
+    .object-booking-main__name Введите свои данные
+    .object-booking-main__inputs
+      .object-booking-main__input.object-booking-main__input--large
+        input(type="text" placeholder="Ваше имя и фамилия" name="name" autocomplete="on" required)
+        span Введите Ваше имя:
+      .object-booking-main__input
+        input(type="number" placeholder="Ваш телефон" name="number")
+        span Телефон:
+      .object-booking-main__input
+        input(type="email" placeholder="Email для получения документов" name="email")
+        span Электронная почта:
+    button.object-booking-main__comment(type="button") 
+      span Добавить комментарий
+    
+  
+  .object-booking-main-security
+    svg.object-booking-main-security__svg(width="48" height="48" viewBox="0 0 48 48")
+      use(xlink:href="#svg-security-check")
+    .object-booking-main-security__content
+      h4.object-booking-main-security__title Ваши персональные данные надежно защищены
+      p.object-booking-main-security__text Тут какой то текст о том, что мы бережно храним данные и никуда их не передаем, или что то еще, чтобы вся возрастная аудитория была спокойна, что их данные не попадут мошенникам и т.д.
+
+  .object-booking-main__buttons
+    .object-booking-main__agreement Нажимая на кнопку, Вы принимаете условия <a href="#">Соглашения на обработку персональных данных</a>
+    button.object-booking-main__button(type="submit")
+      span Запросить бронирование

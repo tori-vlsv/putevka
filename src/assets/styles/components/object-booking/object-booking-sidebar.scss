@@ -11,4 +11,80 @@
     border-radius: 10px;
     padding: 24px;
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-family: 'Panton';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $black-400;
+  }
+
+  &__change {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $blue-500;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__label {
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: $red-100;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba($black-300, 0.75);
+    }
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $black-400;
+    }
+  }
+
+  &__price {
+    font-family: 'Panton';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &__discount {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba($black-300, 0.75);
+  }
+
+  &__prepayment {
+    font-family: 'Panton';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 10px;
+  }
 }
