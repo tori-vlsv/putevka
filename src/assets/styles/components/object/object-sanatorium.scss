@@ -1,0 +1,31 @@
+.object-sanatorium {
+  padding-bottom: 0;
+  .attractions-sanatorium {
+    &__button {
+      display: none;
+    }
+    &__navigation {
+      display: flex;
+      width: 100%;
+    }
+    &__controls {
+      width: 100%;
+    }
+    &__header {
+      position: relative;
+      h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        color: $black; 
+        span {
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+  .swiper {
+    
+  }
+}

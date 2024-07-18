@@ -15,10 +15,11 @@
       font-size: 16px;
       font-weight: 600;
       line-height: 18px;
-      color: $orange-600;
+      color: $green-300;
     }
     svg {
       stroke: transparent;
+      fill: $green-300;
     }
   }
 
@@ -27,15 +28,8 @@
     font-weight: 600;
     line-height: 18px;
     border-bottom: 1px dashed;
-    
-    &--green {
-      color: $green-300;
-      border-color: rgba($green-300, 0.5);
-    }
-    &--red {
-      color: $red-800;
-      border-color: rgba($red-800, 0.5);
-    }
+    color: $green-300;
+    border-color: rgba($green-300, 0.5);
     @include min-screen(laptop) {
       transition: color $transition-default, border-color $transition-default;
       &:hover {
@@ -43,13 +37,14 @@
         border-color: transparent;
       }
     }
-    &--blue {
-      color: $blue-500;
-      border-color: rgba($blue-500, 0.5);
-      border-style: solid;
-      &:hover {
-        color: $orange-500;
-        border-color: $orange-500;
+    &--line {
+      border-bottom: 1px solid $green-300;
+      @include min-screen(laptop) {
+        transition: color $transition-default, border-color $transition-default;
+        &:hover {
+          color: $orange-500;
+          border-color: transparent;
+        }
       }
     }
   }

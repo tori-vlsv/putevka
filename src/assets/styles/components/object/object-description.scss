@@ -1,6 +1,43 @@
 .object-description {
+
+  &__description {
+    margin-top: 10px;
+  }
+
+  &__button {
+    padding: 11px;
+    width: 100%;
+    background-color: $bg-blue;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $blue-500;
+      align-items: center;
+      border-bottom: 1px dashed transparent;
+    }
+    &:active {
+      span {
+        border-color: rgba($blue-500, 0.5);
+      }
+    }
+    @include min-screen(laptop) {
+      span {
+        transition: border-color $transition-default;
+      }
+      &:hover {
+        span {
+          border-color: rgba($blue-500, 0.5);
+        }
+      }
+    }
+  }
+
   &__container {
-    margin-top: 30px;
     background-color: $white;
     border-radius: 10px;
     padding: 30px 24px;
@@ -8,15 +45,11 @@
 
   &__blocks {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 34px;
     row-gap: 30px;
     padding-bottom: 40px;
     padding-top: 30px;
     border-bottom: 1px solid rgba($blue-700, 0.15);
-    &--wide {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
     &:first-child {
       padding-top: 0;
     }
@@ -33,15 +66,6 @@
       stroke: transparent;
       min-width: 24px;
     }
-    &--large {
-      grid-row: span 6;
-    }
-    &--medium {
-      grid-row: span 4;
-    }
-    &--small {
-      grid-row: span 3;
-    }
   }
 
   &__content {
@@ -50,6 +74,17 @@
       font-weight: 700;
       line-height: 20px;
       color: $black-400;
+    }
+    h4 {
+      margin-top: 24px;
+      font-family: 'Tilda Sans';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $black-400;
+    }
+    &--half {
+      width: 50%;
     }
   }
 

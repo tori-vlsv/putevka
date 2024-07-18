@@ -13,6 +13,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
+    &--small {
+      padding: 30px 24px;
+    }
   }
 
   &__block {
@@ -65,44 +69,48 @@
     }
   }
 
-  &__banner {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
-    &:before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      background-color: rgba($black-600, 0.25);
-      z-index: 1;
-    }
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  &__svg  {
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+    stroke: transparent;
   }
 
   &__content {
-    padding: 30px 24px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    gap: 20px;
     position: relative;
     z-index: 2;
   }
 
   &__description {
-    font-family: 'Panton';
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 24px;
-    color: $white;
-    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $black-300;
+    a {
+      font-weight: 700;
+      color: $blue-500;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-300;
+        }
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      border-radius: 100px;
+      background-color: $red-400;
+      color: $white;
+      padding: 0 7px;
+      margin-left: 6px;
+    }
   }
 
   &__status {
@@ -114,7 +122,6 @@
     letter-spacing: 0.1em;
     color: $white;
     text-transform: uppercase;
-
     padding: 0 5px;
     background-color: $red-400;
   }

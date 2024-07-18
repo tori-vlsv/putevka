@@ -1,7 +1,45 @@
 .object-description
   .object-description__wrapper
-    h2.object__title Удобства и услуги <span>в санатории «Знание»</span>
     .object-description__container
+      
+      .object-description-line
+        .object-description-line__images
+          .object-description-line__image.active(data-src="/assets/images/object/1.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/2.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/3.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/4.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/5.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/6.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+        .object-description-line__content
+          h3.object-description-line__title Крытый бассейн
+          .object-description-line__text Входит в стоимость. С подогреваемой, морской водой, оборудован, размером 20*15 метров. Время посещения: с 9:00 до 20:00. Четверг - санитарный день. Работает с 1 мая по 30 сентября. В зависимости от погодных условий период работы бассейна может меняться.
+          button.object-description-line__button(type="button") Развернуть описание
+      
+      .object-description-line
+        .object-description-line__images
+          .object-description-line__image.active(data-src="/assets/images/object/1.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/2.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/3.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/4.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/5.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+          .object-description-line__image(data-src="/assets/images/object/6.png")
+            img(src="/assets/images/object/1.png" alt="" loading="lazy")
+        .object-description-line__content
+          h3.object-description-line__title Открытый бассейн
+          .object-description-line__text Входит в стоимость. С подогреваемой, морской водой, оборудован, размером 20*15 метров. Время посещения: с 9:00 до 20:00
+          button.object-description-line__button(type="button") Развернуть описание
+
       .object-description__blocks
         .object-description__block
           svg(width="24" height="24" viewBox="0 0 24 24")
@@ -27,7 +65,7 @@
             .object-description__description
               .object-description__text
                 p За дополнительную плату. Открытая, охраняемая.
-        .object-description__block.object-description__block--large
+        .object-description__block
           svg(width="24" height="24" viewBox="0 0 24 24")
             use(xlink:href="#svg-object-spa")
           .object-description__content
@@ -99,8 +137,6 @@
                 p 3-разовое питание по системе «шведский стол» (для номеров Стандарт) или «заказное меню» (для номеров Студия, Люкс), или 5-разовое диетическое питание (для лечебных программ Детокс, Мужское здоровье, Женское здоровье, СПА, Идеальная линия).
                 p Залы питания по системе <span>«шведский стол»</span>: Коралловый, Серебряный, Золотой, Зеленый, 3 и 4 корпус.
                 p Залы питания по системе <span>«заказное меню»</span> (A La Carte): Юбилейный, Веранда, Каминный, Океания, 4 корпус.
-        .object-description__block
-          .object-description__content
             .object-description__description.object-description__description--gap
               .object-description__text
                 p Зал, где организовано <span>5-разовое диетическое</span> питание: Каминный, 4 корпус.
@@ -119,7 +155,7 @@
             .object-description__description
               .object-description__text
                 p Принимаются с любого возраста. <br> Дети принимаются бесплатно (без предоставления места и питания) до 4 лет.
-        .object-description__block.object-description__block--small
+        .object-description__block
           svg(width="24" height="24" viewBox="0 0 24 24")
             use(xlink:href="#svg-object-toy")
           .object-description__content
@@ -127,7 +163,7 @@
             .object-description__description
               .object-description__text
                 p Входит в стоимость (по решению администрации). С воспитателем. Для детей 4-14 лет. Дети до 4 лет принимаются только в сопровождении родителей. График работы детского клуба «Знаюшка»: с 08:00 до 20:00, перерыв с 13:00 до 14:00, ежедневно. Последнее воскресенье месяца - санитарный день. Единоразовое посещение - 45 минут. Предварительная запись обязательна.
-        .object-description__block.object-description__block--medium
+        .object-description__block
           svg(width="24" height="24" viewBox="0 0 24 24")
             use(xlink:href="#svg-object-ball")
           .object-description__content
@@ -148,66 +184,18 @@
               .object-description__text
                 p Входят в стоимость.
       
+      .object-description__blocks
+        .object-description__block
+          .object-description__content.object-description__content--half
+            h3 Расчётный час
+            .object-description__description
+              .object-description__text
+                p Заезд c 13:00 (обед), выезд до 11:00 (завтрак).
+          .object-description__content.object-description__content--half
+            h3 Период работы
+            .object-description__description
+              .object-description__text
+                p Круглогодично
       
-      .object-description-line
-        .object-description-line__images
-          .object-description-line__image.active(data-src="/assets/images/object/1.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/2.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/3.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/4.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/5.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/6.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-        .object-description-line__content
-          h3.object-description-line__title Крытый бассейн
-          .object-description-line__text Входит в стоимость. С морской водой, подогреваемый, площадью - 3000 кв. м., глубиной - 1,45 м. Для самых маленьких гостей есть детская плескательница, глубиной 0,6 м., детский плавательный бассейн глубиной 0,9 м. Для комфортного отдыха на территории бассейна расположены душевые, санузел, медпункт, кафе, деревянные лежаки и теневые навесы. Дети до 3-х лет допускаются только в аквапамперсе...
-          button.object-description-line__button(type="button") Развернуть описание
-      
-      .object-description-line
-        .object-description-line__images
-          .object-description-line__image.active(data-src="/assets/images/object/1.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/2.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/3.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/4.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/5.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/6.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-        .object-description-line__content
-          h3.object-description-line__title Открытый бассейн
-          .object-description-line__text Входит в стоимость. С подогреваемой, морской водой, оборудован, размером 20*15 метров. Время посещения: с 9:00 до 20:00. Четверг - санитарный день. Работает с 1 мая по 30 сентября. В зависимости от погодных условий период работы бассейна может меняться.
-          button.object-description-line__button(type="button") Развернуть описание
-      
-      .object-description-line
-        .object-description-line__images
-          .object-description-line__image.active(data-src="/assets/images/object/1.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/2.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/3.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/4.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/5.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-          .object-description-line__image(data-src="/assets/images/object/6.png")
-            img(src="/assets/images/object/1.png" alt="" loading="lazy")
-        .object-description-line__content
-          h3.object-description-line__title Конференц-зал
-          .object-description-line__text 
-            p За дополнительную плату, по предварительному согласованию.
-            p <span>Киноконцертный зал «Коралл»</span> идеально подходит для проведения: крупномасштабных форумов, конференций, семинаров, фестивалей, концертов и спектаклей, кинопоказов. В холле киноконцертного зала возможно размещение выставочных стендов, буфета и т.д. Вместимость до 255 мест: комфортабельные мягкие кресла, современное осветительное, аудио и кинооборудование.
-            p <span>Конференц-зал в корпусе «Коралл»</span> прекрасно подойдет для проведения деловых встреч, семинаров, презентаций, переговоров. Интерьер зала выполнен в традиционном, классическом стиле. Вместимость от 80 до 100 мест: круговой стол с микрофонами, кресла с мягкой обшивкой, кафедра для докладчика, мультимедийное конференц-оборудование, система кондиционирования.
-            p <span>Малый конференц-зал в корпусе «Коралл»</span> подходит для деловых встреч, семинаров, мастер-классов, презентаций, переговоров. Зал предполагает несколько вариантов рассадки и возможность оснащение флипчартом и мультимедийным оборудованием. Вместимость от 25 до 30 мест: круглый стол и стулья с мягкой обивкой, система кондиционирования, выход на балкон.
-            p <span>Летний киноконцертный зал «Отдых»</span> выполнен в форме открытого амфитеатра. Расположен под открытым небом, среди хвойных и эвкалиптовых деревьев. Технические возможности и вместимость зала позволяют проводить фестивали, концерты и другие масштабные мероприятия. Вместимость – 800 посадочных мест.
-          button.object-description-line__button(type="button") Развернуть описание
-
+        button.object-description__button(type="button")
+          span Свернуть описание
