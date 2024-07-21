@@ -25,8 +25,13 @@ block content
               .object__blocks
                 .object__block
                   include ../components/object/object-transfer
+            // sidebar
             .object__sidebar
-              include ../components/object/object-sidebar
+              aside.object-sidebar
+                .object-sidebar__wrapper
+                  include ../components/object/object-sidebar-discounts
+                  include ../components/object/object-sidebar-main
+                  include ../components/object/object-sidebar-documents
           include ../components/object/object-search
           include ../components/object/object-conditions
           include ../components/object/object-no-available

@@ -1,15 +1,21 @@
 .object-description {
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   &__description {
     margin-top: 10px;
   }
 
   &__button {
-    padding: 11px;
-    width: 100%;
+    padding: 11px 16px;
     background-color: $bg-blue;
     border-radius: 8px;
     display: flex;
+    max-width: max-content;
     align-items: center;
     justify-content: center;
     span {
@@ -19,6 +25,10 @@
       color: $blue-500;
       align-items: center;
       border-bottom: 1px dashed transparent;
+    }
+    &--wide {
+      width: 100%;
+      max-width: 100%;
     }
     &:active {
       span {
@@ -128,7 +138,7 @@
   }
 
   &__dot {
-    margin-top: 16px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -156,6 +166,23 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    &--no-gap {
+      display: block;
+      p {
+        margin-top: 16px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      h3 {
+        margin-top: 40px;
+      }
+      .object-description__dot {
+        li {
+          font-weight: 400;
+        }
+      }
+    }
     p {
       font-size: 16px;
       font-weight: 400;
