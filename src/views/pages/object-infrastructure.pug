@@ -1,0 +1,50 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Страница объекта - Инфраструктура
+
+block basicSeo
+  meta(content="Это странца Страница объекта - Инфраструктура" name="description")
+  meta(content="Страница, Страница объекта - Инфраструктура" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.object-infrastructure
+    include ../components/object/object-gallery
+    include ../components/object/object-hero
+    .wrapper
+      .object__main
+        .object__wrapper
+          h2.object__title Инфраструктура <span>санатория «Знание»</span>
+          .object__container
+            .object__descriptions
+              include ../components/object/object-description-three
+            .object__sidebar
+              aside.object-sidebar
+                .object-sidebar__wrapper
+                  include ../components/object/object-sidebar-scheme
+                  include ../components/object/object-sidebar-building
+                  include ../components/object/object-sidebar-documents
+          .object-treatment__block
+            .object__blocks
+              .object__block
+                include ../components/object/object-transfer
+          include ../components/object/object-search
+          include ../components/object/object-conditions
+          .object__cards
+            include ../components/object/object-card
+            include ../components/object/object-card-two
+          include ../components/object/object-contact
+          .object__reviews
+            .object-description
+              .object-description__wrapper
+                h2.object__title 76 отзывов <span>о санатории «Знание»</span>
+                  include ../components/object/object-rating
+                  include ../components/object/object-reviews
+          .object-description
+            .object-description__wrapper
+              include ../components/object/object-about
+    include ../components/object/object-faq

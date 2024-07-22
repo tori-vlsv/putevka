@@ -1,6 +1,11 @@
 .object-about {
   margin-top: 80px;
+
   &__wrapper {
+
+  }
+
+  &__container {
     display: flex;
     gap: 34px;
   }
@@ -47,5 +52,31 @@
 
   &__video {
     width: 406px;
+  }
+
+  &__nav {
+    margin-top: 80px;
+    padding: 20px 0;
+    border-top: 1px  solid rgba($blue-700, 0.1);
+    display: flex;
+    justify-content: space-between;
+    span,
+    a {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    span {
+      color: $gray-400;
+    }
+    a {
+      color: $gray-850;
+      @include min-screen(laptop) {
+        transition: color $transition-default;
+        &:hover {
+          color: $orange-500;
+        }
+      }
+    }
   }
 }
