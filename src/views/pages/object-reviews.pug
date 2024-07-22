@@ -1,0 +1,41 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Страница объекта - Отзывы
+
+block basicSeo
+  meta(content="Это странца Страница объекта - Отзывы" name="description")
+  meta(content="Страница, Страница объекта - Отзывы" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.object-infrastructure
+    include ../components/object/object-gallery
+    include ../components/object/object-hero
+    .wrapper
+      .object__main
+        .object__wrapper
+          h2.object__title 76 отзывов <span>о санатории «Знание»</span>
+          .object__reviews
+            .object-description
+              .object-description__wrapper
+                  include ../components/object/object-rating
+                  include ../components/object/object-filter
+                  include ../components/object/object-reviews
+            .object-treatment__block
+              .object__blocks
+                .object__block
+                  include ../components/object/object-transfer
+            include ../components/object/object-search
+            include ../components/object/object-conditions
+            .object__cards
+              include ../components/object/object-card
+              include ../components/object/object-card-two
+            include ../components/object/object-contact
+          .object-description
+            .object-description__wrapper
+              include ../components/object/object-about
+    include ../components/object/object-faq
