@@ -39,6 +39,9 @@
       display: grid;
       margin-top: 24px;
     }
+    &--column {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__link {

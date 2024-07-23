@@ -1,0 +1,90 @@
+extends ../layouts/master
+
+block title
+  title Путевка | Страница объекта - Расположение
+
+block basicSeo
+  meta(content="Это странца Страница объекта - Расположение" name="description")
+  meta(content="Страница, Страница объекта - Расположение" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.object-location
+    include ../components/object/object-gallery
+    include ../components/object/object-hero
+    .wrapper
+      .object__main
+        .object__wrapper
+          h2.object__title Как добраться <span>до санатория «Знание»</span>
+          .object__container.object__container--column
+            .object__descriptions
+              include ../components/object/object-description-four
+          .object-treatment__block
+            .object__blocks
+              .object__block
+                include ../components/object/object-transfer
+          include ../components/object/object-search
+          include ../components/object/object-conditions
+          .object__cards
+            include ../components/object/object-card
+            include ../components/object/object-card-two
+          include ../components/object/object-contact
+          .object__reviews
+            .object-description
+              .object-description__wrapper
+                h2.object__title 76 отзывов <span>о санатории «Знание»</span>
+                include ../components/object/object-rating
+                include ../components/object/object-reviews
+          include ../components/object/object-about
+    include ../components/object/object-faq
+  
+  script.
+    async function initMap() {
+      await ymaps3.ready;
+
+      const {
+        YMap,
+        YMapDefaultSchemeLayer,
+        YMapDefaultFeaturesLayer,
+        YMapFeature,
+        YMapMarker,
+        YMapControls
+      } = ymaps3;
+      
+      const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+        const map = new YMap(document.getElementById('map-yandex'),
+          {
+            location: {
+              center: [37.623150, 55.752507],
+              zoom: 7,
+            }
+          },
+          [
+            // Add a map scheme layer
+            new YMapDefaultSchemeLayer({}),
+            // Add a layer of geo objects to display the line
+            new YMapDefaultFeaturesLayer({})
+          ]
+        );
+
+        map.addChild(
+          // Here we place the control on the right
+          new YMapControls({position: 'left'})
+            // Add the first zoom control to the map
+            .addChild(new YMapZoomControl({}))
+        );
+
+        const markerElement = document.createElement('img');
+        markerElement.className = 'icon-marker';
+        markerElement.src = '/assets/images/pin.png';
+
+        map.addChild(new YMapMarker({coordinates: [37.623150, 55.752507]}, markerElement));
+      }
+      
+    if (document.getElementById('map-yandex') !== null) {
+      initMap();
+    }
