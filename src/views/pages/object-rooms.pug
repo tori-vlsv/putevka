@@ -12,16 +12,17 @@ block manifestBrowserconfigFiles
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main.object-location
+  main.object
     include ../components/object/object-gallery
     include ../components/object/object-hero
     .wrapper
       .object__main
         .object__wrapper
-          h2.object__title Как добраться <span>до санатория «Знание»</span>
+          h2.object__title Номерной фонд <span>санатория «Знание»</span>
           .object__container.object__container--column
-            .object__descriptions
-              include ../components/object/object-description-four
+            include ../mixins/object-room
+            
+
           .object-treatment__block
             .object__blocks
               .object__block
@@ -43,50 +44,3 @@ block content
     .object__slider
       include ../components/attractions/attractions-sanatorium
   
-  script.
-    async function initMap() {
-      await ymaps3.ready;
-
-      const {
-        YMap,
-        YMapDefaultSchemeLayer,
-        YMapDefaultFeaturesLayer,
-        YMapFeature,
-        YMapMarker,
-        YMapControls
-      } = ymaps3;
-      
-      const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
-
-        const map = new YMap(document.getElementById('map-yandex'),
-          {
-            location: {
-              center: [37.623150, 55.752507],
-              zoom: 7,
-            }
-          },
-          [
-            // Add a map scheme layer
-            new YMapDefaultSchemeLayer({}),
-            // Add a layer of geo objects to display the line
-            new YMapDefaultFeaturesLayer({})
-          ]
-        );
-
-        map.addChild(
-          // Here we place the control on the right
-          new YMapControls({position: 'left'})
-            // Add the first zoom control to the map
-            .addChild(new YMapZoomControl({}))
-        );
-
-        const markerElement = document.createElement('img');
-        markerElement.className = 'icon-marker';
-        markerElement.src = '/assets/images/pin.png';
-
-        map.addChild(new YMapMarker({coordinates: [37.623150, 55.752507]}, markerElement));
-      }
-      
-    if (document.getElementById('map-yandex') !== null) {
-      initMap();
-    }

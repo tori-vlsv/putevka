@@ -1,0 +1,60 @@
+.object-room
+  .object-room__wrapper
+    .object-room__block
+      .object-room__image
+        .object-room__free Доступен
+        .object-room__slider.swiper
+          .swiper-wrapper
+            .swiper-slide
+              img(src="/assets/images/search/1.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/2.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/3.png" alt="hotel-room" loading="lazy")
+            .swiper-slide
+              img(src="/assets/images/search/4.png" alt="hotel-room" loading="lazy")
+          button(type="button", aria-label="Previous").swiper-button-prev
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+          button(type="button", aria-label="Next").swiper-button-next
+            svg(width="10" height="16" viewBox="0 0 10 16")
+              use(xlink:href="#svg-arrow-right")
+          .swiper-pagination
+      .object-room__information
+        h2.object-room__title Стандартный 2-местный 1-комнатный ПК
+        .object-room__items
+          .object-room__item
+            .object-room__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-building")
+              span Корпус:
+          .object-room__item  №1, №3, №4, №5
+            .object-room__help.object-room__help--stations
+              svg(width="16" height="16" viewBox="0 0 16 16")
+                use(xlink:href="#svg-search-help")
+              .object-room__hint
+                p Выберите одну или несколько станций и укажите
+          .object-room__item
+            .object-room__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-search-params")
+              span Площадь:
+          .object-room__item 18,8 кв.м.
+          .object-room__item
+            .object-room__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-bath")
+              span Санузел:
+          .object-room__item душ, туалет, умывальник, фен.
+          .object-room__item
+            .object-room__name
+              svg(width="18" height="18" viewBox="0 0 18 18")
+                use(xlink:href="#svg-object-user-plus")
+              span Доп. место:
+          .object-room__item еврораскладушка
+        .object-room__description
+          button.object-room__button(type="button") Подробное описание номера
+          h3 В номере:
+          p 2 большие кровати, диван, микроволновая печь, кондиционер, холодильник без наполнения, стиральная машина, два телевизора, телефон, два сейфа, чайник, посуда (тарелки, чайные кружки, бокалы, набор столовых приборов), гладильная доска и утюг, Wi-Fi, балкон.
+          button.object-room__roll(type="button") Свернуть
+          
