@@ -55,14 +55,20 @@
       line-height: 18px;
       color: $blue-500;
       border-bottom: 1px dashed transparent;
-      &:active {
-        border-color: rgba($blue-500, 0.5);
-      }
-      @include min-screen(laptop) {
+    }
+    @include min-screen(laptop) {
+      span {
         transition: border-color $transition-default;
-        &:hover {
+      }
+      &:hover {
+        span {
           border-color: rgba($blue-500, 0.5);
         }
+      }
+    }
+    &:active {
+      span {
+        border-color: rgba($blue-500, 0.5);
       }
     }
     
@@ -98,8 +104,6 @@
     display: flex;
     flex-direction: column;
     gap: 70px;
-    // padding-top: 70px;
-    // padding-bottom: 80px;
   }
 
   &__dropdowns {

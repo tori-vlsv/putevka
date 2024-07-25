@@ -64,3 +64,4 @@ import "./components/toggle/object/object-about";
 import "./components/toggle/object/object-faq";
 import "./components/toggle/object/object-booking-main";
 import "./components/toggle/object/object-room";
+import "./components/toggle/object/object-promo";

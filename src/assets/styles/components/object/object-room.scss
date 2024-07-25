@@ -387,12 +387,17 @@
     border-radius: 6px;
     background-color: $orange-500;
     padding: 11px 36px;
-
     font-size: 16px;
     font-weight: 800;
     line-height: 18px;
     text-align: center;
     color: $white;
+    transition: background-color $transition-default;
+    @include min-screen(laptop) {
+      &:hover {
+        background-color: $orange-300;
+      }
+    }
   }
 
   &__non-free {
