@@ -1,0 +1,11 @@
+.object-camera {
+  margin-top: 30px;
+  padding: 30px 24px;
+  background-color: $white;
+
+  &__blocks {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
