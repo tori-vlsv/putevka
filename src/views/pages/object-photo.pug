@@ -1,11 +1,11 @@
 extends ../layouts/master
 
 block title
-  title Путевка | Страница объекта - Расположение
+  title Путевка | Страница объекта - Фото
 
 block basicSeo
-  meta(content="Это странца Страница объекта - Расположение" name="description")
-  meta(content="Страница, Страница объекта - Расположение" name="keywords")
+  meta(content="Это странца Страница объекта - Фото" name="description")
+  meta(content="Страница, Страница объекта - Фото" name="keywords")
 
 block manifestBrowserconfigFiles
   link(href="../manifest.json" rel="manifest" crossorigin)
@@ -18,9 +18,9 @@ block content
     .wrapper
       .object__main
         .object__wrapper
-          h2.object__title Номерной фонд <span>санатория «Знание»</span>
+          h2.object__title Фото <span>санатория «Знание»</span>
           .object__container.object__container--column
-            include ../components/object/object-room
+            include ../components/object/object-photo
           .object-treatment__block
             .object__blocks
               .object__block

@@ -45,6 +45,7 @@ import "./components/slider/object-services-gallery";
 import "./components/slider/object-scheme-gallery";
 import "./components/slider/object-reviews-gallery";
 import "./components/slider/object-room";
+import "./components/slider/object-photo";
 
 import "./components/toggle/search-sidebar/search-sidebar-area";
 import "./components/toggle/search-sidebar/search-sidebar-cost";

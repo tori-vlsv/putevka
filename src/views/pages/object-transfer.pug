@@ -1,27 +1,26 @@
 extends ../layouts/master
 
 block title
-  title Путевка | Страница объекта - Расположение
+  title Путевка | Страница объекта - Траснфер
 
 block basicSeo
-  meta(content="Это странца Страница объекта - Расположение" name="description")
-  meta(content="Страница, Страница объекта - Расположение" name="keywords")
+  meta(content="Это странца Страница объекта - Траснфер" name="description")
+  meta(content="Страница, Страница объекта - Траснфер" name="keywords")
 
 block manifestBrowserconfigFiles
   link(href="../manifest.json" rel="manifest" crossorigin)
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main.object-location
+  main.object
     include ../components/object/object-gallery
     include ../components/object/object-hero
     .wrapper
       .object__main
         .object__wrapper
-          h2.object__title Как добраться <span>до санатория «Знание»</span>
+          h2.object__title Стоимость трансфера <span>в санатории «Знание»</span>
           .object__container.object__container--column
-            .object__descriptions
-              include ../components/object/object-description-four
+            include ../components/object/object-transfer
           .object-treatment__block
             .object__blocks
               .object__block
